@@ -8,51 +8,64 @@
 
 | 资料 | 适用 | 规模 | 在线页面 | PDF |
 | --- | --- | --- | --- | --- |
-| U1–U8 黑体词词形变化整理 | 九年级上册 | 8 个单元 · 327 个黑体词 · 2,013 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-vocab-forms.pdf) |
-| U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
+| 初中五册黑体词汇与助记汇总 | 七上–九上 | 5 册 · 42 单元 · 1,298 条黑体词 · 10 类助记 | [打开](https://1901151458-prog.github.io/english-materials/vocab-5-books/) | [下载（109 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/vocab-5books-2024.pdf) |
+| U1–U8 黑体词词形变化整理 | 九年级上册 | 8 个单元 · 327 个黑体词 · 2,013 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) | [下载（18 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-vocab-forms.pdf) |
+| U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
 
 ## 资料简介
 
-### 一、U1–U8 黑体词词形变化整理（词汇）
+### 一、初中五册黑体词汇与助记汇总（词汇 · 七上–九上）
+
+- 以人民教育出版社官方电子教材（2024 年版）各册分单元词表的**粗体（黑体）词条**为唯一判定标准，覆盖七年级上册至九年级上册 5 册 42 单元，共 **1,298 条**。
+- 每条含：序号、单词、国际音标、词性、释义、**助记技巧**（词根 / 联想 / 拆分 / 近形 / 谐音 / 拼读 / 搭配 / 词源 / 图像 / 辨析，共 10 类）。
+- 旧版 1,819 条按官方黑体口径校订为 1,298 条；跨册/跨单元错位的词已归位，校订明细见 PDF 前言。
+- 网站支持搜索（单词/音标/释义/助记）、按册/单元/词性/助记类型筛选、遮住释义自测、A4 打印；PDF 109 页可直接下载打印。
+
+### 二、U1–U8 黑体词词形变化整理（词汇 · 九年级上册）
 
 - 词表来自人教版（2024 版）九年级上册英语教材的单元词汇表，只收录其中要求掌握的黑体词。
 - 每个黑体词逐个列出：三单、过去式、过去分词、现在分词、复数、比较级与派生词。
-- **黑色加粗**：义务教育英语课程标准（2022 年版）初中考纲词汇（三级词汇表）及其常规词形变化。
-- **绿色加粗**：考纲外拓展同根词（已对照剑桥词典核对，供学有余力的同学参考）。
-- **蓝色文字**：中文词性、词形说明。
-- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；另有 PDF 版可直接下载打印。
+- **黑色加粗**：2022 版课标初中考纲词汇及其常规词形变化；**绿色加粗**：考纲外拓展同根词（已对照剑桥词典核对）；**蓝色文字**：中文词性、词形说明。
+- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 18 页。
 
-### 二、U1–U8 书面表达范文集（写作）
+### 三、U1–U8 书面表达范文集（写作 · 九年级上册）
 
 - 依据人教新版（2024 年版）九年级上册各单元话题整理，面向成都市中考英语书面表达备考。
-- 每单元包含：**8 条写作常用句型**（附中文释义与用法）、**A 组 5 篇满分范文**（配亮点解析与亮点句）、**B 组 5 篇好背好文**（配参考译文）。
+- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
 - 全书 8 个单元、80 篇范文、64 条句型；范文话题贴近成都生活（天府绿道、成都大运会、城市音乐厅等）。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；另有 PDF 版（56 页 A4）。
+- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 56 页。
 
 ## 目录结构
 
 ```
-index.html                           # 首页（资料目录）
+index.html                             # 首页（资料目录）
 assets/
-  base.css                           # 全站共用样式
+  base.css                             # 全站共用样式
   favicon.svg
   pdf/
-    g9-u1-u8-vocab-forms.pdf         # 词形表 PDF（xelatex 编译）
-    g9-u1-u8-writing-essays.pdf      # 范文集 PDF（xelatex 编译，56 页 A4）
-  vocab-forms/                       # 词形表数据与逻辑
+    vocab-5books-2024.pdf              # 五册词汇与助记（109 页 A4）
+    g9-u1-u8-vocab-forms.pdf           # 词形表（18 页 A4）
+    g9-u1-u8-writing-essays.pdf        # 范文集（56 页 A4）
+  vocab-5-books/                       # 五册词汇数据与逻辑
     data.js / logic.js / app.js
-  essays/                            # 范文集数据与逻辑
+  vocab-forms/                         # 词形表数据与逻辑
     data.js / logic.js / app.js
+  essays/                              # 范文集数据与逻辑
+    data.js / logic.js / app.js
+vocab-5-books/
+  index.html                           # 五册词汇互动页面
+  style.css
 vocab-forms-u1-u8/
-  index.html                         # 词形变化互动页面
+  index.html                           # 词形变化互动页面
   style.css
 essays-u1-u8/
-  index.html                         # 书面表达范文集页面
+  index.html                           # 书面表达范文集页面
   style.css
 source/
-  vocab-forms-u1-u8.tex              # 词形表 LaTeX 源文件
-  writing-essays-u1-u8.tex           # 范文集 LaTeX 源文件
-.nojekyll                            # 让 GitHub Pages 原样发布，不走 Jekyll
+  vocab-5books.tex                     # 五册词汇 LaTeX 源文件
+  vocab-forms-u1-u8.tex                # 词形表 LaTeX 源文件
+  writing-essays-u1-u8.tex             # 范文集 LaTeX 源文件
+.nojekyll                              # 让 GitHub Pages 原样发布，不走 Jekyll
 ```
 
 ## 本地预览
@@ -76,6 +89,7 @@ git push
 
 ## 数据与标注
 
+- 五册词汇以人教社官方电子教材（2024 年版）分单元词表粗体词条为准；助记由程序与人工整理，仅作记忆线索，不替代词典。
 - 词形变化依据教材词汇表整理；拓展同根词对照 [Cambridge Dictionary](https://dictionary.cambridge.org/) 核对。
 - 范文依据教材单元话题与成都市中考书面表达要求整理；文中专有名词可在考场上按题目替换。
 - 资料仅供学习与教学参考，可自由用于课堂教学与家庭辅导，请保留出处；发现疏漏欢迎提 Issue。
