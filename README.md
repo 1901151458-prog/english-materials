@@ -11,6 +11,7 @@
 | 初中五册黑体词汇与助记汇总 | 七上–九上 | 5 册 · 42 单元 · 1,298 条黑体词 · 10 类助记 | [打开](https://1901151458-prog.github.io/english-materials/vocab-5-books/) | [下载（109 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/vocab-5books-2024.pdf) |
 | U1–U8 黑体词词形变化整理 | 九年级上册 | 8 个单元 · 327 个黑体词 · 2,013 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) | [下载（18 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-vocab-forms.pdf) |
 | U1–U8 黑体词词形变化整理（八下） | 八年级下册 | 8 个单元 · 290 个黑体词 · 1,363 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8b/) | [下载（15 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-vocab-forms.pdf) |
+| U1–U8 黑体词词形变化整理（八上） | 八年级上册 | 8 个单元 · 324 个黑体词 · 1,564 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8a/) | [下载（17 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-u1-u8-vocab-forms.pdf) |
 | U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
 
 ## 资料简介
@@ -36,7 +37,14 @@
 - **黑色加粗**：本词的常规词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级）；**绿色加粗**：拓展同根词（已逐条核对）；**蓝色文字**：中文词性、词形说明。
 - 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 15 页。
 
-### 四、U1–U8 书面表达范文集（写作 · 九年级上册）
+### 四、U1–U8 黑体词词形变化整理（词汇 · 八年级上册）
+
+- 词表来自人教版（2024 版）八年级上册英语教材的单元词汇表，只收录其中要求掌握的黑体词（8 个单元、324 词）。
+- 每个黑体词逐个列出：三单、过去式、过去分词、现在分词、复数、比较级与拓展同根词。
+- **黑色加粗**：本词的常规词形变化；**绿色加粗**：拓展同根词；**蓝色文字**：中文词性、词形说明。
+- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 17 页。
+
+### 五、U1–U8 书面表达范文集（写作 · 九年级上册）
 
 - 依据人教新版（2024 年版）九年级上册各单元话题整理，面向成都市中考英语书面表达备考。
 - 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
@@ -61,6 +69,8 @@ assets/
     data.js / logic.js / app.js
   vocab-forms-g8b/                     # 八下词形表数据与逻辑
     data.js / logic.js / app.js
+  vocab-forms-g8a/                     # 八上词形表数据与逻辑
+    data.js / logic.js / app.js
   essays/                              # 范文集数据与逻辑
     data.js / logic.js / app.js
 vocab-5-books/
@@ -72,6 +82,9 @@ vocab-forms-u1-u8/
 vocab-forms-g8b/
   index.html                           # 八下词形变化互动页面
   style.css
+vocab-forms-g8a/
+  index.html                           # 八上词形变化互动页面
+  style.css
 essays-u1-u8/
   index.html                           # 书面表达范文集页面
   style.css
@@ -79,6 +92,7 @@ source/
   vocab-5books.tex                     # 五册词汇 LaTeX 源文件
   vocab-forms-u1-u8.tex                # 九上词形表 LaTeX 源文件
   vocab-forms-g8b.tex                  # 八下词形表 LaTeX 源文件
+  vocab-forms-g8a.tex                  # 八上词形表 LaTeX 源文件
   writing-essays-u1-u8.tex             # 范文集 LaTeX 源文件
 .nojekyll                              # 让 GitHub Pages 原样发布，不走 Jekyll
 ```
