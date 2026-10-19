@@ -12,7 +12,8 @@
 | U1–U8 黑体词词形变化整理 | 九年级上册 | 8 个单元 · 327 个黑体词 · 2,013 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) | [下载（18 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-vocab-forms.pdf) |
 | U1–U8 黑体词词形变化整理（八下） | 八年级下册 | 8 个单元 · 290 个黑体词 · 1,363 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8b/) | [下载（15 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-vocab-forms.pdf) |
 | U1–U8 黑体词词形变化整理（八上） | 八年级上册 | 8 个单元 · 324 个黑体词 · 1,564 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8a/) | [下载（17 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-u1-u8-vocab-forms.pdf) |
-| U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
+| U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 |
+| U1–U8 书面表达范文集（八下） | 八年级下册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g8b/) | [下载（53 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-writing-essays.pdf) | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
 
 ## 资料简介
 
@@ -50,6 +51,13 @@
 - 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
 - 全书 8 个单元、80 篇范文、64 条句型；范文话题贴近成都生活（天府绿道、成都大运会、城市音乐厅等）。
 - 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 56 页。
+
+### 六、U1–U8 书面表达范文集（写作 · 八年级下册）
+
+- 依据人教版（2024 版）八年级下册 8 个单元话题编写，面向初二下学期与成都市中考英语书面表达。
+- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
+- 全书 8 个单元、80 篇范文、64 条句型；话题覆盖放松、健康、成长、自然奇观、自然灾害、跨文化礼仪、阅读、志愿服务。
+- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
 
 ## 词汇测试（独立站点）
 
