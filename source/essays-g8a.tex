@@ -1,0 +1,1166 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% =====================================================================
+%  成都市初二英语书面表达范文集
+%  人教新版（2024 年版）八年级上册  Unit 1 — Unit 8
+%  ---------------------------------------------------------------------
+%  编译方式（必须使用 XeLaTeX，并连续编译两遍以生成目录与页码）：
+%      xelatex 成都市初二英语Unit1-8范文集.tex
+%      xelatex 成都市初二英语Unit1-8范文集.tex
+%  若使用 IDE（TeXstudio / VS Code + LaTeX Workshop），将编译器设为 XeLaTeX 即可。
+% =====================================================================
+\documentclass[UTF8,a4paper,11pt,oneside]{ctexbook}
+
+% ---------------- 页面与字体 ----------------
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.4cm,right=2.2cm,headheight=17pt}
+\usepackage{xcolor}
+\definecolor{mainblue}{RGB}{21,73,124}
+\definecolor{accent}{RGB}{176,84,32}
+\definecolor{textgray}{RGB}{96,101,107}
+\definecolor{rulelight}{RGB}{168,193,219}
+\definecolor{patternbg}{RGB}{245,249,253}
+\definecolor{transbg}{RGB}{247,247,245}
+\definecolor{transframe}{RGB}{176,176,168}
+
+% ---------------- 版式组件 ----------------
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{needspace}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks,bookmarksopen]{hyperref}
+\hypersetup{
+  pdftitle={Chengdu Grade 8 English Writing Model Essays (Unit 1-8)},
+  pdfsubject={中考书面表达备考},
+  pdfcreator={XeLaTeX}
+}
+
+% ---------------- 章节标题样式 ----------------
+\ctexset{
+  chapter = {
+    format    = {\centering\sffamily\Huge\bfseries\color{mainblue}},
+    beforeskip = 1.6ex,
+    afterskip  = 2.2ex
+  }
+}
+
+% ---------------- 页眉页脚 ----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{textgray}\leftmark}
+\fancyhead[R]{\small\sffamily\color{mainblue}\thepage}
+\fancyfoot[C]{\footnotesize\sffamily\color{textgray}成都市初二英语书面表达范文集（人教新版八年级上册）}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{\color{rulelight}\leaders\hrule height \headrulewidth\hfill}}
+% plain 页面样式：直接用底层定义，避免 fancyhdr v5 的 \fancypagestyle
+% 在每页重置全局页眉页脚设置（会把 fancy 的设置清掉）。
+\makeatletter
+\def\ps@plain{%
+  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \def\@oddfoot{\hfil{\small\sffamily\color{textgray}\thepage}\hfil}%
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+% ---------------- 自定义盒子 ----------------
+\newtcolorbox{analysisbox}{
+  enhanced,
+  colback=patternbg, colframe=mainblue!45,
+  boxrule=0.5pt, arc=1.2mm,
+  left=2.4mm, right=2.4mm, top=1.2mm, bottom=1.2mm,
+  toptitle=0.9mm, bottomtitle=0.9mm,
+  coltitle=white, colbacktitle=mainblue!78,
+  fonttitle=\sffamily\bfseries\small,
+  title={亮点解析},
+  before skip=1.2ex, after skip=1.6ex,
+  fontupper=\small
+}
+\newtcolorbox{transbox}{
+  enhanced,
+  colback=transbg, colframe=transframe!75,
+  boxrule=0.5pt, arc=1.2mm,
+  left=2.4mm, right=2.4mm, top=1.2mm, bottom=1.2mm,
+  toptitle=0.9mm, bottomtitle=0.9mm,
+  coltitle=white, colbacktitle=transframe!85,
+  fonttitle=\sffamily\bfseries\small,
+  title={参考译文},
+  before skip=1.2ex, after skip=1.6ex,
+  fontupper=\small
+}
+
+% ---------------- 单元 / 小节 / 范文标题 ----------------
+% \fanunit{序号}{英文单元名}{中文单元名}{核心语法}
+\newcommand{\fanunit}[4]{%
+  \chapter*{\texorpdfstring{Unit #1\quad #2}{Unit #1 #2}}%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\texorpdfstring{Unit #1\quad #2（#3）}{Unit #1 #2}}%
+  \markboth{Unit #1\quad #2}{Unit #1\quad #2}%
+  \vspace{-1.1em}%
+  {\centering{\sffamily\large\color{accent}#3}\par}%
+  \vspace{0.45em}%
+  {\centering\color{rulelight}\rule{0.82\linewidth}{1pt}\par}%
+  \vspace{0.75em}%
+  {\centering{\small\sffamily\color{textgray}本单元语法重点：#4}\par}%
+  \addvspace{1.2em}%
+}
+% \fansection{〇、本单元写作常用句型} 等
+\newcommand{\fansection}[1]{%
+  \par\addvspace{2.4ex}%
+  \Needspace{6\baselineskip}%
+  \noindent{\sffamily\Large\bfseries\color{mainblue}#1}\par
+  \nopagebreak
+  \addvspace{0.2ex}%
+  \noindent{\color{rulelight}\rule{\linewidth}{0.9pt}}\par
+  \addvspace{0.9ex}%
+  \nobreak
+}
+% \fanessay{范文一}{中文标题}{English Title}{约126词}
+\newcommand{\fanessay}[4]{%
+  \Needspace{7\baselineskip}%
+  \par\addvspace{2.2ex}%
+  \noindent{\color{rulelight}\rule{\linewidth}{0.6pt}}\par
+  \nopagebreak
+  \addvspace{0.45ex}%
+  \noindent{\sffamily\bfseries\color{accent}\large #1}\hspace{0.85em}%
+  {\sffamily\bfseries\large\color{mainblue}#2}\par
+  \nopagebreak
+  \addvspace{0.3ex}%
+  {\centering{\bfseries #3}\hspace{0.7em}{\small\color{textgray}（#4）}\par}%
+  \addvspace{0.7ex}%
+  \nobreak
+}
+% \fanpat{英文句}{中文释义}{语法说明}
+\newcommand{\fanpat}[3]{%
+  \item{\bfseries #1}\par\nopagebreak
+  {\small\color{textgray}#2}\par\nopagebreak
+  {\footnotesize\color{accent!90!black}【用法】#3}\par
+}
+
+% ---------------- 写作常用句型列表 ----------------
+\newlist{fanpatterns}{enumerate}{1}
+\setlist[fanpatterns]{%
+  label={\sffamily\bfseries\color{mainblue}\arabic*.},
+  leftmargin=2.6em, labelsep=0.7em,
+  itemsep=1.0ex, topsep=0.5ex, parsep=0.3ex
+}
+
+
+\begin{document}
+\linespread{1.32}\selectfont
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{1.4cm}
+  {\color{mainblue}\rule{\linewidth}{1.8pt}}\par
+  \vspace{0.55cm}
+  {\color{rulelight}\rule{\linewidth}{0.6pt}}\par
+  \vspace{1.5cm}
+  {\sffamily\bfseries\fontsize{36pt}{46pt}\selectfont\color{mainblue} 八年级上册英语\par}
+  \vspace{0.35cm}
+  {\sffamily\bfseries\fontsize{36pt}{46pt}\selectfont\color{mainblue} 书面表达范文集\par}
+  \vspace{1.3cm}
+  {\sffamily\fontsize{15pt}{21pt}\selectfont\color{accent} 人教版（2024 版）· 八年级上册\par}
+  \vspace{0.3cm}
+  {\sffamily\Large\color{mainblue} Unit 1 — Unit 8（全 8 个单元）\par}
+  \vspace{1.0cm}
+  {\color{accent}\rule{0.62\linewidth}{0.8pt}}\par
+  \vspace{0.9cm}
+  {\sffamily\large\color{textgray} 8 个单元\quad·\quad 80 篇范文\quad·\quad 64 条写作常用句型\par}
+  \vfill
+  {\large\sffamily 适用对象：八年级学生\quad 书面表达备考\par}
+  \vspace{0.9cm}
+  {\color{rulelight}\rule{0.62\linewidth}{0.6pt}}\par
+  \vspace{0.5cm}
+  {\sffamily\normalsize\color{textgray} 2026 年 10 月 20 日\par}
+  \vspace*{0.6cm}
+\end{titlepage}
+
+\frontmatter
+\pagestyle{plain}
+
+\chapter*{使用说明}
+\phantomsection
+\addcontentsline{toc}{chapter}{使用说明}
+
+\noindent\textbf{一、教材依据}\quad 本书依据人教新版（2024 年版）八年级上册编写，覆盖全册
+Unit 1 — Unit 8 共 8 个单元，供成都市初二学生中考英语书面表达备考使用。
+
+\vspace{0.6em}
+\noindent\textbf{二、单元结构}\quad 每个单元由三部分组成：
+\begin{itemize}[leftmargin=2.2em,itemsep=0.25ex,topsep=0.35ex]
+  \item \textbf{〇、本单元写作常用句型}：精选 8 条紧扣单元语法的高分句型，附中文释义与用法说明；
+  \item \textbf{一、满分范文}：A 组 5 篇，每篇约 120 — 150 词，词汇丰富、句式多样，配\textbf{亮点解析}与\textbf{亮点句}，供冲刺满分的同学精读仿写；
+  \item \textbf{二、高分好背好文}：B 组 5 篇，每篇约 85 — 105 词，句式简单、模板化，配\textbf{参考译文}，基础薄弱的同学可直接背诵套用。
+\end{itemize}
+
+\vspace{0.6em}
+\noindent\textbf{三、使用建议}
+\begin{enumerate}[leftmargin=2.2em,itemsep=0.25ex,topsep=0.35ex]
+  \item 先背熟本单元的 8 条常用句型与 B 组范文，做到“写得对、写得全”；
+  \item 再精读 A 组范文，把「亮点解析」中的加分句式（非谓语动词、定语从句、倒装、\textit{so...that...} 等）迁移到自己的作文里；
+  \item 每篇范文至少仿写一次；写完后对照「亮点解析」自查是否用上了本单元语法重点；
+  \item 范文话题贴近成都生活（天府绿道、成都大运会、城市音乐厅等），考场上可根据题目灵活替换专有名词。
+\end{enumerate}
+
+\clearpage
+\vspace{0.2em}
+\noindent\textbf{四、单元一览}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm}
+                              >{\raggedright\arraybackslash}p{6.3cm}
+                              >{\raggedright\arraybackslash}X@{}}
+\toprule
+{\sffamily\bfseries 单元} & {\sffamily\bfseries 核心语法} & {\sffamily\bfseries 代表写作任务}\\
+\midrule
+{\bfseries Unit 1}\newline Happy Holiday\newline {\small 快乐假期} & 一般过去时；假期经历叙述；旅行计划表达 & My Holiday（我的假期） \\
+{\bfseries Unit 2}\newline Home Sweet Home\newline {\small 温暖的家} & 一般现在时；there be 句型；家务表达 & My Home and Housework（我的家与家务） \\
+{\bfseries Unit 3}\newline Same or Different?\newline {\small 相同还是不同？} & 比较级与最高级；both...and；比较异同 & My Friend and I（我和我的朋友） \\
+{\bfseries Unit 4}\newline Amazing Plants and Animals\newline {\small 神奇的动植物} & 一般现在时；最高级；数字与量词；说明文 & Amazing Plants and Animals（神奇的动植物） \\
+{\bfseries Unit 5}\newline What a Delicious Meal!\newline {\small 美味的一餐} & 祈使句；first/next/then/finally；可数与不可数名词 & A Delicious Meal（一道美味/一次美味的一餐） \\
+{\bfseries Unit 6}\newline Plan for Yourself\newline {\small 为自己做计划} & be going to / will；不定式作目的；计划与打算 & My Plan（我的计划） \\
+{\bfseries Unit 7}\newline When Tomorrow Comes\newline {\small 当明天来临} & 一般将来时；will 表预测；if 条件句 & Life in the Future（未来的生活） \\
+{\bfseries Unit 8}\newline Let's Communicate!\newline {\small 让我们沟通吧！} & 祈使句；情态动词；沟通与建议表达 & Let's Communicate!（沟通与理解） \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.4em}
+\noindent{\small\color{textgray}说明：每单元 A 组 5 篇 + B 组 5 篇，共 10 篇范文；全书共 8 个单元、80 篇范文、64 条写作常用句型。}
+
+\clearpage
+\tableofcontents
+\mainmatter
+\pagestyle{fancy}
+
+% ============================ 正文 ============================
+
+\fanunit{1}{Happy Holiday}{快乐假期}{一般过去时；假期经历叙述；旅行计划表达}
+
+{\centering\small\color{accent}本单元写作任务：My Holiday（我的假期）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{I'm writing to tell you about my plan for the coming holiday.}{我写信是想告诉你我接下来的假期计划。}{书信或邮件开头点明写作目的，自然引出假期计划，常用于计划类作文的第一段。}
+
+\fanpat{Last summer holiday, I went to Beijing with my family and visited the Great Wall.}{去年暑假，我和家人去了北京，参观了长城。}{一般过去时开头，用时间、地点、人物三要素快速进入假期叙事。}
+
+\fanpat{As soon as we arrived at the foot of the mountain, we started to climb.}{我们一到山脚就开始往上爬。}{as soon as 引导时间状语从句，表示“一……就……”，让叙事节奏更紧凑。}
+
+\fanpat{While we were having hotpot, we talked about the interesting things on the way.}{我们一边吃火锅，一边聊路上的趣事。}{while 引导的过去进行时从句，描写两个动作同时发生，画面感强。}
+
+\fanpat{We set off early in the morning to avoid the heavy traffic.}{我们一大早就出发，以避开拥堵的交通。}{动词不定式 to do 作目的状语，说明做某事的原因或目的。}
+
+\fanpat{Not only did I relax, but I also learned how to cook.}{我不仅得到了放松，还学会了做饭。}{Not only 置于句首时主句用部分倒装，用来强调收获，适合结尾总结。}
+
+\fanpat{If you come to Chengdu, I will show you around the city.}{如果你来成都，我会带你逛逛这座城市。}{if 引导条件状语从句，遵循“主将从现”，常用于邀请与承诺。}
+
+\fanpat{Why not put down your phone and go out to enjoy the sunshine?}{为什么不放下手机，出门享受阳光呢？}{Why not do...? 用来委婉地提出建议，比 You should... 更亲切自然。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{难忘的西岭雪山之旅}{An Unforgettable Trip to Xiling Snow Mountain}{约130词}
+Last winter holiday, my parents and I went to Xiling Snow Mountain. It was our first time seeing real snow, so we were excited all the way there.\par
+As soon as we arrived, we took the cable car up the mountain. The world turned white, and the trees were covered with snow. Never had I seen such a beautiful place. We rented two sleds and slid down the hill again and again. While we were playing, my mother took photos of us, and my father laughed like a child. In the afternoon, we drank hot tea in a small wooden house. My hands were cold, but my heart was warm.\par
+The trip lasted only two days, but it is still fresh in my memory. What an unforgettable holiday I had!\par
+\begin{analysisbox}
+1）开头用 Last winter holiday 交代时间，our first time seeing real snow 写出期待，为下文写雪景作铺垫。2）主体按“上山—玩雪—喝茶”的顺序展开，the world turned white、the trees were covered with snow 写出雪景，Never had I seen such a beautiful place 用否定词提前的倒装句强化惊喜。3）结尾把 only two days 与 still fresh 对照，再用 What 感叹句收束，点题有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Never had I seen such a beautiful place.}\quad{\small\color{textgray}（译文：我从来没有见过这么美的地方。）}
+\end{analysisbox}
+
+\fanessay{范文二}{一封关于假期计划的信}{A Letter About My Holiday Plan}{约105词}
+Dear Anna, I'm writing to tell you about my plan for the coming National Day holiday.\par
+My parents and I are going to visit Dujiangyan first. We will learn about the ancient irrigation system and walk along the river. Then we will go to the Panda Base to see the baby pandas. In the evening, we will walk around Kuanzhai Alley and try local snacks. If you come to Chengdu, I will show you around the city. We can try hotpot and watch a Sichuan opera show together. I'm sure you will love the face-changing show.\par
+Please tell me your plan soon. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信格式完整：Dear Anna 开头，Yours, Li Hua 结尾，I'm writing to tell you about my plan 一句点明写信目的。2）主体用 first、then、in the evening 等词按游览顺序介绍都江堰、熊猫基地和宽窄巷子，内容具体；If you come to Chengdu, I will show you around the city 用条件句发出邀请，真诚自然。3）结尾 Please tell me your plan soon 把话题交回对方，体现书信的交流感。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape If you come to Chengdu, I will show you around the city.}\quad{\small\color{textgray}（译文：如果你来成都，我会带你逛逛这座城市。）}
+\end{analysisbox}
+
+\fanessay{范文三}{我在三星堆的见闻}{What I Saw at Sanxingdui}{约124词}
+During the summer holiday, I visited the Sanxingdui Museum in Guanghan with my classmates. I had read about it, but the real objects were even more amazing.\par
+In the first hall, we saw a huge bronze mask with big eyes. It was over three thousand years old. Our guide told us how people made it long ago. The gold mask shone brightly under the light. I could not believe my eyes. I stood there for a long time, imagining the ancient kingdom. Later, we made small clay masks by ourselves. Mine was ugly, but I loved it.\par
+On the way back, we kept talking about what we had seen. History is not only in books; it is also around us, waiting to be discovered.\par
+\begin{analysisbox}
+1）开头交代时间、地点和同行者，I had read about it, but the real objects were even more amazing 用书本与实物的对比制造悬念。2）主体按参观顺序写青铜面具、金面具和亲手做陶泥面具，three thousand years old 与 the gold mask shone brightly 等细节让见闻具体可感。3）结尾由一次参观上升到对历史的思考，History is not only in books 一句用 not only 结构升华主题，收束自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape History is not only in books; it is also around us, waiting to be discovered.}\quad{\small\color{textgray}（译文：历史不仅在书本里，它也在我们身边，等待着被发现。）}
+\end{analysisbox}
+
+\fanessay{范文四}{让我长大的那个假期}{The Holiday That Made Me Grow Up}{约138词}
+Last summer holiday, my mother was ill and stayed in bed for a week. For the first time, I had to take care of everything at home.\par
+At first, I thought it was easy. But soon I found that cooking was harder than I expected. My first mapo tofu was too salty, and the rice was too soft. I felt upset, but my mother smiled and said, “Thank you. It smells good.” Then I watched cooking videos and learned step by step. While I was cooking, my mother gave me some advice. On the fourth day, I made a good meal. I also cleaned the rooms and washed the clothes. When my mother got better, she said I had grown up.\par
+That holiday taught me more than any textbook. Caring for others is a kind of happiness, too.\par
+\begin{analysisbox}
+1）开头用妈妈生病这一突发事件设置情境，For the first time 点出“我”不得不独自撑起家务的处境。2）主体写做饭从失败到成功的全过程，too salty、too soft 与第四天的 a good meal 形成前后对比，妈妈那句鼓励让情节温暖可信。3）结尾用 That holiday taught me more than any textbook 总结收获，再用 Caring for others 点明成长的含义，升华贴切。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape That holiday taught me more than any textbook.}\quad{\small\color{textgray}（译文：那个假期教给我的，比任何课本都多。）}
+\end{analysisbox}
+
+\fanessay{范文五}{怎样度过一个有意义的假期}{How to Spend a Meaningful Holiday}{约113词}
+The winter holiday is coming. Some of my classmates plan to stay in bed and play games all day. I think we can do something better.\par
+First, make a simple plan. Write down three things you want to finish, such as reading two books or learning to swim. Second, go out and exercise. You can run along the greenway or play basketball with friends. Third, spend time with your family. Why not cook a meal for your parents? Last, try something new, like visiting a museum or helping out at a community center.\par
+A holiday is not just a break from school but also a chance to grow. Let's make it meaningful together.\par
+\begin{analysisbox}
+1）开头先摆出同学“睡懒觉、打游戏”的现象，再用 I think we can do something better 提出观点，切入自然。2）主体用 First、Second、Third、Last 分层给出建议，Why not cook a meal for your parents 用反问句提出建议，语气亲切不生硬。3）结尾用 not just... but also 重新定义假期的意义，并以 Let's... 发出号召，收束有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A holiday is not just a break from school but also a chance to grow.}\quad{\small\color{textgray}（译文：假期不只是离开学校的休息，也是成长的机会。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我的假期}{My Holiday}{约94词}
+Last summer holiday, I went to my grandparents' home in the countryside. I stayed there for two weeks.\par
+Every morning, I got up early and helped my grandpa water the vegetables. After breakfast, I did my homework under a big tree. In the afternoon, I went fishing with my cousin. We caught three fish, and Grandma cooked them for dinner. At night, we sat outside and looked at the stars. The air was fresh, and the night was quiet.\par
+I was sad when I had to go home. I will never forget that holiday.\par
+\begin{transbox}
+去年暑假，我去了乡下爷爷奶奶家。我在那里住了两个星期。每天早上，我早早起床，帮爷爷给菜地浇水。早饭后，我在一棵大树下写作业。下午，我和表哥去钓鱼。我们钓到三条鱼，奶奶把它们做成了晚饭。晚上，我们坐在屋外看星星。空气很清新，夜晚很安静。不得不回家时，我很难过。我永远不会忘记那个假期。
+\end{transbox}
+
+\fanessay{范文七}{青城山之旅}{A Trip to Qingcheng Mountain}{约101词}
+Last October, my family and I went to Qingcheng Mountain. It was a cool and sunny day.\par
+We arrived at nine in the morning. The mountain was covered with green trees. We walked up the stone steps and listened to the birds. My father carried a big bag of water and fruit. When I felt tired, we stopped to rest. At noon, we ate noodles in a small restaurant. The owner was friendly and told us a story about the mountain.\par
+We got home at six. My legs were sore, but I was very happy. I hope to go there again.\par
+\begin{transbox}
+去年十月，我和家人去了青城山。那是一个凉爽又晴朗的日子。我们上午九点到达。山上长满了绿树。我们沿着石阶往上走，听着鸟叫。爸爸背着一大袋水和水果。我觉得累了，就停下来休息。中午，我们在一家小餐馆吃面。老板很友好，还给我们讲了关于这座山的故事。我们六点到家。我的腿很酸，但我非常开心。我希望还能再去那里。
+\end{transbox}
+
+\fanessay{范文八}{我的假期计划}{My Holiday Plan}{约95词}
+The summer holiday is coming. I have made a plan for it.\par
+First, I will read four books. I will write a short report after reading each book. Second, I will learn to swim. My uncle is a good swimmer, and he will teach me twice a week. Third, I will go to Dujiangyan with my parents for three days. We will walk along the river and eat local food. I will also help my mother do some housework.\par
+I think my holiday will be busy but fun. I can't wait for it to start.\par
+\begin{transbox}
+暑假就要到了。我已经为暑假做好了计划。首先，我要读四本书。每读完一本，我会写一篇简短的读书报告。其次，我要学游泳。叔叔游泳游得很好，他每周教我两次。第三，我要和父母去都江堰玩三天。我们会沿着河边散步，品尝当地美食。我还会帮妈妈做些家务。我想我的假期会忙碌而有趣。我迫不及待地等着它开始。
+\end{transbox}
+
+\fanessay{范文九}{假期里的一天}{A Day in My Holiday}{约95词}
+Last Tuesday was a happy day during my holiday.\par
+I got up at seven and ran with my father in the park. After breakfast, I did my homework for an hour. At ten, I met my friend Li Ming at the library. We read books and borrowed two storybooks. In the afternoon, we went to People's Park. We rowed a boat on the lake and ate ice cream under the trees. In the evening, my family had hotpot together. We talked and laughed a lot.\par
+I went to bed at ten. What a wonderful day!\par
+\begin{transbox}
+上周二是我假期里快乐的一天。我七点起床，和爸爸在公园里跑步。早饭后，我做了一个小时作业。十点，我在图书馆见到了朋友李明。我们一起看书，还借了两本故事书。下午，我们去了人民公园。我们在湖上划船，在树下吃冰淇淋。晚上，我们一家人一起吃火锅。我们聊了很多，也笑了很多。我十点上床睡觉。多么美好的一天啊！
+\end{transbox}
+
+\fanessay{范文十}{一个难忘的假期}{An Unforgettable Holiday}{约98词}
+Last summer, I joined a volunteer group in my neighborhood. We helped clean the greenway near the Jinjiang River.\par
+On the first day, we picked up bottles and waste paper from the grass. It was hot, and my back hurt. But an old man stopped and said, “Thank you, children. The river looks cleaner now.” His words made me happy. After that, we put up a small sign and asked people not to litter. Many people smiled and said yes.\par
+I did not travel far that holiday, but I learned something important. Helping others makes a holiday unforgettable.\par
+\begin{transbox}
+去年夏天，我参加了社区里的志愿者小组。我们帮忙清扫锦江边的绿道。第一天，我们从草丛里捡起瓶子和废纸。天气很热，我的背都酸了。但一位老人停下来，说：“谢谢你们，孩子们。现在河水看起来干净多了。”他的话让我很开心。之后，我们立了一块小牌子，请人们不要乱扔垃圾。许多人都笑着答应了。那个假期我没有去很远的地方旅行，但我学到了很重要的东西。帮助他人让假期变得难忘。
+\end{transbox}
+
+
+\fanunit{2}{Home Sweet Home}{温暖的家}{一般现在时；there be 句型；家务表达}
+
+{\centering\small\color{accent}本单元写作任务：My Home and Housework（我的家与家务）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{There is a small garden behind my house, and there are two tall trees in it.}{我家房子后面有一个小花园，里面有两棵高大的树。}{there be 句型表示“某处有某物”，be 动词与后面的主语保持一致；主语为并列名词时遵循“就近原则”，适合介绍家居环境。}
+
+\fanpat{My room is small but cosy, and it is always full of sunshine.}{我的房间虽小但很温馨，而且总是洒满阳光。}{用 but 先写不足再写优点，句子短而有余味，适合介绍类作文的开头。}
+
+\fanpat{Every weekend, I help my parents do some housework.}{每个周末，我都帮父母做些家务。}{一般现在时配合 every weekend 等频率状语，表达经常性的家务习惯，可作为“我帮父母做家务”类作文的主题句。}
+
+\fanpat{I sweep the floor, take out the rubbish and wash the dishes.}{我扫地、倒垃圾，还洗碗。}{用三个并列的动词短语列举家务，动词形式保持一致，内容具体，节奏明快。}
+
+\fanpat{It takes me about half an hour to clean my room.}{我打扫房间大约要半个小时。}{It takes sb some time to do sth 表示“做某事花费某人多少时间”，用来交代家务的耗时与辛苦。}
+
+\fanpat{The more housework I do, the more I understand my parents.}{我做的家务越多，就越理解我的父母。}{“the + 比较级, the + 比较级”表示“越……就越……”，适合在结尾写出做家务带来的成长。}
+
+\fanpat{Why not share the housework with your family this weekend?}{这个周末为什么不和家人一起分担家务呢？}{Why not do ...? 用于提出建议，语气亲切自然，适合建议信或倡议书的结尾。}
+
+\fanpat{A home is not just a place to live in but a place where love grows.}{家不只是一个居住的地方，更是一个让爱生长的地方。}{not just ... but ... 表示递进，后接 where 引导的定语从句，适合结尾升华“家的意义”。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{锦江边的小家}{My Home by the Jinjiang River}{约121词}
+My home is in a quiet neighbourhood near the Jinjiang River. There are four people in my family: my parents, my little sister and I.\par
+Our flat is small but warm and tidy. There is a bright living room, where we often talk after dinner. There are three bedrooms, and my room is the smallest one. I keep my books on a shelf and a family photo on the desk. From my window, I can see green trees and the river. My favourite place is the balcony. There are many green plants on it, and my mother grows tomatoes in two big pots.\par
+I love my home not because it is big, but because it is full of love and laughter.\par
+\begin{analysisbox}
+1）开头先写 My home is in a quiet neighbourhood near the Jinjiang River 交代位置，再用 There are four people in my family 点明家庭人数，语气亲切自然。2）主体按“客厅—卧室—阳台”的空间顺序介绍，There is 与 There are 交替出现，where 引导的定语从句让描写更连贯。3）结尾用 not because ... but because ... 形成对比，把“家”从房子升华到爱与欢笑。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape I love my home not because it is big, but because it is full of love and laughter.}\quad{\small\color{textgray}（译文：我爱我的家，不是因为它大，而是因为它充满了爱与欢笑。）}
+\end{analysisbox}
+
+\fanessay{范文二}{第一次给爸妈做饭}{The First Time I Cooked for My Parents}{约137词}
+Last Sunday, my parents went to work early, so I decided to cook lunch for them. I was a little nervous because I had never cooked alone before.\par
+I made tomato and egg noodles, a dish my mother often cooks. First, I washed the tomatoes and cut them into small pieces. Then I fried the eggs with the tomatoes, added water and cooked the noodles. When the noodles were ready, I put them into three bowls. The kitchen was a mess: there were tomato skins on the table and water on the floor. It took me ten minutes to clean up.\par
+When my parents came back, they were surprised and happy. My father said the noodles were delicious. Now I often help in the kitchen, because cooking for the people we love is a kind of happiness.\par
+\begin{analysisbox}
+1）开头用 Last Sunday 交代时间，decided to cook lunch 点明事件，I was a little nervous 写出心理，叙事有起伏。2）主体按“备菜—煮面—收拾厨房”的顺序展开，First、Then、When 等连接词使过程清楚，there were tomato skins ... 既写实又自然复现了 there be 的过去形式。3）结尾回到一般现在时，用 Now I often help ... 写出这件事带来的改变，并把“做家务”升华为“表达爱”。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Now I often help in the kitchen, because cooking for the people we love is a kind of happiness.}\quad{\small\color{textgray}（译文：现在，我经常在厨房帮忙，因为为所爱的人做饭是一种幸福。）}
+\end{analysisbox}
+
+\fanessay{范文三}{给朋友介绍新家}{A Letter About Our New Flat}{约139词}
+Dear Lucy, How are you? We moved to a new flat near Huanhuaxi Park last month, and I can't wait to tell you about it.\par
+The flat is on the twelfth floor, so from the living room we can see the whole park. There is a soft sofa in it, and a tall bookshelf stands against the wall. My mother's favourite place is the kitchen, because she can cook Sichuan food there. There are two bedrooms, and mine has a desk by the window. What I like most is the small garden behind the building, where green bamboo grows. On Sunday mornings, I often read English there.\par
+I hope you can come and visit us during the summer holiday. You can stay in my room, and I will show you around the park. Write back soon. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头用 How are you? 问候，再用 moved to a new flat ... 点明写信缘由，语气亲切。2）主体按“楼层视野—客厅—厨房—卧室—楼下花园”的顺序介绍新家，There is 与 There are 交替出现，from、against、behind 等方位词使空间关系清楚；What I like most is ... 用主语从句强调最爱的角落。3）结尾用 I hope you can come and visit us 发出邀请，并主动提出 show you around，符合朋友间书信的口吻。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape What I like most is the small garden behind the building, where green bamboo grows.}\quad{\small\color{textgray}（译文：我最喜欢的是楼后的小花园，那里长着青翠的竹子。）}
+\end{analysisbox}
+
+\fanessay{范文四}{给爸妈的家务分工建议信}{A Letter to My Parents About Sharing the Housework}{约138词}
+Dear Dad and Mum, You are both busy with work, and I want to help more at home. May I share some ideas about our housework?\par
+I think we can make a simple plan. Dad, you can cook dinner on weekdays, since you are the best cook in our family. Mum, you can wash the clothes and water the plants on the balcony. I can sweep the floor, take out the rubbish and clean the table after dinner. On weekends, we can clean the flat together. When we all help, the work takes only about an hour, and then we can have a rest.\par
+The three of us are like a team. If each of us does a little, our home will be a cleaner and happier place. What do you think of my plan? Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头先体谅父母 You are both busy with work，再提出 May I share some ideas ...，语气礼貌，容易让人接受。2）主体按“爸爸—妈妈—我—全家”分配任务，can 反复出现，家务表达具体，When we all help ... 说明分工的好处。3）结尾先把一家三口比作一个团队，再用 If each of us does a little ... 点明分工的意义，并以问句征求父母意见，互动感强。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape If each of us does a little, our home will be a cleaner and happier place.}\quad{\small\color{textgray}（译文：如果我们每个人都做一点，我们的家会变得更干净、更快乐。）}
+\end{analysisbox}
+
+\fanessay{范文五}{家不只是一座房子}{Home Is More Than a House}{约136词}
+Some people think a home is a big house with a garden. In my eyes, a home is much more than that.\par
+A home is the place where my mother's soup is always warm and my father's jokes are always silly. It is the small table where we talk about our day, the sofa where we watch a film on rainy nights, and the kitchen where we make dumplings together. When I fail an exam, my parents never shout at me. They sit with me and tell me that tomorrow is another day. There is no TV show or computer game that can take the place of these moments.\par
+Houses are made of bricks, but homes are made of love, patience and time. That is why my heart always goes back to this warm little place.\par
+\begin{analysisbox}
+1）开头先破后立：先写 Some people think ... 的常见看法，再用 In my eyes ... 提出自己的观点，观点鲜明。2）主体用 where 引导的定语从句串起“餐桌—沙发—厨房”的生活细节，再以父母在考试失利时的反应为例，最后用 There is no TV show or computer game ... 强调这些时刻无可替代。3）结尾 Houses are made of bricks, but homes are made of love ... 用对比句收束，把“房子”与“家”的区别点透。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Houses are made of bricks, but homes are made of love, patience and time.}\quad{\small\color{textgray}（译文：房子由砖块砌成，而家由爱、耐心和时间筑成。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我在成都的家}{My Home in Chengdu}{约88词}
+I live in a flat in Chengdu with my parents and my grandma. There are three bedrooms, a living room and a kitchen.\par
+My home is not big, but it is always clean and bright. There is a small balcony, and my grandma grows flowers and green onions there. In the evening, we often sit in the living room and talk about our day. My father makes tea, and I tell them funny stories from school.\par
+I love my home. It is the warmest place in the world.\par
+\begin{transbox}
+我和爸爸妈妈、奶奶一起住在成都的一套公寓里。家里有三间卧室、一个客厅和一个厨房。我的家不大，但总是干净明亮。家里有一个小阳台，奶奶在那里种花，还种着葱。傍晚，我们常常坐在客厅里聊一天发生的事。爸爸泡茶，我给他们讲学校里的趣事。我爱我的家。它是世界上最温暖的地方。
+\end{transbox}
+
+\fanessay{范文七}{我的小房间}{My Small Room}{约94词}
+My room is my favourite place at home. It is small but tidy.\par
+There is a bed, a desk and a bookshelf in it. My desk is by the window, so I can see the trees outside when I read. On the wall, there is a photo of my family and a picture of pandas. I keep my books and pens in good order. After I finish my homework, I often listen to music on my bed.\par
+My room is not big, but it is full of my dreams. I clean it every Saturday.\par
+\begin{transbox}
+我的房间是我在家里最喜欢的地方。它很小，但很整洁。房间里有一张床、一张书桌和一个书架。我的书桌在窗边，所以我读书时能看到窗外的树。墙上有一张全家福和一幅熊猫画。我把书和笔收拾得整整齐齐。写完作业后，我常常躺在床上听音乐。我的房间不大，但装满了我的梦想。我每个星期六都打扫它。
+\end{transbox}
+
+\fanessay{范文八}{我帮父母做家务}{I Help My Parents with Housework}{约80词}
+My parents are busy with work, so I often help them with the housework at home.\par
+On weekdays, I take out the rubbish after dinner and wash my own bowl. On Saturday morning, I sweep the floor and clean the table. Sometimes I help my mother wash vegetables. It takes me about twenty minutes to finish, but my mother looks very happy.\par
+Doing housework is tiring, but it makes me feel useful. I will keep helping my family every day.\par
+\begin{transbox}
+爸爸妈妈工作很忙，所以我常常在家帮他们做家务。工作日，我晚饭后倒垃圾，还洗自己的碗。星期六早上，我扫地、擦桌子。有时我帮妈妈洗菜。这些活大约要花我二十分钟，但妈妈看起来非常开心。做家务很累，但它让我觉得自己有用。我会每天继续帮家里做事。
+\end{transbox}
+
+\fanessay{范文九}{我的周六家务}{My Saturday Chores}{约91词}
+Saturday is my housework day. I get up at eight and make my bed first.\par
+Then I clean my room and put my books back on the shelf. After lunch, I wash the dishes while my mother rests. In the afternoon, I water the plants on the balcony and help my father clean the windows. We often finish the work in an hour.\par
+After that, I feel tired but happy. A clean home makes everyone comfortable. I think housework is a good way to say “I love you” to my family.\par
+\begin{transbox}
+星期六是我的家务日。我八点起床，先整理床铺。然后我打扫房间，把书放回书架。午饭后，妈妈休息，我来洗碗。下午，我给阳台上的植物浇水，还帮爸爸擦窗户。我们常常一个小时就干完。之后，我觉得累但很开心。干净的家让每个人都舒服。我认为做家务是向家人说“我爱你”的好方式。
+\end{transbox}
+
+\fanessay{范文十}{家的温暖}{The Warmth of Home}{约80词}
+Last winter, I had a bad cold and stayed at home for a week.\par
+Every morning, my mother brought me warm porridge and sat by my bed. My father bought me some books and read funny stories to me. My little dog stayed at the foot of my bed all day. I felt ill, but my heart was warm.\par
+Now I know that home is not just a house. It is the people who love you and stay with you.\par
+\begin{transbox}
+去年冬天，我得了重感冒，在家待了一个星期。每天早上，妈妈给我端来热粥，坐在我床边。爸爸给我买了几本书，还给我读有趣的故事。我的小狗整天待在我床脚边。我生病了，但心里暖暖的。现在我知道，家不只是一座房子。家是那些爱你、陪着你的人。
+\end{transbox}
+
+
+\fanunit{3}{Same or Different?}{相同还是不同？}{比较级与最高级；both...and；比较异同}
+
+{\centering\small\color{accent}本单元写作任务：My Friend and I（我和我的朋友）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{My best friend and I have a lot in common, but we are also quite different.}{我和我最好的朋友有很多共同点，但我们也大不相同。}{开头总起句：have a lot in common 说“同”，be different 说“异”，一句话立起“同中有异”的对比框架。}
+
+\fanpat{Both of us like playing basketball, and both of us are good at English.}{我们俩都喜欢打篮球，英语也学得好。}{both 作代词时后接 of + 复数代词，谓语动词用复数；both...and... 连接两个并列主语时，谓语也用复数。}
+
+\fanpat{My classmate is much taller than I am, but I am more outgoing than she is.}{我的同学比我高很多，但我比她更外向。}{比较级 + than 写两人的差异；much、a little、even 等词放在比较级前，可以表示差别的大小。}
+
+\fanpat{I am not as tall as my brother, but I run faster than he does.}{我没有哥哥高，但我跑得比他快。}{not as/so... as... 表示“不如”，与比较级配合使用，能客观地写出各自的长处，避免一味贬低对方。}
+
+\fanpat{Of all my friends, Chen Jie is the most patient and the easiest to talk to.}{在我所有的朋友中，陈杰最有耐心，也最容易相处。}{最高级用于三者或三者以上的比较，前面一般加 the，常用 of all... 或 in our class 说明比较范围。}
+
+\fanpat{My friend Lily likes quiet music, while I prefer rock.}{我的朋友莉莉喜欢安静的音乐，而我更喜欢摇滚。}{while 连接两个分句表示对比，是写“不同点”时最简洁的连接词，注意前后结构尽量对称。}
+
+\fanpat{The more time we spend together, the better we understand each other.}{我们在一起的时间越多，就越了解彼此。}{the + 比较级, the + 比较级 表示“越……就越……”，用来写友谊在相处中加深，是提分句式。}
+
+\fanpat{Although we are different in many ways, our friendship is stronger than ever.}{虽然我们在很多方面不同，但我们的友谊比以往更牢固。}{although 引导让步状语从句，主句用比较级收尾，适合写“求同存异”的结尾；注意 although 不与 but 连用。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{我们不一样，却最合拍}{Different, Yet the Best of Friends}{约130词}
+My best friend Zhang Han and I became friends in primary school, and we are still close today. We have a lot in common, yet we are different in many ways.\par
+Both of us love basketball and play for the school team. However, Zhang Han is much taller and more outgoing than I am, while I am quieter and do better in maths. He makes friends easily; I prefer reading at home. He is the loudest boy on the playground, and I am the quietest one in the library.\par
+Different as we are, we never let it get in the way of our friendship. The more time we spend together, the better we understand each other. A good friendship is not about being the same, but about accepting the differences.\par
+\begin{analysisbox}
+1）开篇用 became friends in primary school 交代友谊的起点，再用 still close today 点出时间跨度；第二句以 have a lot in common 与 different in many ways 形成对照，迅速立起全文的“同与异”。2）主体先用 both of us 写共同点，再用 However 与 while 转写差异，最后用 the loudest、the quietest 两个最高级作漫画式对比，层次清楚。3）结尾 Different as we are... 是 as 引导的倒装让步句，意为“尽管我们如此不同”，随后用 the more..., the more... 句式收束，点明友谊的真谛是接纳差异。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Different as we are, we never let it get in the way of our friendship.}\quad{\small\color{textgray}（译文：尽管我们如此不同，我们从不让它妨碍我们的友谊。）}
+\end{analysisbox}
+
+\fanessay{范文二}{双胞胎姐妹：同一张脸，两个人}{My Twin Sister: Same Face, Different Person}{约134词}
+People often mistake my twin sister Lin Yue for me. We have the same face and the same voice, but inside we are very different.\par
+Both my sister and I get up at six thirty and take the metro to school. English is our favourite subject, and we both love watching pandas at the Chengdu Panda Base. However, Lin Yue is more careful than I am, and she keeps the tidiest desk in our class. I am more talkative, and I make people laugh. She listens to quiet music, while I prefer rock.\par
+Our parents say we are like two sides of the same coin: different, but always together. Although we argue sometimes, she is the first person I turn to. I am glad to have a twin sister who knows me so well.\par
+\begin{analysisbox}
+1）开头用 People often mistake... for me 这一生活细节切入，same face 与 very different 一句转折，制造“同貌不同人”的悬念。2）主体先用两处 both 交代双胞胎的共同点，再用 more careful、the tidiest 等比较级与最高级写差异，最后以 while 对比听歌口味，材料具体可感。3）结尾用 two sides of the same coin 的比喻和 Although 让步句收束，把“不同”写成“互补”，情感真挚。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Our parents say we are like two sides of the same coin: different, but always together.}\quad{\small\color{textgray}（译文：父母说我们就像同一枚硬币的两面：不同，却永远在一起。）}
+\end{analysisbox}
+
+\fanessay{范文三}{我选朋友的三条标准}{What I Look for in a Friend}{约125词}
+Some classmates choose friends by looks or grades. For me, three things matter much more.\par
+First, a friend should be honest. A true friend is not the one who always agrees with you, but the one who tells you the truth when you are wrong. Last term, Chen Jie pointed out a mistake in my plan, and that saved me a lot of time. Second, a friend should be kind. Such a friend never laughs at others and always helps the quieter students in our class. Third, shared interests bring us together. We both love science, so we often go to the science museum and talk for hours.\par
+Looks and grades may change, but character does not. That is why I think honesty matters most.\par
+\begin{analysisbox}
+1）开头先摆出 Some classmates choose friends by looks or grades 这一现象，再用 three things matter much more 亮出观点，对比鲜明。2）主体用 First、Second、Third 分条列出诚实、善良、共同兴趣三条标准，每条都有事例或细节支撑，做到先亮观点、再举例子，说服力强。3）结尾 Looks and grades may change, but character does not 用对比收束，把话题从“选朋友”提升到“看人品”，立意更高。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A true friend is not the one who always agrees with you, but the one who tells you the truth when you are wrong.}\quad{\small\color{textgray}（译文：真正的朋友不是总顺着你的人，而是在你犯错时对你说真话的人。）}
+\end{analysisbox}
+
+\fanessay{范文四}{城市与乡村：两种生活}{City Life and Country Life}{约125词}
+I grew up in Chengdu, but my grandparents live in a small village in Chongzhou. That is why I know both city life and country life well.\par
+City life is busier and more convenient. There are more buses and metro lines, bigger libraries and better cinemas. However, the city is also noisier and more crowded. In the village, the air is fresher, the streets are quieter, and I can see stars at night. My grandpa grows vegetables, and everything on our table tastes sweeter. Time there seems to pass more slowly, and nobody is in a hurry.\par
+The city gives me chances to learn, and the country gives me peace of mind. I love both, and each of them is a part of my life.\par
+\begin{analysisbox}
+1）开头交代“我在成都长大、祖父母住在崇州乡下”的生活背景，两句话说明自己为什么能比较城乡，真实可信。2）主体分层对比：先写城市的 busier、more convenient，再写乡村的 fresher、quieter，中间用 However 转换，并用 more buses、bigger libraries 等比较级把抽象感受落到具体事物上。3）结尾 The city gives me..., and the country gives me... 用对称句收束，不偏袒任何一方，表现出客观、成熟的思考。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape The city gives me chances to learn, and the country gives me peace of mind.}\quad{\small\color{textgray}（译文：城市给我学习的机会，乡村给我内心的宁静。）}
+\end{analysisbox}
+
+\fanessay{范文五}{一场误会之后}{After a Misunderstanding}{约138词}
+Last Monday, my best friend Wang Yu promised to help me with my science project, but he never came. I waited in the classroom for an hour, and my anger grew with every minute.\par
+The next morning, I said something unkind to him in front of our classmates. He looked at me and said nothing. Later, our teacher told me that his little sister was in hospital and he had to stay with her all night. I felt terrible. After school, I found him and said sorry. He smiled and said he was sorry for not telling me earlier. He promised to let me know next time.\par
+That day I learned that a short talk is better than a long silence. Now, when something goes wrong, I ask first instead of judging. Our friendship is stronger than before.\par
+\begin{analysisbox}
+1）开头用 promised to help... but he never came 设置冲突，waited for an hour 与 anger grew 把“误会”写得真实可感。2）主体先写“我”当众说了伤人的话，再用 teacher told me 揭开真相，情节一转；随后的道歉与和解用一连串短句推进，节奏明快。3）结尾 That day I learned... 点明主题，a short talk is better than a long silence 用比较级把道理说得含蓄有力，Now... I ask first instead of judging 则写出“我”的成长。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape That day I learned that a short talk is better than a long silence.}\quad{\small\color{textgray}（译文：那天我明白了，一次短短的交谈胜过长久的沉默。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我和我的好朋友}{My Good Friend and I}{约80词}
+Liu Yang is my good friend. We are in the same class, and he sits next to me.\par
+We both like basketball and music. He is taller and more outgoing than I am. I am quieter and better at English. He often helps me with maths after school. On Sunday afternoons, we play basketball in the park near our school.\par
+We are different, but we are still best friends. I think a true friend is the best gift in life.\par
+\begin{transbox}
+刘洋是我的好朋友。我们在同一个班，他坐在我旁边。我们俩都喜欢篮球和音乐。他比我高，也比我外向。我更安静，英语学得更好。放学后他常常帮我学数学。星期天下午，我们在学校附近的公园里打篮球。我们不一样，但依然是最好的朋友。我认为真正的朋友是人生中最好的礼物。
+\end{transbox}
+
+\fanessay{范文七}{我的双胞胎朋友}{My Twin Friends}{约88词}
+I have two good friends, Wang Ke and Wang Le. They are twin sisters, and they look exactly the same.\par
+Both of them are kind and helpful. But they are different in many ways. Wang Ke is quieter. She likes reading and drawing. Wang Le is more active. She plays volleyball and talks a lot.\par
+At first, I could not tell them apart. Now I can, because Wang Ke always smiles first. They look like one person, but they live in two different ways. I like them both.\par
+\begin{transbox}
+我有两个好朋友，王可和王乐。她们是双胞胎姐妹，长得一模一样。她们俩都很善良、乐于助人，但在很多方面又不一样。王可更安静，她喜欢看书和画画。王乐更活泼，她打排球，话也很多。一开始我分不清她们俩。现在我能分清了，因为王可总是先笑。她们看起来像一个人，却过着两种不同的生活。她们两个我都喜欢。
+\end{transbox}
+
+\fanessay{范文八}{我的同学李伟}{My Classmate Li Wei}{约80词}
+Li Wei is my classmate. He sits behind me. He is the tallest boy in our class.\par
+Li Wei is very quiet. He does not talk much, but he is good at maths. I am good at English, so we often help each other. Last term, he taught me how to solve a hard maths problem. I helped him practise speaking English.\par
+He does not say much, but he is warm-hearted. I am lucky to have him as my classmate.\par
+\begin{transbox}
+李伟是我的同学。他坐在我后面。他是我们班最高的男生。李伟很安静，话不多，但他数学很好。我英语好，所以我们常常互相帮助。上个学期，他教我怎么解一道数学难题，我帮他练习说英语。他话不多，却是个热心的人。有他做同学，我很幸运。
+\end{transbox}
+
+\fanessay{范文九}{成都与重庆}{Chengdu and Chongqing}{约79词}
+My family lives in Chengdu. My aunt lives in Chongqing. Both are big cities in the southwest of China.\par
+The two cities are alike in some ways. People in both places love hot pot and are very friendly. But they are also different. Chongqing has more hills and bridges, and it is hotter in summer. Chengdu is flatter and greener, with more parks and teahouses.\par
+I like both cities. But Chengdu is my home, so I love it more.\par
+\begin{transbox}
+我家住在成都，我姑姑住在重庆。两座城市都是中国西南地区的大城市。这两座城市在某些方面很相似：两地的人都爱吃火锅，也非常热情。但它们也有不同：重庆的山和桥更多，夏天也更热；成都更平坦、更绿，公园和茶馆也更多。两座城市我都喜欢。但成都是我的家，所以我更爱成都。
+\end{transbox}
+
+\fanessay{范文十}{我更喜欢的地方}{The Place I Like More}{约80词}
+There are two places near my home: a milk tea shop and an old teahouse. I like the teahouse more.\par
+The milk tea shop is newer and more popular. The music is loud, and the drinks are more expensive. The teahouse is smaller and older. But it is quieter and cheaper. Old men play chess there, and I can read a book for a whole afternoon.\par
+So I choose the teahouse. Life there is slower, but it makes me happier.\par
+\begin{transbox}
+我家附近有两个地方：一家奶茶店和一家老茶馆。我更喜欢那家茶馆。奶茶店更新、更受欢迎，音乐很响，饮料也更贵。茶馆更小、更旧，但更安静、更便宜。老人们在那里下棋，我可以在那儿看一整个下午的书。所以我选茶馆。那里的生活节奏慢一些，却让我更快乐。
+\end{transbox}
+
+
+\fanunit{4}{Amazing Plants and Animals}{神奇的动植物}{一般现在时；最高级；数字与量词；说明文}
+
+{\centering\small\color{accent}本单元写作任务：Amazing Plants and Animals（神奇的动植物）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{Giant pandas are one of the most famous animals in the world.}{大熊猫是世界上最著名的动物之一。}{one of the + 形容词最高级 + 复数名词，用于说明文中给说明对象定位，注意名词用复数。}
+
+\fanpat{A giant panda has a white body with black patches around its eyes, ears and shoulders.}{大熊猫有着白色的身体，眼睛、耳朵和肩膀周围有黑色斑块。}{with 短语可用来描写外形，按“整体—局部”的顺序介绍，句子紧凑。}
+
+\fanpat{There are only about 1,800 giant pandas living in the wild.}{目前野外只剩下大约1800只大熊猫。}{there be + about + 数字 + doing 作后置定语，客观说明数量；数字不确定时用 about 或 around。}
+
+\fanpat{Bamboo makes up most of a panda's diet, so it spends more than ten hours a day eating.}{竹子占大熊猫食物的绝大部分，所以它每天要花十多个小时吃东西。}{make up 表示“占……比例”，spend time doing 描述日常习性，是说明文常用搭配。}
+
+\fanpat{The Chengdu Research Base of Giant Panda Breeding is the best place to see pandas up close.}{成都大熊猫繁育研究基地是近距离观看大熊猫的最佳地点。}{the + 最高级 + 名词 + to do，用不定式作定语介绍地点，适合写参观推荐。}
+
+\fanpat{We should stop buying things made from wild animals and tell more people about the problem.}{我们应该停止购买野生动物制品，并把这个问题告诉更多的人。}{should + 动词原形提出建议；made from 是过去分词短语作后置定语。}
+
+\fanpat{If we all do our part, these animals will have a safer home.}{如果我们每个人都尽一份力，这些动物就会有一个更安全的家。}{if 引导条件状语从句，主句用一般将来时，即“主将从现”，常用于倡议结尾。}
+
+\fanpat{Plants not only feed us but also clean the air we breathe.}{植物不仅为我们提供食物，还净化我们呼吸的空气。}{not only... but also... 连接两个并列成分，说明事物的多重作用；we breathe 前省略了关系代词 that。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{大熊猫：中国的国宝}{The Giant Panda: China's National Treasure}{约125词}
+The giant panda is one of the most famous animals in the world. It is a symbol of China, and people of all ages love it.\par
+A giant panda has a white body with black patches around its eyes, ears and shoulders. It looks like a big soft toy, but it is actually a strong bear. Bamboo makes up most of its diet, so it spends more than ten hours a day eating.\par
+Today there are only about 1,800 giant pandas living in the wild. The Chengdu Research Base of Giant Panda Breeding is the best place to see them up close. Scientists there help baby pandas grow up safely. If we protect their forests, these lovely animals will continue to live in the wild.\par
+\begin{analysisbox}
+1）开篇用 one of the most famous animals 给大熊猫定位，再用 a symbol of China 提升分量，两句话点明说明对象。2）主体按“外形—食物—数量—保护”的顺序展开，has a white body with black patches 用 with 短语描写外形，Bamboo makes up most of its diet, so it spends more than ten hours a day eating 一句用具体数字说明食量。3）结尾把话题落到成都熊猫基地，并用 If we protect their forests... 的条件句发出呼吁，说明与倡议自然结合。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Bamboo makes up most of its diet, so it spends more than ten hours a day eating.}\quad{\small\color{textgray}（译文：竹子占大熊猫食物的绝大部分，所以它每天要花十多个小时吃东西。）}
+\end{analysisbox}
+
+\fanessay{范文二}{保护濒危动物，从今天开始}{Protect Endangered Animals Today}{约122词}
+Dear fellow students, today I want to talk about animals in danger. Giant pandas are lucky because people protect them, but many other animals are not so lucky.\par
+Why are they in danger? People cut down forests, so animals lose their homes. Some people buy things made from wild animals, and this brings hunters a lot of money. Every year, thousands of wild animals are caught and sold, and many of them die on the way.\par
+We can all help. First, stop buying anything made from wild animals. Second, join an animal protection club and tell more people about the problem. If we all do our part, these animals will have a safer home. Let's take action before it is too late.\par
+\begin{analysisbox}
+1）开头用 Dear fellow students 称呼听众，Giant pandas are lucky... but many other animals... 通过对比引出“濒危动物”这一话题，演讲感强。2）主体先用 Why are they in danger? 设问，再从砍伐森林、买卖野生动物两方面说明原因，thousands of wild animals are caught and sold 用约数把问题说得具体可感。3）结尾用 First、Second 给出两条可行建议，并以 If we all do our part... 的条件句和祈使句收束，呼吁有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape If we all do our part, these animals will have a safer home.}\quad{\small\color{textgray}（译文：如果我们每个人都尽一份力，这些动物就会有一个更安全的家。）}
+\end{analysisbox}
+
+\fanessay{范文三}{植物园里的一课}{A Lesson in the Botanical Garden}{约131词}
+Last Saturday, my class visited the Chengdu Botanical Garden. It was a cool morning, and the garden was quiet and green. The garden is home to thousands of plants from all over the world.\par
+A guide took us to the tropical glasshouse first. There we saw banana trees with huge leaves, and the air felt warm and wet. The most amazing plant was a huge ginkgo tree outside the glasshouse. Its yellow leaves looked like small fans. My teacher told us that ginkgo trees can live for more than a thousand years.\par
+Before we left, we planted a small tree near the gate. The guide said that one tree can give shade to many people and a home to many birds. I will go back and visit my tree next spring.\par
+\begin{analysisbox}
+1）开头用 Last Saturday 交代时间地点，quiet and green 两个形容词定下全文清新安静的基调，thousands of plants 则用约数交代植物园的规模。2）主体按参观顺序写玻璃温室和银杏树，the most amazing plant 用最高级突出银杏，Its yellow leaves looked like small fans 的比喻让描写具体可感。3）结尾写“种树”这一细节，并用 one tree can give shade... and a home... 说明树木的作用，最后一句 I will go back... 让文章有余味。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape My teacher told us that ginkgo trees can live for more than a thousand years.}\quad{\small\color{textgray}（译文：老师告诉我们，银杏树能活一千年以上。）}
+\end{analysisbox}
+
+\fanessay{范文四}{蚂蚁教会我的事}{What the Ants Taught Me}{约129词}
+Last summer, I spent a week at my grandma's home in the countryside. One afternoon, I saw a line of ants carrying a dead bee across the yard.\par
+The bee was much bigger than any ant, but the ants did not stop. Some pulled, others pushed, and a few ran back to the nest for help. Soon dozens of them were working together, and the bee slowly moved. Even the smallest ants carried pieces of food bigger than themselves. I watched for half an hour and forgot my ice cream.\par
+That afternoon taught me two things. First, being small does not mean being weak. Second, teamwork can make hard things possible. Now, when I meet a difficult problem, I think of those ants and ask my classmates for help.\par
+\begin{analysisbox}
+1）开头用 Last summer... One afternoon 交代时间，saw a line of ants carrying a dead bee 一句直接切入观察场景，叙事简洁。2）主体用 much bigger than any ant 与 did not stop 形成反差，Some pulled, others pushed, and a few ran back... 三个并列动作把蚂蚁的分工写得生动；Even the smallest ants carried pieces of food bigger than themselves 用最高级与比较级并置，点出“小而不弱”。3）结尾由事及理，用 First、Second 总结两条启示，并把道理落到自己的学习生活，升华自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Even the smallest ants carried pieces of food bigger than themselves.}\quad{\small\color{textgray}（译文：就连最小的蚂蚁也搬着比自己还大的食物碎块。）}
+\end{analysisbox}
+
+\fanessay{范文五}{竹子：一种神奇的植物}{Bamboo: A Wonderful Plant}{约118词}
+Bamboo is one of the fastest-growing plants in the world. Some kinds can grow almost one metre in a single day.\par
+Bamboo is not a tree but a kind of grass. Its stems are light and strong, so people use them to make chairs, baskets and even small bridges. In Sichuan, bamboo shoots are a popular dish in spring. Pandas love bamboo too, and it makes up most of their food.\par
+Bamboo also helps the land. Its roots hold the soil on hillsides, so heavy rain does not wash the earth away. For thousands of years, this wonderful plant has fed us and helped us build our homes. Let's plant more bamboo and use it in clever ways.\par
+\begin{analysisbox}
+1）开头用 one of the fastest-growing plants 和 almost one metre in a single day 给竹子定位，数字让“神奇”有了依据。2）主体从“不是树而是草”这一常识切入，再写竹材、竹笋和熊猫食物，makes up most of their food 一句把竹子与熊猫联系起来，说明层次清楚。3）结尾转向竹子对土地的保护，Its roots hold the soil... 一句点明生态作用，最后用 For thousands of years... 的现在完成时和祈使句收束，视野开阔。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Its roots hold the soil on hillsides, so heavy rain does not wash the earth away.}\quad{\small\color{textgray}（译文：它的根固定住山坡上的土壤，所以大雨不会把泥土冲走。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我最喜欢的动物：小熊猫}{My Favourite Animal: The Red Panda}{约104词}
+My favourite animal is the red panda. It is not a giant panda, but it is just as lovely.\par
+A red panda looks like a cat with red-brown fur. It has a long, bushy tail and small ears. It lives in mountain forests in southwest China and eats bamboo. During the day, it often sleeps in a tree. When it is awake, it climbs slowly and looks for food.\par
+I first saw red pandas at the Chengdu Panda Base. They were playing on a wooden bridge, and one of them looked at me. I hope more people will learn about them and help them.\par
+\begin{transbox}
+我最喜欢的动物是小熊猫。它不是大熊猫，但一样可爱。小熊猫看起来像一只长着红棕色皮毛的猫。它有一条毛茸茸的长尾巴和一对小耳朵。它生活在中国西南的山林里，吃竹子。白天，它常常睡在树上。醒来的时候，它慢慢地爬行，寻找食物。我第一次见到小熊猫是在成都熊猫基地。它们在一座木桥上玩耍，其中一只还看了看我。我希望更多的人了解它们、帮助它们。
+\end{transbox}
+
+\fanessay{范文七}{奶奶家屋后的竹子}{Bamboo Behind Grandma's House}{约100词}
+There is a bamboo forest behind my grandma's house in the countryside. It is my favourite place in summer.\par
+The bamboo is tall and green. Its stems are thin but very strong. In spring, small bamboo shoots come out of the ground, and Grandma cooks them with meat. They taste fresh and sweet. In summer, the bamboo leaves keep the sun off, so the ground stays cool. Grandma often makes baskets and chairs from bamboo.\par
+I like to sit there and listen to the wind in the leaves. Bamboo is useful and beautiful. It is a real gift from nature.\par
+\begin{transbox}
+乡下奶奶家的屋后有一片竹林。夏天，那里是我最喜欢的地方。竹子又高又绿。竹竿细细的，却非常结实。春天，小竹笋从地里冒出来，奶奶把它们和肉一起做成菜。竹笋吃起来又鲜又甜。夏天，竹叶挡住阳光，所以地面很凉快。奶奶常用竹子编篮子和椅子。我喜欢坐在那里，听风吹过竹叶的声音。竹子既有用又美丽。它是大自然真正的礼物。
+\end{transbox}
+
+\fanessay{范文八}{成都动物园的一天}{A Day at Chengdu Zoo}{约102词}
+Last month, my parents took me to Chengdu Zoo. It was a sunny Saturday.\par
+We saw giraffes, elephants and monkeys. The giraffes were the tallest animals there. They ate leaves from high branches, and their long necks moved slowly. The monkeys were the funniest. One little monkey took a child's hat and ran up a tree. Everyone laughed. At noon, we watched a baby elephant play with water.\par
+Before we went home, a zookeeper told us that animals in zoos need good food and clean water. We should be quiet and kind when we visit them. I hope to go there again.\par
+\begin{transbox}
+上个月，父母带我去了成都动物园。那是一个晴朗的星期六。我们看到了长颈鹿、大象和猴子。长颈鹿是那里最高的动物。它们吃高处树枝上的叶子，长长的脖子慢慢地移动。猴子最有趣。一只小猴子抢走了一个孩子的帽子，爬上了树。大家都笑了。中午，我们看一头小象玩水。回家前，一位饲养员告诉我们，动物园里的动物需要好的食物和干净的水。我们参观时应该安静、友善。我希望还能再去那里。
+\end{transbox}
+
+\fanessay{范文九}{保护动物，从小事做起}{Small Actions Can Save Animals}{约91词}
+Animals are our friends, but many of them are in danger. We can help them in small ways.\par
+First, do not buy things made from wild animals, such as ivory or fur coats. Second, keep our parks and rivers clean, because animals need safe homes. Third, be kind to the animals around us. Even a bowl of water on a hot day can help birds and cats.\par
+We can also tell our friends and family about this. If everyone does a little, animals will have a better life. Let's start today.\par
+\begin{transbox}
+动物是我们的朋友，但许多动物正处在危险之中。我们可以用一些小小的方式帮助它们。第一，不要购买野生动物制品，比如象牙或毛皮大衣。第二，保持公园和河流干净，因为动物需要安全的家园。第三，善待我们身边的动物。在天热的时候，哪怕是一碗水也能帮助鸟儿和猫。我们还可以把这件事告诉朋友和家人。如果每个人都做一点，动物们就会有更好的生活。让我们从今天开始吧。
+\end{transbox}
+
+\fanessay{范文十}{植物是我们的朋友}{Plants Are Our Friends}{约87词}
+Plants are very important to us. They are our friends.\par
+Plants give us food. We eat rice, vegetables and fruit every day. Plants also clean the air. The oxygen we breathe comes from plants. Some of our medicines come from plants too. In summer, trees give us cool shade. A city with many trees is more beautiful and comfortable.\par
+We should take care of plants. We can water the flowers at home and plant a tree on Tree Planting Day. Small actions can make our world greener.\par
+\begin{transbox}
+植物对我们非常重要。它们是我们的朋友。植物给我们食物。我们每天吃米饭、蔬菜和水果。植物还能净化空气。我们呼吸的氧气来自植物。有些药物也来自植物。夏天，树木为我们提供阴凉。一座有很多树的城市更美丽、更舒适。我们应该爱护植物。我们可以在家里给花浇水，在植树节种一棵树。小小的行动能让我们的世界更绿。
+\end{transbox}
+
+
+\fanunit{5}{What a Delicious Meal!}{美味的一餐}{祈使句；first/next/then/finally；可数与不可数名词}
+
+{\centering\small\color{accent}本单元写作任务：A Delicious Meal（一道美味/一次美味的一餐）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{Today I'd like to share my favourite dish with you.}{今天我想和大家分享我最喜欢的一道菜。}{介绍美食类作文的开头句，I'd like to 语气礼貌，share... with... 直接点明写作对象。}
+
+\fanpat{First, wash the vegetables and cut them into small pieces. Next, put them into the pot.}{首先，把蔬菜洗干净并切成小块。接下来，把它们放进锅里。}{first 与 next 连接两个祈使句，按步骤说明做法；祈使句以动词原形开头，短促有力。}
+
+\fanpat{Then, cook the soup for five minutes, and finally add a little salt.}{然后煮五分钟，最后加一点盐。}{then 与 finally 推进做菜的最后两步，两个祈使句之间用逗号加 and 连接。}
+
+\fanpat{Don't put too much salt in the soup, or it will taste too salty.}{别在汤里放太多盐，否则汤会太咸。}{否定祈使句 Don't... 提醒注意事项，or 意为“否则”，后面接可能的结果。}
+
+\fanpat{We need three eggs, two tomatoes and a bowl of rice.}{我们需要三个鸡蛋、两个西红柿和一碗米饭。}{可数名词用复数，不可数名词借 a bowl of 等量词表达数量，列食材时按此搭配。}
+
+\fanpat{The soup smells nice and tastes even better.}{这汤闻起来很香，尝起来更好。}{smell、taste 作系动词后接形容词，用来描写食物的香味与口感。}
+
+\fanpat{If you come to Chengdu, you must try the hotpot here.}{如果你来成都，一定要尝尝这里的火锅。}{must try 用于强烈推荐某地美食，if 从句先设定情境，推荐类作文常用。}
+
+\fanpat{A delicious meal is not only about food but also about the people we share it with.}{美味的一餐不仅在于食物，更在于和我们一起分享这顿饭的人。}{not only... but also... 连接两个并列成分，用于结尾升华主题，让文章更有情感。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{为家人做一碗西红柿蛋汤}{Cooking Tomato and Egg Soup for My Family}{约126词}
+Last Sunday, I cooked tomato and egg soup for my family for the first time. It was not difficult, and everyone at the table loved it.\par
+First, wash two tomatoes and cut them into small pieces. Next, crack three eggs into a bowl and beat them well with a little salt. Then, heat some oil in a pot and pour the eggs in. When the eggs turn golden, take them out. After that, add a bowl of hot water and cook the tomatoes in the pot for about five minutes. Finally, put the eggs back in and add a little salt. Now the soup is ready.\par
+The soup smells wonderful and tastes delicious. Cooking for my family makes me happy, because love is the best ingredient.\par
+\begin{analysisbox}
+1）开头用 Last Sunday 交代时间，for the first time 点出“第一次下厨”，自然引出下文。2）主体用 first、next、then、after that、finally 串起做汤的步骤，写步骤的句子都用祈使句，读者可以照着做；a little salt、a bowl of hot water 等表达让不可数名词的数量更准确。3）结尾从味道写到情感，love is the best ingredient 一句点题，把“美味”提升到“爱”。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape When the eggs turn golden, take them out.}\quad{\small\color{textgray}（译文：鸡蛋煎至金黄时，把它们盛出来。）}
+\end{analysisbox}
+
+\fanessay{范文二}{给埃米的一封邮件：推荐成都火锅}{An Email to Amy About Chengdu Hotpot}{约135词}
+Dear Amy, I'm glad to hear that you are coming to Chengdu next month. I'd like to recommend a special dish to you: hotpot.\par
+Hotpot is one of the most popular foods in my city. My favourite restaurant is a small one on Jinli Street. First, choose the spicy soup if you like spicy food. If you don't, ask for the clear soup. Next, put some beef, potatoes and tofu into the boiling soup. Then, wait for about a minute and take the food out. Finally, dip the food in sesame oil and enjoy it. Remember: don't eat it too fast, or you will burn your mouth.\par
+Hotpot is not only delicious but also a great way to get together with friends. I'm sure you will love it. Write to me soon. Yours, Li Hua\par
+\begin{analysisbox}
+1）邮件开头先回应朋友要来成都的消息，再用 I'd like to recommend... 点明推荐对象，符合书信体例。2）主体先总说火锅在成都的地位，再按 first、next、then、finally 介绍吃法，祈使句简明实用；don't eat it too fast, or... 用否定祈使句提醒注意事项，语气亲切。3）结尾用 not only... but also... 说明火锅的社交意义，I'm sure you will love it 让推荐更有说服力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Hotpot is not only delicious but also a great way to get together with friends.}\quad{\small\color{textgray}（译文：火锅不仅美味，也是和朋友相聚的好方式。）}
+\end{analysisbox}
+
+\fanessay{范文三}{一次难忘的生日聚餐}{A Birthday Dinner I Will Never Forget}{约125词}
+Last Friday was my grandpa's seventieth birthday. To celebrate it, our family had a big dinner at a small restaurant near Kuanzhai Alley.\par
+The table was full of Sichuan food: a large bowl of mapo tofu, a plate of kung pao chicken and some fresh vegetables. My mother ordered fish soup for my grandpa because he loves fish. “Try the fish soup,” Grandpa said with a smile. The dishes were a little spicy, but we all loved them. We talked and laughed while we were eating. After dinner, we sang a birthday song and shared a cake. Grandpa said it was the happiest dinner of the year.\par
+That night, I learned that the best meals are the ones we share with the people we love.\par
+\begin{analysisbox}
+1）开头用 Last Friday was my grandpa's seventieth birthday 交代时间与缘由，一句话把读者带进聚餐场景。2）主体按“桌上有什么—大家做什么—饭后活动”展开，a large bowl of、a plate of、some 等搭配准确呈现可数与不可数名词；引语中的祈使句 Try the fish soup 写出爷爷招呼大家尝鱼汤的热心，while 从句写出边吃边聊的热闹。3）结尾由一顿饭写出感悟，the best meals are the ones we share with the people we love 把“美味”与“亲情”连在一起，升华自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Grandpa said it was the happiest dinner of the year.}\quad{\small\color{textgray}（译文：爷爷说那是他一年中最快乐的一顿晚餐。）}
+\end{analysisbox}
+
+\fanessay{范文四}{给同学们的健康饮食建议}{Healthy Eating Advice for Students}{约118词}
+Dear classmates, as we grow up, it is important for us to eat well. Here are some healthy eating tips for you.\par
+First, never skip breakfast. A good breakfast with an egg, some milk and a piece of bread gives you energy for the whole morning. Next, eat more vegetables and fruit every day. They are full of vitamins and help you stay healthy. Then, drink enough water instead of cola or milk tea. Finally, use less salt and sugar when you cook, and don't eat too much junk food.\par
+Try to eat with your family and enjoy your food slowly. Healthy eating is not difficult. Start with small changes today, and you will feel the difference soon.\par
+\begin{analysisbox}
+1）开头用 Dear classmates 称呼读者，it is important for us to eat well 点明主题，Here are some healthy eating tips 引出下文。2）主体四条建议都用祈使句，first、next、then、finally 层次分明；a piece of bread、less salt and sugar 等表达体现可数与不可数名词的用法，建议具体可行。3）结尾先提醒与家人一起慢慢享用食物，再用 Start with small changes today 鼓励行动，呼应开头，简洁有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A good breakfast with an egg, some milk and a piece of bread gives you energy for the whole morning.}\quad{\small\color{textgray}（译文：一份有鸡蛋、牛奶和一片面包的早餐，能为你提供一上午的能量。）}
+\end{analysisbox}
+
+\fanessay{范文五}{担担面：家乡的味道}{Dandan Noodles: The Taste of My Hometown}{约120词}
+Every city has its own taste. In Chengdu, that taste is a bowl of dandan noodles.\par
+Dandan noodles are a famous Sichuan dish. The noodles are thin, and the sauce is made with sesame paste, chilli oil and minced pork. First, boil the noodles in hot water for about three minutes. Next, put the sauce into a bowl. Then, add the noodles and mix them well. Finally, put some chopped spring onions on top. It smells so good that your mouth will water. Many people eat dandan noodles for breakfast, and some enjoy them as a late-night snack.\par
+For me, dandan noodles are more than food. They carry the warm memories of my childhood and the true taste of home.\par
+\begin{analysisbox}
+1）开头用 Every city has its own taste 引入，第二句直接点出家乡味道是一碗担担面，比喻自然。2）主体先介绍面条与酱料，再用 first、next、then、finally 说明做法；be made with 与 so... that... 让说明既准确又生动。3）结尾用 more than food 转折，把食物与童年记忆、家乡情感连在一起，余味悠长。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape It smells so good that your mouth will water.}\quad{\small\color{textgray}（译文：它闻起来太香了，让人直流口水。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我最喜欢的食物}{My Favourite Food}{约88词}
+My favourite food is dumplings. My mother makes them every Sunday, and I always help her.\par
+First, cut up some meat and vegetables and mix them with a little salt. Next, put the filling on a thin piece of dough. Then, press the edges together and make it look like a small moon. Finally, boil the dumplings in boiling water for five minutes.\par
+I love dumplings because they are delicious and because my whole family makes them together. A plate of dumplings always makes me feel at home.\par
+\begin{transbox}
+我最喜欢的食物是饺子。妈妈每个星期天都会包饺子，我总是给她帮忙。首先，把一些肉和蔬菜切碎，加一点盐拌匀。接下来，把馅放在一张薄薄的面皮上。然后，把面皮的边缘捏紧，捏成一个小月亮的形状。最后，把饺子放进沸水里煮五分钟。我喜欢饺子，因为它们好吃，也因为全家人一起包饺子。一盘饺子总让我有一种家的感觉。
+\end{transbox}
+
+\fanessay{范文七}{做一份水果沙拉}{Making a Fruit Salad}{约77词}
+Fruit salad is my favourite dish. It is easy to make and good for our health.\par
+First, wash an apple, a pear and some strawberries. Next, cut them into small pieces and put them into a bowl. Then, add some yogurt and a little honey. Finally, mix everything together and put the bowl in the fridge for ten minutes.\par
+Now you can enjoy a cool and sweet salad. Why not make it for your family this weekend?\par
+\begin{transbox}
+水果沙拉是我最喜欢的一道菜。它做起来简单，而且对我们的健康有好处。首先，把一个苹果、一个梨和一些草莓洗干净。接下来，把它们切成小块，放进碗里。然后，加一些酸奶和一点蜂蜜。最后，把所有东西拌匀，把碗放进冰箱里十分钟。现在你就可以享用一份清凉又香甜的沙拉了。这个周末为什么不给家人做一份呢？
+\end{transbox}
+
+\fanessay{范文八}{一次快乐的家庭聚餐}{A Happy Family Dinner}{约89词}
+Last Saturday, my family had a hotpot dinner at home.\par
+My father bought beef, tofu and vegetables. My mother made the soup base. First, we poured it into the pot. Next, we put the beef, tofu and vegetables in. Then, we waited and talked. Finally, we ate together and shared our stories of the week. The soup was a little spicy, but we all loved it.\par
+The food was delicious, and the room was full of laughter. I think a family dinner is the best time of the week.\par
+\begin{transbox}
+上周六，我们一家人在家吃了一顿火锅。爸爸买了牛肉、豆腐和蔬菜。妈妈做了汤底。首先，我们把汤底倒进锅里。接下来，把牛肉、豆腐和蔬菜放进去。然后，我们一边等一边聊天。最后，我们一起吃，还分享了这一周的故事。汤有点辣，但我们都很喜欢。食物很美味，屋里充满了笑声。我觉得家庭聚餐是一周中最美好的时光。
+\end{transbox}
+
+\fanessay{范文九}{我的早餐}{My Breakfast}{约83词}
+Breakfast is the most important meal of the day. I never skip it.\par
+I usually have a glass of milk, an egg and some bread. On school days, I have breakfast at seven. Sometimes my mother cooks noodles for me. I eat a little fruit, too. I don't drink cola in the morning because water is better for me.\par
+A healthy breakfast gives me energy for the whole morning. It helps me listen carefully in class, and I never feel hungry before lunch.\par
+\begin{transbox}
+早餐是一天中最重要的一餐。我从不错过早餐。我通常喝一杯牛奶，吃一个鸡蛋和一些面包。上学的时候，我七点吃早餐。有时妈妈会给我煮面条。我也会吃一点水果。我早上不喝可乐，因为水对我更好。健康的早餐为我提供一上午的能量。它让我上课能认真听讲，午饭前我也不会觉得饿。
+\end{transbox}
+
+\fanessay{范文十}{家乡的美食}{The Food in My Hometown}{约86词}
+My hometown is Chengdu, a city famous for its food.\par
+There are many delicious foods here. Hotpot is spicy and tasty. Zhong dumplings are small and a little sweet. Dandan noodles are popular with people of all ages. You can find them in small restaurants on every street. The smell of dandan noodles often makes me hungry, so I eat a bowl with my friends after school.\par
+If you come to Chengdu, don't miss them. Food is the best way to get to know my hometown.\par
+\begin{transbox}
+我的家乡是成都，一座以美食闻名的城市。这里有很多好吃的东西。火锅又辣又香。钟水饺个头小，味道微甜。担担面受到各个年龄段的人的喜爱。你可以在每条街的小餐馆里找到它们。担担面的香味常常让我觉得饿，所以放学后我会和朋友们去吃一碗。如果你来成都，千万不要错过它们。美食是了解我家乡最好的方式。
+\end{transbox}
+
+
+\fanunit{6}{Plan for Yourself}{为自己做计划}{be going to / will；不定式作目的；计划与打算}
+
+{\centering\small\color{accent}本单元写作任务：My Plan（我的计划）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{I have made a plan for the new term, and I am going to follow it step by step.}{我已经为新学期制订了计划，打算一步一步地执行。}{have made 用现在完成时交代计划已经定好，be going to 表示事先的打算，一句话开门见山点题。}
+
+\fanpat{I am going to spend twenty minutes reading English aloud every morning.}{我打算每天早上花二十分钟朗读英语。}{be going to + 动词原形表示事先计划好的安排，spend time doing sth 说明时间怎样使用。}
+
+\fanpat{To keep fit, I will play basketball with my classmates twice a week.}{为了保持健康，我每周要和同学们打两次篮球。}{不定式 To keep fit 放句首作目的状语，先说目的再说做法，句子紧凑有力。}
+
+\fanpat{I will join the school English club to make more friends and practise speaking English.}{我要加入学校英语俱乐部，以便交到更多朋友、练习英语口语。}{不定式 to make... and practise... 放句末作目的状语，说明参加活动的目的，是计划类作文的高频结构。}
+
+\fanpat{When I feel tired, I will stop for a short break and then go on with my plan.}{感到累的时候，我会停下来休息一会儿，然后继续执行计划。}{when 引导的时间状语从句用一般现在时，主句用 will，即“主将从现”，写日常安排时常用。}
+
+\fanpat{If I keep practising, I will play the guitar much better by the end of this term.}{如果我坚持练习，到本学期末我的吉他就会弹得好得多。}{if 条件句遵循“主将从现”，用来写计划实现后的结果，语气自信，适合主体段收尾。}
+
+\fanpat{My teacher advises me to break a big goal into small steps.}{老师建议我把大目标分解成一个个小步骤。}{advise sb to do sth 表示建议，break... into... 把大目标化小，是提建议时最实用的说法。}
+
+\fanpat{A good plan is not a dream but a map, and it shows us the way to our goal.}{好的计划不是空想，而是一张地图，为我们指明通向目标的路。}{not... but... 对比两个成分，把计划与空想区分开来，适合结尾升华主题。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{新学期，我的三个小目标}{My Plan for the New Term}{约133词}
+The new term has begun, and I have made a plan for it. I am going to work on three things: study, health and friendship.\par
+For study, I am going to read English aloud for twenty minutes every morning and finish my homework before eight in the evening. When a maths problem is too hard, I will ask my teacher for help. For health, I will run along the Tianfu Greenway three times a week. For friendship, I am going to join the school English club to meet new people.\par
+A plan is easy to make but hard to keep. I will write my goals on a card and put it on my desk, so that I can see it every day. Step by step, I will become a better student this term.\par
+\begin{analysisbox}
+1）开头用 The new term has begun 自然引入，I am going to work on three things: study, health and friendship 一句总起，读者一眼看清全文框架。2）主体按 study、health、friendship 三点分述，be going to 与 will 交替出现，to meet new people 用不定式表目的，内容具体、便于模仿。3）结尾先把“计划易订难守”点破，再用 so that 写出“把目标放在桌上”的小做法，最后 Step by step, I will... 收束，决心坚定。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape I will write my goals on a card and put it on my desk, so that I can see it every day.}\quad{\small\color{textgray}（译文：我会把目标写在一张卡片上，放在书桌上，这样每天都能看到它。）}
+\end{analysisbox}
+
+\fanessay{范文二}{我的梦想：做一名熊猫饲养员}{My Dream: A Panda Keeper}{约135词}
+Many students want to be doctors or pilots, but my dream job is to be a panda keeper at the Chengdu Research Base of Giant Panda Breeding.\par
+I have loved pandas since I was a little girl. When I was eight, my parents took me to the base, and I watched a baby panda eat bamboo for half an hour. To make my dream come true, I am going to work hard at biology and read more books about animals. I will also do volunteer work there during the summer holiday to learn how to look after pandas.\par
+Being a panda keeper is not easy. It means getting up early, carrying fresh bamboo and watching the animals carefully. But I will not give up, because it is the happiest job in the world for me.\par
+\begin{analysisbox}
+1）开头以 Many students want to be doctors or pilots 作陪衬，but 一转亮出自己的梦想，对比中见个性。2）主体先写“为什么”，用 When I was eight 的一个小场景写出与熊猫的缘分，再由 To make my dream come true 的不定式引出具体行动，be going to 与 will 搭配，目标清楚。3）结尾先承认这份工作不易，再用 But I will not give up 表明态度，because 从句点明理由，情感真挚。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape To make my dream come true, I am going to work hard at biology and read more books about animals.}\quad{\small\color{textgray}（译文：为了实现梦想，我打算努力学好生物，多读一些关于动物的书。）}
+\end{analysisbox}
+
+\fanessay{范文三}{给小林的一封信：把大目标变成小步骤}{A Letter to Xiaolin About Making a Plan}{约136词}
+Dear Xiaolin, I heard that you are worried about the new term. You have so many things to do that you do not know where to start. Here is my advice.\par
+First, write down all your goals and choose the three most important ones. Second, break each big goal into small steps. For example, if you want to improve your English, read one short story every week. Third, plan your week every Sunday evening. It takes only ten minutes, and then you will know what to do each day. Leave some time for rest, or you will feel tired soon.\par
+A plan cannot solve every problem, but it can make you feel calmer. Next Sunday I am going to the community library to help you make a plan. Why not come with me? Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头先点出朋友的烦恼，You have so many things to do that you do not know where to start 用 so... that... 写出问题的根源，自然引出建议。2）主体用 First、Second、Third 三条建议层层推进，break each big goal into small steps 是全文的核心方法，For example 后用 if 条件句给出可操作的做法，读者拿来就能用。3）结尾先承认计划的局限，再用 be going to 约朋友去图书馆，Why not...? 发出邀请，建议落到了行动上。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Leave some time for rest, or you will feel tired soon.}\quad{\small\color{textgray}（译文：要留出一些时间休息，否则你很快就会觉得累。）}
+\end{analysisbox}
+
+\fanessay{范文四}{那次我按计划跑完五公里}{How a Plan Helped Me Finish the Five-Kilometre Run}{约138词}
+Last October, our school held a five-kilometre run along the Jinjiang River. I was not good at running and was afraid of coming last.\par
+So I made a plan six weeks before the race. I was going to run for twenty minutes every evening, and add five minutes each week. In the first week, my legs hurt, and I wanted to stop. To keep going, I asked my father to run with me. Little by little, I could run four kilometres without resting.\par
+On the day of the race, I finished in twenty-eight minutes and came forty-second among more than two hundred students. I was tired but very proud. Next term I will start planning earlier and run faster. This experience taught me that a clear plan and small steps can take us much farther than we think.\par
+\begin{analysisbox}
+1）开头用 Last October 交代时间，held a five-kilometre run along the Jinjiang River 把故事放在身边熟悉的场景里，afraid of coming last 写出真实心理。2）主体按“赛前六周—第一周—后来”的顺序写计划的执行，was going to 表示当时已定的安排，could 写进展，To keep going 用不定式表目的，层次分明。3）结尾用具体的时间和名次让结果可信，再用 will 写下学期的打算，最后以 This experience taught me that... 提炼道理，由事及理，收束有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape This experience taught me that a clear plan and small steps can take us much farther than we think.}\quad{\small\color{textgray}（译文：这段经历让我明白，清晰的计划和一个个小步骤能带我们走得比想象中远得多。）}
+\end{analysisbox}
+
+\fanessay{范文五}{十年后，我在成都的一天}{A Day in Chengdu Ten Years from Now}{约131词}
+Ten years from now, I will be twenty-four. I imagine I will live near the Jinjiang River and work as an engineer in Chengdu.\par
+On weekdays, I will get up at seven and take the metro to work. At noon, I will have lunch with my workmates. In the evening, I am going to meet my old classmates at a teahouse in People's Park. We will talk about our school days and laugh a lot.\par
+On weekends, I will go back to see my parents and cook hotpot for them. I also want to help children in a village school with their English. Ten years sounds far away, but every day I am working toward that life. As long as I keep my plan, the future will not let me down.\par
+\begin{analysisbox}
+1）开头用 Ten years from now, I will be twenty-four 直接进入未来场景，年龄、住处、职业三笔交代清楚，想象有根基。2）主体按一天的时间顺序展开，will 写预测与安排，be going to 写已经约好的聚会，at noon、in the evening 等时间状语把未来的一天写得像真的一样。3）结尾由工作日转到周末的家人和乡村孩子，再以 Ten years sounds far away, but... 收回现实，As long as I keep my plan... 用条件句收束，既浪漫又踏实。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Ten years sounds far away, but every day I am working toward that life.}\quad{\small\color{textgray}（译文：十年听起来很遥远，但我每天都在朝着那样的生活努力。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{这个月，我的小计划}{My Plan for This Month}{约93词}
+I like making plans, because they help me use my time well. This month I have a simple plan.\par
+First, I am going to get up at six thirty and read English for fifteen minutes. Second, I will finish my homework before dinner, so I can play basketball with my friends. Third, I am going to help my mother cook supper on Fridays. I want to learn to make mapo tofu.\par
+My plan is small, but I will try my best to keep it. A small step every day will take me further.\par
+\begin{transbox}
+我喜欢制订计划，因为计划能帮我好好利用时间。这个月我有一个简单的计划。第一，我打算六点半起床，读十五分钟英语。第二，我会在晚饭前完成作业，这样就能和朋友们打篮球。第三，我打算每周五帮妈妈做晚饭。我想学会做麻婆豆腐。我的计划很小，但我会尽力坚持。每天一小步，会带我走得更远。
+\end{transbox}
+
+\fanessay{范文七}{我心里有个小小的梦想}{The Dream in My Heart}{约101词}
+Everyone has a dream. My dream is to be a tour guide in Chengdu.\par
+I love this city. It has pandas, hotpot, old teahouses and friendly people. Every year many visitors come here from other countries. I want to show them the beauty of Chengdu and tell them its stories. To make my dream come true, I am going to study English hard and learn more about the history of my city.\par
+Maybe the dream is far away, but I will work hard for it step by step. One day, I will stand in People's Park and say, “Welcome to Chengdu!”\par
+\begin{transbox}
+每个人都有一个梦想。我的梦想是在成都当一名导游。我爱这座城市。这里有熊猫、火锅、老茶馆和友善的人。每年都有许多来自其他国家的游客来到这里。我想带他们看看成都的美，给他们讲讲成都的故事。为了实现梦想，我打算努力学英语，多了解这座城市的历史。也许梦想还很遥远，但我会一步一步地为它努力。总有一天，我会站在人民公园里说：“欢迎来到成都！”
+\end{transbox}
+
+\fanessay{范文八}{新学期，我的英语计划}{My English Plan for the New Term}{约96词}
+The new term starts on Monday. I have made an English plan for it.\par
+I am going to listen to English for ten minutes every morning before school. In class, I will answer at least one question and write down new words in my notebook. On Tuesdays and Thursdays, I will go to the English corner to practise speaking. I will also read one English story every month.\par
+Learning a language takes time. I will not be afraid of making mistakes, and I will keep going. I hope I can speak English more freely by June.\par
+\begin{transbox}
+新学期从星期一开始。我已经为它制订了一份英语计划。我打算每天早上上学前听十分钟英语。课堂上，我要至少回答一个问题，并把生词记在本子上。每周二和周四，我会去英语角练习口语。我还会每个月读一篇英语故事。学一门语言需要时间。我不会害怕犯错，会一直坚持下去。我希望到六月时能把英语说得更流利。
+\end{transbox}
+
+\fanessay{范文九}{我的目标：学会游泳}{My Goal: To Learn to Swim}{约102词}
+My goal for this year is to learn to swim. I have been afraid of water since I was small.\par
+To reach my goal, I am going to take a swimming class near my home every Saturday morning. My coach says I should practise for an hour. I will also watch videos of good swimmers to learn the right moves. If I keep practising, I will swim fifty metres before October.\par
+I know it will not be easy, and I may choke on water. But I will not give up. When I swim across the pool, I will be proud of myself.\par
+\begin{transbox}
+我今年的目标是学会游泳。我从小就怕水。为了达到目标，我打算每周六上午在家附近上游泳课。教练说我应该练一个小时。我还会看优秀游泳者的视频，学习正确的动作。如果我坚持练习，十月前我就能游五十米。我知道这不会容易，我可能还会呛水。但我不会放弃。等我游过整个泳池时，我会为自己感到骄傲。
+\end{transbox}
+
+\fanessay{范文十}{写给二十年后的自己}{A Letter to Myself Twenty Years Later}{约93词}
+Dear future me, I am writing to you from a small desk in Chengdu, twenty years before you read this letter. How are you today?\par
+Are you a doctor or a teacher? Do you still love hotpot and pandas? I hope you will be healthy and happy. I also hope you still call Mum and Dad every week and visit them on Sundays.\par
+I am going to study hard and be kind to people, so that you can be proud of me. Please remember the student who wrote this letter. Yours, Li Hua\par
+\begin{transbox}
+亲爱的未来的我：我正坐在成都的一张小书桌前给你写信，此时距离你读到这封信还有二十年。你今天过得好吗？你成了医生还是老师？你还爱吃火锅、还喜欢熊猫吗？希望你健康、快乐。我也希望你还每周给爸爸妈妈打电话，每个星期天去看望他们。我会努力学习，友善待人，这样你就能为我感到骄傲。请记住那个给你写这封信的学生。你的，李华
+\end{transbox}
+
+
+\fanunit{7}{When Tomorrow Comes}{当明天来临}{一般将来时；will 表预测；if 条件句}
+
+{\centering\small\color{accent}本单元写作任务：Life in the Future（未来的生活）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{In the future, our life will become much easier and more comfortable.}{在未来，我们的生活将会变得轻松、舒适得多。}{will + 动词原形表示对未来的预测，常用于开头总起，一句话点明主题。}
+
+\fanpat{If we use technology in the right way, it will make our life better.}{如果我们正确地使用科技，它会让我们的生活更美好。}{if 引导的条件状语从句用一般现在时，主句用一般将来时，即“主将从现”。}
+
+\fanpat{Students will not need to carry heavy books, because a thin screen will hold all of them.}{学生们将不必再背沉重的书本，因为一块薄薄的屏幕就能装下所有的书。}{will not 表示未来不会发生的事，because 从句说明原因，适合写“变化”类段落。}
+
+\fanpat{Robots will help us do the housework, such as cleaning the floor and cooking meals.}{机器人将帮我们做家务，比如扫地、做饭。}{such as 后接名词或动名词举例，让预测更具体，避免空泛。}
+
+\fanpat{Not only will technology save us time, but it will also bring us new chances to learn.}{科技不仅会为我们节省时间，还会给我们带来新的学习机会。}{Not only 置于句首时主句部分倒装，but... also... 补充递进，是提分的高级句式。}
+
+\fanpat{I hope that in twenty years our city will be greener and cleaner.}{我希望二十年后我们的城市会更绿、更干净。}{I hope that + 从句表达对未来的期望，常用于结尾，语气真诚。}
+
+\fanpat{There will be more trees and fewer cars in our city.}{我们的城市里会有更多的树、更少的汽车。}{There will be 是 there be 句型的将来形式，用来描写未来场景；注意不能写成 there will have。}
+
+\fanpat{The future is not something we wait for but something we build together.}{未来不是我们等待的东西，而是我们一起创造的东西。}{not... but... 对比结构用于结尾，把“等待未来”与“创造未来”对照，立意更深。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{2060 年的日常生活}{Daily Life in 2060}{约136词}
+What will our life be like in 2060? Nobody knows for sure, but I believe it will be very different from today.\par
+In the future, our homes will be smarter. When I get up, the windows will open on their own, and the robot in the kitchen will have breakfast ready. If I feel ill, my smart watch will call a doctor at once. Cars will drive themselves, so people will have more time to read or rest. We will not need to carry heavy books to school, because one thin screen will hold all of them.\par
+However, a better life will not come by itself. If we take good care of the earth today, our children will enjoy a cleaner and greener tomorrow. Only when people and nature live in peace can tomorrow be truly wonderful.\par
+\begin{analysisbox}
+1）开头以 What will our life be like in 2060? 设问，再用 I believe it will be very different from today 给出预测，一下子就抓住“未来生活”这一话题。2）主体按“居家—出行—上学”的顺序展开，When I get up 这一时间状语从句、If I feel ill 这一条件状语从句把未来场景写得具体可感，smart watch、one thin screen 等细节让人信服。3）结尾先用 However 转折提醒读者，再用 Only when 引导的状语从句加倒装收束，把想象落到“人与自然和谐相处”上，立意高远。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Only when people and nature live in peace can tomorrow be truly wonderful.}\quad{\small\color{textgray}（译文：只有人与自然和谐相处，明天才会真正美好。）}
+\end{analysisbox}
+
+\fanessay{范文二}{科技将如何改变我们的生活}{How Technology Will Change Our Lives}{约138词}
+Technology is developing faster than we can imagine. In the next twenty years, it will change almost every part of our lives.\par
+First, smart glasses will help us learn about the world. When we look at a tree, the glasses will tell us its name and age. Second, seeing a doctor online will become common. If my grandparents feel unwell, a small machine at home will check their health and send the result to a doctor. Third, AI assistants will plan our trips and answer our questions in a second. Not only will these inventions save us time, but they will also make life safer.\par
+Of course, technology is only a tool. If we spend all day looking at screens, we will lose the warmth of real talk. We should learn to use it in the right way.\par
+\begin{analysisbox}
+1）开头用 Technology is developing faster than we can imagine 交代背景，第二句直接给出预测，观点鲜明。2）主体用 First、Second、Third 分三层写智能眼镜、在线问诊和 AI 助手，条理清楚；If my grandparents feel unwell 一句用条件句把“科技让看病更方便”说得具体可信。3）Not only will these inventions save us time... 用部分倒装把好处推向高潮，结尾以 Of course 转折，提醒我们要正确使用科技，思辨性强。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Not only will these inventions save us time, but they will also make life safer.}\quad{\small\color{textgray}（译文：这些发明不仅会为我们节省时间，还会让生活更安全。）}
+\end{analysisbox}
+
+\fanessay{范文三}{2050 年的学校}{My School in 2050}{约121词}
+What will our school look like in 2050? Let me share my ideas with you.\par
+Students will not carry heavy schoolbags any more. Instead, a thin tablet will hold all our textbooks. In class, we will put on special glasses and visit the Great Wall or the moon without leaving the classroom. If we get a maths problem wrong, the AI teacher will explain it to us again and again until we understand. Every student will have his or her own study plan.\par
+Still, I think teachers will never be replaced. A machine can give us answers, but only a teacher can give us a warm smile and real encouragement. Even if schools change, the love of learning will stay the same.\par
+\begin{analysisbox}
+1）开头用 What will our school look like in 2050? 设问，再用 Let me share my ideas with you 引出下文，亲切而有吸引力。2）主体从“轻装上学—虚拟课堂—AI 老师”三个角度写学校的变化，If we get a maths problem wrong 一句用条件句写出 AI 老师的耐心，画面感强。3）结尾用 Still 转折，A machine can give us answers, but only a teacher can give us a warm smile and real encouragement 一句把“机器”与“老师”对照，点出教育的温度，收束有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A machine can give us answers, but only a teacher can give us a warm smile and real encouragement.}\quad{\small\color{textgray}（译文：机器能给我们答案，但只有老师才能给我们温暖的微笑和真正的鼓励。）}
+\end{analysisbox}
+
+\fanessay{范文四}{机器人：帮手还是对手？}{Robots: Helpers or Rivals?}{约124词}
+Robots are no longer just characters in science fiction films. They are walking into our homes, hospitals and factories.\par
+In the future, robots will do many jobs for us. They will clean our rooms, cook meals and look after old people who live alone. In factories, they will work day and night without getting tired. Some people are worried that robots will take away our jobs. If that happens, we will need to learn new skills.\par
+In my opinion, robots will not take the place of human beings. They can do our work, but they cannot love, dream or laugh. If we use them wisely, they will be our helpers, not our rivals. After all, the future is made by people, not by machines.\par
+\begin{analysisbox}
+1）开头用 Robots are no longer just characters in science fiction films 打破旧印象，They are walking into our homes 一句让机器人“走进”现实，自然引出话题。2）主体先写机器人替我们做家务、照顾独居老人，再用 Some people are worried that... 引出担忧，用 If that happens, we will need to learn new skills 给出应对，正反兼顾。3）结尾 In my opinion 亮明观点，They can do our work, but they cannot love, dream or laugh 一句用三个动词并列对比人与机器，最后以 the future is made by people 升华主题。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape If we use them wisely, they will be our helpers, not our rivals.}\quad{\small\color{textgray}（译文：如果我们明智地使用它们，它们就会成为我们的帮手，而不是对手。）}
+\end{analysisbox}
+
+\fanessay{范文五}{给二十年后的自己的一封信}{A Letter to My Future Self}{约123词}
+Dear me in 2045, I am a thirteen-year-old student sitting at my desk, writing to you for the first time. How are you?\par
+I often wonder what you are doing now. Have you become a teacher? If you are teaching children in a small village, I will be proud of you. By then, classrooms may have robots and smart screens, but I hope you still remember how to write on paper and how to listen with patience. If life gets hard, please don't forget the boy who was never afraid to try.\par
+I will study hard and keep my dreams alive. When you look back one day, I hope you will smile, because the boy I am today never gave up. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信体以 Dear me in 2045 开头，称呼新奇又亲切，I am a thirteen-year-old student sitting at my desk 一句交代写作情境，代入感强。2）主体用问句和 If you are teaching children in a small village, I will be proud of you 这样的条件句，把对未来的期待写得温柔而具体。3）结尾 I will study hard and keep my dreams alive 回到当下的行动，When you look back one day, I hope you will smile 一句让“未来的我”与“现在的我”对话，情感真挚。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape If life gets hard, please don't forget the boy who was never afraid to try.}\quad{\small\color{textgray}（译文：如果生活变得艰难，请不要忘记那个从不怕尝试的男孩。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我未来的生活}{My Life in the Future}{约103词}
+Life in the future will be very different from today. I often think about my own future.\par
+When I grow up, I will live in Chengdu with my family. I will be a doctor, and I will help sick children. There will be a robot in my home. It will clean the floor and wash the dishes, so I will have more time to read. On weekends, I will drive a car that can fly to visit my grandparents in the countryside.\par
+I know that a good future does not come for free. If I study hard now, my dream will come true.\par
+\begin{transbox}
+未来的生活会和今天大不一样。我常常想到自己的未来。长大后，我会和家人一起住在成都。我会成为一名医生，去帮助生病的孩子。我的家里会有一个机器人。它会擦地板、洗碗，这样我就有更多时间读书。周末，我会开一辆能飞的车，去乡下看望祖父母。我知道，美好的未来不会自己到来。如果我现在努力学习，我的梦想就会实现。
+\end{transbox}
+
+\fanessay{范文七}{我家未来的机器人}{A Robot in My Future Home}{约95词}
+In twenty years, every family may have a robot. I hope my family will have one too.\par
+I will call my robot Xiaobao. It will get up earlier than I do and make breakfast. It will clean the room before I come home from school. It will also help my grandma walk in the park. If I am sad, it will tell me a funny story and make me laugh.\par
+A robot is a machine, but it can be a good helper. With its help, my family will have more time to enjoy life together.\par
+\begin{transbox}
+二十年后，也许每个家庭都会有一个机器人。我希望我家也能有一个。我要给我的机器人取名小宝。它会比我起得早，做好早餐。它会在我放学回家前把房间打扫干净。它还会扶奶奶在公园里散步。如果我难过，它会给我讲一个有趣的故事，逗我笑。机器人是机器，却可以成为好帮手。有了它的帮助，我的家人会有更多时间一起享受生活。
+\end{transbox}
+
+\fanessay{范文八}{未来的学校}{Schools in the Future}{约92词}
+What will schools be like in the future? I think they will change a lot.\par
+Students will not carry paper textbooks any more. They will use a small computer to read and write. In class, they will watch videos and talk to students in other countries. If they have a question, they can ask the AI teacher at any time. The playground will be bigger, and there will be a garden on the roof.\par
+But I hope one thing will never change. Teachers will still care about us and help us grow.\par
+\begin{transbox}
+未来的学校会是什么样呢？我想会有很大的变化。学生们不用再背纸质课本了。他们会用一台小电脑读书、写字。课堂上，他们会看视频，还会和其他国家的学生交流。如果有问题，他们随时可以问 AI 老师。操场会更大，屋顶上还会有一个花园。但我希望有一件事永远不会改变。老师依然会关心我们，帮助我们成长。
+\end{transbox}
+
+\fanessay{范文九}{我的未来}{My Future}{约87词}
+Everyone has a dream. My dream is to be an engineer.\par
+I have loved cars since I was a child. In the future, I will design cars that use no oil and make no noise. They will run on sunlight and water. If these cars run on the road one day, the air in our city will be much cleaner. To make it happen, I will study maths and science harder.\par
+I am sure my dream will come true one day, because I will never give up.\par
+\begin{transbox}
+每个人都有一个梦想。我的梦想是成为一名工程师。我从小就喜欢汽车。未来，我要设计不用汽油、没有噪音的汽车。它们靠阳光和水就能行驶。如果这些汽车有一天跑在路上，我们城市的空气会干净得多。为了实现它，我会更加努力地学习数学和科学。我相信，总有一天我的梦想会实现，因为我永远不会放弃。
+\end{transbox}
+
+\fanessay{范文十}{科技与我们的生活}{Technology and Our Life}{约87词}
+Technology is all around us. It makes our life easier and faster.\par
+With a phone, we can talk to a friend far away and buy things without going out. With a computer, we can study at home when we are ill. In the future, we will see even more new things. If we learn to use them well, they will help us a lot.\par
+However, we should not let technology control us. We still need to walk outside, talk face to face and enjoy the real world.\par
+\begin{transbox}
+科技就在我们身边。它让我们的生活更方便、更快捷。有了手机，我们可以和远方的朋友聊天，不用出门就能买东西。有了电脑，我们生病在家也能学习。未来，我们还会看到更多新事物。如果我们学会好好使用它们，它们会给我们很大帮助。不过，我们不应该让科技控制我们。我们仍然需要到户外走走，面对面地交谈，享受真实的世界。
+\end{transbox}
+
+
+\fanunit{8}{Let's Communicate!}{让我们沟通吧！}{祈使句；情态动词；沟通与建议表达}
+
+{\centering\small\color{accent}本单元写作任务：Let's Communicate!（沟通与理解）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{Good communication is like a bridge that brings two hearts closer.}{良好的沟通就像一座桥，让两颗心靠得更近。}{开头用比喻句点明主题，定语从句让句子更有分量，适合议论文或演讲稿的第一段。}
+
+\fanpat{Don't hide your feelings; say them aloud in a calm voice.}{不要隐藏自己的感受，用平静的声音把它们说出来。}{否定祈使句与肯定祈使句并列，提出具体可行的沟通建议，语气直接而有力量。}
+
+\fanpat{Listen first, and you will understand the other person better.}{先倾听，你就会更好地理解对方。}{“祈使句 + and + 陈述句”相当于 if 条件句，写作中用来表达“这样做就会有好结果”。}
+
+\fanpat{You should choose a good time to talk, not a time when everyone is busy.}{你应该挑一个好时机再谈，而不是大家都忙的时候。}{should 表示“应该”，是最常用的建议表达；not 后接名词短语，对比指出不该选的时间。}
+
+\fanpat{Maybe you could write a short note if talking face to face is too hard.}{如果面对面交谈太难，也许你可以写一张小纸条。}{could 使建议更委婉；if 条件句补充说明建议适用的情形，适合建议信的主体段。}
+
+\fanpat{A smile costs nothing, but it can open a closed heart.}{微笑不花一分钱，却能打开一颗封闭的心。}{but 连接前后对比，can 表示“能够”，用来强调微笑这种肢体语言的力量。}
+
+\fanpat{Not only words but also body language can help us get our message across.}{不仅是语言，肢体语言也能帮助我们传达信息。}{not only... but also... 连接两个并列成分；get... across 意为“把……表达清楚”，是沟通类话题的常用短语。}
+
+\fanpat{Only when we listen with our hearts can we truly understand each other.}{只有用心倾听，我们才能真正理解彼此。}{“Only + 状语从句”置于句首时，主句要部分倒装，适合放在结尾升华主题。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{一次误会，让我们走得更近}{A Misunderstanding That Brought Us Closer}{约134词}
+Last month, a small thing almost ended my friendship with Zhang Yue, my deskmate. I borrowed her English notes and promised to return them on Friday.\par
+But on Friday morning I took the wrong schoolbag and left the notes at home. At lunch Zhang Yue asked for them. When I said I had forgotten, her face turned red. She said I was always so careless and then walked away. I felt hurt, but I knew arguing would only make things worse. Silence would not help either. After school I found her on the playground and explained everything. On Monday I brought her the notes.\par
+She laughed and said she had been too quick to get angry. Now we often remind each other to talk things over. A misunderstanding is not scary; keeping silent is.\par
+\begin{analysisbox}
+1）开头用 a small thing almost ended my friendship 制造悬念，再一句交代借笔记的起因，叙事干净利落。2）主体按时间顺序推进：拿错书包—午饭被追问—好友生气—放学解释—周一还笔记，At lunch、After school、On Monday 等时间状语让情节清楚；I knew arguing would only make things worse 与 Silence would not help either 两句通过心理活动写出“不能沉默”的转变，为下文主动解释作铺垫。3）结尾用分号连接的对比句收束，把“误会不可怕，沉默才可怕”的道理说得简短有力，主题自然升华。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A misunderstanding is not scary; keeping silent is.}\quad{\small\color{textgray}（译文：误会并不可怕，可怕的是保持沉默。）}
+\end{analysisbox}
+
+\fanessay{范文二}{给王磊的一封信：勇敢开口}{A Letter to Wang Lei: Speak Up}{约121词}
+Dear Wang Lei, I heard that you still feel lonely in your new class. Don't worry. Many students feel the same in the first month.\par
+Here are some ideas. First, smile and say hello to the classmates next to you. A smile costs nothing, but it can open a closed heart. Second, join a club you like, such as the basketball club. When you play together, talking becomes easy. Third, ask them a quick question about Chengdu or their hobbies. Most people love to answer questions about themselves. If you feel too nervous, you could write a short note first.\par
+Take the first step, and the rest will be easier. I'm sure you will have good friends soon. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头用 I heard that you still feel lonely 直接回应朋友的处境，再用 Don't worry 安慰，语气亲切自然。2）主体用 First、Second、Third 三条建议层层展开，每条建议后面都跟一句理由：A smile costs nothing, but it can open a closed heart 说明微笑的作用，When you play together, talking becomes easy 说明一起活动的好处；If you feel too nervous, you could... 用 could 把建议说得委婉，照顾到朋友的感受。3）结尾用“祈使句 + and”的 Take the first step, and... 鼓励对方行动，并以 I'm sure... 表达信心，收尾干净有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Take the first step, and the rest will be easier.}\quad{\small\color{textgray}（译文：迈出第一步，剩下的就会容易得多。）}
+\end{analysisbox}
+
+\fanessay{范文三}{无声的语言}{The Language Without Words}{约119词}
+Words are not the only way to communicate. Body language, such as a smile, eye contact and a nod, can say a lot.\par
+Last summer I worked as a volunteer at the Panda Base. One afternoon, a foreign visitor came up to me and spoke very fast. I could only catch a few words, so I smiled, pointed to the map and nodded. He understood at once and thanked me with a thumbs-up. Later I learned that a smile and clear gestures can work when English fails.\par
+In class, body language matters too. Looking at the speaker shows respect, and a nod tells the speaker that you are following. So stand up straight, keep eye contact and smile more.\par
+\begin{analysisbox}
+1）开头用 Words are not the only way to communicate 提出观点，再用 such as 列举微笑、眼神、点头三种肢体语言，观点明确。2）主体以在熊猫基地做志愿者的经历为例：I could only catch a few words 交代语言障碍，so I smiled, pointed to the map and nodded 用三个连续动作说明肢体语言怎样“救场”；a smile and clear gestures can work when English fails 一句点明例子与观点的关系。3）结尾把话题拉回课堂，Looking at the speaker shows respect 说明眼神的作用，最后用 So 引出 stand up straight、keep eye contact、smile more 三个祈使动作，号召读者马上行动。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Later I learned that a smile and clear gestures can work when English fails.}\quad{\small\color{textgray}（译文：后来我明白了，当英语不管用的时候，一个微笑和清楚的手势也能起作用。）}
+\end{analysisbox}
+
+\fanessay{范文四}{当东方遇见西方}{When East Meets West}{约138词}
+Last term, our school welcomed an English teacher, Mr. Green. In his class, I learned that communication between cultures can be full of surprises.\par
+Once, Mr. Green praised my English, but I shook my head and said it was still very poor. He looked puzzled and told me I had just talked with him for ten minutes. In his culture, people accept a compliment and say thank you, while we often refuse it to show modesty. Greetings are different too. He sometimes gives a friendly hug, but we usually shake hands or just nod. At first I stepped back, which made him laugh.\par
+These differences are not problems if we keep an open mind. Watch first, ask when you are not sure, and never laugh at what seems strange. When East meets West, respect is the best translator.\par
+\begin{analysisbox}
+1）开头交代外教的到来，并用 communication between cultures can be full of surprises 点出跨文化沟通的主题，为下文举例作铺垫。2）主体用两组对比展开：外教夸我英语好，我却摇头说还很差——在他看来，接受赞美并说 thank you 才自然，我们却常推辞以示谦虚；打招呼时他给一个拥抱，我们只握手或点头。while we often refuse it to show modesty 用 while 连接对比，At first I stepped back, which made him laugh 用非限制性定语从句补充结果，画面感强。3）结尾用 These differences are not problems if we keep an open mind 表明态度，Watch first, ask when you are not sure 等祈使句给出做法，最后把尊重比作最好的翻译，点题巧妙。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape At first I stepped back, which made him laugh.}\quad{\small\color{textgray}（译文：起初我后退了一步，这让他笑了起来。）}
+\end{analysisbox}
+
+\fanessay{范文五}{放下手机，好好说话}{Put Down Your Phone and Talk}{约121词}
+Good morning, everyone! Today I want to talk about the ways we communicate.\par
+We live in a world of messages. We send emojis, voice messages and short videos every day. They are quick and fun, and they keep friends close when we cannot meet. But there is a problem. Sometimes we send a hundred messages and still say nothing important. A heart-to-heart talk needs eyes, voices and even silence, and a screen can give us none of them.\par
+So put down your phone when someone is talking to you. Look at the speaker, listen carefully and say what you really feel. Words on a screen can be deleted, but a warm talk stays in the heart. Let's communicate, not just connect.\par
+\begin{analysisbox}
+1）演讲稿开头用 Good morning, everyone! 打招呼，再用 Today I want to talk about... 点明话题，符合演讲的文体要求。2）主体先肯定表情符号、语音消息带来的便利，再用 But there is a problem 转折，指出“发了一百条消息却什么也没说”的问题；A heart-to-heart talk needs eyes, voices and even silence 用三个名词并列，把面对面交流的不可替代说得很形象。3）结尾用 So 引出祈使句提出行动建议，put down、look、listen、say 几个动作一气呵成；最后用 Let's communicate, not just connect 收束，not just 的对比让主题更有力量。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Words on a screen can be deleted, but a warm talk stays in the heart.}\quad{\small\color{textgray}（译文：屏幕上的文字可以被删除，但一次温暖的交谈会留在心里。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{沟通的重要性}{Why Communication Matters}{约85词}
+Some people think silence is safe, but I have learned that silence can hurt.\par
+Last term, my best friend and I stopped talking for a week because of a small thing. Neither of us explained, so we both felt hurt. Then I sent her a message and asked if we could talk. Ten minutes later, we were laughing again.\par
+Communication is like opening a window. Fresh air comes in, and the room feels alive again. Say what you think, and listen to what others say.\par
+\begin{transbox}
+有些人认为沉默才安全，但我已经明白，沉默也会伤人。上学期，我和我最好的朋友因为一件小事一个星期没说话。我们谁也没有解释，所以两个人都觉得受了伤。后来我给她发了一条消息，问我们能不能谈谈。十分钟后，我们又笑在了一起。沟通就像打开一扇窗。新鲜空气吹进来，房间又有了生气。说出你的想法，也听听别人怎么说。
+\end{transbox}
+
+\fanessay{范文七}{一句玩笑引起的误会}{A Joke That Caused a Misunderstanding}{约83词}
+On Monday, I made a joke about how slowly my deskmate ran. I thought it was funny.\par
+He said nothing and did not talk to me all day. I felt puzzled and a little worried. After school, I asked him why. He said my words made him feel small in front of others.\par
+I said sorry at once. He smiled, and we played basketball together. Now I think twice before I make a joke. A joke is only funny when both people laugh.\par
+\begin{transbox}
+星期一，我拿同桌跑得慢开了个玩笑。我以为这很好笑。他什么也没说，一整天都没有理我。我有点纳闷，还有点担心。放学后，我问他原因。他说我的话让他在别人面前觉得自己很渺小。我马上道了歉。他笑了，我们又一起打篮球。现在开玩笑前我会三思。只有当两个人都笑的时候，玩笑才是好笑的。
+\end{transbox}
+
+\fanessay{范文八}{微笑的力量}{The Power of a Smile}{约82词}
+A smile is the shortest distance between two people. It needs no words, but it says a lot.\par
+On my first day in Grade 8, I knew nobody. I sat alone in the corner and felt nervous. Then a girl came over, smiled and said her name was Chen Jie. She asked me to sit with her. Her smile made my day.\par
+Now I smile at new classmates too. It takes no effort, but it can make a lonely person feel at home.\par
+\begin{transbox}
+微笑是两个人之间最短的距离。它不需要语言，却能表达很多。八年级开学第一天，我一个人也不认识。我独自坐在角落里，心里很紧张。这时一个女孩走过来，微笑着说她叫陈洁。她请我和她坐在一起。她的微笑让我一整天都很开心。现在我也对新同学微笑。这并不费力，却能让一个孤独的人感到像在家里一样自在。
+\end{transbox}
+
+\fanessay{范文九}{我的沟通方式}{How I Communicate}{约81词}
+I talk with different people in different ways.\par
+With my friends, I like to talk face to face. We meet in the park and share everything. With my teachers, I often write a short note, because I am a little shy. With my grandparents, I talk on the phone. They cannot read my messages, but they love to hear my voice.\par
+The best way to communicate is the way that suits the person. Choose it carefully, and talking will be easier.\par
+\begin{transbox}
+我和不同的人用不同的方式交流。和朋友在一起，我喜欢面对面地聊天。我们在公园见面，分享一切。和老师交流，我常常写一张小纸条，因为我有点害羞。和祖父母交流，我就打电话。他们看不了我的消息，但他们喜欢听我的声音。最好的沟通方式就是适合那个人的方式。用心选择，交谈就会更轻松。
+\end{transbox}
+
+\fanessay{范文十}{如何与父母沟通}{How to Communicate with My Parents}{约86词}
+Many students say their parents do not understand them. I had the same problem.\par
+Last year, I wanted to join the school football team, but my parents said no. I was angry and did not say a word for two days. Then I sat down with them at dinner and told them why I loved football. They listened and agreed.\par
+Choose a quiet time, tell them how you feel instead of complaining, and listen to your parents too. Then talking becomes easy, and home feels warmer.\par
+\begin{transbox}
+很多学生说父母不理解他们。我也遇到过同样的问题。去年，我想加入学校足球队，但父母不同意。我很生气，两天一句话也没说。后来吃晚饭时，我坐下来和他们聊，告诉他们我为什么喜欢足球。他们听了，也同意了。选一个安静的时间，告诉父母你的感受而不是抱怨，也听听他们的想法。这样，谈话就会变容易，家也会更温暖。
+\end{transbox}
+
+\end{document}
