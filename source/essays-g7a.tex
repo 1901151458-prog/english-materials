@@ -1,0 +1,1050 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% =====================================================================
+%  成都市初一英语书面表达范文集
+%  人教新版（2024 年版）七年级上册  Unit 1 — Unit 7
+%  ---------------------------------------------------------------------
+%  编译方式（必须使用 XeLaTeX，并连续编译两遍以生成目录与页码）：
+%      xelatex 成都市初一英语Unit1-8范文集.tex
+%      xelatex 成都市初一英语Unit1-8范文集.tex
+%  若使用 IDE（TeXstudio / VS Code + LaTeX Workshop），将编译器设为 XeLaTeX 即可。
+% =====================================================================
+\documentclass[UTF8,a4paper,11pt,oneside]{ctexbook}
+
+% ---------------- 页面与字体 ----------------
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.4cm,right=2.2cm,headheight=17pt}
+\usepackage{xcolor}
+\definecolor{mainblue}{RGB}{21,73,124}
+\definecolor{accent}{RGB}{176,84,32}
+\definecolor{textgray}{RGB}{96,101,107}
+\definecolor{rulelight}{RGB}{168,193,219}
+\definecolor{patternbg}{RGB}{245,249,253}
+\definecolor{transbg}{RGB}{247,247,245}
+\definecolor{transframe}{RGB}{176,176,168}
+
+% ---------------- 版式组件 ----------------
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{needspace}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks,bookmarksopen]{hyperref}
+\hypersetup{
+  pdftitle={Chengdu Grade 7 English Writing Model Essays (Unit 1-7)},
+  pdfsubject={中考书面表达备考},
+  pdfcreator={XeLaTeX}
+}
+
+% ---------------- 章节标题样式 ----------------
+\ctexset{
+  chapter = {
+    format    = {\centering\sffamily\Huge\bfseries\color{mainblue}},
+    beforeskip = 1.6ex,
+    afterskip  = 2.2ex
+  }
+}
+
+% ---------------- 页眉页脚 ----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{textgray}\leftmark}
+\fancyhead[R]{\small\sffamily\color{mainblue}\thepage}
+\fancyfoot[C]{\footnotesize\sffamily\color{textgray}成都市初一英语书面表达范文集（人教新版七年级上册）}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{\color{rulelight}\leaders\hrule height \headrulewidth\hfill}}
+% plain 页面样式：直接用底层定义，避免 fancyhdr v5 的 \fancypagestyle
+% 在每页重置全局页眉页脚设置（会把 fancy 的设置清掉）。
+\makeatletter
+\def\ps@plain{%
+  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \def\@oddfoot{\hfil{\small\sffamily\color{textgray}\thepage}\hfil}%
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+% ---------------- 自定义盒子 ----------------
+\newtcolorbox{analysisbox}{
+  enhanced,
+  colback=patternbg, colframe=mainblue!45,
+  boxrule=0.5pt, arc=1.2mm,
+  left=2.4mm, right=2.4mm, top=1.2mm, bottom=1.2mm,
+  toptitle=0.9mm, bottomtitle=0.9mm,
+  coltitle=white, colbacktitle=mainblue!78,
+  fonttitle=\sffamily\bfseries\small,
+  title={亮点解析},
+  before skip=1.2ex, after skip=1.6ex,
+  fontupper=\small
+}
+\newtcolorbox{transbox}{
+  enhanced,
+  colback=transbg, colframe=transframe!75,
+  boxrule=0.5pt, arc=1.2mm,
+  left=2.4mm, right=2.4mm, top=1.2mm, bottom=1.2mm,
+  toptitle=0.9mm, bottomtitle=0.9mm,
+  coltitle=white, colbacktitle=transframe!85,
+  fonttitle=\sffamily\bfseries\small,
+  title={参考译文},
+  before skip=1.2ex, after skip=1.6ex,
+  fontupper=\small
+}
+
+% ---------------- 单元 / 小节 / 范文标题 ----------------
+% \fanunit{序号}{英文单元名}{中文单元名}{核心语法}
+\newcommand{\fanunit}[4]{%
+  \chapter*{\texorpdfstring{Unit #1\quad #2}{Unit #1 #2}}%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\texorpdfstring{Unit #1\quad #2（#3）}{Unit #1 #2}}%
+  \markboth{Unit #1\quad #2}{Unit #1\quad #2}%
+  \vspace{-1.1em}%
+  {\centering{\sffamily\large\color{accent}#3}\par}%
+  \vspace{0.45em}%
+  {\centering\color{rulelight}\rule{0.82\linewidth}{1pt}\par}%
+  \vspace{0.75em}%
+  {\centering{\small\sffamily\color{textgray}本单元语法重点：#4}\par}%
+  \addvspace{1.2em}%
+}
+% \fansection{〇、本单元写作常用句型} 等
+\newcommand{\fansection}[1]{%
+  \par\addvspace{2.4ex}%
+  \Needspace{6\baselineskip}%
+  \noindent{\sffamily\Large\bfseries\color{mainblue}#1}\par
+  \nopagebreak
+  \addvspace{0.2ex}%
+  \noindent{\color{rulelight}\rule{\linewidth}{0.9pt}}\par
+  \addvspace{0.9ex}%
+  \nobreak
+}
+% \fanessay{范文一}{中文标题}{English Title}{约126词}
+\newcommand{\fanessay}[4]{%
+  \Needspace{7\baselineskip}%
+  \par\addvspace{2.2ex}%
+  \noindent{\color{rulelight}\rule{\linewidth}{0.6pt}}\par
+  \nopagebreak
+  \addvspace{0.45ex}%
+  \noindent{\sffamily\bfseries\color{accent}\large #1}\hspace{0.85em}%
+  {\sffamily\bfseries\large\color{mainblue}#2}\par
+  \nopagebreak
+  \addvspace{0.3ex}%
+  {\centering{\bfseries #3}\hspace{0.7em}{\small\color{textgray}（#4）}\par}%
+  \addvspace{0.7ex}%
+  \nobreak
+}
+% \fanpat{英文句}{中文释义}{语法说明}
+\newcommand{\fanpat}[3]{%
+  \item{\bfseries #1}\par\nopagebreak
+  {\small\color{textgray}#2}\par\nopagebreak
+  {\footnotesize\color{accent!90!black}【用法】#3}\par
+}
+
+% ---------------- 写作常用句型列表 ----------------
+\newlist{fanpatterns}{enumerate}{1}
+\setlist[fanpatterns]{%
+  label={\sffamily\bfseries\color{mainblue}\arabic*.},
+  leftmargin=2.6em, labelsep=0.7em,
+  itemsep=1.0ex, topsep=0.5ex, parsep=0.3ex
+}
+
+
+\begin{document}
+\linespread{1.32}\selectfont
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{1.4cm}
+  {\color{mainblue}\rule{\linewidth}{1.8pt}}\par
+  \vspace{0.55cm}
+  {\color{rulelight}\rule{\linewidth}{0.6pt}}\par
+  \vspace{1.5cm}
+  {\sffamily\bfseries\fontsize{36pt}{46pt}\selectfont\color{mainblue} 七年级上册英语\par}
+  \vspace{0.35cm}
+  {\sffamily\bfseries\fontsize{36pt}{46pt}\selectfont\color{mainblue} 书面表达范文集\par}
+  \vspace{1.3cm}
+  {\sffamily\fontsize{15pt}{21pt}\selectfont\color{accent} 人教版（2024 版）· 七年级上册\par}
+  \vspace{0.3cm}
+  {\sffamily\Large\color{mainblue} Unit 1 — Unit 7（全 7 个单元）\par}
+  \vspace{1.0cm}
+  {\color{accent}\rule{0.62\linewidth}{0.8pt}}\par
+  \vspace{0.9cm}
+  {\sffamily\large\color{textgray} 7 个单元\quad·\quad 70 篇范文\quad·\quad 56 条写作常用句型\par}
+  \vfill
+  {\large\sffamily 适用对象：七年级学生\quad 书面表达备考\par}
+  \vspace{0.9cm}
+  {\color{rulelight}\rule{0.62\linewidth}{0.6pt}}\par
+  \vspace{0.5cm}
+  {\sffamily\normalsize\color{textgray} 2026 年 10 月 20 日\par}
+  \vspace*{0.6cm}
+\end{titlepage}
+
+\frontmatter
+\pagestyle{plain}
+
+\chapter*{使用说明}
+\phantomsection
+\addcontentsline{toc}{chapter}{使用说明}
+
+\noindent\textbf{一、教材依据}\quad 本书依据人教新版（2024 年版）七年级上册编写，覆盖全册
+Unit 1 — Unit 7 共 7 个单元，供成都市初一学生中考英语书面表达备考使用。
+
+\vspace{0.6em}
+\noindent\textbf{二、单元结构}\quad 每个单元由三部分组成：
+\begin{itemize}[leftmargin=2.2em,itemsep=0.25ex,topsep=0.35ex]
+  \item \textbf{〇、本单元写作常用句型}：精选 8 条紧扣单元语法的高分句型，附中文释义与用法说明；
+  \item \textbf{一、满分范文}：A 组 5 篇，每篇约 120 — 150 词，词汇丰富、句式多样，配\textbf{亮点解析}与\textbf{亮点句}，供冲刺满分的同学精读仿写；
+  \item \textbf{二、高分好背好文}：B 组 5 篇，每篇约 85 — 105 词，句式简单、模板化，配\textbf{参考译文}，基础薄弱的同学可直接背诵套用。
+\end{itemize}
+
+\vspace{0.6em}
+\noindent\textbf{三、使用建议}
+\begin{enumerate}[leftmargin=2.2em,itemsep=0.25ex,topsep=0.35ex]
+  \item 先背熟本单元的 8 条常用句型与 B 组范文，做到“写得对、写得全”；
+  \item 再精读 A 组范文，把「亮点解析」中的加分句式（非谓语动词、定语从句、倒装、\textit{so...that...} 等）迁移到自己的作文里；
+  \item 每篇范文至少仿写一次；写完后对照「亮点解析」自查是否用上了本单元语法重点；
+  \item 范文话题贴近成都生活（天府绿道、成都大运会、城市音乐厅等），考场上可根据题目灵活替换专有名词。
+\end{enumerate}
+
+\clearpage
+\vspace{0.2em}
+\noindent\textbf{四、单元一览}
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.6cm}
+                              >{\raggedright\arraybackslash}p{6.3cm}
+                              >{\raggedright\arraybackslash}X@{}}
+\toprule
+{\sffamily\bfseries 单元} & {\sffamily\bfseries 核心语法} & {\sffamily\bfseries 代表写作任务}\\
+\midrule
+{\bfseries Unit 1}\newline You and Me\newline {\small 你和我} & 一般现在时（be 动词）；自我介绍；代词 & This Is Me（这就是我） \\
+{\bfseries Unit 2}\newline We're Family\newline {\small 我们是一家人} & 一般现在时；have/has；家庭成员 & My Family（我的家庭） \\
+{\bfseries Unit 3}\newline My School\newline {\small 我的学校} & there be 句型；方位介词；一般现在时 & My School（我的学校） \\
+{\bfseries Unit 4}\newline My Favourite Subject\newline {\small 我最喜欢的学科} & 一般现在时；like/love/enjoy doing；because 原因 & My Favourite Subject（我最喜欢的学科） \\
+{\bfseries Unit 5}\newline Fun Clubs\newline {\small 有趣的社团} & can 表能力；一般现在时；like doing & My Club（我的社团） \\
+{\bfseries Unit 6}\newline A Day in the Life\newline {\small 我的一天} & 一般现在时；时间表达；频率副词 & My Day（我的一天） \\
+{\bfseries Unit 7}\newline Happy Birthday!\newline {\small 生日快乐！} & 日期表达；一般现在时；一般过去时（生日经历） & My Birthday（我的生日） \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.4em}
+\noindent{\small\color{textgray}说明：每单元 A 组 5 篇 + B 组 5 篇，共 10 篇范文；全书共 7 个单元、70 篇范文、56 条写作常用句型。}
+
+\clearpage
+\tableofcontents
+\mainmatter
+\pagestyle{fancy}
+
+% ============================ 正文 ============================
+
+\fanunit{1}{You and Me}{你和我}{一般现在时（be 动词）；自我介绍；代词}
+
+{\centering\small\color{accent}本单元写作任务：This Is Me（这就是我）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{My name is Li Hua, and I am twelve years old.}{我叫李华，今年十二岁。}{自我介绍的开头句：name is 后接姓名，I am 后接年龄；and 连接两个并列分句，一句话交代姓名和年龄，最省笔墨。}
+
+\fanpat{I am not tall, but I am good at basketball.}{我个子不高，但篮球打得很好。}{be 动词的否定式在 am 后加 not；but 连接前后转折，先写不足再写长处，人物形象更真实。}
+
+\fanpat{Are you a student in Chengdu too?}{你也是成都的学生吗？}{be 动词的一般疑问句把 are 提到句首，句末用问号；写信、聊天时用来提问，能很快拉近距离。}
+
+\fanpat{This is my new friend, Wang Ming, and he is from Chengdu.}{这是我的新朋友王明，他来自成都。}{This is 用来介绍别人，后半句用 he 指代王明，避免重复人名，这是代词最常用的地方。}
+
+\fanpat{He is tall and friendly, and he often helps me with my English.}{他又高又友好，还常常帮我学英语。}{be 动词后接形容词描写外貌与性格；help sb with sth 是“在某方面帮助某人”的固定搭配，写朋友品质时最实用。}
+
+\fanpat{I like playing basketball, and I am good at it.}{我喜欢打篮球，而且打得很好。}{like doing sth 表示爱好；be good at 后接名词或动名词，句末用 it 指代 basketball，避免重复。}
+
+\fanpat{My parents are both teachers, and they are very kind to me.}{我父母都是老师，他们对我很好。}{复数主语用 are；they 指代 my parents，me 作介词 to 的宾语。介绍家人时用代词替换名词，句子更简洁，也扣住本单元的代词考点。}
+
+\fanpat{I hope we can be good friends. Please write to me soon.}{希望我们能成为好朋友。请尽快给我回信。}{结尾常用句：hope 后接从句要用陈述语序；Please write to me soon 是书信结束语，两句连用礼貌又热情。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{认识一下李华}{Meet Li Hua}{约107词}
+Hello, everyone. My name is Li Hua, and I am twelve years old. I am a student at a middle school in Chengdu.\par
+I am not very tall, but I am strong and fast. I have short black hair and a big smile. I am in Class Three, Grade Seven. I am friendly, so I have many friends. My favourite colour is blue, and my favourite food is hotpot.\par
+After school, I like playing basketball with my classmates. I am good at it, and I want to be a PE teacher one day. This is me, a happy Chengdu boy. I hope we can be good friends.\par
+\begin{analysisbox}
+1）开头用 Hello, everyone 打招呼，再用 My name is 和 I am twelve years old 交代姓名和年龄，用 I am a student 一句交代身份，符合自我介绍“先亮身份”的顺序。2）主体用 but 把 not very tall 与 strong and fast 连起来，先抑后扬；My favourite colour is blue, and my favourite food is hotpot 两个并列句让内容具体可感。3）结尾写爱好和梦想，再用 This is me, a happy Chengdu boy 点题，最后一句发出交友邀请，热情收束。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape This is me, a happy Chengdu boy.}\quad{\small\color{textgray}（译文：这就是我，一个快乐的成都男孩。）}
+\end{analysisbox}
+
+\fanessay{范文二}{我的新同桌}{My New Deskmate}{约105词}
+This term, I have a new deskmate. His name is Wang Ming, and he is from Chongqing. He lives in Chengdu with his family now.\par
+Wang Ming is tall and thin, and he wears glasses. He is quiet, but he is very friendly. He likes reading and playing chess, and he often tells me funny stories about his old school. We both like basketball, too.\par
+After school, we go home together. He helps me with my maths, and I take him to the best noodle shop near our school. I am glad to have a new friend, and I think we will be good friends.\par
+\begin{analysisbox}
+1）开头用 This term, I have a new deskmate 交代背景，His name is Wang Ming, and he is from Chongqing 一句写出姓名和籍贯，紧扣“介绍新朋友”。2）主体先写外貌，再用 He is quiet, but he is very friendly 一转写性格；likes reading and playing chess 与 tells me funny stories 一静一动，人物立体。3）结尾写放学同行、互帮互助，最后以 I think we will be good friends 收束，友情自然落地。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape He helps me with my maths, and I take him to the best noodle shop near our school.}\quad{\small\color{textgray}（译文：他帮我学数学，我带他去学校附近最好吃的面馆。）}
+\end{analysisbox}
+
+\fanessay{范文三}{篮球与绘画}{Basketball and Drawing}{约105词}
+Different people have different hobbies. My hobbies are playing basketball and drawing.\par
+I play basketball every Tuesday and Friday. It makes me strong, and I feel happy when I run on the court. Drawing is my quiet time. After dinner, I take out my pencils and draw for an hour. I draw pandas, bridges and old streets in Chengdu. My art teacher says my pictures are full of life.\par
+These two hobbies are very different, but they are both important to me. One makes me active, and the other makes me calm. I hope I can always enjoy them and share them with my friends.\par
+\begin{analysisbox}
+1）开头用 Different people have different hobbies 引出话题，第二句直接点明篮球和绘画，开门见山。2）主体分写两项爱好：篮球用 makes me strong 和 feel happy when I run 写身体与心情；绘画用 After dinner 的时间细节和 pandas, bridges and old streets 的画面感，写出安静的一面。3）结尾用 One makes me active, and the other makes me calm 对举收束，再写愿意与人分享，立意从爱好升到性格。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape One makes me active, and the other makes me calm.}\quad{\small\color{textgray}（译文：一项让我充满活力，另一项让我安静下来。）}
+\end{analysisbox}
+
+\fanessay{范文四}{我和我的好朋友}{My Best Friend and I}{约117词}
+My best friend is Chen Jie. She is my classmate, and we sit together in the front row.\par
+Chen Jie is short and lively. She has long hair and a sweet voice. She is good at singing, and she is in our school music club. I am quiet, and I am not good at singing, but I like listening to her. We are different, but we are always together.\par
+On weekends, we often go to People's Park by bike. We fly kites, eat ice cream and talk about our dreams. She wants to be a singer, and I want to be a writer. A good friend makes the world bigger, and I am lucky to have her.\par
+\begin{analysisbox}
+1）开头点出好友姓名和关系，sit together in the front row 补一个具体细节，画面感强。2）主体用 short and lively、long hair、a sweet voice 写外貌，再以 I am quiet...but I like listening to her 作对比，最后用 We are different, but we are always together 小结，层次清楚。3）结尾写周末骑车去人民公园的三件小事，句式并列轻快；末句 A good friend makes the world bigger 由事及理，点出友情的意义。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A good friend makes the world bigger, and I am lucky to have her.}\quad{\small\color{textgray}（译文：好朋友让世界变得更大，我很幸运有她这样的朋友。）}
+\end{analysisbox}
+
+\fanessay{范文五}{给笔友的第一封信}{My First Letter to a Pen Pal}{约111词}
+Dear Amy, I am Li Hua, and I am your new pen pal from Chengdu. How are you? I am twelve years old, and I am in Grade Seven.\par
+I live with my parents and my little brother. My father is a doctor, and my mother is a teacher. I like sports and music. After school, I play basketball with my friends, and in the evening I listen to English songs.\par
+Chengdu is a beautiful city. There are many pandas and parks here, and the snacks are delicious. I hope you can visit my city one day. Please write to me soon and tell me about your school. Yours, Li Hua\par
+\begin{analysisbox}
+1）开头按书信格式写称呼 Dear Amy，接着自报姓名和身份，How are you 一句寒暄，礼貌自然。2）主体先介绍家庭成员和职业，My father is a doctor, and my mother is a teacher 用两个并列句写职业，清楚利落；再写自己的爱好和日常。3）结尾用 There are many pandas and parks here, and the snacks are delicious 写出成都的可爱之处，再邀请来访、请对方回信，并以 Yours, Li Hua 收尾，格式完整。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape There are many pandas and parks here, and the snacks are delicious.}\quad{\small\color{textgray}（译文：这里有好多熊猫和公园，小吃也很好吃。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{这就是我}{This Is Me}{约85词}
+Hello! I am Lin Yue. I am twelve years old. I am a middle school student in Chengdu.\par
+I am tall and thin. I have short black hair and big eyes. I am in Class Two, Grade Seven. I am quiet, but I am friendly. I like basketball and music. After school, I play basketball with my friends. In the evening, I listen to music.\par
+I am not perfect, but I am happy every day. This is me. Do you want to be my friend?\par
+\begin{transbox}
+你好！我是林悦。我十二岁。我是成都的一名中学生。我又高又瘦。我留着黑色短发，有一双大眼睛。我在七年级二班。我很安静，但我很友好。我喜欢篮球和音乐。放学后，我和朋友们一起打篮球。晚上，我听音乐。我并不完美，但我每天都很快乐。这就是我。你愿意和我做朋友吗？
+\end{transbox}
+
+\fanessay{范文七}{我的新朋友}{My New Friend}{约87词}
+I have a new friend this term. Her name is Zhang Ling. She is from Chengdu too.\par
+Zhang Ling is short and lovely. She has long hair and a big smile. She is good at English, and she often helps me. She draws very well, and she is in the school art club. We like the same singer, so we talk a lot.\par
+After school, we walk home together. We talk about our classes and our favourite food. I am happy to have her as my friend.\par
+\begin{transbox}
+这学期我有了一个新朋友。她叫张玲。她也是成都人。张玲个子不高，很可爱。她留着长发，笑容很灿烂。她英语很好，常常帮助我。她画画很棒，还参加了学校的艺术社团。我们喜欢同一位歌手，所以总有聊不完的话。放学后，我们一起走路回家。我们聊上课的事，也聊各自爱吃的东西。有她这个朋友，我很开心。
+\end{transbox}
+
+\fanessay{范文八}{我的爱好}{My Hobbies}{约84词}
+I have two hobbies. They are reading and running.\par
+I read books every evening. My favourite books are stories about animals and travel. Reading makes me quiet and happy, and it opens up a big world for me. On Saturdays, I run in the park with my father. We run for half an hour, and running makes me strong.\par
+Reading and running are different, but I love them both. One makes me think, and the other makes me move. They make my life interesting.\par
+\begin{transbox}
+我有两项爱好。它们是阅读和跑步。我每天晚上都读书。我最喜欢的书是动物故事和游记。阅读让我安静又快乐，也为我打开了一个大大的世界。每逢星期六，我和爸爸在公园里跑步。我们一跑就是半个小时，跑步让我身体强壮。阅读和跑步很不一样，但两样我都喜欢。一项让我思考，一项让我运动。它们让我的生活变得有趣。
+\end{transbox}
+
+\fanessay{范文九}{我和我的家人}{My Family and I}{约84词}
+There are four of us in my family: my father, my mother, my little sister and me.\par
+My father is a driver, and my mother is a nurse. They work hard, but they are always kind to us. My little sister is six years old. She is lovely, and she likes drawing. Every evening, we have dinner together and talk about our day. After dinner, I help my sister with her drawing.\par
+I love my family. We are not rich, but we are happy.\par
+\begin{transbox}
+我家有四口人：爸爸、妈妈、妹妹和我。爸爸是司机，妈妈是护士。他们工作辛苦，但对我们总是很和气。妹妹今年六岁。她很可爱，喜欢画画。每天晚上，我们一起吃晚饭，聊聊各自的一天。晚饭后，我帮妹妹学画画。我爱我的家人。我们并不富裕，但我们很快乐。
+\end{transbox}
+
+\fanessay{范文十}{我的自我介绍}{Let Me Introduce Myself}{约82词}
+Good morning, everyone. My name is Li Hua. I am twelve years old. I am from Chengdu.\par
+I am in Class Five, Grade Seven. My favourite subject is English. I like my English teacher because her classes are fun. I am good at drawing, and I want to join the art club. After school, I play basketball with my classmates.\par
+I am a little shy, but I want to make more friends. I hope we can learn and play together. Thank you.\par
+\begin{transbox}
+大家早上好。我叫李华。我十二岁。我来自成都。我在七年级五班。我最喜欢的学科是英语。我喜欢我的英语老师，因为她的课很有趣。我擅长画画，想加入美术社团。放学后，我和同学们一起打篮球。我有点害羞，但我想交更多的朋友。希望我们能一起学习、一起玩。谢谢大家。
+\end{transbox}
+
+
+\fanunit{2}{We're Family}{我们是一家人}{一般现在时；have/has；家庭成员}
+
+{\centering\small\color{accent}本单元写作任务：My Family（我的家庭）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{My family is not big, but it is full of love.}{我的家庭不大，却充满了爱。}{开头点题句。用 but 把“不大”和“充满爱”放在一起形成转折，一句话交代家庭特点并定下温暖基调，最适合做全文第一句。}
+
+\fanpat{I have a big family, and we live in a small but warm flat in Chengdu.}{我有一个大家庭，我们住在成都一套小而温暖的公寓里。}{have 表示“拥有”，and 连接两个并列分句；先用 have 说家庭成员，再补一句居住情况，是介绍家庭的常用开头。}
+
+\fanpat{My father is tall and strong, and he has short black hair and a kind smile.}{我爸爸又高又壮，留着黑色短发，笑容和善。}{is 加形容词写体型，has 加名词写外貌；and 把两个分句连成一句，人物形象立刻清楚。}
+
+\fanpat{My mother works in a hospital, and she is busy from morning to night.}{我妈妈在医院工作，她从早忙到晚。}{一般现在时第三人称单数，动词要作相应变化（works、is）；用职业加忙碌程度两句介绍家人，信息实在。}
+
+\fanpat{Every evening, we have dinner together and talk about our day.}{每天傍晚，我们一起吃晚饭，聊聊各自的一天。}{Every evening 搭配一般现在时表示习惯；have dinner together 是固定搭配，写家庭日常最实用。}
+
+\fanpat{When I am sad, my family always stays with me and makes me smile again.}{我难过的时候，家人总是陪着我，让我重新笑起来。}{when 引导时间状语从句，主句用一般现在时；always 表示“总是”，写出家人的陪伴与关爱。}
+
+\fanpat{Not only do my parents care for me, but they also teach me to be kind.}{父母不仅照顾我，还教我要善良。}{Not only 置于句首时，前一个分句要部分倒装（do my parents care）；but also 表递进，放在结尾段能明显提分。}
+
+\fanpat{A family is not about a big house. It is about people who love each other.}{家不在于房子有多大，而在于有彼此相爱的人。}{结尾升华句。not about... 先否定物质条件，It is about... 再给出自己的理解，who 引导定语从句，立意立刻拔高。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{一张全家福}{Our Family Photo}{约134词}
+This is a photo of my family. It is on the wall of our living room.\par
+In the photo, my father is on the left. He has short black hair and a kind smile. My mother is in the middle. She has long hair and big eyes, and she is a teacher at my school. She is the busiest person in my family, but she always finds time to cook for us. I am on the right, with my hand on her shoulder. My little brother is in front of us. He is only six years old, and he has two big front teeth. In his hands is a red ball.\par
+The photo shows only four people, but it holds the love of our whole family. I will keep it on the wall forever.\par
+\begin{analysisbox}
+1）开头用 This is a photo of my family 直接点题，It is on the wall of our living room 交代照片的位置，画面感很强。2）主体按“左边—中间—右边—前面”的顺序介绍照片里的四个人，has short black hair、has long hair and big eyes 等 has 句交替出现；the busiest person in my family, but she always finds time to cook 用转折写出妈妈的忙碌与爱；I am on the right 一句把自己也写进照片；In his hands is a red ball 把球提到句首，句式有了变化。3）结尾用 only four people 与 the love of our whole family 形成对比，再用 keep it on the wall forever 收束，说明照片虽小、情意很重。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape She is the busiest person in my family, but she always finds time to cook for us.}\quad{\small\color{textgray}（译文：她是我家最忙的人，却总能挤出时间给我们做饭。）}
+\end{analysisbox}
+
+\fanessay{范文二}{我的家人}{Meet My Family}{约136词}
+I live with my grandparents, my parents and my sister in a small but warm flat in Chengdu.\par
+My grandpa is seventy, but he still works in his small garden every day. My grandma has short white hair, and she makes the best dumplings in our family. My father is a bus driver. He has a loud voice but a soft heart, and he always makes us laugh at dinner. My mother works in a bookshop. She has small hands, but she can cook wonderful meals. My sister is a middle school student. She often helps me with my maths, and I help her with her English.\par
+We are busy on weekdays, but we always have dinner together. In my eyes, home is not a big house. It is the warm feeling when we are together.\par
+\begin{analysisbox}
+1）开头一句话交代同住的人和居住条件，small but warm 为全文定下温暖的基调。2）主体按“爷爷—奶奶—爸爸—妈妈—妹妹”的顺序逐一介绍，每人先点出身份或近况，再补一句外貌、性格；has short white hair、has a loud voice but a soft heart 等 has 句让形象具体可感，makes the best dumplings 用最高级突出奶奶的手艺。3）结尾先用 but we always have dinner together 一转，再以 home is not a big house 升华，点出“家是人，不是房子”。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape He has a loud voice but a soft heart, and he always makes us laugh at dinner.}\quad{\small\color{textgray}（译文：他嗓门很大，心却很软，吃饭时总把我们逗笑。）}
+\end{analysisbox}
+
+\fanessay{范文三}{一次难忘的家庭聚会}{An Unforgettable Family Get-together}{约122词}
+Today is the Mid-Autumn Festival. In the evening, my whole family gets together at my grandparents' home.\par
+Grandma and my mother are busy in the kitchen. They make dumplings and a big pot of soup, and the whole house smells wonderful. Grandpa sits in the yard with a cup of tea. He has white hair and a warm smile, and he tells us funny stories about his childhood. My cousin and I are setting the table. My little sister runs around with a paper rabbit in her hand.\par
+After dinner, we eat mooncakes and watch the full moon together. The house is old and small, but it is full of laughter. For me, being together is the best gift of the year.\par
+\begin{analysisbox}
+1）开头用 Today is the Mid-Autumn Festival 交代时间与缘由，一句话把读者带进节日气氛。2）主体分“厨房—院子—餐桌”三个场景，make、smells、sits、tells、runs 等一般现在时动词把一家人各忙各的热闹写得有条有理；the whole house smells wonderful 从嗅觉写节日，with a paper rabbit in her hand 用细节添童趣。3）结尾用 The house is old and small, but it is full of laughter 形成对比，再以 being together is the best gift 点题，情感自然收束。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape The house is old and small, but it is full of laughter.}\quad{\small\color{textgray}（译文：房子又旧又小，却装满了笑声。）}
+\end{analysisbox}
+
+\fanessay{范文四}{家是什么}{What Is Home?}{约135词}
+Some people think a home is a big house with a beautiful garden. In my eyes, a home is much more than that.\par
+A home is a place where someone leaves a light on for you when you come back late. It has the smell of my mother's cooking and the sound of my father's old songs. When I am ill, my parents stay by my bed all night. When I do well in an exam, they are happier than I am. They not only give me a warm bed, but they also teach me how to be kind.\par
+Home is not a building. It is the people who wait for you, listen to you and never give up on you. Wherever I go in the future, my family will always be my warmest home.\par
+\begin{analysisbox}
+1）开头先摆出别人的看法 Some people think a home is a big house with a beautiful garden，再用 In my eyes 提出自己的观点，一开篇就有对比。2）主体先用 A home is a place where 给家下定义，再用 It has the smell... and the sound... 调动嗅觉与听觉，has 的用法紧扣本单元；两个 When 从句写父母的陪伴，not only... but also 一句把爱从衣食住行写到做人的道理。3）结尾用 Home is not a building 否掉物质，再以 wherever 从句把主题推向未来，立意深远。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape It is the people who wait for you, listen to you and never give up on you.}\quad{\small\color{textgray}（译文：家就是那些等你、听你说话、永不放弃你的人。）}
+\end{analysisbox}
+
+\fanessay{范文五}{邀请你来我家}{Come and Visit My Home}{约129词}
+Dear Tony, How are you? I am happy to tell you about my home.\par
+I live in a flat on the fifth floor of a tall building in Chengdu. It is not very big, but it is bright and warm. My favourite place is the balcony. My father has many green plants there, and I often read books beside them. On the wall of the living room, we have a big photo of my family. In it, my grandparents, my parents, my sister and I are all smiling.\par
+My family is always busy, but we have dinner together every evening. That is the best time of my day. I hope you can come and visit us one day. You will love my home and my family. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头用 Dear Tony 称呼、How are you? 问候，再用 I am happy to tell you about my home 说明写信目的，格式规范、语气友好。2）主体按“位置—房子—阳台—照片”的空间顺序介绍自己的家，not very big, but bright and warm 一句定调；My favourite place is the balcony 引出细节，green plants 与 read books 写出生活气息，照片一句自然带出家人。3）结尾用 That is the best time of my day 表达情感，再以 I hope you can come and visit us 发出邀请，最后署上 Yours, Li Hua，礼貌得体。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape My father has many green plants there, and I often read books beside them.}\quad{\small\color{textgray}（译文：我爸爸在那里养了许多绿植，我常常坐在它们旁边看书。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我的家}{My Home}{约95词}
+I have a big family. There are six people in it: my grandparents, my parents, my sister and me.\par
+My grandpa is seventy years old. He likes tea and old songs. My grandma has short white hair, and she cooks very well. My father is a doctor, and my mother is a nurse. They are busy every day. My sister is nine. She has a round face and a big smile. I love her very much.\par
+We are all different, but we love each other. My home is small, but it is full of love.\par
+\begin{transbox}
+我有一个大家庭。家里有六口人：爷爷奶奶、爸爸妈妈、妹妹和我。爷爷七十岁了。他喜欢喝茶、听老歌。奶奶留着短短的白发，饭做得特别好。爸爸是医生，妈妈是护士。他们每天都很忙。妹妹九岁。她有一张圆圆的脸，笑起来很灿烂。我非常爱她。我们性格各不相同，但彼此相爱。我的家不大，却装满了爱。
+\end{transbox}
+
+\fanessay{范文七}{我的妈妈}{My Mum}{约96词}
+My mum is the most important person in my life. She is thirty-eight years old.\par
+My mum is a teacher in a primary school. She has long black hair and a warm smile. She gets up at six every morning and makes breakfast for us. After work, she helps me with my homework. She is strict with me, but she never stays angry for long.\par
+On Sundays, we often go to the park together. We talk and laugh all the way. I love my mum, and I want to say thank you to her every day.\par
+\begin{transbox}
+妈妈是我生命中最重要的人。她三十八岁。妈妈是一所小学的老师。她留着一头黑色长发，笑起来很温暖。她每天早上六点起床，给我们做早饭。下班后，她辅导我写作业。她对我很严格，但从来不会生太久的气。星期天，我们常常一起去公园。一路上我们说个不停、笑个不停。我爱妈妈，我每天都想对她说一声谢谢。
+\end{transbox}
+
+\fanessay{范文八}{照片里的家人}{My Family in the Photo}{约102词}
+This is my favourite photo. In it, my whole family is together in the park near our home.\par
+My father is on the left. He is tall and strong, and he has short black hair. My mother is next to him. She has long hair and a kind face. The little girl in the middle is my sister. She is only five, and she has a toy bear in her arms. I am behind my parents, and I am laughing.\par
+Every time I look at it, I feel warm. My family is always with me, and this photo keeps that love alive.\par
+\begin{transbox}
+这是我最喜欢的一张照片。照片里，我们全家人聚在家附近的公园里。爸爸在左边。他又高又壮，留着黑色短发。妈妈在他旁边。她留着长发，面容温和。中间那个小女孩是我妹妹。她只有五岁，怀里抱着一只玩具熊。我站在爸爸妈妈身后，正笑着。每次看到这张照片，我都觉得很温暖。家人一直陪着我，这张照片让这份爱一直延续。
+\end{transbox}
+
+\fanessay{范文九}{我家的晚餐}{Our Family Dinner}{约94词}
+Dinner is the best time of the day in my family. We are all at the table at half past six.\par
+My mother cooks a lot of food for us. We have fish, chicken, vegetables and soup. My father talks about his day at work, and my sister tells funny stories about her school. I also tell them the news from my class. After dinner, I help wash the dishes.\par
+In some families, people watch TV at dinner. In my family, we talk and laugh. The food is good, but family time is better.\par
+\begin{transbox}
+晚餐是我家一天中最美好的时光。六点半，我们全家都坐在餐桌旁。妈妈为我们做很多菜。我们有鱼、鸡肉、蔬菜和汤。爸爸讲他上班的事，妹妹讲学校里的趣事。我也讲讲班里的事。晚饭后，我帮忙洗碗。有些家庭吃饭时看电视。在我家，我们边吃边聊边说笑。饭菜很好，但一家人在一起的时光更好。
+\end{transbox}
+
+\fanessay{范文十}{我的奶奶}{My Grandma}{约87词}
+My favourite family member is my grandma. She is sixty-five years old, and she lives with us.\par
+My grandma has short white hair and bright eyes. She gets up early every day and makes breakfast for us. Her noodles are the best in the world. In the afternoon, she often sits in the garden and tells me stories about her childhood.\par
+She is old, but her heart is young. She always says that being together makes a family happy. I love her more than I can say.\par
+\begin{transbox}
+我最爱的家人是奶奶。她六十五岁，和我们住在一起。奶奶留着短短的白发，眼睛明亮有神。她每天起得很早，给我们做早饭。她做的面条是世界上最好吃的。下午，她常常坐在院子里，给我讲她小时候的故事。她年纪大了，心却很年轻。她总说，一家人在一起，这个家才幸福。我对她的爱，说也说不完。
+\end{transbox}
+
+
+\fanunit{3}{My School}{我的学校}{there be 句型；方位介词；一般现在时}
+
+{\centering\small\color{accent}本单元写作任务：My School（我的学校）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{There are about eight hundred students and sixty teachers in my school.}{我的学校大约有八百名学生和六十名教师。}{there be 句型表示“某地有某物”；主语是并列的复数名词，be 动词用 are。介绍学校概况时，用具体数字说明规模，最有说服力。}
+
+\fanpat{Our classroom is on the second floor, next to the school library.}{我们的教室在二楼，紧挨着学校图书馆。}{on the second floor 表示楼层，next to 表示“紧挨着”；一句话交代两处位置，方位介词是介绍校园的骨架。}
+
+\fanpat{There is a big blackboard at the front of the classroom, and above it there is a clock.}{教室前面有一块大黑板，黑板的上方有一个钟。}{两个分句都用 there be 句型写教室细节，注意主谓一致：a big blackboard 和 a clock 都是单数，用 is；at the front of 指教室内部的前面。}
+
+\fanpat{In the middle of the playground stands a tall flagpole.}{操场正中间竖立着一根高高的旗杆。}{方位短语放在句首，谓语 stands 提到主语之前，构成完全倒装；介绍大场地时用一句倒装，画面感更强。}
+
+\fanpat{We have four classes in the morning and two in the afternoon.}{我们上午上四节课，下午上两节课。}{一般现在时 have 表示固定的课程安排；两个时间状语一前一后对照，写“学校的一天”最省力。}
+
+\fanpat{After class, we play basketball on the playground and read books in the library.}{课后，我们在操场上打篮球，在图书馆里看书。}{一般现在时表示日常活动，on the playground 与 in the library 两个地点状语并列，活动与地点一一对应。}
+
+\fanpat{My favourite place is the school library, because it is quiet and full of interesting books.}{我最喜欢的地方是学校图书馆，因为它很安静，还有很多有趣的书。}{My favourite place is ... 点明最喜欢的地方，because 引导原因状语从句，be full of 表示“充满”，是“最喜欢的地方”这类作文的常用句。}
+
+\fanpat{Welcome to our school! I am happy to show you around.}{欢迎来到我们学校！我很乐意带你四处看看。}{介绍信和接待用语的开头套语；show sb around 表示“带某人参观”，一句寒暄加一句自荐，礼貌又自然。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{我的新学校}{My New School}{约118词}
+My school is in the east of our city. It is not very big, but it is clean and beautiful. There are about eight hundred students and sixty teachers in it.\par
+There are three classroom buildings and a big playground in my school. My classroom is on the second floor of Building A. In front of the classroom building there is a small garden with many colourful flowers. Our library is just behind the garden, and it is quiet and clean. I often read books there after class.\par
+Our teachers are friendly and helpful. They are always ready to help us with our studies. I love my school, because it is a happy place for all of us.\par
+\begin{analysisbox}
+1）开头用 in the east of our city 交代位置，再用 not very big, but clean and beautiful 一转，最后用 there be 句报出师生人数，信息清楚有序。2）主体按“教学楼—教室—花园—图书馆”的空间顺序展开，in front of、behind 等方位介词把校园布局串成一条线，最后落到“课后去图书馆看书”的日常。3）结尾用 be always ready to help 写老师的友善，再用 because 句点明喜爱的原因，把感情落在“快乐的地方”上。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape They are always ready to help us with our studies.}\quad{\small\color{textgray}（译文：他们总是乐意帮助我们学习。）}
+\end{analysisbox}
+
+\fanessay{范文二}{我们的教室}{Our Classroom}{约116词}
+Our classroom is on the second floor of Building A. It is big and bright. There are forty-five desks and chairs in it.\par
+At the front of the classroom there is a big blackboard. Above the blackboard there is a clock, and on the left wall there are two big maps. My desk is in the middle of the classroom, next to the window. From my seat, I can see the tall trees and the playground.\par
+On the back wall there are some pictures. They are from our art class. Our classroom is like a small home, and we all keep it clean and tidy. I am happy to study here with my classmates every day.\par
+\begin{analysisbox}
+1）开头点明教室的楼层和位置，big and bright 先给出整体印象，再用 there be 句写出课桌椅的数量。2）主体按“前面黑板—上方钟—左墙地图—自己的座位”的空间顺序展开，At the front of、above、on the left wall、in the middle of、next to 一串方位词把教室写成一张平面图。3）结尾从后墙的图画写到“像一个小家”，由陈设转到感情，最后用 keep it clean and tidy 收束。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Above the blackboard there is a clock, and on the left wall there are two big maps.}\quad{\small\color{textgray}（译文：黑板的上方有一个钟，左边的墙上有两幅大地图。）}
+\end{analysisbox}
+
+\fanessay{范文三}{学校的一天}{A Day at School}{约112词}
+My school day begins early. I get to school at half past seven. Then I read English with my classmates for twenty minutes, and the first class begins at eight.\par
+We have four classes in the morning. Our English teacher is Miss Li, and her class is always interesting. At noon, we have lunch in the school dining hall. The food there is delicious, and I usually eat rice and vegetables. In the afternoon, we have two classes. After class, we play basketball on the playground or read books in the library.\par
+School ends at five. I am sometimes tired, but I am always happy, because I learn something new every day.\par
+\begin{analysisbox}
+1）开头用 half past seven、eight 两个时间点起笔，把到校、早读、第一节课的节奏交代清楚。2）主体按上午、中午、下午、课后的顺序推进，have four classes、have lunch、play basketball 等一般现在时动词连成一条时间线，At noon、In the afternoon、After class 让层次一目了然。3）结尾用 sometimes tired, but always happy 作对比，再用 because 句点明原因。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape After class, we play basketball on the playground or read books in the library.}\quad{\small\color{textgray}（译文：课后，我们要么在操场上打篮球，要么在图书馆里看书。）}
+\end{analysisbox}
+
+\fanessay{范文四}{我最喜欢的地方}{My Favourite Place}{约112词}
+There are many places in my school, but my favourite place is the school library.\par
+The library is on the third floor, between the computer room and the art room. There are thousands of books in it. I go there on Tuesday and Thursday afternoons. I usually read storybooks, and sometimes I do my homework there. The library is very quiet, so I can think carefully and learn a lot.\par
+Next to the window there is a big table. I like to sit there and look out at the green trees when I am tired. The library is not only a place to read but also a warm corner of my school.\par
+\begin{analysisbox}
+1）开头用 There are many places ... but my favourite place is ... 先总说再点题，一句锁定写作对象。2）主体先写图书馆的楼层和相邻教室，再用 thousands of books、on Tuesday and Thursday afternoons 写出藏书和去图书馆的习惯，最后以 so 句说明安静环境带来的好处。3）结尾把镜头拉近到窗边的大桌子，用 not only ... but also 把“看书的地方”升华为“温暖的角落”，立意更高一层。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape The library is not only a place to read but also a warm corner of my school.}\quad{\small\color{textgray}（译文：图书馆不仅是看书的地方，也是我们学校一个温暖的角落。）}
+\end{analysisbox}
+
+\fanessay{范文五}{给来访者的信}{A Letter to a Visitor}{约116词}
+Dear Mr Green, I am Li Hua from Class Three, Grade Seven. Welcome to our school! I am happy to show you around.\par
+Our school is in the south of Chengdu. There are three classroom buildings, a library and a big playground. In the middle of the playground stands a tall flagpole. Every Monday morning, we raise our national flag there. Next to the library there is a small garden with many beautiful flowers. It is the best place for a walk.\par
+My classroom is on the second floor, next to the computer room. I would be happy to introduce you to my classmates. I hope you will have a good time here. Yours, Li Hua\par
+\begin{analysisbox}
+1）开头按书信格式写明身份和写信目的，Welcome to our school 与 I am happy to show you around 完成寒暄和自荐。2）主体按“学校位置—楼馆操场—旗杆—花园”的顺序介绍，In the middle of the playground stands a tall flagpole 用倒装句提亮画面，Next to the library there is a small garden 又用方位介词接续路线。3）结尾回到“我的教室”，以 introduce you to my classmates 表达热情，再用 I hope you will have a good time here 收束，礼貌得体。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape In the middle of the playground stands a tall flagpole.}\quad{\small\color{textgray}（译文：操场正中间竖立着一根高高的旗杆。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我的学校}{My School}{约91词}
+My school is big and beautiful. There are many tall trees and colourful flowers in it. It is a good place to study and play.\par
+Our school has three classroom buildings and a big playground. My classroom is on the first floor, next to the teachers' office. In front of the classroom building there is a small garden. I like to read there with my friends after class.\par
+Our teachers are kind and friendly. We are all happy at school. I love my school very much. It is my second home.\par
+\begin{transbox}
+我的学校又大又漂亮。校园里有许多高大的树木和五颜六色的花。这是一个学习和玩耍的好地方。学校里有三栋教学楼和一个大操场。我的教室在一楼，紧挨着教师办公室。教学楼前面有一个小花园。课后我喜欢和朋友们在那里看书。我们的老师亲切又友好。我们在学校里都很快乐。我非常爱我的学校。它是我的第二个家。
+\end{transbox}
+
+\fanessay{范文七}{我的教室}{My Classroom}{约89词}
+My classroom is on the second floor. It is big and clean. There are forty desks and forty chairs in it.\par
+There is a big blackboard at the front of our classroom. Above it there is a clock. On the back wall there are two maps and some pictures. My desk is near the window, so I can see the trees outside.\par
+We clean our classroom every day. We also keep some flowers on the teacher's desk. It is like our second home, and I like it very much.\par
+\begin{transbox}
+我的教室在二楼。它又大又干净。里面有四十张课桌和四十把椅子。教室前面有一块大黑板。黑板的上方有一个钟。后墙上有两幅地图和一些图画。我的课桌靠近窗户，所以我能看见外面的树。我们每天打扫教室。我们还在讲桌上放着一些花。它就像我们的第二个家，我非常喜欢它。
+\end{transbox}
+
+\fanessay{范文八}{我们的操场}{Our Playground}{约91词}
+There is a big playground in our school. It is behind the classroom buildings, and it is very clean. We can see many trees around it.\par
+We have PE classes there. In the morning, we do morning exercises before class. After class, we run, jump and play basketball. Some of us play football, and others play games. We are all happy.\par
+After school, the playground is full of laughter. We learn to work as a team there. The playground is my favourite place in our school. I love it very much.\par
+\begin{transbox}
+我们学校有一个大操场。它在教学楼后面，非常干净。我们能看到操场周围有很多树。我们在那里上体育课。早上，我们在上课前做早操。课后，我们在那里跑步、跳跃、打篮球。我们有的踢足球，有的做游戏。我们都很快乐。放学后，操场上满是欢声笑语。在那里，我们学会了团队合作。操场是学校里我最喜欢的地方。我非常爱它。
+\end{transbox}
+
+\fanessay{范文九}{校园里忙碌的一天}{A Busy Day at School}{约93词}
+I am busy at school every day. I get up at six, and I go to school at seven. My home is a little far from school, so I take the bus.\par
+We have four classes in the morning and two in the afternoon. I like English best because it is interesting. At noon, I have lunch in the school dining hall. Then I play games with my friends.\par
+School is over at five. I go home and do my homework. I am tired but happy. A school day is busy and fun.\par
+\begin{transbox}
+我每天在学校都很忙。我六点起床，七点去上学。我家离学校有点远，所以我坐公交车。我们上午上四节课，下午上两节课。我最喜欢英语，因为它很有趣。中午，我在学校食堂吃午饭。然后我和朋友们一起玩游戏。五点放学。我回家做作业。我很累，但很快乐。学校的一天忙碌又有趣。
+\end{transbox}
+
+\fanessay{范文十}{我最喜欢学校的地方}{What I Like Best About My School}{约95词}
+There are many good places in my school, but I like the library best. It is a warm and friendly place.\par
+The library is on the third floor. There are many books in it. It is quiet and clean. I read there every Friday, and I learn a lot from books. The teachers there are kind, and they help me find good books.\par
+Our subject teachers are helpful, too, and they make every class interesting. My school is a happy place, and I love it very much. I hope you can visit it one day.\par
+\begin{transbox}
+我们学校有很多好地方，但我最喜欢图书馆。它是一个温暖又友好的地方。图书馆在三楼。里面有很多书。它安静又干净。我每周五在那里看书，从书中学到很多。那里的老师很和蔼，他们帮我找到好书。我们的任课老师也很热心，他们让每一节课都很有趣。我的学校是一个快乐的地方，我非常爱它。我希望有一天你能来参观。
+\end{transbox}
+
+
+\fanunit{4}{My Favourite Subject}{我最喜欢的学科}{一般现在时；like/love/enjoy doing；because 原因}
+
+{\centering\small\color{accent}本单元写作任务：My Favourite Subject（我最喜欢的学科）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{Of all my school subjects, English is my favourite, because it is fun and useful.}{在所有学科中，英语是我最喜欢的，因为它既有趣又有用。}{Of all... 先限定比较范围，再用 because 说明原因，是点明“最喜欢的学科”最稳的第一句。}
+
+\fanpat{I like English because each English lesson is like a game, and I can learn new words happily.}{我喜欢英语，因为每节英语课都像一场游戏，我能开开心心地学新单词。}{be like 中 like 是介词，后接名词；because 引导原因状语从句。用打比方说理由，比只说 interesting 更具体。}
+
+\fanpat{I enjoy reading English stories after class, and I love singing English songs with my classmates.}{我喜欢课后读英语故事，也喜欢和同学们一起唱英语歌。}{enjoy 和 love 后都接动名词，表示长期的爱好；两个分句并列，正好写出课外的英语学习。}
+
+\fanpat{In English class, we often play word games, act out stories and talk with our teacher in English.}{英语课上，我们常常玩单词游戏、表演故事，还用英语和老师交谈。}{一般现在时配合 often 写课堂常规；三个动词短语并列，句子饱满，读起来有节奏。}
+
+\fanpat{My English teacher is kind and patient, and she always helps me when I have problems.}{我的英语老师亲切又有耐心，我遇到困难时她总是帮助我。}{两个形容词概括老师的性格，when 引导时间状语从句；写“我喜欢的老师”时常用的一句。}
+
+\fanpat{First, I listen to the teacher carefully in class. Second, I read English aloud every morning.}{首先，我在课上认真听老师讲课；其次，我每天早上大声朗读英语。}{First... Second... 让学习方法条理清楚；一般现在时加 every morning 表示日常习惯。}
+
+\fanpat{If you want to learn English well, you can try to speak it every day and never be afraid of making mistakes.}{如果你想学好英语，可以试着每天说英语，并且不要害怕犯错。}{if 条件句提出建议，try to do 和 be afraid of doing 都是建议信里的高频表达，语气友好不生硬。}
+
+\fanpat{English opens a window to the world, and it makes my school life colourful.}{英语为我打开了一扇通向世界的窗，让我的学校生活多姿多彩。}{结尾升华句，用两个并列分句总结英语的意义；open a window to 的比喻能让全文收束得更有味道。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{我最喜欢的一门课}{The Subject I Love Best}{约114词}
+Of all the subjects I learn this term, English is the one I love best. I have five English classes every week, and I always look forward to them.\par
+In class, we do many interesting things. We sing English songs, play word games and act out short stories. Our teacher, Ms Li, speaks slowly and clearly, so I can understand her. When I learn a new word, I write it in my notebook and try to use it in a sentence.\par
+English is also useful. It opens a window to the world, and one day I want to travel to London and talk with people there. That is why English is my favourite subject.\par
+\begin{analysisbox}
+1）开头用 Of all the subjects I learn this term 限定比较范围，再用 the one I love best 点题，语气自然不生硬。2）主体先用 interesting things 总说，再以 sing、play、act out 三个动词短语铺开课堂活动；so I can understand her 写老师，When I learn a new word 写自己，细节具体。3）结尾用 opens a window to the world 作比喻，落到 travel to London 的具体愿望，最后 That is why... 回扣题目，首尾呼应。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape It opens a window to the world, and one day I want to travel to London and talk with people there.}\quad{\small\color{textgray}（译文：它为我打开了一扇通向世界的窗，我希望有一天能去伦敦旅行，和那里的人交谈。）}
+\end{analysisbox}
+
+\fanessay{范文二}{我为什么喜欢英语}{Why English Is My Favourite}{约115词}
+Many of my classmates ask me why English is my favourite subject. My answer is simple: it is fun, useful and full of surprises.\par
+First, English lessons are fun. We sing songs, play games and act out stories, so the class always goes by quickly. Second, English helps me make friends. On Friday evenings, I talk online with a boy from Australia, and we chat about our favourite sports in English. Third, English opens a door to the world. I can read storybooks about other countries and learn about their food and festivals.\par
+English is not easy, but I enjoy learning it. Every new word brings me a little joy. I will keep working hard.\par
+\begin{analysisbox}
+1）开头从同学的疑问写起，再用 fun、useful 和 full of surprises 三个表达概括理由，自然引出下文。2）主体用 First、Second、Third 分层：课堂有趣、能交朋友、打开世界之窗，每条理由后都跟例子，Friday evenings 一句把“交朋友”落到实处。3）结尾用 not easy 与 enjoy 的对比写出真实感受，再以 Every new word brings me a little joy 收束，情感真挚。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Every new word brings me a little joy.}\quad{\small\color{textgray}（译文：每一个新单词都带给我一点小小的快乐。）}
+\end{analysisbox}
+
+\fanessay{范文三}{一堂特别的英语课}{A Special English Class}{约134词}
+Today is Thursday, and we have a special English class. Ms Li walks into the classroom with a big yellow box in her hands. We all sit up and look at the box.\par
+Inside the box, there are forty word cards. Ms Li divides us into four groups and gives each group ten cards. Some of the words on our cards are 'dragon', 'schoolbag' and 'rain'. We talk together and write a funny story about a dragon with a schoolbag. After ten minutes, every group acts out its story in front of the class. Our story is the funniest, and the whole class laughs and claps.\par
+In this class, I am not afraid to speak English. Games and stories make the words easy and interesting. That is why I enjoy English class so much.\par
+\begin{analysisbox}
+1）开头 Today is Thursday 交代时间，用 a big yellow box 这个细节制造悬念，读者自然想知道盒子里是什么。2）主体按“看盒子—分卡片—编故事—表演”的顺序推进，divide、give、write、act out 等一般现在时动词把一节课写得像镜头；the funniest 与 laughs and claps 写出全班的热烈。3）结尾回到“我”的感受，not afraid to speak English 和 make the words easy and interesting 点明这节课的意义，最后用 That is why... 回扣单元主题。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Games and stories make the words easy and interesting.}\quad{\small\color{textgray}（译文：游戏和故事让单词变得简单又有趣。）}
+\end{analysisbox}
+
+\fanessay{范文四}{我的英语学习方法}{How I Learn English}{约132词}
+Many of my classmates ask me how I learn English. Here are three things I do every day. They are simple, but they work well.\par
+First, I listen carefully in class and take notes. I write down new words and useful sentences in my notebook. Second, I read English aloud for fifteen minutes every morning. Reading aloud makes my pronunciation better and helps me remember the words. Third, I speak English with my friends. We play a small game: one student asks a question in English, and the next student answers it. We laugh a lot, and we learn a lot too.\par
+These habits are not difficult. If I keep doing them, my English will get better and better. Learning a language is like growing a tree: it needs time and care.\par
+\begin{analysisbox}
+1）开头用 Here are three things I do every day 总起，They are simple, but they work well 先让读者觉得方法不难。2）主体用 First、Second、Third 三条方法，每条都有具体做法：listen carefully、read English aloud for fifteen minutes、play a small game；one student ... the next student ... 把小组游戏写得很清楚。3）结尾用 If I keep doing them 展望进步，再以 Learning a language is like growing a tree 作比喻收束，形象又有余味。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Learning a language is like growing a tree: it needs time and care.}\quad{\small\color{textgray}（译文：学一门语言就像种一棵树：它需要时间和用心照料。）}
+\end{analysisbox}
+
+\fanessay{范文五}{给同学的一封建议信}{A Letter of Advice to My Classmate}{约137词}
+Dear Peter, I hear that you find English difficult and want to give it up. Please don't give up. English is not as hard as you think, and I would like to share some ideas with you.\par
+First, start with small goals. For example, you can learn five new words a day. Second, listen and read more. English songs and short stories are good choices, because they are easy and fun. Third, don't be afraid of making mistakes. Everyone makes mistakes, and mistakes help us learn. If you meet a new word, try to guess its meaning first, and then look it up in a dictionary.\par
+Learning English takes time, so please be patient with yourself. I am sure you will do better soon. If you need help, just come to me after class. Yours, Li Hua\par
+\begin{analysisbox}
+1）开头先转述同学的困难 I hear that you find English difficult，再用 Please don't give up 安慰对方并说明写信目的，符合建议信的口吻。2）主体用 First、Second、Third 给三条建议，每条都配做法或理由：five new words a day、English songs and short stories、don't be afraid of making mistakes；If you meet a new word 一句给出可操作的办法。3）结尾用 be patient with yourself 和 I am sure you will do better soon 鼓励对方，最后以 Yours, Li Hua 收束，书信格式完整。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Everyone makes mistakes, and mistakes help us learn.}\quad{\small\color{textgray}（译文：每个人都会犯错，而错误能帮助我们学习。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我最喜欢的学科是音乐}{My Favourite Subject Is Music}{约88词}
+My favourite subject is music. I have two music classes every week, on Tuesday and Friday.\par
+In music class, we sing songs and listen to beautiful music. Our teacher, Mr Zhang, plays the piano very well. He also teaches us to read music. I like singing English songs best, because they are easy and fun. Sometimes we sing in a group, and everyone is happy.\par
+Music helps me relax after a busy day. It is like a good friend. That is why I love music class so much.\par
+\begin{transbox}
+我最喜欢的学科是音乐。我每周有两节音乐课，分别在星期二和星期五。音乐课上，我们唱歌，也听优美的音乐。我们的张老师钢琴弹得非常好，他还教我们识谱。我最喜欢唱英语歌，因为它们简单又有趣。有时我们分组唱歌，每个人都很开心。忙碌了一天之后，音乐帮助我放松。它就像一位好朋友。这就是我这么喜欢音乐课的原因。
+\end{transbox}
+
+\fanessay{范文七}{我们的英语课}{Our English Class}{约101词}
+We have an English class every morning. It is always lively and interesting.\par
+Ms Wang is our English teacher. She comes into the classroom with a smile. In class, we read the new words together and listen to a short story. Then we work in pairs. One student asks a question, and the other answers it. If we make a mistake, Ms Wang helps us patiently. We also play word games, and the whole class laughs.\par
+An English class is not only about words. It is a time to speak, to act and to have fun. I enjoy it very much.\par
+\begin{transbox}
+我们每天早上都有一节英语课。它总是生动有趣。王老师是我们的英语老师。她带着微笑走进教室。课上，我们一起读新单词，听一个小故事。然后我们两人一组练习。一个同学提问，另一个同学回答。如果我们出错，王老师会耐心地帮助我们。我们还玩单词游戏，全班都笑起来。英语课不只是学单词。它是说英语、表演和享受快乐的时间。我非常喜欢它。
+\end{transbox}
+
+\fanessay{范文八}{我喜欢的一位老师}{The Teacher I Like Best}{约92词}
+My favourite teacher is Ms Liu. She teaches us English. She is about thirty years old.\par
+Ms Liu has long black hair and a warm smile. Her classes are never boring. She often tells us funny stories in English and teaches us English songs. When I don't understand a word, she explains it again and again. She is patient with every student. After class, she talks with us like a friend.\par
+I like Ms Liu because she makes English easy and fun. I want to be a teacher like her one day.\par
+\begin{transbox}
+我最喜欢的老师是刘老师。她教我们英语。她大约三十岁。刘老师留着长长的黑发，笑容很温暖。她的课从不无聊。她常常用英语给我们讲有趣的故事，还教我们唱英语歌。当我不懂某个单词时，她会一遍又一遍地解释。她对每个学生都很有耐心。课后，她像朋友一样和我们聊天。我喜欢刘老师，因为她让英语变得简单又有趣。我希望有一天也能成为像她一样的老师。
+\end{transbox}
+
+\fanessay{范文九}{一步一步学英语}{Learning English Step by Step}{约101词}
+English is my favourite subject. I am happy to share how I learn it.\par
+First, I listen to my teacher carefully and write down the key words. Second, I read English aloud every morning. Reading aloud helps me speak clearly. Third, I watch English cartoons on weekends. They are fun, and I learn many new words from them. I also keep a small notebook. When I meet a new word, I write it down. Then I look it up in my dictionary.\par
+Learning English is like a long journey. I take one small step every day, and I enjoy the journey.\par
+\begin{transbox}
+英语是我最喜欢的学科。我很乐意分享我是怎样学英语的。首先，我认真听老师讲课，记下关键词。其次，我每天早上大声朗读英语。大声朗读帮助我吐字清楚。第三，我周末看英语动画片。它们很有趣，我从中学到很多新单词。我还准备了一个小本子。遇到新单词，我就记下来。然后我到词典里查一查。学英语就像一段漫长的旅程。我每天迈出一小步，并且享受这段旅程。
+\end{transbox}
+
+\fanessay{范文十}{一节有趣的地理课}{An Interesting Geography Lesson}{约100词}
+On Wednesday morning, we have a geography lesson in the geography room. There is a big map of the world on the wall.\par
+Our teacher, Mr Chen, points at the map and asks us to find different countries. My group finds Australia first. Then he tells us about the weather there. It is hot in December, and people celebrate Christmas in summer. We are all surprised. At the end of the lesson, we draw a small map of our city.\par
+This lesson is interesting. It makes me want to travel around the world, and geography is now my favourite subject.\par
+\begin{transbox}
+星期三上午，我们在地理教室上一节地理课。墙上有一幅很大的世界地图。我们的陈老师指着地图，让我们找出不同的国家。我们小组最先找到澳大利亚。接着他给我们讲那里的天气。那里十二月很热，人们在夏天过圣诞节。我们都感到很惊奇。下课前，我们画了一幅我们城市的小地图。这节课很有趣。它让我想要环游世界，地理现在是我最喜欢的学科了。
+\end{transbox}
+
+
+\fanunit{5}{Fun Clubs}{有趣的社团}{can 表能力；一般现在时；like doing}
+
+{\centering\small\color{accent}本单元写作任务：My Club（我的社团）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{I am in the reading club, and we meet in the school library every Wednesday afternoon.}{我参加了阅读社团，我们每周三下午在学校图书馆活动。}{be in + 社团名称表示“是某社团的成员”；every + 星期 + 时间点用一般现在时表示固定的活动安排，一句话就能交代社团和活动时间，最适合开头。}
+
+\fanpat{In the club, I can read many interesting books and share my ideas with others.}{在社团里，我能读到许多有趣的书，还能和别人分享我的想法。}{can + 动词原形表示能力或许可，两个 can 句用 and 连接，一次写出两项社团收获；share sth with sb 是常用搭配。}
+
+\fanpat{I like drawing pictures with my club friends because drawing makes me happy.}{我喜欢和社团的朋友们一起画画，因为画画让我快乐。}{like doing sth 表示长期爱好，like 后接动词-ing 形式；because 引导原因状语从句说明理由，从句前一般不加逗号。}
+
+\fanpat{Any student who loves stories can join us, and we are always happy to help new members.}{任何喜欢故事的同学都可以加入我们，我们也很乐意帮助新成员。}{who 引导的定语从句修饰 student，can 表示许可；be happy to help 表达欢迎，是招新介绍里最实用的句型。}
+
+\fanpat{Do you want to make new friends and learn new skills? Come and join the science club!}{你想交新朋友、学新技能吗？快来加入科学社团吧！}{先用 Do you want to...? 提问引起兴趣，再用祈使句 Come and join... 发出邀请，是招新海报、招新演讲的标准开头。}
+
+\fanpat{If you want to start a club, you should first find a teacher and then write a simple plan.}{如果你想创办一个社团，应该先找一位老师，然后写一份简单的计划。}{if 条件句用一般现在时，主句用 should 提建议；first、then 让建议有先后顺序，适合“建议类”段落。}
+
+\fanpat{Joining a club is a good way to learn new things and make new friends.}{参加社团是学新东西、交新朋友的好方法。}{动名词短语作主语，is a good way to do sth 说明好处，是写“加入社团的好处”时最实用的句型，也可换成 a good place to do sth。}
+
+\fanpat{Not only do I learn new skills in the club, but I also become more confident.}{在社团里，我不仅学到了新技能，还变得更自信了。}{Not only 置于句首时主句要部分倒装（do I learn），but also 补充递进；放在结尾总结成长，能明显提升表达层次。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{我参加的阅读社团}{The Reading Club I Joined}{约112词}
+I am in the reading club at our school, and it is my favourite club. We meet in the library every Tuesday and Friday afternoon.\par
+There are twenty members in our club, and Miss Wang is our teacher. In the club, I can read many interesting books and share my ideas with others. I like telling stories to my club friends because they always listen carefully and share good ideas with me. Sometimes we act out a story together, and the whole room is full of laughter.\par
+The reading club makes my school life rich and happy. Books open a big world for me, and my club friends make that world warm.\par
+\begin{analysisbox}
+1）开头用 I am in the reading club at our school 直接点题，and it is my favourite club 表明态度，第二句交代活动的地点和时间，干脆利落。2）主体先用 There are twenty members 介绍规模，再用 can read...and share 与 like telling stories 两个本单元重点结构写出“能做什么、喜欢做什么”，because 从句补充理由，Sometimes 一句让活动有画面。3）结尾用 makes my school life rich and happy 总结收获，再把“书”和“社团朋友”并列，把温暖落到人身上，收束自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Books open a big world for me, and my club friends make that world warm.}\quad{\small\color{textgray}（译文：书籍为我打开了一个广阔的世界，而我的社团朋友让这个世界变得温暖。）}
+\end{analysisbox}
+
+\fanessay{范文二}{一次特别的社团活动}{A Special Science Club Activity}{约134词}
+It is Friday afternoon. The last class is over, and members of the science club run to the science room.\par
+Today our task is to build a paper bridge. Miss Li gives each group ten pieces of paper and some tape. We have only twenty minutes. At first, our bridge is very soft, and it falls down twice. Then Li Ming has a good idea: he rolls the paper into thin tubes, and the tubes become strong. We all work together and finish the bridge just in time. When Miss Li puts six books on it, the bridge still stands, and we jump with joy.\par
+In the science club, I can try new ideas and learn from my mistakes. A small paper bridge teaches me that teamwork can hold up a lot of weight.\par
+\begin{analysisbox}
+1）开头用 It is Friday afternoon 交代时间，members of the science club run to the science room 一句动作感强，直接把读者带进活动现场。2）主体按“领材料—折纸桥—失败两次—想出办法—放书成功”的顺序推进，At first、Then、just in time 让过程清楚；very soft、falls down twice 写出困难，rolls the paper into thin tubes 写出办法，情节有起伏。3）结尾用 can try new ideas and learn from my mistakes 点明社团的意义，最后以 teamwork can hold up a lot of weight 收束——纸桥能承重，团队能担当，一语双关，升华自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A small paper bridge teaches me that teamwork can hold up a lot of weight.}\quad{\small\color{textgray}（译文：一座小小的纸桥让我明白：团队合作能够承受很大的重量。）}
+\end{analysisbox}
+
+\fanessay{范文三}{给想创办社团的同学的建议}{Advice on Starting a New Club}{约137词}
+Dear Li Ming, I am glad to hear that you want to start a new club in our school. Here are some ideas for you.\par
+First, you should find a teacher to help you. A teacher can help you get a room and give you some useful advice. Second, ask your friends what they like doing, and choose a topic that many students are interested in. For example, a reading club needs only books and a quiet room. Third, make a colourful poster and put it up on the school notice board. Write the time and the place on it clearly.\par
+Starting a club is not easy, but it is fun. A club is like a small family, and everyone can find a place in it. If you need help, I am always here. Yours, Li Hua\par
+\begin{analysisbox}
+1）书信开头用 I am glad to hear that... 说明写信缘由，Here are some ideas for you 自然引出建议，符合建议信的体例。2）主体用 First、Second、Third 三条建议层层推进：找老师、选话题、做海报，每条都给出理由或具体做法；what they like doing 与 that many students are interested in 两个从句让表达更准确。3）结尾用 Starting a club is not easy, but it is fun 先抑后扬，再把社团比作 a small family，最后以 I am always here 表达支持，语气真诚。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A club is like a small family, and everyone can find a place in it.}\quad{\small\color{textgray}（译文：社团就像一个小家庭，每个人都能在其中找到自己的位置。）}
+\end{analysisbox}
+
+\fanessay{范文四}{社团让我成长}{How the Club Changed Me}{约122词}
+Two months ago, I joined the drama club. At that time, I was a shy girl, and I was afraid to speak in front of others.\par
+My first task was a short play. I had only six words to say, but my face turned red and my voice was very low. After that, Miss Chen asked me to read aloud for five minutes every day. I read in front of a mirror, and slowly I became brave. Now I can act in a full play, and I even help the new members learn their lines.\par
+The drama club gives me more than a hobby. It teaches me that courage grows a little every day, as long as we do not stop trying.\par
+\begin{analysisbox}
+1）开头用 Two months ago, I joined the drama club 交代时间和事件，was a shy girl、was afraid to speak in front of others 写出从前的自己，为下文的变化作铺垫。2）主体用“第一次上台—脸红声音低—每天照镜子朗读—如今能演完整的话剧”这一条线写变化，but my face turned red and my voice was very low 用细节代替“我很紧张”，真实可信；now I can 与 I even help 两句把成长落到实处。3）结尾用 gives me more than a hobby 提升立意，最后以 courage grows a little every day 点明成长靠一天天积累，与开头呼应。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape It teaches me that courage grows a little every day, as long as we do not stop trying.}\quad{\small\color{textgray}（译文：它教会我：只要我们不停下尝试，勇气就会一天天生长。）}
+\end{analysisbox}
+
+\fanessay{范文五}{篮球社团招新啦}{Come and Join Our Basketball Club}{约115词}
+Hello, everyone! Are you looking for a club to make your school life more fun? Come and join our basketball club!\par
+We meet on the playground every Monday and Thursday afternoon, from four to five thirty. You do not need to be a good player. If you can run and you enjoy team games, you are welcome here. In our club, Mr Zhao teaches us how to pass and shoot. We also play friendly games with other classes. Last month, our team won the school match, and the whole playground cheered for us.\par
+Basketball makes us strong, and our club makes us a team. Come to the playground this Thursday and give it a try!\par
+\begin{analysisbox}
+1）开头连用招呼语和两个问句 Hello, everyone! Are you looking for a club...? 抓住听众，再用祈使句发出邀请，招新演讲的味道很足。2）主体先交代活动时间和地点，再用 You do not need to be a good player 降低门槛，If you can run and you enjoy team games 用条件句说明要求；teaches us how to pass and shoot 写日常，won the school match 写成绩，一虚一实，说服力强。3）结尾用 Basketball makes us strong, and our club makes us a team 对仗收束，最后一句用祈使句再次发出邀请，首尾呼应。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Basketball makes us strong, and our club makes us a team.}\quad{\small\color{textgray}（译文：篮球让我们强壮，而社团让我们成为一个团队。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{我的美术社团}{My Art Club}{约89词}
+I am in the art club. We meet every Friday afternoon in the art room.\par
+There are fifteen of us, and Miss Liu is our teacher. In the club, I can draw animals and flowers. I like drawing birds best because they look free and happy. Sometimes we draw a big picture for our classroom wall. When we finish it, our classroom looks like a small garden.\par
+The art club is quiet but full of fun. I am happy here, and I want to be an artist one day.\par
+\begin{transbox}
+我参加了美术社团。我们每周五下午在美术教室活动。社团里一共有十五个人，刘老师是我们的指导老师。在社团里，我能画动物和花草。我最喜欢画鸟，因为它们看起来自由又快乐。有时我们会为教室的墙画一幅大画。画完以后，我们的教室看起来就像一个小花园。美术社团很安静，却充满乐趣。我在这里很开心，希望有一天能成为一名画家。
+\end{transbox}
+
+\fanessay{范文七}{英语社团的欢乐星期五}{A Happy Friday in the English Club}{约95词}
+This Friday afternoon, our English club is holding a big activity in the school hall.\par
+First, we sing an English song together. Then we play a word game. Miss Green says a word, and we must say a new word with the same first letter. My friend Wang Mei is very quick, and she gets the most stars. After that, we talk about our favourite films in small groups.\par
+I am a little shy, but I can speak English here. The club gives me a good place to practise it. I love our English afternoons.\par
+\begin{transbox}
+这个星期五下午，我们英语社团正在学校礼堂举行一场大型活动。首先，我们一起唱一首英语歌。接着我们玩一个单词游戏：格林老师说一个单词，我们要说出一个首字母相同的新单词。我的朋友王梅反应很快，她得到的星星最多。之后，我们分组谈论自己最喜欢的电影。我有点儿害羞，但在这里我敢说英语了。社团给了我一个练习英语的好地方。我喜欢我们的英语午后时光。
+\end{transbox}
+
+\fanessay{范文八}{我们的音乐社团}{Our Music Club}{约81词}
+Music is my favourite thing, so I am in the music club.\par
+We meet on Wednesday afternoons. In the club, I can play the piano, and my friend Liu Yang can play the guitar. Our teacher, Miss Zhou, teaches us to sing new songs. I like singing English songs best. Sometimes we have a small concert in the classroom, and our classmates come to listen.\par
+Music makes me happy when I am tired. In the music club, I feel at home.\par
+\begin{transbox}
+音乐是我最喜欢的东西，所以我参加了音乐社团。我们每周三下午活动。在社团里，我会弹钢琴，我的朋友刘洋会弹吉他。我们的老师周老师教我们唱新歌。我最喜欢唱英语歌。有时我们会在教室里开一场小小的音乐会，同学们都来听。累的时候，音乐让我快乐。在音乐社团里，我感觉像在家里一样自在。
+\end{transbox}
+
+\fanessay{范文九}{我最喜欢的运动社团}{My Favourite Sports Club}{约85词}
+I am a member of the football club at our school. We meet every Tuesday and Friday.\par
+Our coach is Mr Huang. He is strict but kind. In the club, we run, pass the ball and shoot. I can run fast, but my shooting is not good. Mr Huang tells me to practise every day, and now I can score goals. I like playing with my teammates because we help each other.\par
+Football makes me strong and happy. Our club is like a big family.\par
+\begin{transbox}
+我是学校足球社团的一员。我们每周二和周五活动。我们的教练是黄老师。他很严格，但也很和蔼。在社团里，我们跑步、传球和射门。我跑得快，但射门不好。黄老师让我每天练习，现在我能进球了。我喜欢和队友们一起踢球，因为我们互相帮助。足球让我强壮又快乐。我们的社团就像一个大家庭。
+\end{transbox}
+
+\fanessay{范文十}{加入社团的好处}{Why We Should Join a Club}{约95词}
+Many students ask me, 'Why do you join a club?' My answer is simple: clubs make school life better.\par
+First, we can learn new skills. In a club, we can draw, sing or play ball games. Second, we can make new friends. We meet students from other classes, and we do things together. Third, we can relax after a long day of study. A club is a good place to forget our worries for an hour.\par
+So find a club you like and join it. You will be busy, but you will be happy too.\par
+\begin{transbox}
+很多同学问我：“你为什么要参加社团？”我的答案很简单：社团让学校生活更美好。第一，我们能学到新技能。在社团里，我们能画画、唱歌或者打球。第二，我们能交到新朋友。我们会认识其他班的同学，一起做事。第三，我们能在长时间的学习之后放松一下。社团是一个能让人忘掉烦恼一小时的好地方。所以，找一个你喜欢的社团加入吧。你会很忙，但你也会很快乐。
+\end{transbox}
+
+
+\fanunit{6}{A Day in the Life}{我的一天}{一般现在时；时间表达；频率副词}
+
+{\centering\small\color{accent}本单元写作任务：My Day（我的一天）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{I usually get up at six thirty and go to bed at nine thirty.}{我通常六点半起床，九点半睡觉。}{usually 表频率，放在实义动词前；at + 钟点交代时间，一句话就能立起一天的框架，最适合做开头句。}
+
+\fanpat{After breakfast, I go to school by bike with my cousin.}{早饭后，我和表姐一起骑自行车上学。}{After + 名词作时间状语，置于句首使叙述有先后；by bike 表示交通方式，with sb 补充同行的人。}
+
+\fanpat{Classes begin at eight o'clock, and we have four lessons in the morning.}{八点开始上课，我们上午有四节课。}{一般现在时描述固定的课程安排；begin at + 钟点、in the morning 表示时间段，两个分句用 and 并列，整齐好记。}
+
+\fanpat{I often play basketball with my classmates after school, and sometimes I play ping-pong with my father.}{放学后我常常和同学一起打篮球，有时也和爸爸打乒乓球。}{often 与 sometimes 都表频率，放在实义动词前；after school 是“放学后”，play...with sb 说明和谁一起，写日常活动最常用。}
+
+\fanpat{I always finish my homework before dinner, so I never study late at night.}{我总是在晚饭前写完作业，所以从不熬夜学习。}{always 与 never 一正一反形成对比，so 引出结果；before dinner 与 at night 让作息更有条理。}
+
+\fanpat{It is important for us to go to bed early and get up early.}{早睡早起对我们很重要。}{It is + 形容词 + for sb + to do sth 句型，用来讲道理、提建议，适合放在建议类作文的开头或结尾。}
+
+\fanpat{We should not spend too much time on our phones before bed.}{我们不应该在睡前花太多时间玩手机。}{should not 表示建议；spend time on sth 是常用搭配，before bed 点明时间，写健康作息很实用。}
+
+\fanpat{A good daily routine keeps me healthy and helps me study better.}{良好的作息让我保持健康，也帮我学得更好。}{结尾升华句：keep sb + 形容词、help sb do sth 两个搭配并列，用一般现在时总结作息带来的好处。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{我的一天：从早到晚}{My Day from Morning to Night}{约133词}
+My day starts at six thirty. I get up, wash my face and brush my teeth. Then I have breakfast with my parents. At seven twenty, I go to school by bike. It takes me about ten minutes.\par
+Classes begin at eight o'clock. We have four lessons in the morning and three in the afternoon. My favourite subject is English. At noon, I have lunch in the school dining hall. After lunch, I often play basketball with my classmates for half an hour.\par
+School ends at five. I go home and do my homework first. After dinner, I help my mother wash the dishes. Then I read a book or watch TV for a while. I go to bed at nine thirty. My day is busy, but I enjoy every minute of it.\par
+\begin{analysisbox}
+1）开头 My day starts at six thirty，随后 get up—have breakfast—go to school 三个动作都带着具体钟点，一天的框架立刻清楚。2）主体用 in the morning、in the afternoon、After lunch 层层推进，often 与 for half an hour 写出午饭后固定的运动安排，频率副词与时间状语配合，节奏稳定。3）结尾用 busy 与 enjoy every minute of it 对照收束，把平凡的一天写得有温度。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape My day is busy, but I enjoy every minute of it.}\quad{\small\color{textgray}（译文：我的一天很忙，但我享受其中的每一分钟。）}
+\end{analysisbox}
+
+\fanessay{范文二}{忙碌的早晨}{A Busy Morning}{约124词}
+Monday mornings are always busy for me. My alarm clock rings at six forty, but I sometimes stay in bed for five more minutes.\par
+Then everything happens quickly. I wash my face, brush my teeth and put on my school uniform in ten minutes. At seven, I have a quick breakfast: milk, bread and an egg. My mother always says, 'Take your time!' but I have no time. At seven fifteen, I put my books into my schoolbag and run to the bus stop. Sometimes I even forget my keys.\par
+The bus comes at seven twenty, and I get to school at seven forty. I am never late. A busy morning makes me tired, but it also teaches me to use my time well.\par
+\begin{analysisbox}
+1）开篇 Monday mornings are always busy for me 直接点题，always 定下全文节奏，闹钟响了还要赖床五分钟的细节很真实。2）主体连用 Then、At seven、At seven fifteen 三个时间点，把十分钟内的忙乱写得紧凑；妈妈的一句 Take your time! 让画面有了声音。3）结尾先以 never late 收束事实，再用 makes me tired 与 teaches me to use my time well 一转，把忙碌写成成长。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A busy morning makes me tired, but it also teaches me to use my time well.}\quad{\small\color{textgray}（译文：忙碌的早晨让我疲惫，但也教会我好好利用时间。）}
+\end{analysisbox}
+
+\fanessay{范文三}{我的周末}{My Weekend}{约116词}
+On weekends, I do not go to school, but my weekends are never boring. I usually get up at seven, an hour later than on school days.\par
+On Saturday morning, I help my parents clean the house. I clean the windows and water the plants. In the afternoon, I go to the library with my best friend Lily. We read books there for two hours. On Sunday, I visit my grandparents. My grandmother always cooks my favourite food, and we take a walk in the park after lunch.\par
+I also do my homework on Sunday evening, so I am ready for a new week. Weekends are short, but they are full of family time and fun.\par
+\begin{analysisbox}
+1）开头用 but 一转，never boring 说明周末虽不上学却充实，an hour later than on school days 的比较也自然。2）主体按 Saturday、Sunday 两条线展开，help...clean、water the plants、visit grandparents 等动词短语具体可感，for two hours 补出时长。3）结尾以 short 与 full of family time and fun 对照收束，点出周末的意义。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Weekends are short, but they are full of family time and fun.}\quad{\small\color{textgray}（译文：周末很短，却装满了家庭时光和乐趣。）}
+\end{analysisbox}
+
+\fanessay{范文四}{特别的一天}{A Special Day at School}{约122词}
+Every autumn, our school has an English Day. It is a special day for me, and I look forward to it all year.\par
+On that day, we have no usual lessons. In the morning, we watch an English film and learn new songs. At noon, we taste food from different countries. In the afternoon, every class puts on a short play. This year my class chooses Snow White, and I am the king. I have only three lines, but I practise them every day.\par
+English Day is special because English comes out of our books and into our lives. For one day, we speak English, laugh in English and even dream in English. I always feel proud and happy on this day.\par
+\begin{analysisbox}
+1）开头用 Every autumn 引出学校的英语日，all year 写出期待，紧扣 special。2）主体按 in the morning、At noon、In the afternoon 的顺序介绍活动，watch an English film、taste food、put on a short play 三个动作用词准确；only three lines 与 practise them every day 形成小反差，真实可爱。3）结尾用 comes out of our books and into our lives 升华，speak、laugh、dream 三个动词并列，把学语言写成过日子。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape English Day is special because English comes out of our books and into our lives.}\quad{\small\color{textgray}（译文：英语日之所以特别，是因为英语从我们的书本里走出来，走进了我们的生活。）}
+\end{analysisbox}
+
+\fanessay{范文五}{健康作息建议}{Tips for a Healthy Daily Routine}{约118词}
+Many students in my class are tired every day. They go to bed late and get up early. Here are some tips for a healthy daily routine.\par
+First, go to bed before ten o'clock. Getting eight hours of sleep every night makes you strong. Second, get up early and have a good breakfast. Never go to school on an empty stomach. Third, do sports for at least thirty minutes a day. You can run, jump or play ball games with your friends.\par
+Finally, do not spend too much time on your phone before bed. Turn it off and read a book instead. A good daily routine keeps you healthy and helps you study better. Why not start today?\par
+\begin{analysisbox}
+1）开头先写同学们 tired 的现状，再用 Here are some tips 自然过渡到建议，符合建议类文章的写法。2）主体用 First、Second、Third、Finally 四层铺排：睡眠、早餐、运动、手机，每条建议都带一个具体做法或数字，eight hours、thirty minutes 让建议可执行。3）结尾用 keep you healthy and help you study better 总结好处，Why not start today? 以问句收尾，亲切有号召力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A good daily routine keeps you healthy and helps you study better.}\quad{\small\color{textgray}（译文：良好的作息让你保持健康，也帮你学得更好。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{忙碌而快乐的一天}{A Busy but Happy Day}{约102词}
+I am a middle school student. I am busy every day, but I am happy.\par
+I get up at six thirty and have breakfast at seven. Then I go to school by bus. Classes start at eight, and I have four classes in the morning. At twelve, I have lunch at school. After school, I play ping-pong with my friends. I go home at five thirty.\par
+In the evening, I do my homework first. Then I read or watch TV for a short time. I go to bed at nine thirty. I am tired at night, but I like my busy day.\par
+\begin{transbox}
+我是一名中学生。我每天都很忙，但我很快乐。我六点半起床，七点吃早饭，然后坐公交车去上学。八点开始上课，上午有四节课。十二点我在学校吃午饭。放学后，我和朋友们打乒乓球，五点半回家。晚上我先写作业，然后看一会儿书或电视。我九点半上床睡觉。晚上我很累，但我喜欢我忙碌的一天。
+\end{transbox}
+
+\fanessay{范文七}{我的早晨}{My Morning}{约92词}
+I am always busy in the morning. I get up at six forty from Monday to Friday.\par
+First, I wash my face and brush my teeth. Then I have breakfast with my family. I usually have an egg, some bread and a glass of milk. At seven ten, I put on my shoes and pick up my schoolbag. My school is near my home, so I walk there with my sister.\par
+I get to school at seven thirty. The morning air is fresh, and I feel great. I like my busy morning.\par
+\begin{transbox}
+我早上总是很忙。周一到周五我六点四十起床。首先，我洗脸、刷牙。然后我和家人一起吃早饭。我通常吃一个鸡蛋、一些面包，喝一杯牛奶。七点十分，我穿上鞋，拿起书包。学校离家很近，所以我和妹妹一起走路去。我七点半到校。早晨的空气很新鲜，我感觉很好。我喜欢我忙碌的早晨。
+\end{transbox}
+
+\fanessay{范文八}{周末的一天}{A Day at the Weekend}{约89词}
+I love weekends. They are different from school days.\par
+On Saturday morning, I get up at seven thirty and I do not go to school. I help my mother wash the dishes and clean the table. At ten, I do my homework. In the afternoon, I play football in the park with my friends. We play for about an hour.\par
+In the evening, my parents and I watch TV together. We also talk about our week. I go to bed at ten. Weekends are short, but I enjoy them.\par
+\begin{transbox}
+我喜欢周末，它们和上学的日子不一样。周六早上我七点半起床，不用去上学。我帮妈妈洗碗、擦桌子。十点我做作业。下午我和朋友们在公园里踢足球，我们踢大约一个小时。晚上我和爸爸妈妈一起看电视，也聊聊这一周的事。我十点睡觉。周末很短，但我很享受。
+\end{transbox}
+
+\fanessay{范文九}{放学后}{After School}{约86词}
+School ends at five in the afternoon. After school, I have a lot of things to do.\par
+First, I go to the library with my friend Tom. We read books for half an hour. Then we play basketball on the playground. It is my favourite sport. At six, I go home and do my homework. My mother helps me when I have questions.\par
+After dinner, I take a walk with my parents. We talk and laugh. I am tired after school, but I am never bored.\par
+\begin{transbox}
+下午五点放学。放学后，我有很多事情要做。首先，我和朋友汤姆去图书馆，我们看半个小时的书。然后我们在操场上打篮球，这是我最喜欢的运动。六点我回家写作业。遇到不懂的问题时，妈妈会帮我。晚饭后，我和父母一起散步，我们有说有笑。放学后我很累，但我从不觉得无聊。
+\end{transbox}
+
+\fanessay{范文十}{我的作息}{My Daily Routine}{约91词}
+Let me tell you about my daily routine. I think it is healthy.\par
+I always get up at six thirty. I never get up late. After breakfast, I go to school by bike. I have seven classes every day. I usually have lunch at school. After school, I often run for twenty minutes. I sometimes help my mother cook dinner.\par
+I do my homework before dinner. At ten o'clock, I go to bed and read for a few minutes. I am never tired in class. Good habits make my day better.\par
+\begin{transbox}
+让我来说说我的日常作息吧。我觉得它很健康。我总是六点半起床，从不睡懒觉。早饭后我骑自行车去上学。我每天有七节课，通常在学校吃午饭。放学后我常常跑二十分钟步，有时还帮妈妈做晚饭。我在晚饭前写作业。十点我上床，看几分钟书。我上课从不觉得累。好习惯让我的每一天都更好。
+\end{transbox}
+
+
+\fanunit{7}{Happy Birthday!}{生日快乐！}{日期表达；一般现在时；一般过去时（生日经历）}
+
+{\centering\small\color{accent}本单元写作任务：My Birthday（我的生日）\par}
+\vspace{0.6em}
+
+\fansection{〇、本单元写作常用句型}
+\begin{fanpatterns}
+\fanpat{My birthday is on October 12th, and it is my favourite day of the year.}{我的生日是十月十二日，它是我一年中最喜欢的一天。}{日期用“on + 月份 + 序数词”表达，如 on October 12th；这一句既交代生日，又点明情感，适合放在开头。}
+
+\fanpat{On my birthday, my mother always cooks long noodles for me, because in China they mean a long and happy life.}{每到生日，妈妈总会给我做长寿面，因为面条寓意长寿和幸福。}{一般现在时配合 On my birthday 写生日习惯，because 说明原因，把习俗和寓意一起写出来。}
+
+\fanpat{Last Saturday was my thirteenth birthday, and my parents held a small party for me at home.}{上周六是我十三岁生日，父母在家为我办了一个小型聚会。}{用“Last + 时间”开头，把全文带入一般过去时；hold a party for sb 是“为某人举办聚会”的固定搭配。}
+
+\fanpat{I made a wish and blew out all the candles in one breath.}{我许了个愿，一口气吹灭了所有蜡烛。}{make a wish、blow out candles 是生日场景的两个核心动作，用 and 连接两个过去式动词，叙事紧凑。}
+
+\fanpat{My best friend gave me a hand-made card, and I liked it more than any expensive gift.}{我最好的朋友送了我一张手工贺卡，比起任何贵重的礼物，我更喜欢它。}{give sb sth 双宾语结构写礼物，more than 作比较，突出心意比价格更重要。}
+
+\fanpat{A birthday is not only about cake and gifts, but also about saying thank you to our parents.}{生日不只是蛋糕和礼物，更是向父母说声谢谢的日子。}{not only... but also... 连接两个并列成分，用于结尾升华主题；about 后接动名词 saying。}
+
+\fanpat{It was a simple birthday, but I will never forget it.}{那是一个简单的生日，但我永远不会忘记它。}{用 but 构成转折，前半句用一般过去时叙事，后半句用 will 表达难忘，是叙事后收尾的万能句。}
+
+\fanpat{This year, I plan to invite two friends to my home and make a cake with my mother.}{今年，我打算邀请两个朋友来我家，和妈妈一起做蛋糕。}{plan to do sth 表示计划，invite sb to + 地点 表示邀请，适合写“生日计划”类作文。}
+
+\end{fanpatterns}
+
+\fansection{一、满分范文}
+
+\fanessay{范文一}{十月十二日，我的生日}{October 12th, My Birthday}{约138词}
+My birthday is on October 12th, and it is my favourite day of the year. On that day, our home always smells of cake and flowers.\par
+This year, my birthday fell on a Sunday. My parents got up early and cleaned the house. My mother cooked long noodles for me, because in China they mean a long and happy life. In the afternoon, my grandparents came with a big bag of fruit. My father gave me a new basketball, and my little sister drew a picture for me.\par
+After dinner, I made a wish and blew out the candles on the cake in one breath. I kept my wish secret, but I hope my family will be healthy and happy. A birthday is a day to grow up a little, and I want to be a better son.\par
+\begin{analysisbox}
+1）开头用 My birthday is on October 12th 直接点题，日期表达准确；On that day, our home always smells of cake and flowers 从嗅觉入手，一句话写出家里的生日气氛。2）主体按时间顺序展开：父母早起打扫，妈妈做长寿面，祖父母带来水果，爸爸送篮球，妹妹画画，细节具体；because 一句还点出长寿面的文化含义。3）结尾写晚饭后许愿、吹蜡烛，再由“长大”写到想做“更好的儿子”，把生日和成长、感恩连在一起，立意自然高于“吃蛋糕、收礼物”。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape My mother cooked long noodles for me, because in China they mean a long and happy life.}\quad{\small\color{textgray}（译文：妈妈为我做了长寿面，因为在中国，面条寓意长寿和幸福。）}
+\end{analysisbox}
+
+\fanessay{范文二}{露西的生日派对}{Lucy's Birthday Party}{约136词}
+Last Saturday was my friend Lucy's twelfth birthday. She invited five of us to her home for a party.\par
+We arrived at three in the afternoon. Lucy's mother made a big chocolate cake and some fruit salad. We played games in the living room, and the loser had to sing a song. Lucy's little dog ran around us, which made us laugh again and again. At six, we sat around the table. Lucy made a wish and blew out the candles. Then we shared the cake and talked about our favourite films.\par
+Before I went home, I gave Lucy a storybook. She said it was her best party ever. I was tired that night, but my heart was full of joy. A good party is not about expensive food; it is about the people around us.\par
+\begin{analysisbox}
+1）开头用 Last Saturday was... 交代时间、人物和事由，一句话就进入叙事。2）主体按“到访—玩游戏—吃蛋糕—聊天”的顺序推进，arrived、made、played、sat、shared 等过去式动词让情节连贯；Lucy's little dog ran around us, which made us laugh again and again 用非限制性定语从句补充细节，画面感强。3）结尾用 not about... it is about... 作对比，把派对的意义落在人而不是食物上。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape Lucy's little dog ran around us, which made us laugh again and again.}\quad{\small\color{textgray}（译文：露西的小狗在我们身边跑来跑去，逗得我们笑了一遍又一遍。）}
+\end{analysisbox}
+
+\fanessay{范文三}{给妈妈过生日}{A Birthday for Mum}{约135词}
+My mother's birthday is on March 8th, which is also Women's Day. This year, my father and I decided to give her a surprise.\par
+We got up before six and cleaned the whole house. In the afternoon, we cooked noodles and two dishes. I made a card with a picture of the three of us, and I wrote on it: 'Thank you for everything, Mum.' At seven in the evening, my mother came home from work. She stood at the door and could not believe her eyes. She read the card twice and smiled with tears in her eyes.\par
+At dinner, we sang a song for her and shared a small cake. She said it was her happiest birthday. I learned that parents also need our love. A small surprise can make a big difference.\par
+\begin{analysisbox}
+1）开头点明妈妈的生日，并补一句 which is also Women's Day，交代特殊背景；decided to give her a surprise 设置悬念。2）主体按“早起打扫—下午做饭—做贺卡—妈妈回家”的顺序叙述，cleaned、cooked、made、wrote 等动词连用，条理清楚；She stood at the door and could not believe her eyes 写妈妈进门时的惊讶，符合“惊喜”的情境。3）结尾先写妈妈的话，再用 A small surprise can make a big difference 议论收束，先叙事后说理，主题明确。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape She read the card twice and smiled with tears in her eyes.}\quad{\small\color{textgray}（译文：她把卡片读了两遍，眼里含着泪笑了。）}
+\end{analysisbox}
+
+\fanessay{范文四}{最好的生日礼物}{The Best Birthday Gift}{约137词}
+Last year, I got many birthday gifts, but the best one was a small card from my best friend, Wang Lei.\par
+At that time, our school basketball team had a big game, and I felt very nervous. Wang Lei knew how I felt. On my birthday, he gave me a card and a photo of our team. On the card he wrote, 'You are better than you think.' I read it again and again. In the game, I did my best, and our team won.\par
+Some of my other gifts were expensive, like a new watch and a pair of shoes. But the card means more to me, because it showed me what true friendship is. I keep it in my desk drawer. A gift is not about its price; it is about the love behind it.\par
+\begin{analysisbox}
+1）开头用 but the best one was... 制造对比，直接引出“最好的礼物”，扣题紧凑。2）主体先写赛前的紧张，再写朋友送卡片和照片、卡片上的话给自己力量，最后用比赛获胜证明这份礼物的价值，叙事有起因、经过和结果。3）结尾把卡片与手表、鞋子作比，用 A gift is not about its price; it is about the love behind it 点明主旨，升华自然。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape A gift is not about its price; it is about the love behind it.}\quad{\small\color{textgray}（译文：礼物的意义不在于价格，而在于它背后的爱。）}
+\end{analysisbox}
+
+\fanessay{范文五}{生日的意义}{What a Birthday Really Means}{约127词}
+Many children think a birthday is all about cake, gifts and a big party. I thought so too when I was younger.\par
+Two years ago, I asked my parents for a new bike, and they bought me one. I was happy, but then I found that my mother worked late every day that month. A year later, I did not ask for anything. Instead, I cooked noodles for my parents and said thank you to them.\par
+Now I understand the meaning of a birthday. It is a day to remember all the love our parents give us. It is also a new start. Every birthday, I make a small plan and try to be a better person. That is the best gift I can give my family.\par
+\begin{analysisbox}
+1）开头先写“很多孩子以为生日就是蛋糕和礼物”，再写“我小时候也这样想”，为下文的转变作铺垫。2）主体用两年前和一年后两个生日作对比：先前要自行车，后来发现妈妈每天工作到很晚，于是改为给父母做面条、说谢谢，前后变化让“懂事”真实可信。3）结尾连用短句层层递进，把生日的意义落到“感恩”和“新的开始”上，最后一句 That is the best gift I can give my family 收束有力。
+\par\smallskip{\sffamily\bfseries\color{mainblue}亮点句：}{\itshape It is a day to remember all the love our parents give us.}\quad{\small\color{textgray}（译文：生日是一个让我们记住父母给予我们的所有爱的日子。）}
+\end{analysisbox}
+
+\fansection{二、高分好背好文（适合基础薄弱同学）}
+
+\fanessay{范文六}{温暖的生日}{A Warm Birthday}{约91词}
+My birthday is on May 5th. It is a warm and happy day for me.\par
+On that day, my mother always cooks noodles for me. My father buys a small cake. In the evening, we have dinner together. My grandparents call me and say, 'Happy birthday!' I get some gifts, like books and pens.\par
+Last year, my best friend came to my home. We played games and took photos. I made a wish and ate a big piece of cake. I love my birthday because I can feel my family's love.\par
+\begin{transbox}
+我的生日是五月五日。对我来说，那是温暖而快乐的一天。每到那一天，妈妈总会给我做面条，爸爸会买一个小蛋糕。晚上，我们一家人一起吃晚饭。爷爷奶奶会打电话对我说：“生日快乐！”我还会收到一些礼物，比如书和钢笔。去年，我最好的朋友来到我家。我们一起玩游戏、拍照片。我许了愿，还吃了一大块蛋糕。我爱我的生日，因为我能感受到家人的爱。
+\end{transbox}
+
+\fanessay{范文七}{家里的生日聚会}{A Birthday Party at Home}{约97词}
+My twelfth birthday was last Sunday. I had a party at home with three good friends.\par
+My mother made a big cake. My father put up balloons in the living room. We played card games and danced to the music. We also told jokes. At six, we ate cake and ice cream. My friends sang a song for me. They did not sing well, but I loved it.\par
+After the party, we took a photo together. I put it on my desk. When I see it, I always smile. Good friends make a birthday warm and special.\par
+\begin{transbox}
+我的十二岁生日是在上周日。我和三个好朋友在家办了一个聚会。妈妈做了一个大蛋糕，爸爸在客厅里挂上了气球。我们玩纸牌游戏，跟着音乐跳舞，还讲了笑话。六点的时候，我们吃蛋糕和冰淇淋。朋友们为我唱了一首歌。他们唱得不太好，但我很喜欢。聚会结束后，我们一起拍了一张照片，我把它放在书桌上。每当我看到这张照片，我都会笑。好朋友让生日变得温暖又特别。
+\end{transbox}
+
+\fanessay{范文八}{一份会长大的礼物}{A Gift That Grows}{约98词}
+On my last birthday, my sister gave me a small plant. It was not expensive, but I liked it at once.\par
+The plant is green and small. My sister said, 'It will grow with you.' I put it by the window. I water it every morning. I also talk to it, and my parents laugh at me. Now it has three new leaves.\par
+The plant is taller too. When I look at it, I think of my sister's words. A good gift does not need to be big. It can be a small plant that grows with you.\par
+\begin{transbox}
+上一个生日，姐姐送给我一株小植物。它并不贵，但我一下子就喜欢上了它。这株植物绿绿的，小小的。姐姐说：“它会和你一起长大。”我把它放在窗边。我每天早上给它浇水。我还会跟它说话，爸爸妈妈都笑我。现在它有三片新叶子。这株植物也长高了。看着它，我就想起姐姐的话。一份好礼物不必很大，它也可以是一株和你一起成长的小植物。
+\end{transbox}
+
+\fanessay{范文九}{难忘的生日}{An Unforgettable Birthday}{约104词}
+Last year, my birthday was on a Tuesday. It was a school day, so I thought it would be boring.\par
+In the morning, I went to school as usual. Nobody said 'Happy birthday' to me, and I felt a little sad. But after the last class, my teacher asked me to stay. Then my classmates stood up and sang a song for me. They gave me a big card with many kind words on it.\par
+I was so surprised that I did not know what to say. That day, I learned that love can come from many people. I will never forget that birthday.\par
+\begin{transbox}
+去年，我的生日是在一个星期二。那天要上学，所以我以为会过得很无聊。早上，我像往常一样去学校。没有人对我说“生日快乐”，我有一点点难过。但最后一节课结束后，老师让我留下来。接着，同学们站起来为我唱了一首歌。他们送给我一张大卡片，上面写满了温暖的话语。我惊讶极了，不知道说什么好。那一天，我明白了爱可以来自很多人。我永远不会忘记那个生日。
+\end{transbox}
+
+\fanessay{范文十}{我的生日计划}{My Birthday Plan}{约99词}
+Next Saturday is my birthday. This year, I want to do something different.\par
+In the morning, I plan to clean my room and buy some fruit with my father. In the afternoon, I want to invite two friends to my home. We can play games and watch a film. My mother will make a cake, and I will help her. In the evening, I plan to give my mother a card. I want to thank her for her love.\par
+I hope my birthday will be simple but happy. I also hope I can grow up a little this year.\par
+\begin{transbox}
+下周六是我的生日。今年，我想做一点不一样的事。早上，我打算打扫我的房间，和爸爸一起买些水果。下午，我想邀请两个朋友来我家。我们可以玩游戏、看电影。妈妈会做一个蛋糕，我会帮她。晚上，我打算送给妈妈一张卡片，我想感谢她的爱。我希望我的生日简单而快乐。我也希望今年我能长大一点。
+\end{transbox}
+
+\end{document}
