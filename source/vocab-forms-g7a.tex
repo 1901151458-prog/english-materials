@@ -1,0 +1,370 @@
+% !TEX program = xelatex
+% 编译：xelatex 文件名.tex  （请连续编译两遍）
+% 本文件由 tools/build_forms_g7a.py 自动生成，请勿手工修改。
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+
+% ---------- 版面 ----------
+\usepackage[a4paper,top=1.5cm,bottom=1.4cm,left=1.5cm,right=1.5cm,%
+            headheight=13pt,headsep=6pt,footskip=12pt]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fancyhdr}
+
+% ---------- 配色 ----------
+\definecolor{headblue}{RGB}{26,54,93}
+\definecolor{headbg}{RGB}{223,231,242}
+\definecolor{rowbg}{RGB}{245,247,250}
+\definecolor{rulegray}{RGB}{160,160,160}
+\definecolor{textgray}{RGB}{102,102,102}
+\definecolor{cngreen}{RGB}{24,118,72}
+\definecolor{cnblue}{RGB}{31,92,156}
+
+% ---------- 全局 ----------
+\linespread{1.05}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\sloppy
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.08}
+\arrayrulecolor{rulegray}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTpre}{2pt}
+\setlength{\LTpost}{2pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+
+% ---------- 页眉页脚 ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\color{textgray} 人教版七年级上册英语（2024 版）}
+\fancyhead[R]{\scriptsize\color{textgray} 黑体词词形变化 · Unit 1--7}
+\fancyfoot[C]{\scriptsize\color{textgray}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 单元条（不另起一页）
+\newcommand{\unitheading}[1]{%
+  \par\vspace{4pt}%
+  \noindent\colorbox{headbg}{%
+    \makebox[\dimexpr\textwidth-2\fboxsep\relax][l]{%
+      \color{headblue}\zihao{5}\heiti\ \ #1\ \ }}%
+  \par\vspace{1pt}}
+
+\begin{document}
+
+% ============================ 标题块 ============================
+\begin{center}
+{\sffamily\bfseries\fontsize{20pt}{26pt}\selectfont\color{headblue} 人教版七年级上册英语（2024 版）\par}
+\vspace{2pt}
+{\sffamily\bfseries\fontsize{17pt}{22pt}\selectfont\color{headblue} U1--U7 黑体词词形变化整理\par}
+\vspace{7pt}
+{\small\color{textgray} 教材词汇表黑体词 · 184 词 · 7 个单元\par}
+\vspace{2pt}
+{\scriptsize\color{textgray} 2026 年 10 月 20 日\par}
+\end{center}
+\vspace{2pt}
+
+{\small\color{textgray}\textbf{图例说明}：单词列全部\textbf{加粗}，为教材词汇表中的黑体词（重点词汇，中考要求掌握）。词形变化栏中黑色\textbf{加粗}的词＝本词的常规词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级，均为中考要求掌握）；\textbf{\color{cngreen}绿色}的词＝拓展同根词（供拓展参考，已逐条核对）；中文（含词性、词形说明）统一用蓝色显示。}
+
+\vspace{4pt}
+
+\unitheading{Unit 1（26 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{unit} & n. & {\heiti {\color{cnblue}复数}} \textbf{units} \\
+\rowcolor{rowbg} \textbf{greet} & v. & {\heiti {\color{cnblue}三单}} \textbf{greets}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{greeted}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{greeted}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{greeting}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{greet each other}}{\color{cnblue}（互相问候）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{greet with a smile}}{\color{cnblue}（微笑着问候）} \\
+\textbf{each} & adj. \& pron. & {\color{cnblue}限定词/代词，通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{each other}}{\color{cnblue}（互相；彼此）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{each of us}}{\color{cnblue}（我们每个人）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{each day}}{\color{cnblue}（每天）} \\
+\rowcolor{rowbg} \textbf{other} & pron. \& adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the other}}{\color{cnblue}（（两者中的）另一个）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the others}}{\color{cnblue}（其他的人或物）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{other than}}{\color{cnblue}（除……之外）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the other day}}{\color{cnblue}（前几天）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in other words}}{\color{cnblue}（换句话说）} \\
+\textbf{everyone} & pron. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{everyone else}}{\color{cnblue}（其他所有人）} \\
+\rowcolor{rowbg} \textbf{start} & v. & {\heiti {\color{cnblue}三单}} \textbf{starts}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{started}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{started}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{starting}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{finish}}{\color{cnblue}（结束；完成）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{start with}}{\color{cnblue}（以……开始）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{start to do}}{\color{cnblue}（开始做某事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{start a conversation}}{\color{cnblue}（开始交谈）} \\
+\textbf{conversation} & n. & {\heiti {\color{cnblue}复数}} \textbf{conversations}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{have a conversation}}{\color{cnblue}（进行交谈）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{have a conversation with}}{\color{cnblue}（与……交谈）} \\
+\rowcolor{rowbg} \textbf{spell} & v. & {\heiti {\color{cnblue}三单}} \textbf{spells}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{spelled}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{spelled}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{spelling}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{spell out}}{\color{cnblue}（拼写出来；讲清楚）} \\
+\textbf{bell} & n. & {\heiti {\color{cnblue}复数}} \textbf{bells}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{ring the bell}}{\color{cnblue}（按铃；敲钟）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{doorbell}}{\color{cnblue}（门铃）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{school bell}}{\color{cnblue}（上课铃；校铃）} \\
+\rowcolor{rowbg} \textbf{full} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{fuller}{\color{cnblue}，最高级} \textbf{fullest}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{fully}}{\color{cnblue}（完全地；充分地）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{empty}}{\color{cnblue}（空的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be full of}}{\color{cnblue}（充满；满是）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{full name}}{\color{cnblue}（全名）} \\
+\textbf{grade} & n. & {\heiti {\color{cnblue}复数}} \textbf{grades}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{get good grades}}{\color{cnblue}（取得好成绩）} \\
+\rowcolor{rowbg} \textbf{classmate} & n. & {\heiti {\color{cnblue}复数}} \textbf{classmates}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{deskmate}}{\color{cnblue}（同桌）} \\
+\textbf{mistake} & n. & {\heiti {\color{cnblue}复数}} \textbf{mistakes}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{make a mistake}}{\color{cnblue}（犯错误）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{by mistake}}{\color{cnblue}（错误地；无意中）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{learn from mistakes}}{\color{cnblue}（从错误中学习）} \\
+\rowcolor{rowbg} \textbf{country} & n. & {\heiti {\color{cnblue}复数}} \textbf{countries}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{all over the country}}{\color{cnblue}（全国各地）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{countryside}}{\color{cnblue}（乡村；农村）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{country music}}{\color{cnblue}（乡村音乐）} \\
+\textbf{same} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{different}}{\color{cnblue}（不同的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the same as}}{\color{cnblue}（与……相同）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{at the same time}}{\color{cnblue}（同时）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the same class}}{\color{cnblue}（在同一个班）} \\
+\rowcolor{rowbg} \textbf{both} & adj. \& pron. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{both of us}}{\color{cnblue}（我们两个都）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{both sides}}{\color{cnblue}（双方；两边）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{both...and...}}{\color{cnblue}（既……又……；两者都）} \\
+\textbf{band} & n. & {\heiti {\color{cnblue}复数}} \textbf{bands}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play in a band}}{\color{cnblue}（在乐队演奏）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{rock band}}{\color{cnblue}（摇滚乐队）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{school band}}{\color{cnblue}（校乐队）} \\
+\rowcolor{rowbg} \textbf{pot} & n. & {\heiti {\color{cnblue}复数}} \textbf{pots}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{pots and pans}}{\color{cnblue}（锅碗瓢盆）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{hot pot}}{\color{cnblue}（火锅）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{teapot}}{\color{cnblue}（茶壶）} \\
+\textbf{tofu} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{mapo tofu}}{\color{cnblue}（麻婆豆腐）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{fried tofu}}{\color{cnblue}（炸豆腐）} \\
+\rowcolor{rowbg} \textbf{guitar} & n. & {\heiti {\color{cnblue}复数}} \textbf{guitars}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{guitarist}}{\color{cnblue}（吉他手）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play the guitar}}{\color{cnblue}（弹吉他）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{electric guitar}}{\color{cnblue}（电吉他）} \\
+\textbf{tennis} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play tennis}}{\color{cnblue}（打网球）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{table tennis}}{\color{cnblue}（乒乓球）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{tennis ball}}{\color{cnblue}（网球）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{tennis racket}}{\color{cnblue}（网球拍）} \\
+\rowcolor{rowbg} \textbf{page} & n. & {\heiti {\color{cnblue}复数}} \textbf{pages}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{turn to page}}{\color{cnblue}（翻到……页）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{web page}}{\color{cnblue}（网页）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{page number}}{\color{cnblue}（页码）} \\
+\textbf{even} & adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{even if}}{\color{cnblue}（即使；虽然）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{even though}}{\color{cnblue}（尽管；虽然）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{even better}}{\color{cnblue}（甚至更好）} \\
+\rowcolor{rowbg} \textbf{would} & modal v. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{would like}}{\color{cnblue}（想要）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{would you like}}{\color{cnblue}（你想要……吗）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{would love to}}{\color{cnblue}（很想；很愿意）} \\
+\textbf{information} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a piece of information}}{\color{cnblue}（一条信息）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{information about}}{\color{cnblue}（关于……的信息）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{information desk}}{\color{cnblue}（服务台；咨询台）} \\
+\rowcolor{rowbg} \textbf{hobby} & n. & {\heiti {\color{cnblue}复数}} \textbf{hobbies}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{have a hobby}}{\color{cnblue}（有业余爱好）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{hobbies and interests}}{\color{cnblue}（兴趣爱好）} \\
+\end{longtable}}
+
+\unitheading{Unit 2（23 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{bottle} & n. & {\heiti {\color{cnblue}复数}} \textbf{bottles}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a bottle of}}{\color{cnblue}（一瓶……）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{water bottle}}{\color{cnblue}（水瓶）} \\
+\rowcolor{rowbg} \textbf{eraser} & n. & {\heiti {\color{cnblue}复数}} \textbf{erasers}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{erase}}{\color{cnblue}（擦除；消除）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{blackboard eraser}}{\color{cnblue}（黑板擦）} \\
+\textbf{key} & n. & {\heiti {\color{cnblue}复数}} \textbf{keys}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{key to}}{\color{cnblue}（……的关键；……的钥匙）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{keyboard}}{\color{cnblue}（键盘）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{key ring}}{\color{cnblue}（钥匙圈）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{key word}}{\color{cnblue}（关键词）} \\
+\rowcolor{rowbg} \textbf{thing} & n. & {\heiti {\color{cnblue}复数}} \textbf{things}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{something}}{\color{cnblue}（某物；某事）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{everything}}{\color{cnblue}（一切；所有事物）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{anything}}{\color{cnblue}（任何东西；任何事物）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{nothing}}{\color{cnblue}（没有什么；没有东西）} \\
+\textbf{need} & v. & {\heiti {\color{cnblue}三单}} \textbf{needs}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{needed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{needed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{needing}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{need to do}}{\color{cnblue}（需要做某事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in need of}}{\color{cnblue}（需要；缺少）} \\
+\rowcolor{rowbg} \textbf{mean} & v. & {\heiti {\color{cnblue}三单}} \textbf{means}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{meant}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{meant}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{meaning}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{meaningful}}{\color{cnblue}（有意义的；重要的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{mean to do}}{\color{cnblue}（打算做某事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{what do you mean}}{\color{cnblue}（你是什么意思）} \\
+\textbf{husband} & n. & {\heiti {\color{cnblue}复数}} \textbf{husbands}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{wife}}{\color{cnblue}（妻子）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{husband and wife}}{\color{cnblue}（夫妻；夫妇）} \\
+\rowcolor{rowbg} \textbf{bat} & n. & {\heiti {\color{cnblue}复数}} \textbf{bats}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{baseball bat}}{\color{cnblue}（棒球棒）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{ping-pong bat}}{\color{cnblue}（乒乓球拍）} \\
+\textbf{together} & adv. & {\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{altogether}}{\color{cnblue}（完全地；总共）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{get together}}{\color{cnblue}（聚会；相聚）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{together with}}{\color{cnblue}（连同；和……一起）} \\
+\rowcolor{rowbg} \textbf{spend} & v. & {\heiti {\color{cnblue}三单}} \textbf{spends}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{spent}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{spent}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{spending}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{spend time with}}{\color{cnblue}（和……共度时光）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{spend time on}}{\color{cnblue}（在……上花时间）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{spend time doing}}{\color{cnblue}（花时间做某事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{spend money on}}{\color{cnblue}（在……上花钱）} \\
+\textbf{really} & adv. & {\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{real}}{\color{cnblue}（真的；真实的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{not really}}{\color{cnblue}（不完全是；不见得）} \\
+\rowcolor{rowbg} \textbf{member} & n. & {\heiti {\color{cnblue}复数}} \textbf{members}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a member of}}{\color{cnblue}（……的一员）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{family member}}{\color{cnblue}（家庭成员）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{team member}}{\color{cnblue}（队员；团队成员）} \\
+\textbf{activity} & n. & {\heiti {\color{cnblue}复数}} \textbf{activities}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{active}}{\color{cnblue}（积极的；活跃的）}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{actively}}{\color{cnblue}（积极地；活跃地）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{after-school activity}}{\color{cnblue}（课外活动）} \\
+\rowcolor{rowbg} \textbf{chess} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play chess}}{\color{cnblue}（下国际象棋）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{chessboard}}{\color{cnblue}（棋盘）} \\
+\textbf{funny} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{funnier}{\color{cnblue}，最高级} \textbf{funniest}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{fun}}{\color{cnblue}（乐趣；快乐）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{funny story}}{\color{cnblue}（好笑的故事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{funny smell}}{\color{cnblue}（奇怪的气味）} \\
+\rowcolor{rowbg} \textbf{laugh} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{laughs}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{laughed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{laughed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{laughing}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{laughs}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{laughter}}{\color{cnblue}（笑声；笑）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{laugh at}}{\color{cnblue}（嘲笑；取笑）} \\
+\textbf{different} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more different}{\color{cnblue}，最高级} \textbf{most different}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{difference}}{\color{cnblue}（不同；差别）}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{differently}}{\color{cnblue}（不同地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be different from}}{\color{cnblue}（与……不同）} \\
+\rowcolor{rowbg} \textbf{violin} & n. & {\heiti {\color{cnblue}复数}} \textbf{violins}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{violinist}}{\color{cnblue}（小提琴手）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play the violin}}{\color{cnblue}（拉小提琴）} \\
+\textbf{hat} & n. & {\heiti {\color{cnblue}复数}} \textbf{hats}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{wear a hat}}{\color{cnblue}（戴帽子）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{straw hat}}{\color{cnblue}（草帽）} \\
+\rowcolor{rowbg} \textbf{handsome} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more handsome}{\color{cnblue}，最高级} \textbf{most handsome}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{ugly}}{\color{cnblue}（丑陋的；难看的）} \\
+\textbf{knee} & n. & {\heiti {\color{cnblue}复数}} \textbf{knees}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{kneel}}{\color{cnblue}（跪下）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on one's knees}}{\color{cnblue}（跪着）} \\
+\rowcolor{rowbg} \textbf{son} & n. & {\heiti {\color{cnblue}复数}} \textbf{sons}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{daughter}}{\color{cnblue}（女儿）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{grandson}}{\color{cnblue}（孙子；外孙）} \\
+\textbf{hike} & v. & {\heiti {\color{cnblue}三单}} \textbf{hikes}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{hiked}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{hiked}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{hiking}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{hiker}}{\color{cnblue}（徒步旅行者）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{go hiking}}{\color{cnblue}（去远足）} \\
+\end{longtable}}
+
+\unitheading{Unit 3（35 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{fun} & n. \& adj. & {\color{cnblue}作名词时不可数，无复数；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{funny}}{\color{cnblue}（好笑的；滑稽的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{have fun}}{\color{cnblue}（玩得开心）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{for fun}}{\color{cnblue}（为了好玩）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{make fun of}}{\color{cnblue}（取笑；嘲弄）} \\
+\rowcolor{rowbg} \textbf{yard} & n. & {\heiti {\color{cnblue}复数}} \textbf{yards}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{backyard}}{\color{cnblue}（后院）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{schoolyard}}{\color{cnblue}（校园；操场）} \\
+\textbf{carrot} & n. & {\heiti {\color{cnblue}复数}} \textbf{carrots}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{carrot cake}}{\color{cnblue}（胡萝卜蛋糕）} \\
+\rowcolor{rowbg} \textbf{count} & v. & {\heiti {\color{cnblue}三单}} \textbf{counts}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{counted}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{counted}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{counting}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{count on}}{\color{cnblue}（依靠；指望）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{countdown}}{\color{cnblue}（倒计时）} \\
+\textbf{another} & adj. \& pron. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{one another}}{\color{cnblue}（互相；彼此）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{one after another}}{\color{cnblue}（一个接一个地）} \\
+\rowcolor{rowbg} \textbf{else} & adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{anything else}}{\color{cnblue}（别的什么东西）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{what else}}{\color{cnblue}（还有什么）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{or else}}{\color{cnblue}（否则；要不然）} \\
+\textbf{circle} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{circles}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{circled}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{circled}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{circling}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{circles}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in a circle}}{\color{cnblue}（围成一圈）} \\
+\rowcolor{rowbg} \textbf{hall} & n. & {\heiti {\color{cnblue}复数}} \textbf{halls}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{hallway}}{\color{cnblue}（走廊；门厅）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{concert hall}}{\color{cnblue}（音乐厅）} \\
+\textbf{dining hall} & n. & {\heiti {\color{cnblue}复数}} \textbf{dining halls} \\
+\rowcolor{rowbg} \textbf{building} & n. & {\heiti {\color{cnblue}复数}} \textbf{buildings}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{builder}}{\color{cnblue}（建筑工人；建造者）}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{build}}{\color{cnblue}（建造；修建）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{teaching building}}{\color{cnblue}（教学楼）} \\
+\textbf{across} & prep. \& adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{across from}}{\color{cnblue}（在……对面）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{across the street}}{\color{cnblue}（在街对面）} \\
+\rowcolor{rowbg} \textbf{center} & n. & {\heiti {\color{cnblue}复数}} \textbf{centers}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{central}}{\color{cnblue}（中心的；中央的）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{shopping center}}{\color{cnblue}（购物中心）} \\
+\textbf{gym} & n. & {\heiti {\color{cnblue}复数}} \textbf{gyms}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{gym class}}{\color{cnblue}（体育课）} \\
+\rowcolor{rowbg} \textbf{field} & n. & {\heiti {\color{cnblue}复数}} \textbf{fields}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{football field}}{\color{cnblue}（足球场）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{field trip}}{\color{cnblue}（实地考察）} \\
+\textbf{office} & n. & {\heiti {\color{cnblue}复数}} \textbf{offices}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{officer}}{\color{cnblue}（官员；军官）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{post office}}{\color{cnblue}（邮局）} \\
+\rowcolor{rowbg} \textbf{large} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{larger}{\color{cnblue}，最高级} \textbf{largest}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{small}}{\color{cnblue}（小的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a large number of}}{\color{cnblue}（许多；大量的）} \\
+\textbf{special} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more special}{\color{cnblue}，最高级} \textbf{most special}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{specially}}{\color{cnblue}（特别地；专门地）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{ordinary}}{\color{cnblue}（普通的；平常的）} \\
+\rowcolor{rowbg} \textbf{smart} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{smarter}{\color{cnblue}，最高级} \textbf{smartest}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{stupid}}{\color{cnblue}（愚蠢的）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{smartphone}}{\color{cnblue}（智能手机）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{smart watch}}{\color{cnblue}（智能手表）} \\
+\textbf{important} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more important}{\color{cnblue}，最高级} \textbf{most important}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{importance}}{\color{cnblue}（重要性）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{unimportant}}{\color{cnblue}（不重要的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be important to}}{\color{cnblue}（对……重要）} \\
+\rowcolor{rowbg} \textbf{notice} & n. \& v. & {\heiti {\color{cnblue}三单}} \textbf{notices}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{noticed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{noticed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{noticing}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{notices}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take notice of}}{\color{cnblue}（注意到；留意）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{notice board}}{\color{cnblue}（布告板）} \\
+\textbf{locker} & n. & {\heiti {\color{cnblue}复数}} \textbf{lockers}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{locker room}}{\color{cnblue}（更衣室）} \\
+\rowcolor{rowbg} \textbf{corner} & n. & {\heiti {\color{cnblue}复数}} \textbf{corners}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{around the corner}}{\color{cnblue}（在拐角处；即将到来）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the corner}}{\color{cnblue}（在角落里）} \\
+\textbf{screen} & n. & {\heiti {\color{cnblue}复数}} \textbf{screens}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{touch screen}}{\color{cnblue}（触摸屏）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{screen time}}{\color{cnblue}（屏幕使用时间）} \\
+\rowcolor{rowbg} \textbf{modern} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more modern}{\color{cnblue}，最高级} \textbf{most modern}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{ancient}}{\color{cnblue}（古代的；古老的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{modern times}}{\color{cnblue}（现代；当代）} \\
+\textbf{amazing} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more amazing}{\color{cnblue}，最高级} \textbf{most amazing}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{amazed}}{\color{cnblue}（感到惊奇的）}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{amaze}}{\color{cnblue}（使惊奇；使惊叹）} \\
+\rowcolor{rowbg} \textbf{raise} & v. & {\heiti {\color{cnblue}三单}} \textbf{raises}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{raised}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{raised}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{raising}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{raise money}}{\color{cnblue}（筹钱；募捐）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{raise one's hand}}{\color{cnblue}（举手）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{raise the flag}}{\color{cnblue}（升旗）} \\
+\textbf{flag} & n. & {\heiti {\color{cnblue}复数}} \textbf{flags}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{national flag}}{\color{cnblue}（国旗）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{flagpole}}{\color{cnblue}（旗杆）} \\
+\rowcolor{rowbg} \textbf{most} & adj. \& pron. \& adv. & {\color{cnblue}many / much 的最高级，比较级 more；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{most of}}{\color{cnblue}（大多数；大部分）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{at most}}{\color{cnblue}（至多；最多）} \\
+\textbf{change} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{changes}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{changed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{changed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{changing}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{changes}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{change into}}{\color{cnblue}（变成；变为）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{change one's mind}}{\color{cnblue}（改变主意）} \\
+\rowcolor{rowbg} \textbf{seat} & n. & {\heiti {\color{cnblue}复数}} \textbf{seats}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take a seat}}{\color{cnblue}（坐下）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{seat belt}}{\color{cnblue}（安全带）} \\
+\textbf{delicious} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more delicious}{\color{cnblue}，最高级} \textbf{most delicious} \\
+\rowcolor{rowbg} \textbf{yours} & pron. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a friend of yours}}{\color{cnblue}（你的一个朋友）} \\
+\textbf{send} & v. & {\heiti {\color{cnblue}三单}} \textbf{sends}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{sent}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{sent}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{sending}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{sender}}{\color{cnblue}（寄件人；发送者）} \\
+\rowcolor{rowbg} \textbf{similar} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more similar}{\color{cnblue}，最高级} \textbf{most similar}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{different}}{\color{cnblue}（不同的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be similar to}}{\color{cnblue}（与……相似）} \\
+\textbf{sound} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{sounds}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{sounded}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{sounded}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{sounding}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{sounds}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{sound like}}{\color{cnblue}（听起来像）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{sound good}}{\color{cnblue}（听起来不错）} \\
+\end{longtable}}
+
+\unitheading{Unit 4（22 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{biology} & n. & {\color{cnblue}学科名称，通常作不可数名词，无复数；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{biologist}}{\color{cnblue}（生物学家）} \\
+\rowcolor{rowbg} \textbf{geography} & n. & {\color{cnblue}学科名称，通常作不可数名词，无复数；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{geographer}}{\color{cnblue}（地理学家）} \\
+\textbf{history} & n. & {\color{cnblue}作学科名称时通常不可数，无复数；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{historian}}{\color{cnblue}（历史学家）} \\
+\rowcolor{rowbg} \textbf{boring} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more boring}{\color{cnblue}，最高级} \textbf{most boring}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{bored}}{\color{cnblue}（感到厌烦的）}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{bore}}{\color{cnblue}（使厌烦；使无聊）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{interesting}}{\color{cnblue}（有趣的）} \\
+\textbf{useful} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more useful}{\color{cnblue}，最高级} \textbf{most useful}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{use}}{\color{cnblue}（使用；利用）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{useless}}{\color{cnblue}（无用的；没用的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be useful to}}{\color{cnblue}（对……有用）} \\
+\rowcolor{rowbg} \textbf{exciting} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more exciting}{\color{cnblue}，最高级} \textbf{most exciting}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{excitement}}{\color{cnblue}（激动；兴奋）}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{excited}}{\color{cnblue}（感到激动的）}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{excite}}{\color{cnblue}（使激动；使兴奋）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be excited about}}{\color{cnblue}（对……感到兴奋）} \\
+\textbf{past} & n. \& adj. \& prep. & {\color{cnblue}作形容词时通常不列比较级/最高级；}{\heiti {\color{cnblue}复数}} \textbf{pasts}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{future}}{\color{cnblue}（将来；未来）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the past}}{\color{cnblue}（在过去）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{past tense}}{\color{cnblue}（过去时）} \\
+\rowcolor{rowbg} \textbf{number} & n. & {\heiti {\color{cnblue}复数}} \textbf{numbers}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a number of}}{\color{cnblue}（许多；一些）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the number of}}{\color{cnblue}（……的数量）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{phone number}}{\color{cnblue}（电话号码）} \\
+\textbf{reason} & n. & {\heiti {\color{cnblue}复数}} \textbf{reasons}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{reasonable}}{\color{cnblue}（合理的；明智的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the reason for}}{\color{cnblue}（……的原因）} \\
+\rowcolor{rowbg} \textbf{remember} & v. & {\heiti {\color{cnblue}三单}} \textbf{remembers}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{remembered}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{remembered}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{remembering}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{forget}}{\color{cnblue}（忘记）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{remember to do sth}}{\color{cnblue}（记得去做（某事））}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{remember doing sth}}{\color{cnblue}（记得做过（某事））} \\
+\textbf{as} & prep. \& conj. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{such as}}{\color{cnblue}（例如；像）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{as well as}}{\color{cnblue}（也；和；还）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{as soon as}}{\color{cnblue}（一……就）} \\
+\rowcolor{rowbg} \textbf{AM} & abbr. & {\color{cnblue}—} \\
+\textbf{PM} & abbr. & {\color{cnblue}—} \\
+\rowcolor{rowbg} \textbf{excellent} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be excellent at}}{\color{cnblue}（擅长）} \\
+\textbf{instrument} & n. & {\heiti {\color{cnblue}复数}} \textbf{instruments}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play an instrument}}{\color{cnblue}（演奏乐器）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{musical instrument}}{\color{cnblue}（乐器）} \\
+\rowcolor{rowbg} \textbf{singer} & n. & {\heiti {\color{cnblue}复数}} \textbf{singers}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{sing}}{\color{cnblue}（唱歌）} \\
+\textbf{future} & n. & {\heiti {\color{cnblue}复数}} \textbf{futures}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{past}}{\color{cnblue}（过去）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the future}}{\color{cnblue}（在未来）} \\
+\rowcolor{rowbg} \textbf{term} & n. & {\heiti {\color{cnblue}复数}} \textbf{terms}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{this term}}{\color{cnblue}（这学期）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{next term}}{\color{cnblue}（下学期）} \\
+\textbf{problem} & n. & {\heiti {\color{cnblue}复数}} \textbf{problems}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{no problem}}{\color{cnblue}（没问题）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{solve a problem}}{\color{cnblue}（解决问题）} \\
+\rowcolor{rowbg} \textbf{magic} & n. \& adj. & {\color{cnblue}作形容词时通常不列比较级/最高级；}{\heiti {\color{cnblue}复数}} \textbf{magics}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{magician}}{\color{cnblue}（魔术师）}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{magical}}{\color{cnblue}（神奇的；有魔力的）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{magic trick}}{\color{cnblue}（魔术；戏法）} \\
+\textbf{life} & n. & {\heiti {\color{cnblue}复数}} \textbf{lives}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{live}}{\color{cnblue}（生活；居住）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{daily life}}{\color{cnblue}（日常生活）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{lifestyle}}{\color{cnblue}（生活方式）} \\
+\rowcolor{rowbg} \textbf{scientist} & n. & {\heiti {\color{cnblue}复数}} \textbf{scientists}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{science}}{\color{cnblue}（科学）} \\
+\end{longtable}}
+
+\unitheading{Unit 5（23 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{club} & n. & {\heiti {\color{cnblue}复数}} \textbf{clubs}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{music club}}{\color{cnblue}（音乐社团）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{sports club}}{\color{cnblue}（体育社团）} \\
+\rowcolor{rowbg} \textbf{join} & v. & {\heiti {\color{cnblue}三单}} \textbf{joins}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{joined}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{joined}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{joining}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{join in}}{\color{cnblue}（参加（活动））}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{join the club}}{\color{cnblue}（加入社团）} \\
+\textbf{choose} & v. & {\heiti {\color{cnblue}三单}} \textbf{chooses}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{chose}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{chosen}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{choosing}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{choice}}{\color{cnblue}（选择；抉择）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{choose to do}}{\color{cnblue}（选择做某事）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{choose from}}{\color{cnblue}（从……中挑选）} \\
+\rowcolor{rowbg} \textbf{drama} & n. & {\heiti {\color{cnblue}复数}} \textbf{dramas}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{drama club}}{\color{cnblue}（戏剧社）} \\
+\textbf{feeling} & n. & {\heiti {\color{cnblue}复数}} \textbf{feelings}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{feel}}{\color{cnblue}（感觉；觉得）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{hurt one's feelings}}{\color{cnblue}（伤害某人感情）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{feel like}}{\color{cnblue}（想要；感觉像）} \\
+\rowcolor{rowbg} \textbf{news} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a piece of news}}{\color{cnblue}（一条消息）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{newspaper}}{\color{cnblue}（报纸）} \\
+\textbf{musical} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more musical}{\color{cnblue}，最高级} \textbf{most musical}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{music}}{\color{cnblue}（音乐）}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{musician}}{\color{cnblue}（音乐家）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{musical instrument}}{\color{cnblue}（乐器）} \\
+\rowcolor{rowbg} \textbf{exactly} & adv. & {\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{exact}}{\color{cnblue}（准确的；精确的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{not exactly}}{\color{cnblue}（不完全是）} \\
+\textbf{ability} & n. & {\heiti {\color{cnblue}复数}} \textbf{abilities}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{able}}{\color{cnblue}（能够的；有能力的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be able to}}{\color{cnblue}（能够；会）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{have the ability to}}{\color{cnblue}（有能力做某事）} \\
+\rowcolor{rowbg} \textbf{paint} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{paints}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{painted}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{painted}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{painting}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{paints}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{painter}}{\color{cnblue}（画家；油漆工）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{paint a picture}}{\color{cnblue}（画一幅画）} \\
+\textbf{climb} & v. & {\heiti {\color{cnblue}三单}} \textbf{climbs}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{climbed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{climbed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{climbing}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{climber}}{\color{cnblue}（攀登者；爬山者）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{climb the mountain}}{\color{cnblue}（爬山）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{go climbing}}{\color{cnblue}（去爬山）} \\
+\rowcolor{rowbg} \textbf{more} & adj. \& pron. & {\color{cnblue}many / much 的比较级，最高级 most；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{more and more}}{\color{cnblue}（越来越多）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{more or less}}{\color{cnblue}（或多或少）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{not any more}}{\color{cnblue}（不再）} \\
+\textbf{act} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{acts}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{acted}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{acted}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{acting}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{acts}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{actor}}{\color{cnblue}（演员）}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{action}}{\color{cnblue}（行动；动作）}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{active}}{\color{cnblue}（积极的；活跃的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take action}}{\color{cnblue}（采取行动）} \\
+\rowcolor{rowbg} \textbf{interested} & adj. & {\color{cnblue}由分词转化，通常不列比较级/最高级；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{interest}}{\color{cnblue}（兴趣；趣味）}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{interesting}}{\color{cnblue}（有趣的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be interested in}}{\color{cnblue}（对……感兴趣）} \\
+\textbf{nature} & n. & {\heiti {\color{cnblue}复数}} \textbf{natures}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{natural}}{\color{cnblue}（自然的；天然的）}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{naturally}}{\color{cnblue}（自然地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in nature}}{\color{cnblue}（在自然界中）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{nature club}}{\color{cnblue}（自然社团）} \\
+\rowcolor{rowbg} \textbf{beef} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{beef noodles}}{\color{cnblue}（牛肉面）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{beef soup}}{\color{cnblue}（牛肉汤）} \\
+\textbf{soon} & adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{as soon as}}{\color{cnblue}（一……就）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{as soon as possible}}{\color{cnblue}（尽快）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{sooner or later}}{\color{cnblue}（迟早）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{see you soon}}{\color{cnblue}（再见；回头见）} \\
+\rowcolor{rowbg} \textbf{than} & prep. \& conj. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{more than}}{\color{cnblue}（多于；超过）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{less than}}{\color{cnblue}（少于；不到）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{rather than}}{\color{cnblue}（而不是）} \\
+\textbf{mind} & n. & {\heiti {\color{cnblue}复数}} \textbf{minds}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{never mind}}{\color{cnblue}（没关系；不要紧）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{change one's mind}}{\color{cnblue}（改变主意）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{make up one's mind}}{\color{cnblue}（下定决心）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{mind map}}{\color{cnblue}（思维导图）} \\
+\rowcolor{rowbg} \textbf{fall} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{falls}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{fell}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{fallen}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{falling}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{falls}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{fall asleep}}{\color{cnblue}（入睡）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{fall down}}{\color{cnblue}（跌倒；摔倒）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{fall off}}{\color{cnblue}（从……跌落）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the fall}}{\color{cnblue}（在秋天）} \\
+\textbf{collect} & v. & {\heiti {\color{cnblue}三单}} \textbf{collects}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{collected}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{collected}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{collecting}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{collection}}{\color{cnblue}（收藏品；收集）}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{collector}}{\color{cnblue}（收集者；收藏家）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{collect stamps}}{\color{cnblue}（收集邮票）} \\
+\rowcolor{rowbg} \textbf{insect} & n. & {\heiti {\color{cnblue}复数}} \textbf{insects} \\
+\textbf{discover} & v. & {\heiti {\color{cnblue}三单}} \textbf{discovers}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{discovered}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{discovered}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{discovering}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{discovery}}{\color{cnblue}（发现；发觉）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{make a discovery}}{\color{cnblue}（有所发现）} \\
+\end{longtable}}
+
+\unitheading{Unit 6（25 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{quarter} & n. & {\heiti {\color{cnblue}复数}} \textbf{quarters}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a quarter past}}{\color{cnblue}（……点一刻）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a quarter to}}{\color{cnblue}（……点差一刻）} \\
+\rowcolor{rowbg} \textbf{shower} & n. \& v. & {\heiti {\color{cnblue}三单}} \textbf{showers}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{showered}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{showered}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{showering}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{showers}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take a shower}}{\color{cnblue}（洗淋浴；洗澡）} \\
+\textbf{brush} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{brushes}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{brushed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{brushed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{brushing}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{brushes}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{brush one's teeth}}{\color{cnblue}（刷牙）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{paintbrush}}{\color{cnblue}（画笔）} \\
+\rowcolor{rowbg} \textbf{tooth} & n. & {\heiti {\color{cnblue}复数}} \textbf{teeth}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{toothache}}{\color{cnblue}（牙痛）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{toothbrush}}{\color{cnblue}（牙刷）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{toothpaste}}{\color{cnblue}（牙膏）} \\
+\textbf{duty} & n. & {\heiti {\color{cnblue}复数}} \textbf{duties}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on duty}}{\color{cnblue}（值班；值日）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{off duty}}{\color{cnblue}（下班；不值班）} \\
+\rowcolor{rowbg} \textbf{usually} & adv. & {\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{usual}}{\color{cnblue}（通常的；平常的）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{seldom}}{\color{cnblue}（很少；不常）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{as usual}}{\color{cnblue}（像往常一样）} \\
+\textbf{reporter} & n. & {\heiti {\color{cnblue}复数}} \textbf{reporters}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{report}}{\color{cnblue}（报道；报告）} \\
+\rowcolor{rowbg} \textbf{around} & prep. \& adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{around the world}}{\color{cnblue}（全世界）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{look around}}{\color{cnblue}（环顾四周）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{around here}}{\color{cnblue}（附近；这一带）} \\
+\textbf{homework} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{do one's homework}}{\color{cnblue}（做作业）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{hand in homework}}{\color{cnblue}（交作业）} \\
+\rowcolor{rowbg} \textbf{rise} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{rises}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{rose}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{risen}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{rising}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{rises}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{fall}}{\color{cnblue}（落下；下降）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{sunrise}}{\color{cnblue}（日出）} \\
+\textbf{stay} & v. & {\heiti {\color{cnblue}三单}} \textbf{stays}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{stayed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{stayed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{staying}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{stay at home}}{\color{cnblue}（待在家里）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{stay up}}{\color{cnblue}（熬夜）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{stay healthy}}{\color{cnblue}（保持健康）} \\
+\rowcolor{rowbg} \textbf{restaurant} & n. & {\heiti {\color{cnblue}复数}} \textbf{restaurants}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{fast food restaurant}}{\color{cnblue}（快餐店）} \\
+\textbf{housework} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{do housework}}{\color{cnblue}（做家务）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{share housework}}{\color{cnblue}（分担家务）} \\
+\rowcolor{rowbg} \textbf{while} & n. \& conj. & {\color{cnblue}作名词时通常用 a while，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{for a while}}{\color{cnblue}（一会儿）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{after a while}}{\color{cnblue}（过了一会儿）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{once in a while}}{\color{cnblue}（偶尔；有时）} \\
+\textbf{weekend} & n. & {\heiti {\color{cnblue}复数}} \textbf{weekends}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{at the weekend}}{\color{cnblue}（在周末）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on the weekend}}{\color{cnblue}（在周末（美式））} \\
+\rowcolor{rowbg} \textbf{daily} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{day}}{\color{cnblue}（天；白天）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{daily life}}{\color{cnblue}（日常生活）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{daily routine}}{\color{cnblue}（日常安排；作息）} \\
+\textbf{only} & adv. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{only a few}}{\color{cnblue}（只有几个）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{only child}}{\color{cnblue}（独生子女）} \\
+\rowcolor{rowbg} \textbf{break} & n. \& v. & {\heiti {\color{cnblue}三单}} \textbf{breaks}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{broke}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{broken}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{breaking}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{breaks}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take a break}}{\color{cnblue}（休息一下）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{break down}}{\color{cnblue}（出故障；抛锚）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{break out}}{\color{cnblue}（爆发；突然发生）} \\
+\textbf{finish} & v. & {\heiti {\color{cnblue}三单}} \textbf{finishes}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{finished}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{finished}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{finishing}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{finish doing sth}}{\color{cnblue}（做完某事）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{finish line}}{\color{cnblue}（终点线）} \\
+\rowcolor{rowbg} \textbf{already} & adv. & {\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{yet}}{\color{cnblue}（还；尚未）} \\
+\textbf{dark} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{darker}{\color{cnblue}，最高级} \textbf{darkest}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{darkness}}{\color{cnblue}（黑暗；漆黑）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{bright}}{\color{cnblue}（明亮的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in the dark}}{\color{cnblue}（在黑暗中）} \\
+\rowcolor{rowbg} \textbf{outside} & adv. \& adj. \& prep. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{inside}}{\color{cnblue}（在里面；内部的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{go outside}}{\color{cnblue}（到外面去）} \\
+\textbf{part} & n. & {\heiti {\color{cnblue}复数}} \textbf{parts}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{partly}}{\color{cnblue}（部分地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{take part in}}{\color{cnblue}（参加；参与）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{play a part in}}{\color{cnblue}（起作用；扮演角色）} \\
+\rowcolor{rowbg} \textbf{everyday} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{every day}}{\color{cnblue}（每天（作状语））}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{everyday life}}{\color{cnblue}（日常生活）} \\
+\textbf{prepare} & v. & {\heiti {\color{cnblue}三单}} \textbf{prepares}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{prepared}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{prepared}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{preparing}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{preparation}}{\color{cnblue}（准备；预备）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{prepare for}}{\color{cnblue}（为……做准备）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{prepare to do}}{\color{cnblue}（准备做某事）} \\
+\end{longtable}}
+
+\unitheading{Unit 7（30 个词）}
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}>{\centering\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{11.6cm}@{}}
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 派生词）}\\
+\midrule
+\endfirsthead
+\toprule
+\rowcolor{headbg}{\heiti\color{headblue} 单词} & {\heiti\color{headblue} 词性} & {\heiti\color{headblue} 词形变化（接上页）}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{celebrate} & v. & {\heiti {\color{cnblue}三单}} \textbf{celebrates}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{celebrated}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{celebrated}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{celebrating}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{celebrate a birthday}}{\color{cnblue}（庆祝生日）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{celebrate the new year}}{\color{cnblue}（庆祝新年）} \\
+\rowcolor{rowbg} \textbf{surprise} & n. \& v. & {\heiti {\color{cnblue}三单}} \textbf{surprises}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{surprised}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{surprised}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{surprising}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{surprises}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{surprisingly}}{\color{cnblue}（令人惊讶地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in surprise}}{\color{cnblue}（惊讶地；吃惊地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{to one's surprise}}{\color{cnblue}（令某人惊讶的是）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{surprise party}}{\color{cnblue}（惊喜派对）} \\
+\textbf{something} & pron. & {\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{something else}}{\color{cnblue}（别的东西；其他东西）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{something to eat}}{\color{cnblue}（吃的东西）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{something new}}{\color{cnblue}（新东西；新鲜事）} \\
+\rowcolor{rowbg} \textbf{sale} & n. & {\heiti {\color{cnblue}复数}} \textbf{sales}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{sell}}{\color{cnblue}（卖；出售）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on sale}}{\color{cnblue}（出售；减价销售）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{for sale}}{\color{cnblue}（待售；供出售）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{salesman}}{\color{cnblue}（男售货员）} \\
+\textbf{kilo} & n. & {\heiti {\color{cnblue}复数}} \textbf{kilos}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a kilo of}}{\color{cnblue}（一千克（的）……）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{half a kilo}}{\color{cnblue}（半公斤；半千克）} \\
+\rowcolor{rowbg} \textbf{yogurt} & n. & {\color{cnblue}不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a cup of yogurt}}{\color{cnblue}（一杯酸奶）} \\
+\textbf{total} & n. \& adj. & {\color{cnblue}作形容词时通常不列比较级/最高级；}{\heiti {\color{cnblue}复数}} \textbf{totals}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{totally}}{\color{cnblue}（完全地；全部地）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{in total}}{\color{cnblue}（总共；总计）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a total of}}{\color{cnblue}（总数为……）} \\
+\rowcolor{rowbg} \textbf{price} & n. & {\heiti {\color{cnblue}复数}} \textbf{prices}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{the price of}}{\color{cnblue}（……的价格）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{at a low price}}{\color{cnblue}（以低价）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{price tag}}{\color{cnblue}（价格标签）} \\
+\textbf{balloon} & n. & {\heiti {\color{cnblue}复数}} \textbf{balloons}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{blow up a balloon}}{\color{cnblue}（吹气球）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{hot air balloon}}{\color{cnblue}（热气球）} \\
+\rowcolor{rowbg} \textbf{chocolate} & n. & {\color{cnblue}通常作不可数名词，无复数；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a bar of chocolate}}{\color{cnblue}（一块（条）巧克力）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{chocolate cake}}{\color{cnblue}（巧克力蛋糕）} \\
+\textbf{pizza} & n. & {\heiti {\color{cnblue}复数}} \textbf{pizzas}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a slice of pizza}}{\color{cnblue}（一块比萨）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{pizza shop}}{\color{cnblue}（比萨店）} \\
+\rowcolor{rowbg} \textbf{list} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{lists}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{listed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{listed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{listing}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{lists}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{make a list}}{\color{cnblue}（列清单）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on the list}}{\color{cnblue}（在名单上）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{shopping list}}{\color{cnblue}（购物清单）} \\
+\textbf{own} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{owner}}{\color{cnblue}（主人；物主）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{on one's own}}{\color{cnblue}（独自；单独）} \\
+\rowcolor{rowbg} \textbf{example} & n. & {\heiti {\color{cnblue}复数}} \textbf{examples}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{for example}}{\color{cnblue}（例如）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{set an example}}{\color{cnblue}（树立榜样）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{give an example}}{\color{cnblue}（举例）} \\
+\textbf{language} & n. & {\heiti {\color{cnblue}复数}} \textbf{languages}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{body language}}{\color{cnblue}（肢体语言）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{foreign language}}{\color{cnblue}（外语）} \\
+\rowcolor{rowbg} \textbf{international} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{international school}}{\color{cnblue}（国际学校）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{international trade}}{\color{cnblue}（国际贸易）} \\
+\textbf{mark} & v. \& n. & {\heiti {\color{cnblue}三单}} \textbf{marks}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{marked}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{marked}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{marking}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{marks}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{marker}}{\color{cnblue}（记号笔；标记）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{full marks}}{\color{cnblue}（满分）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{question mark}}{\color{cnblue}（问号）} \\
+\rowcolor{rowbg} \textbf{national} & adj. & {\color{cnblue}通常不列比较级/最高级；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{nation}}{\color{cnblue}（国家；民族）}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{nationality}}{\color{cnblue}（国籍）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{national flag}}{\color{cnblue}（国旗）} \\
+\textbf{found} & v. & {\heiti {\color{cnblue}三单}} \textbf{founds}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{founded}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{founded}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{founding}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{founder}}{\color{cnblue}（创建者；创始人）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{be founded in}}{\color{cnblue}（成立于）} \\
+\rowcolor{rowbg} \textbf{meaningful} & adj. & {\heiti {\color{cnblue}比较级}} \textbf{more meaningful}{\color{cnblue}，最高级} \textbf{most meaningful}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{meaning}}{\color{cnblue}（意思；意义）}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{mean}}{\color{cnblue}（意思是；意味着）}{\color{cnblue}；}{\heiti {\color{cnblue}反义词}} {\color{cngreen}\textbf{meaningless}}{\color{cnblue}（无意义的）} \\
+\textbf{celebration} & n. & {\heiti {\color{cnblue}复数}} \textbf{celebrations}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{hold a celebration}}{\color{cnblue}（举行庆祝活动）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{birthday celebration}}{\color{cnblue}（生日庆祝活动）} \\
+\rowcolor{rowbg} \textbf{post} & n. \& v. & {\heiti {\color{cnblue}三单}} \textbf{posts}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{posted}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{posted}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{posting}{\color{cnblue}；}{\heiti {\color{cnblue}复数}} \textbf{posts}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{poster}}{\color{cnblue}（海报）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{post a letter}}{\color{cnblue}（寄信）}{\color{cnblue}；}{\heiti {\color{cnblue}复合词}} {\color{cngreen}\textbf{postcard}}{\color{cnblue}（明信片）} \\
+\textbf{symbol} & n. & {\heiti {\color{cnblue}复数}} \textbf{symbols}{\color{cnblue}；}{\heiti {\color{cnblue}动词}} {\color{cngreen}\textbf{symbolize}}{\color{cnblue}（象征；代表）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{a symbol of}}{\color{cnblue}（……的象征）} \\
+\rowcolor{rowbg} \textbf{village} & n. & {\heiti {\color{cnblue}复数}} \textbf{villages}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{villager}}{\color{cnblue}（村民）} \\
+\textbf{grow} & v. & {\heiti {\color{cnblue}三单}} \textbf{grows}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{grew}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{grown}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{growing}{\color{cnblue}；}{\heiti {\color{cnblue}名词}} {\color{cngreen}\textbf{growth}}{\color{cnblue}（成长；增长）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{grow up}}{\color{cnblue}（长大；成长）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{grow into}}{\color{cnblue}（长成；成长为）} \\
+\rowcolor{rowbg} \textbf{blow} & v. & {\heiti {\color{cnblue}三单}} \textbf{blows}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{blew}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{blown}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{blowing}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{blow out}}{\color{cnblue}（吹灭）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{blow up}}{\color{cnblue}（充气；爆炸）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{blow out the candles}}{\color{cnblue}（吹灭蜡烛）} \\
+\textbf{enjoy} & v. & {\heiti {\color{cnblue}三单}} \textbf{enjoys}{\color{cnblue}；}{\heiti {\color{cnblue}过去式}} \textbf{enjoyed}{\color{cnblue}；}{\heiti {\color{cnblue}过去分词}} \textbf{enjoyed}{\color{cnblue}；}{\heiti {\color{cnblue}现在分词}} \textbf{enjoying}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{enjoyable}}{\color{cnblue}（令人愉快的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{enjoy oneself}}{\color{cnblue}（玩得开心）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{enjoy doing}}{\color{cnblue}（喜欢做某事）} \\
+\rowcolor{rowbg} \textbf{height} & n. & {\heiti {\color{cnblue}复数}} \textbf{heights}{\color{cnblue}；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{high}}{\color{cnblue}（高的）}{\color{cnblue}；}{\heiti {\color{cnblue}副词}} {\color{cngreen}\textbf{highly}}{\color{cnblue}（高度地；非常）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{at a height of}}{\color{cnblue}（在……高度）} \\
+\textbf{later} & adv. \& adj. & {\color{cnblue}原级 late，本词为比较级，最高级 latest；}{\heiti {\color{cnblue}形容词}} {\color{cngreen}\textbf{late}}{\color{cnblue}（迟的；晚的）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{later on}}{\color{cnblue}（后来；以后）}{\color{cnblue}；}{\heiti {\color{cnblue}短语}} {\color{cngreen}\textbf{see you later}}{\color{cnblue}（回头见）} \\
+\rowcolor{rowbg} \textbf{whom} & pron. & {\color{cnblue}—} \\
+\end{longtable}}
+
+\end{document}
