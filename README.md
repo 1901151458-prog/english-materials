@@ -16,7 +16,8 @@
 | U1–U8 书面表达范文集（八下） | 八年级下册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g8b/) | [下载（53 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-writing-essays.pdf) |
 | U1–U8 书面表达范文集（八上） | 八年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g8a/) | [下载（52 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-u1-u8-writing-essays.pdf) |
 | U1–U8 书面表达范文集（七下） | 七年级下册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g7b/) | [下载（52 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7b-u1-u8-writing-essays.pdf) |
-| U1–U7 书面表达范文集（七上） | 七年级上册 | 7 个单元 · 70 篇范文 · 56 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g7a/) | [下载（47 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7a-u1-u7-writing-essays.pdf) | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
+| U1–U7 书面表达范文集（七上） | 七年级上册 | 7 个单元 · 70 篇范文 · 56 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g7a/) | [下载（47 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7a-u1-u7-writing-essays.pdf) |
+| U1–U8 黑体词词形变化整理（七下） | 七年级下册 | 8 个单元 · 286 个黑体词 · 1,166 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g7b/) | [下载（14 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7b-u1-u8-vocab-forms.pdf) | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
 
 ## 资料简介
 
@@ -82,6 +83,13 @@
 - 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
 - 全书 7 个单元、70 篇范文、56 条句型；话题覆盖自我介绍、家庭、学校、最喜欢的学科、社团、我的一天、生日。
 - 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
+
+### 十、U1–U8 黑体词词形变化整理（词汇 · 七年级下册）
+
+- 依据人教版（2024 版）七年级下册 8 个单元 286 个黑体词，逐词列出三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级，以及拓展同根词。
+- 8 个单元 · 286 个黑体词 · 1,166 个词形与派生词（常规词形 477 + 拓展词形 689）。
+- 网站支持按单元浏览、搜索、词性筛选、隐藏/显示拓展词、自测模式、A4 打印；PDF 由脚本生成（14 页）。
+- 三个词（however / among / although）无合适词形，按「—」说明展示。
 
 ## 词汇测试（独立站点）
 
