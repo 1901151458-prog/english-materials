@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SDG 高级作文文库 · 联合国可持续发展目标 | 初中英语资料站</title>
+<meta name="description" content="联合国可持续发展目标（SDGs）高级英语作文文库：8 篇 C1/C2 级议论文，覆盖发展融资、AI 与就业、照护经济、气候正义、粮食安全、海洋治理、住房与数据问责；附写作工具箱与联合国官方深度链接。">
+<meta name="theme-color" content="#12324f">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="../assets/refine.css">
+<style>
+:root{
+  --sdg-navy:#12324f;--sdg-blue:#1e6a96;--sdg-green:#2f7d5b;--sdg-gold:#b8863b;--sdg-red:#b4483a;
+  --sdg-bg:#f5f8fb;--sdg-line:#dce6f1;--sdg-ink:#1d2b38;--sdg-muted:#5e7183;
+}
+.sdg-wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,3vw,32px)}
+.sdg-hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 480px at 78% -10%,rgba(143,180,217,.2),transparent 62%),
+  radial-gradient(700px 420px at 8% 0%,rgba(217,179,130,.16),transparent 60%),
+  linear-gradient(135deg,#0d2640,#12324f 55%,#1b4a6b);color:#edf4fa;padding:clamp(54px,7vw,92px) 0 clamp(38px,5vw,60px)}
+.sdg-hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 75%)}
+.sdg-hero-inner{position:relative;z-index:1;max-width:1000px}
+.sdg-kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:11.5px;letter-spacing:.22em;color:#d9e8f4;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;background:rgba(255,255,255,.07)}
+.sdg-kicker .dot{width:6px;height:6px;border-radius:50%;background:#e7c68f;box-shadow:0 0 10px #e7c68f}
+.sdg-hero h1{margin:20px 0 14px;font-size:clamp(30px,4.2vw,54px);line-height:1.16;letter-spacing:-.015em;font-weight:800;color:#f5f0e5}
+.sdg-hero h1 em{font-style:normal;color:#e8c88d;background:linear-gradient(transparent 64%,rgba(232,200,141,.22) 64%)}
+.sdg-hero p.lead{max-width:720px;margin:0;color:#c8d8e5;font-size:clamp(14.5px,1.35vw,17px);line-height:1.9}
+.sdg-hero .sdg-meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:26px;font-family:var(--font-sans);font-size:12px;color:#a9c0d2;letter-spacing:.05em}
+.sdg-hero .sdg-meta span{display:inline-flex;align-items:center;gap:7px}
+.sdg-hero .sdg-meta i{width:5px;height:5px;border-radius:50%;background:#e7c68f}
+.sdg-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.sdg-actions .btn{border-radius:10px}
+.sdg-band{height:4px;background:linear-gradient(90deg,#e5243b,#dda63a,#4c9f38,#c5192d,#ff3a21,#26bde2,#fcc30b,#a21942,#fd6925,#dd1367,#fd9d24,#bf8b2e,#3f7e44,#0a97d9,#56c02b,#00689d,#19486a)}
+.sdg-section{padding:clamp(40px,5vw,68px) 0}
+.sdg-section.alt{background:linear-gradient(180deg,#f8fbfd,#f2f6fa)}
+.sdg-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sdg-section-head h2{margin:0;font-size:clamp(22px,2.4vw,30px);color:var(--sdg-navy);letter-spacing:-.01em}
+.sdg-section-head p{margin:6px 0 0;color:var(--sdg-muted);font-size:13.5px;max-width:660px}
+.sdg-section-head .eyebrow-lite{font-family:var(--font-sans);font-size:11px;letter-spacing:.18em;color:var(--sdg-blue);margin-bottom:6px;font-weight:600}
+.sdg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:980px){.sdg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.sdg-grid{grid-template-columns:1fr}}
+.sdg-card{display:flex;flex-direction:column;position:relative;overflow:hidden;background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:22px;text-decoration:none;color:var(--sdg-ink);box-shadow:0 1px 2px rgba(18,50,79,.04),0 10px 26px rgba(18,50,79,.055);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.sdg-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--sdg-blue),var(--sdg-green));transform:scaleX(.2);transform-origin:left;transition:transform .28s ease}
+.sdg-card:hover{transform:translateY(-4px);border-color:#bcd0e2;box-shadow:0 2px 5px rgba(18,50,79,.06),0 20px 44px rgba(18,50,79,.12);text-decoration:none}
+.sdg-card:hover::before{transform:scaleX(1)}
+.sdg-tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-sans);font-size:10.5px;font-weight:600;letter-spacing:.05em;color:#1b5a8a;background:#eaf4fb;border:1px solid #d2e6f5;border-radius:999px;padding:3px 9px}
+.sdg-card h3{margin:12px 0 6px;font-size:17px;line-height:1.45;color:var(--sdg-navy);letter-spacing:-.01em}
+.sdg-card h3 .cn{display:block;font-size:12px;color:var(--sdg-muted);font-weight:500;margin-top:3px;letter-spacing:.02em}
+.sdg-card p{margin:0 0 14px;font-size:13px;line-height:1.8;color:#46596a;flex:1}
+.sdg-card .sdg-foot{display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:11px;color:#7a8c9d;border-top:1px dashed #e2eaf2;padding-top:10px}
+.sdg-card .sdg-foot .more{margin-left:auto;color:var(--sdg-blue);font-weight:600}
+.sdg-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.sdg-filter{border:1px solid #d5e2ee;background:#fff;color:#4d6275;border-radius:999px;padding:6px 13px;font-family:var(--font-sans);font-size:12px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.sdg-filter:hover{border-color:#9fc0da;color:var(--sdg-blue)}
+.sdg-filter.active{background:var(--sdg-navy);border-color:var(--sdg-navy);color:#fff}
+.sdg-search{display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.sdg-search input{width:100%;max-width:420px;border:1px solid #d5e2ee;border-radius:10px;padding:10px 14px;font:inherit;font-size:13.5px;background:#fff;color:var(--sdg-ink)}
+.sdg-search input:focus{outline:none;border-color:#8db4d6;box-shadow:0 0 0 4px rgba(30,106,150,.12)}
+.sdg-empty{display:none;padding:30px;text-align:center;color:var(--sdg-muted);border:1px dashed #cfdeeb;border-radius:12px;background:#fff;font-size:14px}
+.sdg-empty.show{display:block}
+
+/* UN link desk */
+.un-desk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:760px){.un-desk{grid-template-columns:1fr}}
+.un-group{background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:20px;box-shadow:0 1px 2px rgba(18,50,79,.035)}
+.un-group h3{margin:0 0 4px;font-size:13px;letter-spacing:.08em;color:var(--sdg-blue);font-family:var(--font-sans);text-transform:uppercase}
+.un-group p{margin:0 0 12px;font-size:12px;color:#6d8092;line-height:1.7}
+.un-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.un-group li a{display:flex;align-items:baseline;gap:8px;font-size:13px;color:var(--sdg-navy);border-bottom:1px dotted #e2eaf2;padding:5px 0}
+.un-group li a:hover{color:var(--sdg-blue)}
+.un-group li a span.ext{margin-left:auto;color:#8ba0b2;font-size:11px}
+.un-group li a em{font-style:normal;font-family:var(--font-sans);font-size:10.5px;color:#8ba0b2}
+.sdg-note{font-size:12.5px;color:#6d8092;margin-top:16px;line-height:1.8}
+
+/* essay page */
+.essay-hero{background:
+  radial-gradient(900px 480px at 78% -10%,rgba(143,180,217,.18),transparent 62%),
+  radial-gradient(700px 420px at 8% 0%,rgba(217,179,130,.14),transparent 60%),
+  linear-gradient(135deg,#0d2640,#12324f 55%,#1b4a6b);color:#edf4fa;padding:clamp(38px,5vw,64px) 0 clamp(30px,4vw,48px)}
+.essay-hero .sdg-wrap{max-width:1100px}
+.essay-crumb{font-family:var(--font-sans);font-size:11.5px;color:#9fb8cb;margin-bottom:18px}
+.essay-crumb a{color:#cfe2f0}
+.essay-hero h1{margin:0 0 8px;font-size:clamp(27px,3.6vw,44px);line-height:1.2;letter-spacing:-.02em;color:#f6f0e4}
+.essay-hero h2{margin:0;font-size:clamp(16px,1.7vw,20px);font-weight:400;color:#e3c88f;letter-spacing:.03em;line-height:1.6}
+.essay-hero .sub{margin:14px 0 0;max-width:780px;font-size:14.5px;line-height:1.85;color:#c8d8e5}
+.essay-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;font-family:var(--font-sans);font-size:11px;color:#b5cad9}
+.essay-meta span{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px 10px;background:rgba(255,255,255,.05)}
+.essay-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(26px,4vw,50px);align-items:start;padding:clamp(34px,4vw,56px) 0 clamp(50px,6vw,80px)}
+@media(max-width:980px){.essay-layout{grid-template-columns:1fr}}
+.essay-body{min-width:0;background:#fff;border:1px solid var(--sdg-line);border-radius:16px;padding:clamp(24px,3.4vw,46px);box-shadow:0 1px 2px rgba(18,50,79,.035),0 14px 34px rgba(18,50,79,.05)}
+.essay-body .lead{font-size:clamp(15.5px,1.5vw,18px);line-height:1.95;color:#1f3a50;border-left:3px solid var(--sdg-gold);padding-left:16px;margin:0 0 30px;font-family:var(--font-serif);font-style:italic}
+.essay-body h2{margin:34px 0 12px;font-size:clamp(19px,2vw,23px);color:var(--sdg-navy);letter-spacing:-.01em;line-height:1.4}
+.essay-body h2:first-of-type{margin-top:0}
+.essay-body p{margin:0 0 16px;font-size:15.5px;line-height:1.95;color:#2c3e4e}
+.essay-body p strong{color:var(--sdg-navy)}
+.essay-body ul{margin:0 0 18px;padding-left:1.25em;color:#2c3e4e;font-size:15px;line-height:1.9}
+.essay-body li{margin:.35em 0}
+.essay-body blockquote{margin:24px 0;padding:18px 22px;background:linear-gradient(180deg,#f6fafc,#eef5fa);border-left:3px solid var(--sdg-blue);font-family:var(--font-serif);font-size:16px;line-height:1.9;color:#1d3e56}
+.essay-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.essay-stats{grid-template-columns:1fr}}
+.essay-stat{background:#f7fafc;border:1px solid #e2ebf3;border-radius:12px;padding:14px}
+.essay-stat b{display:block;font-family:var(--font-en);font-size:20px;color:var(--sdg-blue);letter-spacing:-.02em}
+.essay-stat span{display:block;margin-top:5px;font-size:11.5px;line-height:1.6;color:#697d8f}
+.essay-side{display:grid;gap:14px;position:sticky;top:86px}
+@media(max-width:980px){.essay-side{position:static}}
+.side-card{background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(18,50,79,.035)}
+.side-card h3{margin:0 0 10px;font-family:var(--font-sans);font-size:11px;letter-spacing:.14em;color:var(--sdg-blue);text-transform:uppercase}
+.side-card p{margin:0;font-size:12.5px;line-height:1.8;color:#4b5f70}
+.side-card ol,.side-card ul{margin:0;padding-left:1.1em;font-size:12.5px;line-height:1.8;color:#4b5f70}
+.side-card li{margin:.35em 0}
+.side-card .map b{display:block;margin:10px 0 3px;color:var(--sdg-navy);font-size:12px}
+.term{display:flex;gap:8px;font-size:12.5px;line-height:1.65;margin-bottom:7px}
+.term b{color:var(--sdg-navy);font-weight:600}
+.term span{color:#6b7e8f}
+.side-links{display:grid;gap:6px}
+.side-links a{display:flex;gap:6px;font-size:12px;line-height:1.55;color:var(--sdg-navy);border-bottom:1px dotted #e2eaf2;padding:4px 0}
+.side-links a:hover{color:var(--sdg-blue)}
+.side-links a em{font-style:normal;color:#8ba0b2;font-size:10px;white-space:nowrap;margin-left:auto}
+.essay-nav{display:flex;justify-content:space-between;gap:14px;margin-top:40px;padding-top:20px;border-top:1px solid #e4edf4;flex-wrap:wrap}
+.essay-nav a{font-size:13px;color:var(--sdg-blue);font-weight:600}
+.essay-footnote{margin-top:22px;font-size:11.5px;color:#7d8f9f;line-height:1.8}
+
+/* index howto */
+.howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:800px){.howto-grid{grid-template-columns:1fr}}
+.howto-item{background:#fff;border:1px solid var(--sdg-line);border-radius:12px;padding:18px}
+.howto-item b{display:block;font-size:12px;letter-spacing:.1em;color:var(--sdg-blue);margin-bottom:6px}
+.howto-item p{margin:0;font-size:12.5px;line-height:1.75;color:#5b6e7f}
+.sdg-footer{margin-top:50px;border-top:1px solid #dce6f1;background:#0d2640;color:#a9c0d2;padding:30px 0 40px;font-size:12px;line-height:1.9}
+.sdg-footer a{color:#e3c88f}
+.sdg-footer .sdg-wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">英</span><span class="brand-text"><strong>初中英语资料站</strong><small>SDG · 高级写作</small></span></a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../index.html#materials">资料目录</a>
+      <a class="nav-strong" href="./index.html">SDG 作文文库</a>
+    </nav>
+  </div>
+</header>
+<div class="sdg-band" aria-hidden="true"></div>
+<main>
+<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<p class="sdg-kicker"><span class="dot"></span>UNITED NATIONS · SUSTAINABLE DEVELOPMENT GOALS</p>
+<h1>SDG <em>高级作文文库</em><br>从目标到论证，从新闻到政策</h1>
+<p class="lead">8 篇面向高中、大学与教师的英文议论文：不是“保护环境很重要”的套话，而是围绕发展融资、人工智能、照护经济、气候正义、粮食与海洋治理、住房和数据问责展开的政策论证。每篇配中文导读、论证地图、语言工具箱与联合国官方深度链接。</p>
+<div class="sdg-meta"><span><i></i>C1 / C2 学术写作</span><span><i></i>8 篇 · 约 7,000 词</span><span><i></i>对接 17 个 SDG</span><span><i></i>UN 官方链接直达</span></div>
+<div class="sdg-actions"><a class="btn btn-primary" href="#library">进入文库 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#un-desk">联合国官方入口</a></div>
+</div></section>
+
+<section class="sdg-section" id="library"><div class="sdg-wrap">
+<div class="sdg-section-head"><div><div class="eyebrow-lite">THE LIBRARY</div><h2>八篇政策议论文</h2><p>按主题筛选，或直接搜索关键词。每篇都有独立页面、中文摘要与可复制的论证框架。</p></div></div>
+<div class="sdg-filters"><button type="button" class="sdg-filter active" data-filter="all">全部</button><button type="button" class="sdg-filter" data-filter="financing">发展融资</button><button type="button" class="sdg-filter" data-filter="work">体面工作</button><button type="button" class="sdg-filter" data-filter="gender">性别平等</button><button type="button" class="sdg-filter" data-filter="planet">气候与生态</button><button type="button" class="sdg-filter" data-filter="people">粮食与民生</button><button type="button" class="sdg-filter" data-filter="cities">城市与住房</button><button type="button" class="sdg-filter" data-filter="accountability">数据与问责</button></div>
+<div class="sdg-search"><input type="search" id="sdgSearch" placeholder="搜索：融资、AI、气候、海洋、住房……" aria-label="搜索作文"></div>
+<div class="sdg-grid" id="sdgGrid"><a class="sdg-card" href="essays/2030-deadline-political-choice.html" data-theme="financing" data-title="The 2030 Deadline Is a Political Choice 2030 期限是一道政治选择题">
+  <span class="sdg-tag">发展融资 · C1</span>
+  <h3>The 2030 Deadline Is a Political Choice<span class="cn">2030 期限是一道政治选择题</span></h3>
+  <p>距离 2030 年仅剩数年，联合国却承认多数可持续发展目标进展不足。本文把“资金缺口”重新定义为“治理缺口”：真正短缺的不是全球资本，而是征税、减债、改革多边开发银行与重新分配政策空间的政治意…</p>
+  <div class="sdg-foot"><span>9 min read</span><span>·</span><span>SDG 17 / SDG 1 / SDG 10</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/decent-work-age-of-ai.html" data-theme="work" data-title="Decent Work in the Age of AI 人工智能时代的体面工作">
+  <span class="sdg-tag">体面工作 · C1</span>
+  <h3>Decent Work in the Age of AI<span class="cn">人工智能时代的体面工作</span></h3>
+  <p>关于人工智能的争论常停留在“会取代多少岗位”。本文认为，更关键的问题是收益与风险如何分配：谁拥有模型、谁监控劳动、谁承担转型成本。文章从非正规经济、平台劳动、社会保护与技能培训四个维度，讨论 …</p>
+  <div class="sdg-foot"><span>8 min read</span><span>·</span><span>SDG 8 / SDG 10 / SDG 4</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/care-economy-infrastructure.html" data-theme="gender" data-title="The Care Economy Is Infrastructure 照护经济就是基础设施">
+  <span class="sdg-tag">性别平等 · C1</span>
+  <h3>The Care Economy Is Infrastructure<span class="cn">照护经济就是基础设施</span></h3>
+  <p>性别平等常被简化为“让更多女性进入劳动力市场”。本文指出，若不重新分配无酬照护劳动，这种“进入”往往只是让女性承担双重负担。文章把照护视为基础设施：它支撑经济运行，却长期不可见、不計酬、由女性…</p>
+  <div class="sdg-foot"><span>8 min read</span><span>·</span><span>SDG 5 / SDG 8 / SDG 1</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/climate-justice-after-belem.html" data-theme="planet" data-title="Climate Justice after Belém 贝伦之后的气候正义">
+  <span class="sdg-tag">气候行动 · C1–C2</span>
+  <h3>Climate Justice after Belém<span class="cn">贝伦之后的气候正义</span></h3>
+  <p>2024 年成为首个全年均温超过 1.5°C 的日历年，气候政治进入“ overshoot ”时代。本文以 COP30 与损失损害基金为线索，讨论气候行动中的分配冲突：减排责任、适应资金、碳不…</p>
+  <div class="sdg-foot"><span>9 min read</span><span>·</span><span>SDG 13 / SDG 10 / SDG 7</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/food-security-is-geopolitics.html" data-theme="people" data-title="Food Security Is Geopolitics 粮食安全就是地缘政治">
+  <span class="sdg-tag">粮食安全 · C1</span>
+  <h3>Food Security Is Geopolitics<span class="cn">粮食安全就是地缘政治</span></h3>
+  <p>全球饥饿人口仍以数亿计，而粮食系统同时深受战争、能源价格、化肥依赖与金融投机影响。本文把“零饥饿”从农业技术问题重新放回地缘政治：粮食走廊、出口限制、进口账单与气候冲击如何共同制造脆弱性。作者…</p>
+  <div class="sdg-foot"><span>8 min read</span><span>·</span><span>SDG 2 / SDG 12 / SDG 13</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/ocean-commons.html" data-theme="planet" data-title="The Ocean Is a Commons, Not a Dumping Ground 海洋是公地，不是垃圾场">
+  <span class="sdg-tag">海洋治理 · C1–C2</span>
+  <h3>The Ocean Is a Commons, Not a Dumping Ground<span class="cn">海洋是公地，不是垃圾场</span></h3>
+  <p>海洋吸收了九成以上多余热量，却长期被视为无主之地。本文以 BBNJ 公海条约、塑料条约谈判与渔业补贴为主线，讨论 SDG 14 的治理难题：如何为不属于任何国家的公地制定可执行的规则，并让沿海…</p>
+  <div class="sdg-foot"><span>8 min read</span><span>·</span><span>SDG 14 / SDG 13 / SDG 12</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/housing-the-city.html" data-theme="cities" data-title="Housing the City: SDG 11 and the Politics of Land 为城市提供住房：SDG 11 与土地政治">
+  <span class="sdg-tag">城市与住房 · C1</span>
+  <h3>Housing the City: SDG 11 and the Politics of Land<span class="cn">为城市提供住房：SDG 11 与土地政治</span></h3>
+  <p>全球约十一亿人居住在非正规住区，住房可负担性危机正在从贫困国家蔓延到富裕城市。本文把 SDG 11 从“绿色城市”口号拉回土地、金融与治理：住房如何被金融化，地方财政为何无力，租金管制、社会住…</p>
+  <div class="sdg-foot"><span>8 min read</span><span>·</span><span>SDG 11 / SDG 1 / SDG 10</span><span class="more">阅读 →</span></div>
+</a><a class="sdg-card" href="essays/measuring-what-matters.html" data-theme="accountability" data-title="Measuring What Matters: Data and the Politics of the SDG Scorecard 衡量真正重要的东西：数据与 SDG 记分卡的政治">
+  <span class="sdg-tag">数据与问责 · C1–C2</span>
+  <h3>Measuring What Matters: Data and the Politics of the SDG Scorecard<span class="cn">衡量真正重要的东西：数据与 SDG 记分卡的政治</span></h3>
+  <p>SDG 的进展报告常被当作客观记分卡，但指标选择、数据缺口与统计能力本身都是政治问题。本文讨论“16% 目标在轨”这一数字背后的测量政治：缺失的数据如何掩盖不平等，国家统计能力为何不足，AI …</p>
+  <div class="sdg-foot"><span>9 min read</span><span>·</span><span>SDG 17 / SDG 16 / SDG 4</span><span class="more">阅读 →</span></div>
+</a></div>
+<div class="sdg-empty" id="sdgEmpty">没有匹配的文章。试试“气候”“融资”“AI”或切换到“全部”。</div>
+</div></section>
+
+<section class="sdg-section alt" id="un-desk"><div class="sdg-wrap">
+<div class="sdg-section-head"><div><div class="eyebrow-lite">OFFICIAL DESK</div><h2>联合国官方深度入口</h2><p>以下链接直达联合国可持续发展目标网站的不同部分：目标页面、进展报告、新闻、活动、资源、融资与伙伴关系。写作时优先引用官方页面与报告。</p></div></div>
+<div class="un-desk"><div class="un-group"><h3>Explore the Goals</h3><p>从 17 个目标进入联合国官方页面</p><ul><li><a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank" rel="noopener">17 个可持续发展目标 · 总览<span class="ext">↗</span><em>The 17 Goals</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank" rel="noopener">SDG 1 无贫穷<span class="ext">↗</span><em>No Poverty</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/hunger/" target="_blank" rel="noopener">SDG 2 零饥饿<span class="ext">↗</span><em>Zero Hunger</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank" rel="noopener">SDG 4 优质教育<span class="ext">↗</span><em>Quality Education</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/gender-equality/" target="_blank" rel="noopener">SDG 5 性别平等<span class="ext">↗</span><em>Gender Equality</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank" rel="noopener">SDG 7 清洁能源<span class="ext">↗</span><em>Affordable and Clean Energy</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/economic-growth/" target="_blank" rel="noopener">SDG 8 体面工作<span class="ext">↗</span><em>Decent Work and Economic Growth</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/inequality/" target="_blank" rel="noopener">SDG 10 减少不平等<span class="ext">↗</span><em>Reduced Inequalities</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/sustainable-cities-communities/" target="_blank" rel="noopener">SDG 11 可持续城市<span class="ext">↗</span><em>Sustainable Cities and Communities</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/responsible-consumption/" target="_blank" rel="noopener">SDG 12 负责任消费<span class="ext">↗</span><em>Responsible Consumption and Production</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/climate-change/" target="_blank" rel="noopener">SDG 13 气候行动<span class="ext">↗</span><em>Climate Action</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/life-below-water/" target="_blank" rel="noopener">SDG 14 水下生物<span class="ext">↗</span><em>Life Below Water</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/peace-justice-and-strong-institutions/" target="_blank" rel="noopener">SDG 16 和平与正义<span class="ext">↗</span><em>Peace, Justice and Strong Institutions</em></a></li></ul></div><div class="un-group"><h3>Track Progress</h3><p>看全球进展、数据与缺口</p><ul><li><a href="https://www.un.org/sustainabledevelopment/progress-report/" target="_blank" rel="noopener">《可持续发展目标报告》· 官方进展<span class="ext">↗</span><em>Progress Report</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/resources/" target="_blank" rel="noopener">资源与出版物<span class="ext">↗</span><em>Resources</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank" rel="noopener">目标与指标总览<span class="ext">↗</span><em>The 17 Goals</em></a></li></ul></div><div class="un-group"><h3>News &amp; Events</h3><p>跟踪最新政治动态与会议</p><ul><li><a href="https://www.un.org/sustainabledevelopment/news/" target="_blank" rel="noopener">联合国 SDG 新闻<span class="ext">↗</span><em>News</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/events/" target="_blank" rel="noopener">官方活动与峰会<span class="ext">↗</span><em>Events</em></a></li><li><a href="https://www.un.org/en/actnow" target="_blank" rel="noopener">ActNow 个人行动<span class="ext">↗</span><em>ActNow</em></a></li></ul></div><div class="un-group"><h3>Finance &amp; Partnerships</h3><p>发展融资与多方合作</p><ul><li><a href="https://www.un.org/sustainabledevelopment/financing-for-development/" target="_blank" rel="noopener">发展融资 · Financing for Development<span class="ext">↗</span><em>Financing for Development</em></a></li><li><a href="https://www.un.org/sustainabledevelopment/partnerships/" target="_blank" rel="noopener">伙伴关系平台<span class="ext">↗</span><em>Partnerships</em></a></li></ul></div></div>
+<p class="sdg-note">提示：联合国网站部分页面可能因地区网络限制而无法直接打开；课堂使用时可提前下载 PDF 或使用学校网络。所有链接均为 un.org 官方域名。</p>
+</div></section>
+
+<section class="sdg-section" id="howto"><div class="sdg-wrap">
+<div class="sdg-section-head"><div><div class="eyebrow-lite">HOW TO USE</div><h2>怎么用这个文库</h2><p>为议论文、演讲、模拟联合国、雅思/托福写作与课堂辩论准备。</p></div></div>
+<div class="howto-grid">
+<div class="howto-item"><b>01 · 先读论证地图</b><p>每篇侧栏列出论点、证据、反方与回应。先看结构，再读全文，比逐句背诵更有效。</p></div>
+<div class="howto-item"><b>02 · 摘取可迁移的句式</b><p>“语言工具箱”给出术语、搭配与句式框架；把它们改写成与你题目相关的句子，而不是整段照搬。</p></div>
+<div class="howto-item"><b>03 · 用官方链接核对事实</b><p>每篇的 UN 链接指向具体目标或报告页面。引用数据时标明报告名称、年份与机构。</p></div>
+</div>
+</div></section>
+</main>
+<footer class="sdg-footer"><div class="sdg-wrap">
+<div><strong>SDG 高级作文文库</strong><br>挂在初中英语资料站下 · 面向高中、大学与教师</div>
+<div>官方来源：<a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">un.org/sustainabledevelopment</a> · 中文导读与作文为本站原创，仅供学习</div>
+</div></footer>
+<script>
+(function(){
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.sdg-filter'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#sdgGrid .sdg-card'));
+  var search = document.getElementById('sdgSearch');
+  var empty = document.getElementById('sdgEmpty');
+  var active = 'all';
+  function apply(){
+    var q = (search && search.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(card){
+      var okTheme = active === 'all' || card.getAttribute('data-theme') === active;
+      var okText = !q || (card.getAttribute('data-title') || '').toLowerCase().indexOf(q) >= 0 || card.textContent.toLowerCase().indexOf(q) >= 0;
+      var show = okTheme && okText;
+      card.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    if(empty) empty.classList.toggle('show', shown === 0);
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ active = b.getAttribute('data-filter'); buttons.forEach(function(x){x.classList.toggle('active', x===b);}); apply(); }); });
+  if(search) search.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>
