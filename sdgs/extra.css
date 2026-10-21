@@ -1,0 +1,10 @@
+/* 中文译文块 */
+.zh-toggle{display:inline-flex;align-items:center;gap:6px;border:1px solid #cfe0ee;background:#fff;color:#155d90;border-radius:999px;padding:6px 13px;font-size:12px;font-weight:600;cursor:pointer;margin-top:14px}
+.zh-toggle:hover{background:#f2f8fd;border-color:#9fc0da}
+.zh-toggle.on{background:#12324f;color:#fff;border-color:#12324f}
+.zh-block{display:none;margin:34px 0 0;padding:24px 0 0;border-top:2px solid #dce7f1}
+.zh-block.open{display:block}
+.zh-block h2{margin:0 0 14px;font-size:clamp(20px,2vw,24px);color:#12324f;letter-spacing:-.01em}
+.zh-block p{margin:0 0 15px;font-size:15.5px;line-height:1.95;color:#2c3e4e}
+.zh-block .zh-mark{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:#b8863b;font-weight:700;margin-bottom:10px}
+.zh-note{font-size:11.5px;color:#7d8f9f;line-height:1.8;margin-top:18px;padding-top:12px;border-top:1px dashed #e2eaf2}

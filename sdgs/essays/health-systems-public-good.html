@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health Systems Are a Public Good · SDG 3 · 作文文库</title>
+<meta name="description" content="新冠疫情暴露了卫生体系的深层不平等：疫苗、氧气、医护人员与财政空间在全球范围内分配极不均衡。本文从全民健康覆盖、大流行病防范、抗微生物药物耐药性与卫生融资四个角度，说明为什么卫生不是个人消费，而是公共品与社会韧性的基础。">
+<meta name="theme-color" content="#12324f">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/refine.css">
+<link rel="stylesheet" href="../extra.css">
+<style>
+:root{
+  --sdg-navy:#12324f;--sdg-blue:#1e6a96;--sdg-green:#2f7d5b;--sdg-gold:#b8863b;--sdg-red:#b4483a;
+  --sdg-bg:#f5f8fb;--sdg-line:#dce6f1;--sdg-ink:#1d2b38;--sdg-muted:#5e7183;
+}
+.sdg-wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,3vw,32px)}
+.sdg-hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 480px at 78% -10%,rgba(143,180,217,.2),transparent 62%),
+  radial-gradient(700px 420px at 8% 0%,rgba(217,179,130,.16),transparent 60%),
+  linear-gradient(135deg,#0d2640,#12324f 55%,#1b4a6b);color:#edf4fa;padding:clamp(54px,7vw,92px) 0 clamp(38px,5vw,60px)}
+.sdg-hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0%,#000 10%,transparent 75%)}
+.sdg-hero-inner{position:relative;z-index:1;max-width:1000px}
+.sdg-kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:11.5px;letter-spacing:.22em;color:#d9e8f4;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;background:rgba(255,255,255,.07)}
+.sdg-kicker .dot{width:6px;height:6px;border-radius:50%;background:#e7c68f;box-shadow:0 0 10px #e7c68f}
+.sdg-hero h1{margin:20px 0 14px;font-size:clamp(30px,4.2vw,54px);line-height:1.16;letter-spacing:-.015em;font-weight:800;color:#f5f0e5}
+.sdg-hero h1 em{font-style:normal;color:#e8c88d;background:linear-gradient(transparent 64%,rgba(232,200,141,.22) 64%)}
+.sdg-hero p.lead{max-width:720px;margin:0;color:#c8d8e5;font-size:clamp(14.5px,1.35vw,17px);line-height:1.9}
+.sdg-hero .sdg-meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:26px;font-family:var(--font-sans);font-size:12px;color:#a9c0d2;letter-spacing:.05em}
+.sdg-hero .sdg-meta span{display:inline-flex;align-items:center;gap:7px}
+.sdg-hero .sdg-meta i{width:5px;height:5px;border-radius:50%;background:#e7c68f}
+.sdg-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.sdg-actions .btn{border-radius:10px}
+.sdg-band{height:4px;background:linear-gradient(90deg,#e5243b,#dda63a,#4c9f38,#c5192d,#ff3a21,#26bde2,#fcc30b,#a21942,#fd6925,#dd1367,#fd9d24,#bf8b2e,#3f7e44,#0a97d9,#56c02b,#00689d,#19486a)}
+.sdg-section{padding:clamp(40px,5vw,68px) 0}
+.sdg-section.alt{background:linear-gradient(180deg,#f8fbfd,#f2f6fa)}
+.sdg-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sdg-section-head h2{margin:0;font-size:clamp(22px,2.4vw,30px);color:var(--sdg-navy);letter-spacing:-.01em}
+.sdg-section-head p{margin:6px 0 0;color:var(--sdg-muted);font-size:13.5px;max-width:660px}
+.sdg-section-head .eyebrow-lite{font-family:var(--font-sans);font-size:11px;letter-spacing:.18em;color:var(--sdg-blue);margin-bottom:6px;font-weight:600}
+.sdg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:980px){.sdg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.sdg-grid{grid-template-columns:1fr}}
+.sdg-card{display:flex;flex-direction:column;position:relative;overflow:hidden;background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:22px;text-decoration:none;color:var(--sdg-ink);box-shadow:0 1px 2px rgba(18,50,79,.04),0 10px 26px rgba(18,50,79,.055);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.sdg-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--sdg-blue),var(--sdg-green));transform:scaleX(.2);transform-origin:left;transition:transform .28s ease}
+.sdg-card:hover{transform:translateY(-4px);border-color:#bcd0e2;box-shadow:0 2px 5px rgba(18,50,79,.06),0 20px 44px rgba(18,50,79,.12);text-decoration:none}
+.sdg-card:hover::before{transform:scaleX(1)}
+.sdg-tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-sans);font-size:10.5px;font-weight:600;letter-spacing:.05em;color:#1b5a8a;background:#eaf4fb;border:1px solid #d2e6f5;border-radius:999px;padding:3px 9px}
+.sdg-card h3{margin:12px 0 6px;font-size:17px;line-height:1.45;color:var(--sdg-navy);letter-spacing:-.01em}
+.sdg-card h3 .cn{display:block;font-size:12px;color:var(--sdg-muted);font-weight:500;margin-top:3px;letter-spacing:.02em}
+.sdg-card p{margin:0 0 14px;font-size:13px;line-height:1.8;color:#46596a;flex:1}
+.sdg-card .sdg-foot{display:flex;align-items:center;gap:8px;font-family:var(--font-sans);font-size:11px;color:#7a8c9d;border-top:1px dashed #e2eaf2;padding-top:10px}
+.sdg-card .sdg-foot .more{margin-left:auto;color:var(--sdg-blue);font-weight:600}
+.sdg-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.sdg-filter{border:1px solid #d5e2ee;background:#fff;color:#4d6275;border-radius:999px;padding:6px 13px;font-family:var(--font-sans);font-size:12px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.sdg-filter:hover{border-color:#9fc0da;color:var(--sdg-blue)}
+.sdg-filter.active{background:var(--sdg-navy);border-color:var(--sdg-navy);color:#fff}
+.sdg-search{display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.sdg-search input{width:100%;max-width:420px;border:1px solid #d5e2ee;border-radius:10px;padding:10px 14px;font:inherit;font-size:13.5px;background:#fff;color:var(--sdg-ink)}
+.sdg-search input:focus{outline:none;border-color:#8db4d6;box-shadow:0 0 0 4px rgba(30,106,150,.12)}
+.sdg-empty{display:none;padding:30px;text-align:center;color:var(--sdg-muted);border:1px dashed #cfdeeb;border-radius:12px;background:#fff;font-size:14px}
+.sdg-empty.show{display:block}
+
+/* UN link desk */
+.un-desk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:760px){.un-desk{grid-template-columns:1fr}}
+.un-group{background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:20px;box-shadow:0 1px 2px rgba(18,50,79,.035)}
+.un-group h3{margin:0 0 4px;font-size:13px;letter-spacing:.08em;color:var(--sdg-blue);font-family:var(--font-sans);text-transform:uppercase}
+.un-group p{margin:0 0 12px;font-size:12px;color:#6d8092;line-height:1.7}
+.un-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.un-group li a{display:flex;align-items:baseline;gap:8px;font-size:13px;color:var(--sdg-navy);border-bottom:1px dotted #e2eaf2;padding:5px 0}
+.un-group li a:hover{color:var(--sdg-blue)}
+.un-group li a span.ext{margin-left:auto;color:#8ba0b2;font-size:11px}
+.un-group li a em{font-style:normal;font-family:var(--font-sans);font-size:10.5px;color:#8ba0b2}
+.sdg-note{font-size:12.5px;color:#6d8092;margin-top:16px;line-height:1.8}
+
+/* essay page */
+.essay-hero{background:
+  radial-gradient(900px 480px at 78% -10%,rgba(143,180,217,.18),transparent 62%),
+  radial-gradient(700px 420px at 8% 0%,rgba(217,179,130,.14),transparent 60%),
+  linear-gradient(135deg,#0d2640,#12324f 55%,#1b4a6b);color:#edf4fa;padding:clamp(38px,5vw,64px) 0 clamp(30px,4vw,48px)}
+.essay-hero .sdg-wrap{max-width:1100px}
+.essay-crumb{font-family:var(--font-sans);font-size:11.5px;color:#9fb8cb;margin-bottom:18px}
+.essay-crumb a{color:#cfe2f0}
+.essay-hero h1{margin:0 0 8px;font-size:clamp(27px,3.6vw,44px);line-height:1.2;letter-spacing:-.02em;color:#f6f0e4}
+.essay-hero h2{margin:0;font-size:clamp(16px,1.7vw,20px);font-weight:400;color:#e3c88f;letter-spacing:.03em;line-height:1.6}
+.essay-hero .sub{margin:14px 0 0;max-width:780px;font-size:14.5px;line-height:1.85;color:#c8d8e5}
+.essay-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;font-family:var(--font-sans);font-size:11px;color:#b5cad9}
+.essay-meta span{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:4px 10px;background:rgba(255,255,255,.05)}
+.essay-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(26px,4vw,50px);align-items:start;padding:clamp(34px,4vw,56px) 0 clamp(50px,6vw,80px)}
+@media(max-width:980px){.essay-layout{grid-template-columns:1fr}}
+.essay-body{min-width:0;background:#fff;border:1px solid var(--sdg-line);border-radius:16px;padding:clamp(24px,3.4vw,46px);box-shadow:0 1px 2px rgba(18,50,79,.035),0 14px 34px rgba(18,50,79,.05)}
+.essay-body .lead{font-size:clamp(15.5px,1.5vw,18px);line-height:1.95;color:#1f3a50;border-left:3px solid var(--sdg-gold);padding-left:16px;margin:0 0 30px;font-family:var(--font-serif);font-style:italic}
+.essay-body h2{margin:34px 0 12px;font-size:clamp(19px,2vw,23px);color:var(--sdg-navy);letter-spacing:-.01em;line-height:1.4}
+.essay-body h2:first-of-type{margin-top:0}
+.essay-body p{margin:0 0 16px;font-size:15.5px;line-height:1.95;color:#2c3e4e}
+.essay-body p strong{color:var(--sdg-navy)}
+.essay-body ul{margin:0 0 18px;padding-left:1.25em;color:#2c3e4e;font-size:15px;line-height:1.9}
+.essay-body li{margin:.35em 0}
+.essay-body blockquote{margin:24px 0;padding:18px 22px;background:linear-gradient(180deg,#f6fafc,#eef5fa);border-left:3px solid var(--sdg-blue);font-family:var(--font-serif);font-size:16px;line-height:1.9;color:#1d3e56}
+.essay-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0}
+@media(max-width:640px){.essay-stats{grid-template-columns:1fr}}
+.essay-stat{background:#f7fafc;border:1px solid #e2ebf3;border-radius:12px;padding:14px}
+.essay-stat b{display:block;font-family:var(--font-en);font-size:20px;color:var(--sdg-blue);letter-spacing:-.02em}
+.essay-stat span{display:block;margin-top:5px;font-size:11.5px;line-height:1.6;color:#697d8f}
+.essay-side{display:grid;gap:14px;position:sticky;top:86px}
+@media(max-width:980px){.essay-side{position:static}}
+.side-card{background:#fff;border:1px solid var(--sdg-line);border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(18,50,79,.035)}
+.side-card h3{margin:0 0 10px;font-family:var(--font-sans);font-size:11px;letter-spacing:.14em;color:var(--sdg-blue);text-transform:uppercase}
+.side-card p{margin:0;font-size:12.5px;line-height:1.8;color:#4b5f70}
+.side-card ol,.side-card ul{margin:0;padding-left:1.1em;font-size:12.5px;line-height:1.8;color:#4b5f70}
+.side-card li{margin:.35em 0}
+.side-card .map b{display:block;margin:10px 0 3px;color:var(--sdg-navy);font-size:12px}
+.term{display:flex;gap:8px;font-size:12.5px;line-height:1.65;margin-bottom:7px}
+.term b{color:var(--sdg-navy);font-weight:600}
+.term span{color:#6b7e8f}
+.side-links{display:grid;gap:6px}
+.side-links a{display:flex;gap:6px;font-size:12px;line-height:1.55;color:var(--sdg-navy);border-bottom:1px dotted #e2eaf2;padding:4px 0}
+.side-links a:hover{color:var(--sdg-blue)}
+.side-links a em{font-style:normal;color:#8ba0b2;font-size:10px;white-space:nowrap;margin-left:auto}
+.essay-nav{display:flex;justify-content:space-between;gap:14px;margin-top:40px;padding-top:20px;border-top:1px solid #e4edf4;flex-wrap:wrap}
+.essay-nav a{font-size:13px;color:var(--sdg-blue);font-weight:600}
+.essay-footnote{margin-top:22px;font-size:11.5px;color:#7d8f9f;line-height:1.8}
+
+/* index howto */
+.howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:800px){.howto-grid{grid-template-columns:1fr}}
+.howto-item{background:#fff;border:1px solid var(--sdg-line);border-radius:12px;padding:18px}
+.howto-item b{display:block;font-size:12px;letter-spacing:.1em;color:var(--sdg-blue);margin-bottom:6px}
+.howto-item p{margin:0;font-size:12.5px;line-height:1.75;color:#5b6e7f}
+.sdg-footer{margin-top:50px;border-top:1px solid #dce6f1;background:#0d2640;color:#a9c0d2;padding:30px 0 40px;font-size:12px;line-height:1.9}
+.sdg-footer a{color:#e3c88f}
+.sdg-footer .sdg-wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">英</span><span class="brand-text"><strong>初中英语资料站</strong><small>SDG · 高级写作</small></span></a>
+    <nav class="site-nav" aria-label="主导航"><a href="../../index.html">首页</a><a href="../index.html">SDG 文库</a><a class="nav-strong" href="../index.html#un-desk">UN 官方入口</a></nav>
+  </div>
+</header>
+<div class="sdg-band" aria-hidden="true"></div>
+<main>
+<section class="essay-hero"><div class="sdg-wrap">
+<div class="essay-crumb"><a href="../index.html">SDG 作文文库</a> / SDG 3 · 良好健康与福祉</div>
+<h1>Health Systems Are a Public Good</h1>
+<h2>卫生体系是公共品</h2>
+<p class="sub">Universal health coverage is not a cost centre; it is the infrastructure of a resilient society</p>
+<div class="essay-meta"><span>SDG 3 · 良好健康与福祉 / Good Health and Well-being</span><span>C1 · 雅思 7.5+ / 托福 100+</span><span>6 min read</span></div>
+</div></section>
+<div class="sdg-wrap essay-layout">
+<article class="essay-body">
+<p class="lead">Health systems are public goods: their value is measured not only in treatment, but in the collective security they provide.</p><h2>The illusion of individual health</h2><p>Health is often treated as a private outcome: individuals make choices, buy insurance and visit doctors. But health is produced collectively. Clean water, sanitation, safe workplaces, air quality, vaccination and epidemic surveillance are public goods whose benefits cannot be confined to paying customers.</p><p>The pandemic made this visible. A virus does not respect insurance status. The health of the most exposed worker shapes the risk of the entire community. Yet health systems were treated as a cost to be contained, not as infrastructure to be maintained.</p><h2>Universal coverage as architecture</h2><p>Universal health coverage means that everyone can access quality health services without financial hardship. It is not a single policy but an architecture: primary care, hospitals, medicines, health workers, financing and governance.</p><p>The world is far from this goal. Out-of-pocket payments push millions into poverty each year. Health worker shortages are concentrated in low-income countries, while wealthy countries recruit their staff. Medicines and vaccines are distributed by markets that reward purchasing power, not need.</p><h2>Preparedness and antimicrobial resistance</h2><p>Pandemic preparedness requires sustained investment in surveillance, laboratories, supply chains and public health institutions. It is a classic collective action problem: the benefits are invisible when prevention succeeds, so governments underinvest until a crisis arrives.</p><p>Antimicrobial resistance is a slower emergency. It is driven by the overuse of antibiotics in human medicine and agriculture, and by the absence of affordable diagnostics and new drugs. Addressing it requires coordination across health, agriculture, trade and finance—not only biomedical research.</p><h2>Financing health as security</h2><p>Health financing is a political choice. Countries can prioritise debt service, defence or tax cuts, or they can build a health system. The latter requires progressive taxation, public spending and international solidarity for the poorest countries.</p><p>SDG 3 promises healthy lives and well-being for all ages. Meeting it requires treating health as a public good and a security issue, not as a private market. A society that lets people die of preventable diseases because they cannot pay is neither just nor resilient.</p>
+<div class="essay-stats"><div class="essay-stat"><b>~4.5bn</b><span>people lack access to essential health services, according to WHO/World Bank estimates</span></div><div class="essay-stat"><b>100m</b><span>people are pushed into extreme poverty by out-of-pocket health spending each year</span></div><div class="essay-stat"><b>SDG 3</b><span>covers health across the life course, not only disease treatment</span></div></div>
+<blockquote>Health systems are public goods: their value is measured not only in treatment, but in the collective security they provide.</blockquote>
+<section class="zh-block" lang="zh-CN"><span class="zh-mark">中文译文 · CHINESE</span><h2>卫生体系是公共品</h2><p>健康常被当作私人结果：个人做选择、买保险、看医生。但健康是集体生产的。清洁饮水、卫生设施、安全 workplace、空气质量、疫苗接种与疫情监测都是公共品，其收益无法局限于付费顾客。疫情使这一点变得清楚：病毒不尊重保险身份；最暴露的劳动者的健康塑造整个社区的风险。然而卫生体系常被当作要控制的成本，而不是要维护的基础设施。</p><p>全民健康覆盖意味着每个人都能获得优质卫生服务而不陷入经济困难。它不是单一政策，而是一套架构：初级保健、医院、药品、卫生人力、融资与治理。世界距离这一目标还很远：自付费用每年把数百万人推入贫困；卫生人力短缺集中在低收入国家，而富裕国家招募其人员；药品与疫苗由奖励购买力而非需求的市场分配。</p><p>大流行病防范需要持续投资监测、实验室、供应链与公共卫生机构。它是典型的集体行动问题：预防成功时收益不可见，因此政府直到危机来临才投资。抗微生物药物耐药性是更慢的紧急状态，由人类医学与农业中抗生素过度使用、以及缺乏可负担诊断与新药驱动；应对它需要卫生、农业、贸易与财政的协调，而不仅是生物医学研究。</p><p>卫生融资是政治选择。国家可以优先偿债、国防或减税，也可以建设卫生体系。后者需要累进税、公共支出与对最贫困国家的国际团结。SDG 3 承诺各年龄段健康生活与福祉；实现它需要把健康当作公共品与安全问题，而不是私人市场。一个让人因付不起钱而死于可预防疾病的社会，既不公正，也不有韧性。</p><p class="zh-note">中文译文为本站译校，供理解与写作参考；引用请以英文原文及联合国官方报告为准。</p></section>
+<div class="essay-nav"><a href="../index.html">← 返回文库</a><a href="https://www.un.org/sustainabledevelopment/health/" target="_blank" rel="noopener">联合国 SDG 3 官方页 →</a></div>
+<p class="essay-footnote">本文为本站原创议论文；事实与数据请以联合国及相关机构最新报告为准。中文摘要、译文与导读由本站撰写。</p>
+</article>
+<aside class="essay-side">
+<div class="side-card"><h3>Argument Map</h3><div class="map"><b>Thesis</b><p>Health systems are public goods: their value is measured not only in treatment, but in the collective security they provide.</p><b>Structure</b><p>Problem → Evidence → Counterargument → Proposal</p></div></div>
+<div class="side-card"><h3>语言工具箱</h3><div class="term"><b>universal health coverage</b><span>全民健康覆盖</span></div><div class="term"><b>out-of-pocket payment</b><span>自付费用</span></div><div class="term"><b>antimicrobial resistance</b><span>抗微生物药物耐药性</span></div><div class="term"><b>pandemic preparedness</b><span>大流行病防范</span></div><div class="term"><b>primary care</b><span>初级卫生保健</span></div><div class="term"><b>social health insurance</b><span>社会医疗保险</span></div></div>
+<div class="side-card"><h3>可迁移句式</h3><ul><li>Health is produced collectively, even when treatment is consumed individually.</li><li>A health system is infrastructure: its value is most visible when it fails.</li><li>Universal coverage is not a cost; it is the architecture of collective security.</li><li>Preparedness is invisible when it works, which is why it is chronically underfunded.</li></ul></div>
+<div class="side-card"><h3>UN 官方链接</h3><div class="side-links"><a href="https://www.un.org/sustainabledevelopment/health/" target="_blank" rel="noopener">SDG 3 官方目标页 <em>official ↗</em></a><a href="https://www.un.org/sustainabledevelopment/progress-report/" target="_blank" rel="noopener">SDG 进展报告 <em>official ↗</em></a><a href="https://www.un.org/sustainabledevelopment/financing-for-development/" target="_blank" rel="noopener">发展融资 <em>official ↗</em></a><a href="https://www.un.org/sustainabledevelopment/news/" target="_blank" rel="noopener">SDG 新闻 <em>official ↗</em></a></div></div>
+<div class="side-card"><h3>讨论题</h3><ol><li>Why do governments underinvest in pandemic preparedness?</li><li>Should health worker migration be regulated internationally?</li><li>How can countries expand universal health coverage without imposing catastrophic costs?</li></ol></div>
+</aside>
+</div>
+</main>
+<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 高级作文文库</strong><br>17 个目标 · 17 篇文章</div><div><a href="../index.html">返回文库</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="../extra.js" defer></script>
+</body>
+</html>
