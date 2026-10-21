@@ -218,7 +218,41 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 <header class="site-header">
@@ -236,7 +270,7 @@
 <div class="sdg-actions"><a class="btn btn-primary" href="../essays/consumption-is-political.html">本目标作文 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="https://www.un.org/sustainabledevelopment/responsible-consumption/" target="_blank" rel="noopener">UN 官方目标页 ↗</a></div>
 </div></section>
 <section class="sdg-section"><div class="sdg-wrap">
-<div class="goal-page-head"><span class="num" style="--c:#bf8b2e">SDG 12</span><div><h1>负责任消费和生产 · Responsible Consumption and Production</h1><p>繁荣 Prosperity · 20 篇 · 免费阅读</p></div></div>
+<div class="goal-page-head"><span class="num" style="--c:#bf8b2e">SDG 12</span><div><h1>负责任消费和生产 · Responsible Consumption and Production</h1><p>繁荣 Prosperity · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html" style="--c:#e5243b" class="">01</a><a href="goal-2.html" style="--c:#dda63a" class="">02</a><a href="goal-3.html" style="--c:#4c9f38" class="">03</a><a href="goal-4.html" style="--c:#c5192d" class="">04</a><a href="goal-5.html" style="--c:#ff3a21" class="">05</a><a href="goal-6.html" style="--c:#26bde2" class="">06</a><a href="goal-7.html" style="--c:#fcc30b" class="">07</a><a href="goal-8.html" style="--c:#a21942" class="">08</a><a href="goal-9.html" style="--c:#fd6925" class="">09</a><a href="goal-10.html" style="--c:#dd1367" class="">10</a><a href="goal-11.html" style="--c:#fd9d24" class="">11</a><a href="goal-12.html" style="--c:#bf8b2e" class="on">12</a><a href="goal-13.html" style="--c:#3f7e44" class="">13</a><a href="goal-14.html" style="--c:#0a97d9" class="">14</a><a href="goal-15.html" style="--c:#56c02b" class="">15</a><a href="goal-16.html" style="--c:#00689d" class="">16</a><a href="goal-17.html" style="--c:#19486a" class="">17</a></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
 <div class="rd-grid"><article class="rd-card">
@@ -339,10 +373,35 @@
   <h3><a href="https://www.worldbank.org/en/programs/problue/publication/unlocking-financing-to-combat-the-plastics-crisis" target="_blank" rel="noopener">Unlocking Financing to Combat the Plastics Crisis</a></h3>
   <p class="rd-cn">塑料污染是一场全球性危机，迄今为止产生的塑料废物中只有 9% 得到了回收。为了解决这个问题，政策制定者、企业和社区正在探索创新的解决方案，包括塑料信用。</p>
   <div class="rd-meta"><span>208 词</span><span>·</span><span>约 1 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/programs/problue/publication/unlocking-financing-to-combat-the-plastics-crisis" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-08-05</time></div>
+  <h3><a href="https://news.un.org/en/story/2025/08/1165574" target="_blank" rel="noopener">The world is demanding action over plastic pollution: UN environment chief</a></h3>
+  <p class="rd-cn">周二，联合国日内瓦办事处正在进行高风险谈判，以商定一项具有法律约束力的条约来遏制塑料污染，来自近 180 个国家的代表出席了会议。 “世界想要并且......</p>
+  <div class="rd-meta"><span>686 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/08/1165574" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-07-31</time></div>
+  <h3><a href="https://news.un.org/en/story/2025/07/1165545" target="_blank" rel="noopener">Trade measures critical to ending plastic pollution</a></h3>
+  <p class="rd-cn">联合国贸易和发展机构贸发会议周四在最后一轮谈判之前发布了最新评估，以制定一项具有法律约束力的国际文书来应对……</p>
+  <div class="rd-meta"><span>529 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/07/1165545" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2025-03-20</time></div>
+  <h3><a href="https://www.carbonbrief.org/qa-how-chinas-two-new-policy-aims-to-help-cut-emissions" target="_blank" rel="noopener">Q&amp;A: How China’s ‘two new’ policy aims to help cut emissions</a></h3>
+  <p class="rd-cn">中国山东省青州市一家报废机动车回收企业内待拆解的汽车。图片来源：Sipa US / Alamy Stock Photo。中国中央政府列出...</p>
+  <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-how-chinas-two-new-policy-aims-to-help-cut-emissions" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2021-11-18</time></div>
+  <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-france-2021_289a0a17-en.html" target="_blank" rel="noopener">OECD Economic Surveys: France 2021</a></h3>
+  <p class="rd-cn">性别平等政策是经济增长、民主和社会凝聚力的驱动力……</p>
+  <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-france-2021_289a0a17-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">Phys.org</span><span class="rd-free">免费</span><time>2022-12-07</time></div>
+  <h3><a href="https://phys.org/news/2022-12-circular-bioplastics-solution-climate-crisis.html" target="_blank" rel="noopener">Circular bioplastics offer solution for climate crisis and growing resource consumption</a></h3>
+  <p class="rd-cn">循环生物经济可以极大地控制快速增长的塑料行业对气候、污染和资源消耗的影响。根据当前政策，全球塑料生产可能...</p>
+  <div class="rd-meta"><span>596 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://phys.org/news/2022-12-circular-bioplastics-solution-climate-crisis.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html">← 返回阅读室</a><a href="../index.html">SDG 作文文库 →</a></div>
 </div></section>
 </main>
-<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 20 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
 </body>
 </html>

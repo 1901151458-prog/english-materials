@@ -218,7 +218,41 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 <header class="site-header">
@@ -236,7 +270,7 @@
 <div class="sdg-actions"><a class="btn btn-primary" href="../essays/care-economy-infrastructure.html">本目标作文 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="https://www.un.org/sustainabledevelopment/gender-equality/" target="_blank" rel="noopener">UN 官方目标页 ↗</a></div>
 </div></section>
 <section class="sdg-section"><div class="sdg-wrap">
-<div class="goal-page-head"><span class="num" style="--c:#ff3a21">SDG 05</span><div><h1>性别平等 · Gender Equality</h1><p>人 People · 20 篇 · 免费阅读</p></div></div>
+<div class="goal-page-head"><span class="num" style="--c:#ff3a21">SDG 05</span><div><h1>性别平等 · Gender Equality</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html" style="--c:#e5243b" class="">01</a><a href="goal-2.html" style="--c:#dda63a" class="">02</a><a href="goal-3.html" style="--c:#4c9f38" class="">03</a><a href="goal-4.html" style="--c:#c5192d" class="">04</a><a href="goal-5.html" style="--c:#ff3a21" class="on">05</a><a href="goal-6.html" style="--c:#26bde2" class="">06</a><a href="goal-7.html" style="--c:#fcc30b" class="">07</a><a href="goal-8.html" style="--c:#a21942" class="">08</a><a href="goal-9.html" style="--c:#fd6925" class="">09</a><a href="goal-10.html" style="--c:#dd1367" class="">10</a><a href="goal-11.html" style="--c:#fd9d24" class="">11</a><a href="goal-12.html" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html" style="--c:#3f7e44" class="">13</a><a href="goal-14.html" style="--c:#0a97d9" class="">14</a><a href="goal-15.html" style="--c:#56c02b" class="">15</a><a href="goal-16.html" style="--c:#00689d" class="">16</a><a href="goal-17.html" style="--c:#19486a" class="">17</a></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
 <div class="rd-grid"><article class="rd-card">
@@ -339,10 +373,35 @@
   <h3><a href="https://www.theguardian.com/commentisfree/2019/aug/22/a-new-poll-shows-what-really-interests-pro-lifers-controlling-women" target="_blank" rel="noopener">A new poll shows what really interests &#x27;pro-lifers&#x27;: controlling women</a></h3>
   <p class="rd-cn">根据自称为“反堕胎”倡导者的说法，那些想要禁止堕胎和那些想要保持堕胎合法的人之间的根本分歧归结为一个问题：生命从何时开始？反堕胎倡导者宣扬生命始于受孕的观点；他们的运动名称小心翼翼地集中在</p>
   <div class="rd-meta"><span>1,115 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2019/aug/22/a-new-poll-shows-what-really-interests-pro-lifers-controlling-women" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-09-07</time></div>
+  <h3><a href="https://news.un.org/en/story/2023/09/1140472" target="_blank" rel="noopener">Gender gap persists on road to the SDGs: UN Women</a></h3>
+  <p class="rd-cn">联合国妇女署周四警告说，作为2030年可持续发展目标(SDG)的一部分，世界在缩小性别差距方面还远远落后。来自...的新性别快照报告</p>
+  <div class="rd-meta"><span>466 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/09/1140472" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">ILO</span><span class="rd-free">免费</span><time>2026-02-18</time></div>
+  <h3><a href="https://www.ilo.org/resource/news/uzbekistan-advances-dialogue-care-economy-promote-gender-equality-and" target="_blank" rel="noopener">Uzbekistan advances dialogue on care economy to promote gender equality and decent work</a></h3>
+  <p class="rd-cn">乌兹别克斯坦推进关爱经济对话，以促进性别平等和体面工作 — 塔什干（国际劳工组织新闻） — 2026 年 2 月 19 日，政府、雇主组织和工人组织、青年代表、民间社会和国际合作伙伴与国际劳工组织和联合国开发计划署齐聚一堂，讨论......</p>
+  <div class="rd-meta"><span>941 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.ilo.org/resource/news/uzbekistan-advances-dialogue-care-economy-promote-gender-equality-and" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">ILO</span><span class="rd-free">免费</span><time>2026-03-17</time></div>
+  <h3><a href="https://www.ilo.org/resource/news/social-dialogue-advances-gender-equality-and-shared-care-responsibilities" target="_blank" rel="noopener">Social dialogue advances gender equality and shared care responsibilities in Latin America</a></h3>
+  <p class="rd-cn">LIMA（国际劳工组织新闻）——社会对话——通过集体谈判和公司实践等进程——正在将护理相关权利扩大到八个国家超出法定最低标准……</p>
+  <div class="rd-meta"><span>605 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.ilo.org/resource/news/social-dialogue-advances-gender-equality-and-shared-care-responsibilities" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-12</time></div>
+  <h3><a href="https://www.theguardian.com/australia-news/2026/oct/13/more-part-time-bosses-and-co-ceos-could-keep-women-in-leadership-and-narrow-australias-pay-gap" target="_blank" rel="noopener">More part-time bosses and co-CEOs could keep women in leadership and narrow Australia’s pay gap</a></h3>
+  <p class="rd-cn">研究表明，不均匀的照顾责任加上缺乏灵活的工作选择阻碍了女性担任高级职位……</p>
+  <div class="rd-meta"><span>594 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/australia-news/2026/oct/13/more-part-time-bosses-and-co-ceos-could-keep-women-in-leadership-and-narrow-australias-pay-gap" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
+  <h3><a href="https://www.theguardian.com/society/2026/oct/15/trans-women-no-longer-to-be-placed-on-female-only-wards-under-new-nhs-england-guidance" target="_blank" rel="noopener">Trans women no longer to be placed on female-only wards under new NHS England guidance</a></h3>
+  <p class="rd-cn">规则意味着单性别病房、厕所和更衣室现在将由人们根据其生物性别使用……</p>
+  <div class="rd-meta"><span>563 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/society/2026/oct/15/trans-women-no-longer-to-be-placed-on-female-only-wards-under-new-nhs-england-guidance" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html">← 返回阅读室</a><a href="../index.html">SDG 作文文库 →</a></div>
 </div></section>
 </main>
-<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 20 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
 </body>
 </html>

@@ -1,0 +1,25 @@
+/* SDG 阅读室 / 范文库视觉增强 */
+body{background-image:radial-gradient(900px 520px at 10% -8%,rgba(30,95,163,.06),transparent 60%),radial-gradient(800px 480px at 100% 0%,rgba(23,122,75,.05),transparent 58%)}
+.sdg-section{padding:clamp(38px,5vw,64px) 0}
+.idx-card{position:relative;overflow:hidden;border-left:4px solid var(--c);box-shadow:0 1px 2px rgba(18,50,79,.035),0 8px 22px rgba(18,50,79,.04)}
+.idx-card::after{content:"";position:absolute;right:-30px;top:-30px;width:80px;height:80px;border-radius:50%;background:var(--c);opacity:.06}
+.idx-card h3{letter-spacing:-.01em}
+.idx-count{color:var(--sdg-blue);font-weight:600}
+.rd-card{position:relative;overflow:hidden;border-top:3px solid rgba(18,50,79,.18)}
+.rd-card::before{content:"";position:absolute;left:0;top:0;width:38%;height:3px;background:linear-gradient(90deg,#1e5fa3,#177a4b);transition:width .25s ease}
+.rd-card:hover::before{width:100%}
+.rd-card h3 a{text-wrap:pretty}
+.rd-cn{text-wrap:pretty}
+.rd-source{letter-spacing:.02em}
+.rd-free{letter-spacing:.04em}
+.goal-page-head .num{box-shadow:0 8px 18px -10px rgba(18,50,79,.5)}
+.summary-box{border-left:3px solid #b8cfe2;background:linear-gradient(180deg,#fff,#fbfdff)}
+.goal-nav a{transition:background .15s,color .15s,border-color .15s,transform .15s}
+.goal-nav a:hover{transform:translateY(-1px)}
+.model-card{position:relative;border-top:3px solid rgba(18,50,79,.16)}
+.model-card::before{content:"";position:absolute;left:0;top:0;width:44px;height:3px;background:linear-gradient(90deg,#1e5fa3,#b8863b)}
+.model-text{font-family:Georgia,"Times New Roman","Noto Serif SC",serif;color:#243849}
+.model-card h2{text-wrap:balance}
+.model-tip{background:#f8fbfd;padding:9px 12px;border-left:3px solid #b8863b}
+.long-card{box-shadow:0 12px 30px -18px rgba(18,50,79,.5)}
+@media(max-width:640px){.rd-card{padding:14px}.model-card{padding:18px}.idx-card{padding:14px}}

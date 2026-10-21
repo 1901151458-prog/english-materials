@@ -218,7 +218,41 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 <header class="site-header">
@@ -236,7 +270,7 @@
 <div class="sdg-actions"><a class="btn btn-primary" href="../essays/ocean-commons.html">本目标作文 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="https://www.un.org/sustainabledevelopment/life-below-water/" target="_blank" rel="noopener">UN 官方目标页 ↗</a></div>
 </div></section>
 <section class="sdg-section"><div class="sdg-wrap">
-<div class="goal-page-head"><span class="num" style="--c:#0a97d9">SDG 14</span><div><h1>水下生物 · Life Below Water</h1><p>地球 Planet · 20 篇 · 免费阅读</p></div></div>
+<div class="goal-page-head"><span class="num" style="--c:#0a97d9">SDG 14</span><div><h1>水下生物 · Life Below Water</h1><p>地球 Planet · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html" style="--c:#e5243b" class="">01</a><a href="goal-2.html" style="--c:#dda63a" class="">02</a><a href="goal-3.html" style="--c:#4c9f38" class="">03</a><a href="goal-4.html" style="--c:#c5192d" class="">04</a><a href="goal-5.html" style="--c:#ff3a21" class="">05</a><a href="goal-6.html" style="--c:#26bde2" class="">06</a><a href="goal-7.html" style="--c:#fcc30b" class="">07</a><a href="goal-8.html" style="--c:#a21942" class="">08</a><a href="goal-9.html" style="--c:#fd6925" class="">09</a><a href="goal-10.html" style="--c:#dd1367" class="">10</a><a href="goal-11.html" style="--c:#fd9d24" class="">11</a><a href="goal-12.html" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html" style="--c:#3f7e44" class="">13</a><a href="goal-14.html" style="--c:#0a97d9" class="on">14</a><a href="goal-15.html" style="--c:#56c02b" class="">15</a><a href="goal-16.html" style="--c:#00689d" class="">16</a><a href="goal-17.html" style="--c:#19486a" class="">17</a></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
 <div class="rd-grid"><article class="rd-card">
@@ -339,10 +373,35 @@
   <h3><a href="https://news.mongabay.com/2026/10/shedding-light-on-the-sea-interview-with-thai-photographer-sirachai-arunrugstichai/" target="_blank" rel="noopener">Shedding light on the sea: Interview with Thai photographer Sirachai Arunrugstichai</a></h3>
   <p class="rd-cn">接受过海洋生物学培训的泰国摄影记者 Sirachai “Shin” Arunrugstichai 拍摄的照片捕捉到了与海洋保护相关的问题，从搁浅的珊瑚礁到被石油泄漏污染的海滩。 - 在拍摄了鱿鱼的恋尸癖行为后，他与人合着了一项关于鱿鱼恋尸癖的研究。</p>
   <div class="rd-meta"><span>1,341 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://news.mongabay.com/2026/10/shedding-light-on-the-sea-interview-with-thai-photographer-sirachai-arunrugstichai/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2021-12-07</time></div>
+  <h3><a href="https://news.un.org/en/story/2021/12/1107342" target="_blank" rel="noopener">Plastics in soil threaten food security, health, and environment: FAO</a></h3>
+  <p class="rd-cn">土壤中的塑料威胁粮食安全、健康和环境：联合国农业机构周二发布的一份新报告显示，塑料污染在农业土壤中已变得普遍，对粮食安全、人民健康和环境构成威胁。</p>
+  <div class="rd-meta"><span>566 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2021/12/1107342" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-06-03</time></div>
+  <h3><a href="https://www.reuters.com/sustainability/land-use-biodiversity/sea-change-needed-global-talks-save-ocean-disaster-2025-06-03/" target="_blank" rel="noopener">Sea change needed at global talks to save ocean from disaster</a></h3>
+  <p class="rd-cn">汤森路透旗下道德企业杂志的行业洞察。海洋会议必须批准关键条约并为海洋恢复提供资金，以避免生态崩溃 只有 3% 的海洋被...</p>
+  <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/land-use-biodiversity/sea-change-needed-global-talks-save-ocean-disaster-2025-06-03/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2021-10-21</time></div>
+  <h3><a href="https://news.un.org/en/story/2021/10/1103692" target="_blank" rel="noopener">Plastic pollution on course to double by 2030</a></h3>
+  <p class="rd-cn">根据联合国环境规划署周四发布的评估报告，海洋和其他水体中的塑料污染继续急剧增长，到 2030 年可能增加一倍以上。</p>
+  <div class="rd-meta"><span>737 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2021/10/1103692" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-06-07</time></div>
+  <h3><a href="https://news.un.org/en/story/2026/06/1167654" target="_blank" rel="noopener">Humanity’s future depends on protecting the rapidly changing ocean</a></h3>
+  <p class="rd-cn">海洋覆盖了地球 70% 以上的面积，调节气候、维持生物多样性并支持全世界的经济和文化。它是地球上生命的基础。然而，它有...</p>
+  <div class="rd-meta"><span>939 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/06/1167654" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">Mongabay</span><span class="rd-free">免费</span><time>2025-03-24</time></div>
+  <h3><a href="https://news.mongabay.com/2025/03/plastic-pollution-cuts-into-fishers-livelihoods-in-ecuador-and-peru/" target="_blank" rel="noopener">Plastic pollution cuts into fishers’ livelihoods in Ecuador and Peru</a></h3>
+  <p class="rd-cn">如果您喜欢这个故事，请与其他人分享。秘鲁和厄瓜多尔的一项新研究发现，由于海洋中大量的塑料污染，手工渔民正在损失收入。研究人员...</p>
+  <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.mongabay.com/2025/03/plastic-pollution-cuts-into-fishers-livelihoods-in-ecuador-and-peru/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html">← 返回阅读室</a><a href="../index.html">SDG 作文文库 →</a></div>
 </div></section>
 </main>
-<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 20 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
 </body>
 </html>

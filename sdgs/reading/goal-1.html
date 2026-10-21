@@ -218,7 +218,41 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 <header class="site-header">
@@ -236,7 +270,7 @@
 <div class="sdg-actions"><a class="btn btn-primary" href="../essays/poverty-is-a-political-relationship.html">本目标作文 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank" rel="noopener">UN 官方目标页 ↗</a></div>
 </div></section>
 <section class="sdg-section"><div class="sdg-wrap">
-<div class="goal-page-head"><span class="num" style="--c:#e5243b">SDG 01</span><div><h1>无贫穷 · No Poverty</h1><p>人 People · 20 篇 · 免费阅读</p></div></div>
+<div class="goal-page-head"><span class="num" style="--c:#e5243b">SDG 01</span><div><h1>无贫穷 · No Poverty</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html" style="--c:#e5243b" class="on">01</a><a href="goal-2.html" style="--c:#dda63a" class="">02</a><a href="goal-3.html" style="--c:#4c9f38" class="">03</a><a href="goal-4.html" style="--c:#c5192d" class="">04</a><a href="goal-5.html" style="--c:#ff3a21" class="">05</a><a href="goal-6.html" style="--c:#26bde2" class="">06</a><a href="goal-7.html" style="--c:#fcc30b" class="">07</a><a href="goal-8.html" style="--c:#a21942" class="">08</a><a href="goal-9.html" style="--c:#fd6925" class="">09</a><a href="goal-10.html" style="--c:#dd1367" class="">10</a><a href="goal-11.html" style="--c:#fd9d24" class="">11</a><a href="goal-12.html" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html" style="--c:#3f7e44" class="">13</a><a href="goal-14.html" style="--c:#0a97d9" class="">14</a><a href="goal-15.html" style="--c:#56c02b" class="">15</a><a href="goal-16.html" style="--c:#00689d" class="">16</a><a href="goal-17.html" style="--c:#19486a" class="">17</a></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
 <div class="rd-grid"><article class="rd-card">
@@ -339,10 +373,35 @@
   <h3><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">Two billion women without access to social protection</a></h3>
   <p class="rd-cn">20 亿妇女无法获得社会保障 — 20 亿妇女无法获得社会保障 联合国妇女署的一份报告显示，从现金福利到医疗保健和养老金等各种政策并未惠及足够多的妇女和女童，导致她们在全球范围内更容易陷入贫困。当世界准备纪念国际根除日时</p>
   <div class="rd-meta"><span>470 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-04-15</time></div>
+  <h3><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">KEY FINDINGS Overcoming Poverty and Inequality in the Philippines: Past, Present, and Prospects for the Future</a></h3>
+  <p class="rd-cn">主要调查结果 克服菲律宾的贫困和不平等：过去、现在和未来的前景 — 菲律宾在减少贫困方面取得了重大进展，但收入不平等最近才开始下降。由于高增长率和结构转型，1985 年至...</p>
+  <div class="rd-meta"><span>631 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2025-10-14</time></div>
+  <h3><a href="https://www.undp.org/events/undp-second-world-summit-social-development" target="_blank" rel="noopener">UNDP at the Second World Summit for Social Development</a></h3>
+  <p class="rd-cn">联合国开发计划署出席第二届社会发展问题世界峰会 — 纽约 – 第二届社会发展问题世界峰会 (WSSD2) 将于 2025 年 11 月 4 日至 6 日在卡塔尔多哈举行。在不平等现象日益扩大以及主要人口、气候和...</p>
+  <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/events/undp-second-world-summit-social-development" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2019-11-12</time></div>
+  <h3><a href="https://www.theguardian.com/society/2019/nov/13/children-act-changed-family-life-children-better" target="_blank" rel="noopener">Thirty years on, has the Children Act changed family life for the better?</a></h3>
+  <p class="rd-cn">三十年过去了，《儿童法》是否让家庭生活变得更好了？ — 政治家、社会工作者、家长和法律专家讨论这项影响深远的法案是否成功地将儿童利益放在首位，前卫生部长弗吉尼亚·博顿利 (Virginia Bottomley)</p>
+  <div class="rd-meta"><span>2,776 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/society/2019/nov/13/children-act-changed-family-life-children-better" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-05-12</time></div>
+  <h3><a href="https://news.un.org/en/story/2026/05/1167492" target="_blank" rel="noopener">From childhood to university, economic inequality shapes life chances worldwide</a></h3>
+  <p class="rd-cn">经济不平等正在给儿童的健康、学习和未来机会留下深刻的印记——其影响远远超出了课堂、联合国儿童基金会、联合国儿童基金会和联合国教育……</p>
+  <div class="rd-meta"><span>806 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/05/1167492" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
+</article><article class="rd-card">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2024-11-12</time></div>
+  <h3><a href="https://www.reuters.com/world/americas/latin-america-poverty-hits-33-year-low-inequality-prevails-un-report-says-2024-11-12/" target="_blank" rel="noopener">Latin America poverty hits 33-year low but inequality prevails, UN report says</a></h3>
+  <p class="rd-cn">圣地亚哥，11月12日（路透社）——在巴西、联合国拉丁美洲和加勒比经济委员会（拉加经委会）取得进展的带动下，拉丁美洲贫困水平将在2023年降至33年低点……</p>
+  <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/americas/latin-america-poverty-hits-33-year-low-inequality-prevails-un-report-says-2024-11-12/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html">← 返回阅读室</a><a href="../index.html">SDG 作文文库 →</a></div>
 </div></section>
 </main>
-<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 20 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
 </body>
 </html>
