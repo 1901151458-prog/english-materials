@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 07</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 07 · AFFORDABLE AND CLEAN ENERGY</p>
 <h1>SDG 07 · 经济适用的清洁能源<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕能源可及性、电网与转型的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#fcc30b">SDG 07</span><div><h1>经济适用的清洁能源 · Affordable and Clean Energy</h1><p>繁荣 Prosperity · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="on">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WRI">WRI</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#fcc30b"><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2025-04-30</time></div>
   <h3><a href="https://www.carbonbrief.org/qa-what-we-do-and-do-not-know-about-the-blackout-in-spain-and-portugal" target="_blank" rel="noopener">Q&amp;A: What we do – and do not – know about the blackout in Spain and Portugal</a></h3>
   <p class="rd-cn">问答：对于西班牙和葡萄牙的停电，我们了解和不了解 — 问答：对于西班牙和葡萄牙的停电，我们了解和不了解 4 月 28 日星期一中午 12 点 33 分，西班牙和葡萄牙大部分地区因停电而陷入混乱。虽然最初的触发因素仍不确定，但全国范围内的停电是在发电量达到约 15 吉瓦 (GW) 后发生的</p>
   <div class="rd-meta"><span>4,080 词</span><span>·</span><span>约 19 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-what-we-do-and-do-not-know-about-the-blackout-in-spain-and-portugal" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-01-29</time></div>
   <h3><a href="https://news.un.org/en/story/2025/01/1159566" target="_blank" rel="noopener">From policy to progress: UN deputy chief Mohammed outlines path for Africa’s clean energy transformation</a></h3>
   <p class="rd-cn">从政策到进展：联合国副秘书长穆罕默德概述了非洲清洁能源转型的路径 — 从政策到进展：联合国副秘书长穆罕默德概述了非洲清洁能源转型的路径 联合国副秘书长阿米娜·穆罕默德周二强调，迫切需要采取合作和紧急行动，以实现为 3 亿非洲人提供电力的宏伟目标</p>
   <div class="rd-meta"><span>1,030 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/01/1159566" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-06-25</time></div>
   <h3><a href="https://www.worldbank.org/en/topic/energy/publication/tracking-sdg-7-the-energy-progress-report-2025" target="_blank" rel="noopener">Tracking SDG 7 – The Energy Progress Report 2025</a></h3>
   <p class="rd-cn">跟踪可持续发展目标 7 – 2025 年能源进展报告 — 查看报告 查看新闻稿 2025 年 6 月 25 日 — 能源进展报告评估了全球在 2030 年之前普遍获得负担得起的、可靠的、可持续的现代能源方面所取得的成就。2023 年，全球改善电力供应的努力在 2022 年遭遇挫折后出现复苏。</p>
   <div class="rd-meta"><span>463 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/topic/energy/publication/tracking-sdg-7-the-energy-progress-report-2025" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2023-11-22</time></div>
   <h3><a href="https://theconversation.com/south-africa-and-renewable-energy-a-12-year-old-programme-offers-insights-for-countries-moving-to-cleaner-power-sources-217392" target="_blank" rel="noopener">South Africa and renewable energy: a 12‑year‑old programme offers insights for countries moving to cleaner power sources</a></h3>
   <p class="rd-cn">社会如何应对气候转型存在许多未知数。以及相关的能源从化石燃料能源向可再生能源的转变。</p>
   <div class="rd-meta"><span>1,081 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/south-africa-and-renewable-energy-a-12-year-old-programme-offers-insights-for-countries-moving-to-cleaner-power-sources-217392" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2023-07-19</time></div>
   <h3><a href="https://www.brookings.edu/articles/usmca-at-3-reflecting-on-impact-and-charting-the-future/" target="_blank" rel="noopener">USMCA at 3: Reflecting on impact and charting the future</a></h3>
   <p class="rd-cn">USMCA 3：反思影响并规划未来 — 2023 年 7 月 1 日是《美国-墨西哥-加拿大协定》(USMCA) 三周年纪念日，提供了一个反思其对北美贸易和投资影响并探索进一步加强该地区经济合作的机会。正如去年的政策简报中所概述的那样</p>
   <div class="rd-meta"><span>3,906 词</span><span>·</span><span>约 18 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/usmca-at-3-reflecting-on-impact-and-charting-the-future/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2023-10-18</time></div>
   <h3><a href="https://theconversation.com/the-original-and-still-the-best-why-its-time-to-renew-australias-renewable-energy-policy-213879" target="_blank" rel="noopener">The original and still the best: why it’s time to renew Australia’s renewable energy policy</a></h3>
   <p class="rd-cn">如果澳大利亚要履行到 2030 年将温室气体排放量减少到 2005 年水平以下 43% 的承诺，我们需要更快地减少排放。即使当前所有政府政策承诺均得以实现（考虑到实施的延迟，这不太可能实现），排放量预计仍仅比 2005 年水平低 40%</p>
   <div class="rd-meta"><span>1,258 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://theconversation.com/the-original-and-still-the-best-why-its-time-to-renew-australias-renewable-energy-policy-213879" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2026-09-16</time></div>
   <h3><a href="https://www.carbonbrief.org/analysis-indias-power-sector-emissions-flat-for-two-years-due-to-clean-energy-surge" target="_blank" rel="noopener">Analysis: India’s power-sector emissions flat for two years due to clean-energy surge</a></h3>
   <p class="rd-cn">分析：由于清洁能源激增，印度电力行业排放量连续两年持平 — 分析：由于清洁能源激增，印度电力行业排放量连续两年持平 清洁能源的激增使整个印度电力行业的二氧化碳 (CO2) 排放量受到控制，从 2024 年上半年到 2026 年同期没有增长。本文作者：Lauri Myllyvirta，Cent 首席分析师</p>
   <div class="rd-meta"><span>3,571 词</span><span>·</span><span>约 16 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/analysis-indias-power-sector-emissions-flat-for-two-years-due-to-clean-energy-surge" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">Why Long-Term Climate Strategies Are the Economic Planning Tool Governments Need Right Now</a></h3>
   <p class="rd-cn">为什么长期气候战略是政府现在需要的经济规划工具 — 为什么长期气候战略是政府现在需要的经济规划工具 长期气候战略是实用的经济规划工具，可以帮助政府管理波动、动员投资并使能源转型造福于人民和社区。在地缘政治定义的时代</p>
   <div class="rd-meta"><span>2,068 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2020-10-14</time></div>
   <h3><a href="https://www.worldbank.org/en/results/2020/10/15/increasing-access-to-electricity-and-renewable-energy-in-bolivia" target="_blank" rel="noopener">Increasing Access to Electricity and Renewable Energy in Bolivia</a></h3>
   <p class="rd-cn">玻利维亚正在努力实现减少贫困和到 2025 年实现普遍用电的目标。2014 年至 2019 年间，有 4,300 个家庭接入电网，为约 20,200 人提供电力。</p>
   <div class="rd-meta"><span>891 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/results/2020/10/15/increasing-access-to-electricity-and-renewable-energy-in-bolivia" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2022-12-14</time></div>
   <h3><a href="https://theconversation.com/australia-needs-much-more-solar-and-wind-power-but-where-are-the-best-sites-we-mapped-them-all-196033" target="_blank" rel="noopener">Australia needs much more solar and wind power, but where are the best sites? We mapped them all</a></h3>
   <p class="rd-cn">可再生能源在澳大利亚主要电网中的份额在五年内从 16% 增加了一倍多至 35%，联邦政府希望这一数字到 2030 年达到 82%。澳大利亚几乎所有新建发电厂都是太阳能和风能，因为它们是最便宜的电力来源。</p>
   <div class="rd-meta"><span>1,122 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/australia-needs-much-more-solar-and-wind-power-but-where-are-the-best-sites-we-mapped-them-all-196033" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2025-02-12</time></div>
   <h3><a href="https://www.wri.org/insights/accelerating-the-energy-transition-6-opportunities" target="_blank" rel="noopener">6 Opportunities to Accelerate the Global Energy Transition</a></h3>
   <p class="rd-cn">加速全球能源转型的 6 个机遇 — 加速全球能源转型的 6 个机遇 向清洁、负担得起、丰富、可靠的能源转型正在发生，但速度还不够快。六个关键机会可以加快进展。</p>
   <div class="rd-meta"><span>2,177 词</span><span>·</span><span>约 10 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/accelerating-the-energy-transition-6-opportunities" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2024-09-11</time></div>
   <h3><a href="https://www.carbonbrief.org/qa-what-the-draghi-report-says-about-eu-climate-action-and-energy" target="_blank" rel="noopener">Q&amp;A: What the Draghi report says about EU climate action and energy</a></h3>
   <p class="rd-cn">问答：德拉吉报告对欧盟气候行动和能源的看法 — 问答：德拉吉报告对欧盟气候行动和能源的看法 9 月 9 日，人们期待已久的意大利前总理马里奥·德拉吉发布了关于欧盟竞争力的报告。欧洲竞争力报告的未来重点关注气候和能源，制定了联合脱碳和</p>
   <div class="rd-meta"><span>3,256 词</span><span>·</span><span>约 15 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-what-the-draghi-report-says-about-eu-climate-action-and-energy" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2021-03-10</time></div>
   <h3><a href="https://news.un.org/en/story/2021/03/1086882" target="_blank" rel="noopener">Recognizing ‘historic tipping point’, UN begins push towards more sustainable energy future</a></h3>
   <p class="rd-cn">认识到“历史性转折点”，联合国开始推动更加可持续的能源未来 — 认识到“历史性转折点”，联合国开始推动更加可持续的能源未来 联合国秘书长周三表示，可再生能源“对于建设可持续、繁荣与和平的未来至关重要”，并加速推动清洁能源和气候行动。 “我们的挑战很明确：实现新的目标</p>
   <div class="rd-meta"><span>681 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2021/03/1086882" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2024-02-07</time></div>
   <h3><a href="https://www.theguardian.com/environment/2024/feb/08/parliament-house-protest-renewable-energy-plan-barnaby-joyce-pauline-hanson-matt-canavan-craig-kelly" target="_blank" rel="noopener">Reckless or reasonable? Factchecking the claims of anti-renewable activists</a></h3>
   <p class="rd-cn">周二，社区团体、活动人士和政界人士在议会大厦草坪上集会，反对联邦政府计划到 2030 年电网使用 82% 可再生能源。这次抗议活动被称为“鲁莽的可再生能源集会”，其中包括反对气候变化行动的熟悉人士，其中包括</p>
   <div class="rd-meta"><span>1,472 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2024/feb/08/parliament-house-protest-renewable-energy-plan-barnaby-joyce-pauline-hanson-matt-canavan-craig-kelly" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-09-06</time></div>
   <h3><a href="https://news.un.org/en/story/2023/09/1140357" target="_blank" rel="noopener">‘Without renewables, there can be no future’: 5 ways to power the energy transition</a></h3>
   <p class="rd-cn">“没有可再生能源，就没有未来”：推动能源转型的 5 种方式 — “没有可再生能源，就没有未来”：推动能源转型的 5 种方式 联合国秘书长安东尼奥·古特雷斯在国际蓝天清洁空气日之前表示，向可再生能源转型是确保人类生存的关键，因为“没有可再生能源，就没有未来”</p>
   <div class="rd-meta"><span>847 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/09/1140357" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-03-06</time></div>
   <h3><a href="https://www.brookings.edu/articles/harsh-times-north-america-geopolitics-and-the-new-energy-map/" target="_blank" rel="noopener">Harsh times? North America, geopolitics, and the new energy map</a></h3>
   <p class="rd-cn">本章是《2024 年 USMCA 展望》的一部分。中美贸易紧张局势、供应链中断、俄罗斯-乌克兰战争以及全球秩序的整体不稳定，凸显了美国-墨西哥-加拿大协议 (USMCA) 框架在区域层面提供的可预测性的价值。</p>
   <div class="rd-meta"><span>2,428 词</span><span>·</span><span>约 11 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/harsh-times-north-america-geopolitics-and-the-new-energy-map/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2025-10-01</time></div>
   <h3><a href="https://www.wri.org/insights/pakistan-solar-energy-boom" target="_blank" rel="noopener">The Perfect Storm Fueling Pakistan’s Solar Boom</a></h3>
   <p class="rd-cn">推动巴基斯坦太阳能热潮的完美风暴 虽然能源转型通常被认为是需要长期规划、国际气候融资或产业政策的复杂政治进程，但巴基斯坦证明了不同的故事是可能的。巴基斯坦见证了一场最迅速、最出乎意料的灾难</p>
   <div class="rd-meta"><span>1,771 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/pakistan-solar-energy-boom" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-05-27</time></div>
   <h3><a href="https://www.worldbank.org/en/news/feature/2025/05/27/improving-healthcare-access-through-renewable-energy" target="_blank" rel="noopener">Improving Healthcare Access Through Renewable Energy</a></h3>
-  <p class="rd-cn">通过可再生能源改善医疗服务 — - first letter 12 月 23 日星期一，Justinien 医院弥漫着一种正常的感觉；海地北部地区最重要的医院。尽管持续且出人意料的降雨影响了该地区一个多星期，但情况仍然如此。</p>
+  <p class="rd-cn">通过可再生能源改善医疗服务 — first letter 12 月 23 日星期一，Justinien 医院弥漫着一种正常的感觉；海地北部地区最重要的医院。尽管持续且出人意料的降雨影响了该地区一个多星期，但情况仍然如此。</p>
   <div class="rd-meta"><span>555 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/feature/2025/05/27/improving-healthcare-access-through-renewable-energy" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-07-22</time></div>
   <h3><a href="https://www.theguardian.com/environment/2025/jul/22/antonio-guterres-climate-breakthrough-clean-energy-fossil-fuels" target="_blank" rel="noopener">World on brink of climate breakthrough as fossil fuels ‘run out of road’, UN chief says</a></h3>
   <p class="rd-cn">联合国秘书长周二表示，世界正处于气候斗争取得突破的边缘，而化石燃料正在耗尽道路，他敦促各国为低碳能源提供支持。目前，全球超过十分之九的可再生能源项目比化石燃料替代品更便宜。</p>
   <div class="rd-meta"><span>870 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2025/jul/22/antonio-guterres-climate-breakthrough-clean-energy-fossil-fuels" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-09-17</time></div>
   <h3><a href="https://www.brookings.edu/articles/place-and-price-are-the-main-components-of-equity-in-climate-related-energy-investment/" target="_blank" rel="noopener">Place and price are the main components of equity in climate-related energy investment</a></h3>
   <p class="rd-cn">地点和价格是气候相关能源投资权益的主要组成部分 — 执行摘要 能源部门是美国温室气体 (GHG) 排放的最大贡献者。</p>
   <div class="rd-meta"><span>3,482 词</span><span>·</span><span>约 16 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/place-and-price-are-the-main-components-of-equity-in-climate-related-energy-investment/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.theguardian.com/smarter-homes-lower-bills/2026/oct/13/smart-home-guide-how-does-yours-compare" target="_blank" rel="noopener">Welcome to the smart home – how does yours compare?</a></h3>
   <p class="rd-cn">您的智能家居相比如何？ — 准备好探索一个充满科技、居住舒适且节省账单的住宅了吗？进行互动之旅，看看您可以实现什么......</p>
   <div class="rd-meta"><span>1,725 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/smarter-homes-lower-bills/2026/oct/13/smart-home-guide-how-does-yours-compare" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2022-05-10</time></div>
   <h3><a href="https://www.reuters.com/newsletters/reuters-power-up/" target="_blank" rel="noopener">Newsletter: Reuters Power Up</a></h3>
   <p class="rd-cn">时事通讯：Reuters Power Up — 您需要了解的有关全球能源行业以及推动向可再生燃料过渡的力量的一切信息。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/newsletters/reuters-power-up/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-11-04</time></div>
   <h3><a href="https://www.reuters.com/sustainability/land-use-biodiversity/transform-food-system-we-need-enable-access-renewable-energy--ecmii-2025-11-04/" target="_blank" rel="noopener">To transform the food system, we need to enable access to renewable energy</a></h3>
   <p class="rd-cn">来自汤森路透旗下 Ethical Corporation 杂志的评论行业洞察。但粮食系统的转型离不开为其提供动力的能源系统。那是因为...</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/land-use-biodiversity/transform-food-system-we-need-enable-access-renewable-energy--ecmii-2025-11-04/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
   <h3><a href="https://www.reuters.com/business/energy/senegals-state-owned-pipeline-operater-rgs-seeks-investors-530-million-euro-2026-10-15/" target="_blank" rel="noopener">Senegal&#x27;s state-owned pipeline operater RGS seeks investors for 530 million Euro expansion</a></h3>
   <p class="rd-cn">塞内加尔国有管道运营商 Reseau Gazier du Senegal 希望投资者帮助资助额外的 5.3 亿欧元（5.94 亿美元）网络扩建，以将天然气分配给多个电力公司……</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/energy/senegals-state-owned-pipeline-operater-rgs-seeks-investors-530-million-euro-2026-10-15/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-12</time></div>
   <h3><a href="https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles" target="_blank" rel="noopener">EU to limit Chinese hybrid vehicle imports to 350,000 a year</a></h3>
   <p class="rd-cn">布鲁塞尔利用世贸组织规则迅速实施每年35万辆汽车配额，这将使中国市场份额减半至3%……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

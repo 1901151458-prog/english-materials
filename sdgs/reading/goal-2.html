@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 02</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 02 · ZERO HUNGER</p>
 <h1>SDG 02 · 零饥饿<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕粮食安全、援助与贸易的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,136 +372,141 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#dda63a">SDG 02</span><div><h1>零饥饿 · Zero Hunger</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="on">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WFP">WFP</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#dda63a"><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-04-29</time></div>
   <h3><a href="https://www.reuters.com/world/middle-east/more-than-1-million-lebanon-expected-face-acute-food-insecurity-hunger-monitor-2026-04-29/" target="_blank" rel="noopener">More than 1 million in Lebanon expected to face acute food insecurity, hunger monitor says</a></h3>
   <p class="rd-cn">IPC 表示，家庭将难以满足基本粮食需求。地区冲突推高了燃料和粮食价格。农业部长表示，该行业将需要“数年”时间才能恢复。农民受到连续两年的严重打击……</p>
   <div class="rd-meta"><span>约 384 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/middle-east/more-than-1-million-lebanon-expected-face-acute-food-insecurity-hunger-monitor-2026-04-29/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2025-11-26</time></div>
   <h3><a href="https://theconversation.com/food-insecurity-is-on-the-rise-a-look-at-the-worlds-hunger-hotspots-270581" target="_blank" rel="noopener">Food insecurity is on the rise: a look at the world’s ‘hunger hotspots’</a></h3>
   <p class="rd-cn">2025 年 11 月 12 日，联合国粮食及农业组织 (FAO) 和世界粮食计划署 (WFP) 发布了一份联合报告，对全球粮食安全状况敲响了警钟。两个机构都警告说，“防止数百万人面临严重粮食不安全的窗口正在缩小”。</p>
   <div class="rd-meta"><span>1,013 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/food-insecurity-is-on-the-rise-a-look-at-the-worlds-hunger-hotspots-270581" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2024-07-24</time></div>
   <h3><a href="https://news.un.org/en/interview/2024/07/1152461" target="_blank" rel="noopener">The world must look to South America’s success in reducing hunger</a></h3>
   <p class="rd-cn">世界必须关注南美洲在减少饥饿方面的成功 — 世界必须关注南美洲在减少饥饿方面的成功 每年，周三发布的《世界粮食安全和营养状况》报告都会提供有关全球在实现 2030 年零饥饿目标方面的进展或挫折的最新信息。 2024 年报告显示，713 至 7.57 亿人</p>
   <div class="rd-meta"><span>1,171 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://news.un.org/en/interview/2024/07/1152461" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2024-07-24</time></div>
   <h3><a href="https://www.reuters.com/world/drive-end-global-hunger-has-stalled-united-nations-warns-2024-07-24/" target="_blank" rel="noopener">Drive to end global hunger has stalled, United Nations warns</a></h3>
-  <p class="rd-cn">罗马，7月24日（路透社）——到2030年消除全球饥饿的目标看起来越来越不可能实现，因为过去一年中遭受长期饥饿的人数几乎没有变化，...</p>
+  <p class="rd-cn">到2030年消除全球饥饿的目标看起来越来越不可能实现，因为过去一年中遭受长期饥饿的人数几乎没有变化，...</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/drive-end-global-hunger-has-stalled-united-nations-warns-2024-07-24/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2022-08-24</time></div>
   <h3><a href="https://theconversation.com/hunger-is-increasing-worldwide-but-women-bear-the-brunt-of-food-insecurity-188906" target="_blank" rel="noopener">Hunger is increasing worldwide but women bear the brunt of food insecurity</a></h3>
   <p class="rd-cn">联合国最近关于粮食不安全的数据描绘了一幅日益严重的国际问题的惨淡景象：全球饥饿不仅在加剧，而且对妇女的影响尤为严重。同样，国际人道主义援助组织 CARE 估计，2021 年挨饿的女性比男性多 1.5 亿。</p>
   <div class="rd-meta"><span>811 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/hunger-is-increasing-worldwide-but-women-bear-the-brunt-of-food-insecurity-188906" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2024-04-17</time></div>
   <h3><a href="https://theconversation.com/how-to-end-hunger-in-sub-saharan-africa-fight-inequality-gender-imbalances-and-climate-change-226660" target="_blank" rel="noopener">How to end hunger in sub‑Saharan Africa: fight inequality, gender imbalances and climate change</a></h3>
   <p class="rd-cn">与其他地区人口相比，更多非洲人口无法负担健康饮食。撒哈拉以南非洲的粮食不安全是由气候变化、高度贫困、人口快速增长、经济增长缓慢、基础设施不足和冲突造成的。</p>
   <div class="rd-meta"><span>984 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/how-to-end-hunger-in-sub-saharan-africa-fight-inequality-gender-imbalances-and-climate-change-226660" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.theguardian.com/global-development/2026/oct/14/farming-insects-food-fodder-fertiliser-uganda" target="_blank" rel="noopener">From black soldier flies to mealworms: farming insects for food, fodder and fertiliser in Uganda</a></h3>
   <p class="rd-cn">卡纳内·比卡尼亚勒 (Kanane Bikanyale) 养了一小群鸡，距离他位于凯卡二号难民营的家只有几分钟的步行路程。他从一个改装的塑料桶中，将黑水虻幼虫倒进政变中，它们消失在一群啄食鸡中。</p>
   <div class="rd-meta"><span>1,054 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/global-development/2026/oct/14/farming-insects-food-fodder-fertiliser-uganda" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2023-07-12</time></div>
   <h3><a href="https://www.theguardian.com/global-development/2023/jul/12/covid-pandemic-climate-crisis-ukraine-war-increases-number-people-hungry-globally-by-122m-since-2019-un" target="_blank" rel="noopener">Number of people going hungry has risen by 122m since 2019, UN says</a></h3>
   <p class="rd-cn">联合国表示，自 2019 年以来，挨饿人数已增加 1.22 亿。联合国表示，由于 Covid-19 大流行和乌克兰战争，自 2019 年以来，世界挨饿人数已增加 1.22 亿，达到 7.35 亿。如果目前的趋势继续下去，到 2030 年，将有近 6 亿人长期营养不良——如果这两个因素都没有解决的话，这一数字将多出约 1.19 亿。</p>
   <div class="rd-meta"><span>589 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/global-development/2023/jul/12/covid-pandemic-climate-crisis-ukraine-war-increases-number-people-hungry-globally-by-122m-since-2019-un" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2022-07-06</time></div>
   <h3><a href="https://news.un.org/en/story/2022/07/1122032" target="_blank" rel="noopener">World is moving backwards on eliminating hunger and malnutrition, UN report reveals</a></h3>
   <p class="rd-cn">联合国报告显示，世界在消除饥饿和营养不良方面正在倒退 — 联合国报告显示，世界在消除饥饿和营养不良方面正在倒退 根据一份新的联合国报告，到 2021 年，全球受饥饿影响的人数将增至 8.28 亿，该报告提供了新的证据，表明世界正在倒退，偏离了结束可持续发展目标</p>
   <div class="rd-meta"><span>1,295 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2022/07/1122032" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-08-05</time></div>
   <h3><a href="https://www.theguardian.com/environment/2026/aug/05/el-nino-could-push-50m-people-acute-hunger-next-year" target="_blank" rel="noopener">El Niño could push 50m people into acute hunger before end of next year</a></h3>
   <p class="rd-cn">据预测，快速发展的厄尔尼诺天气系统可能会在明年底之前使大约 5000 万人陷入严重饥饿。此外，由于非洲部分地区连年干旱，数亿人已经面临危险程度的饥饿。</p>
   <div class="rd-meta"><span>670 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2026/aug/05/el-nino-could-push-50m-people-acute-hunger-next-year" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2020-08-05</time></div>
   <h3><a href="https://www.worldbank.org/en/news/immersive-story/2020/08/06/beyond-the-pandemic-harnessing-the-digital-revolution-to-set-food-systems-on-a-better-course" target="_blank" rel="noopener">Beyond the Pandemic: Harnessing the Digital Revolution to Set Food Systems on a Better Course</a></h3>
   <p class="rd-cn">超越流行病：利用数字革命让粮食系统走上更好的道路 — 作者：Julian Lampietti、Ghada El Abed 和 Kateryna Schroeder [tweetquote:[tweetText=冠状病毒大流行最引人注目的图像之一是农民将牛奶倾倒、砸碎鸡蛋、将蔬菜重新耕种到土壤中，与消费者面对空荡荡的商店货架和食品分配处的长队之间的对比。</p>
   <div class="rd-meta"><span>3,274 词</span><span>·</span><span>约 15 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/immersive-story/2020/08/06/beyond-the-pandemic-harnessing-the-digital-revolution-to-set-food-systems-on-a-better-course" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-07-21</time></div>
   <h3><a href="https://www.reuters.com/world/americas/global-hunger-declines-across-continents-climate-trade-risks-loom-un-says-2026-07-21/" target="_blank" rel="noopener">Global hunger declines across continents but climate, trade risks loom, UN says</a></h3>
   <p class="rd-cn">报告预计，到 2025 年，将有 6.45 亿人面临饥饿，占全球人口的 7.8% 非洲饥饿人口最多，为 3.09 亿人，占非洲人口的五分之一 粮农组织首席经济学家警告说，厄尔尼诺现象...</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/americas/global-hunger-declines-across-continents-climate-trade-risks-loom-un-says-2026-07-21/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
   <h3><a href="https://news.un.org/en/story/2026/10/1168631" target="_blank" rel="noopener">‘One step away from famine’: Inside Afghanistan’s hunger crisis</a></h3>
   <p class="rd-cn">“距离饥荒仅一步之遥”：阿富汗的饥饿危机内部 “距离饥荒仅一步之遥”：阿富汗的饥饿危机内部 在极端饥饿警告之后，阿富汗各地正在展开一个痛苦的现实：食物是可用的，但数百万人仍然无法获得。这是联合国援助协调办公室发言人奥尔加·切列夫科 (Olga Cherevko) 的说法，她刚刚从联合国援助归来。</p>
   <div class="rd-meta"><span>671 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/10/1168631" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2023-04-18</time></div>
   <h3><a href="https://www.worldbank.org/en/news/feature/2023/04/19/global-hunger-responding-to-the-present-crisis-with-the-future-in-mind" target="_blank" rel="noopener">Global Hunger: Responding to the Present Crisis With the Future in Mind</a></h3>
-  <p class="rd-cn">全球饥饿：展望未来，应对当前危机 — -first-letter [tweetquote:[tweetText=距离 2030 年消除饥饿目标仅剩七年时间，世界已进一步偏离正轨。迫切需要采取更大规模且协调一致的应对措施。</p>
+  <p class="rd-cn">全球饥饿：展望未来，应对当前危机 — [tweetquote:[tweetText=距离 2030 年消除饥饿目标仅剩七年时间，世界已进一步偏离正轨。迫切需要采取更大规模且协调一致的应对措施。</p>
   <div class="rd-meta"><span>2,662 词</span><span>·</span><span>约 12 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/feature/2023/04/19/global-hunger-responding-to-the-present-crisis-with-the-future-in-mind" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2023-04-23</time></div>
   <h3><a href="https://www.worldbank.org/en/brief/2023/04/24/agriculture-and-food-what-we-do" target="_blank" rel="noopener">Agriculture and Food: What We Do</a></h3>
   <p class="rd-cn">农业与食品：我们所做的 — 气候智能型农业 作为农业发展援助的最大资助者，世界银行是支持向更高效、气候智能型粮食系统转型的全球领导者。我们通过投资、技术援助、知识生成和伙伴关系拥有全球影响力</p>
   <div class="rd-meta"><span>506 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/brief/2023/04/24/agriculture-and-food-what-we-do" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-10-19</time></div>
   <h3><a href="https://www.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza" target="_blank" rel="noopener">Funding cuts force WFP to drastically reduce lifesaving assistance in Gaza</a></h3>
   <p class="rd-cn">资金削减迫使粮食计划署大幅减少对加沙的救生援助 — 资金削减迫使粮食计划署大幅减少对加沙的救生援助 过去三年，粮食计划署的粮食援助为加沙多达 90% 的家庭提供了生命线。自 2025 年 10 月宣布停火以来，该机构每月向约 160 万人提供食品</p>
   <div class="rd-meta"><span>666 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
   <h3><a href="https://www.wfp.org/stories/meet-innovators-transforming-food-systems-south-sudan" target="_blank" rel="noopener">Meet the innovators transforming food systems in South Sudan</a></h3>
   <p class="rd-cn">认识改变南苏丹粮食系统的创新者 — 认识改变南苏丹粮食系统的创新者 每个收获季节，Cissy Apio Mario 都会看到同样的事情发生。她和无数其他南苏丹农民眼睁睁地看着他们辛苦生产的油籽作物卖不出去或被浪费，尽管该国仍然严重依赖进口食用油</p>
   <div class="rd-meta"><span>1,058 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/meet-innovators-transforming-food-systems-south-sudan" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.wfp.org/news/wfp-warns-escalating-yemen-conflict-cutting-life-saving-assistance-city-taiz" target="_blank" rel="noopener">WFP warns escalating Yemen conflict is cutting off life-saving assistance to city of Taiz</a></h3>
   <p class="rd-cn">粮食署警告也门冲突升级正在切断对塔伊兹市的救生援助 — 粮食署警告也门冲突升级正在切断对塔伊兹市的救生援助 也门第三大城市塔伊兹地区收容了自危机爆发以来数量最多的国内流离失所者，由于持续的战斗和周围道路即将封闭，许多地区目前无法进入。</p>
   <div class="rd-meta"><span>690 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.wfp.org/news/wfp-warns-escalating-yemen-conflict-cutting-life-saving-assistance-city-taiz" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-10-19</time></div>
   <h3><a href="https://www.wfp.org/news/republic-korea-provides-usd-78-million-flexible-contribution-support-wfps-life-saving" target="_blank" rel="noopener">Republic of Korea provides USD 7.8 million flexible contribution to support WFP’s life-saving operations worldwide</a></h3>
   <p class="rd-cn">大韩民国提供 780 万美元灵活捐款，支持粮食计划署在全球范围内的救生行动 — 大韩民国提供 780 万美元灵活捐款，支持粮食计划署在全球范围内的救生行动 核心资金使粮食计划署能够确定哪里最急需资源，从而为世界上最脆弱的社区提供灵活的战略援助。这笔重要资金有助于</p>
   <div class="rd-meta"><span>403 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.wfp.org/news/republic-korea-provides-usd-78-million-flexible-contribution-support-wfps-life-saving" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-10-07</time></div>
   <h3><a href="https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger" target="_blank" rel="noopener">How a record-breaking El Niño could deepen global hunger</a></h3>
   <p class="rd-cn">破纪录的厄尔尼诺现象如何加剧全球饥饿 — 破纪录的厄尔尼诺现象如何加剧全球饥饿 粮食计划署几个月来一直就 2026-27 年的厄尔尼诺现象发出警告。现在它已经到来了，我们看到了什么？</p>
   <div class="rd-meta"><span>1,020 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-06-07</time></div>
   <h3><a href="https://www.wfp.org/stories/i-have-never-seen-anything-it-reflections-worsening-hunger-crisis" target="_blank" rel="noopener">&#x27;I have never seen anything like it&#x27; – reflections from a worsening hunger crisis</a></h3>
-  <p class="rd-cn">日益恶化的饥饿危机的反映——卡尔·斯考在担任世界粮食计划署代理执行主任的新角色中阐述了他对全球饥饿危机的看法，在这场危机中，冲突、成本上升和资金削减正在加剧粮食不安全，而援助......</p>
+  <p class="rd-cn">卡尔·斯考在担任世界粮食计划署代理执行主任的新角色中阐述了他对全球饥饿危机的看法，在这场危机中，冲突、成本上升和资金削减正在加剧粮食不安全，而援助......</p>
   <div class="rd-meta"><span>904 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/i-have-never-seen-anything-it-reflections-worsening-hunger-crisis" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-08-10</time></div>
   <h3><a href="https://www.wfp.org/stories/colombia-earthquake-deepens-hunger-communities-already-under-strain" target="_blank" rel="noopener">Colombia earthquake deepens hunger in communities already under strain</a></h3>
   <p class="rd-cn">灾难加剧了冲突、流离失所和粮食不安全带来的现有挑战，粮食计划署准备在最需要的地方扩大援助规模。一名妇女看着救援人员寻找……</p>
   <div class="rd-meta"><span>571 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/colombia-earthquake-deepens-hunger-communities-already-under-strain" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2025-06-10</time></div>
   <h3><a href="https://www.wfp.org/stories/understanding-famine-what-it-how-you-can-act" target="_blank" rel="noopener">Understanding famine: what it is, how you can act</a></h3>
   <p class="rd-cn">了解饥荒：它是什么，您可以如何采取行动 - 什么是饥荒以及谁处于危险之中？全球饥饿监测机构综合粮食安全分类（IPC）将饥荒定义为“极度粮食匮乏”。已经是极限了……</p>
   <div class="rd-meta"><span>947 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/understanding-famine-what-it-how-you-can-act" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2026-06-02</time></div>
   <h3><a href="https://www.wfp.org/stories/frontlines-drcs-ebola-crisis-wfps-race-against-time-and-hunger" target="_blank" rel="noopener">On the frontlines of DRC&#x27;s Ebola crisis: WFP&#x27;s race against time and hunger</a></h3>
   <p class="rd-cn">在刚果民主共和国埃博拉危机的前线：粮食署与时间和饥饿赛跑 — 粮食署在刚果民主共和国东部的两名顶级埃博拉应对人员 Sib Ollo 和 Olivier Nkakudulu 介绍了我们如何调动卫生工作者、医疗用品和粮食援助来支持……</p>
   <div class="rd-meta"><span>1,457 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/frontlines-drcs-ebola-crisis-wfps-race-against-time-and-hunger" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WFP">
   <div class="rd-top"><span class="rd-source">WFP</span><span class="rd-free">免费</span><time>2025-12-08</time></div>
   <h3><a href="https://www.wfp.org/stories/northern-nigerias-toxic-mix-violence-and-hunger" target="_blank" rel="noopener">Northern Nigeria&#x27;s toxic mix of violence and hunger</a></h3>
-  <p class="rd-cn">世界粮食计划署警告说，援助萎缩和该地区令人震惊的粮食安全前景可能会加剧不稳定——可能会波及整个西非。严重营养不良的一岁孩子扎拉正在……</p>
+  <p class="rd-cn">可能会波及整个西非。严重营养不良的一岁孩子扎拉正在……</p>
   <div class="rd-meta"><span>915 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.wfp.org/stories/northern-nigerias-toxic-mix-violence-and-hunger" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html?v=25">← 返回阅读室</a><a href="../index.html?v=25">SDG 作文文库 →</a></div>
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 04</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 04 · QUALITY EDUCATION</p>
 <h1>SDG 04 · 优质教育<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕学习质量、教师与教育技术的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#c5192d">SDG 04</span><div><h1>优质教育 · Quality Education</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="on">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNESCO">UNESCO</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#c5192d"><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-09-30</time></div>
   <h3><a href="https://www.brookings.edu/articles/what-kind-of-brazil-will-emerge-from-this-election/" target="_blank" rel="noopener">What kind of Brazil will emerge from this election?</a></h3>
   <p class="rd-cn">这次选举将会出现什么样的巴西？ — 该合集提供了有关巴西 2026 年选举影响的指南。有关犯罪和安全状况的姊妹篇，请参阅 Vanda Felbab-Brown 的评论：“犯罪和安全成为巴西选举的中心舞台。” 10月4日，巴西将进行第一轮总统大选投票</p>
   <div class="rd-meta"><span>2,957 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/what-kind-of-brazil-will-emerge-from-this-election/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-07-26</time></div>
   <h3><a href="https://news.un.org/en/story/2023/07/1139122" target="_blank" rel="noopener">UNESCO education report advises appropriate use of technology in schools</a></h3>
   <p class="rd-cn">联合国教科文组织教育报告建议在学校适当使用技术 — 联合国教科文组织教育报告建议在学校适当使用技术 一份新的联合国报告周三对全球学校过度使用智能手机表示担忧。据联合国教育、科学和文化机构联合国教科文组织称，过度使用手机会影响学习。</p>
   <div class="rd-meta"><span>780 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/07/1139122" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-21</time></div>
   <h3><a href="https://www.theguardian.com/news/2026/oct/20/what-is-black-journalism-for" target="_blank" rel="noopener">What is Black journalism for?</a></h3>
   <p class="rd-cn">黑人新闻是为了什么？ — 本周，我非常荣幸地发表由英国全国记者联盟主办的克劳迪娅·琼斯纪念演讲。它的部分灵感来自于《长波》及其不断收到的读者的非凡反响。</p>
   <div class="rd-meta"><span>1,893 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/news/2026/oct/20/what-is-black-journalism-for" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2024-11-20</time></div>
   <h3><a href="https://www.reuters.com/technology/artificial-intelligence/openai-launches-free-ai-training-course-teachers-2024-11-20/" target="_blank" rel="noopener">OpenAI launches free AI training course for teachers</a></h3>
   <p class="rd-cn">OpenAI 为教师推出免费人工智能培训课程 — 11 月 20 日（路透社）—OpenAI 和非营利合作伙伴 Common Sense Media 为教师推出了免费培训课程，旨在揭开人工智能和快速工程的神秘面纱，...</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/technology/artificial-intelligence/openai-launches-free-ai-training-course-teachers-2024-11-20/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2021-03-17</time></div>
   <h3><a href="https://www.worldbank.org/en/brief/2021/03/18/teach-ece-helping-countries-track-and-improve-teaching-quality-in-early-childhood-education" target="_blank" rel="noopener">Teach ECE: Helping Countries Track and Improve Teaching Quality in Early Childhood Education</a></h3>
   <p class="rd-cn">Teach ECE：帮助各国跟踪和提高幼儿教育的教学质量 — 关于 Teach ECE Teach ECE 全面衡量 ECE 课堂上发生的情况。这样做不仅考虑了学习时间，更重要的是考虑了幼儿教育教学实践的质量。</p>
   <div class="rd-meta"><span>602 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/brief/2021/03/18/teach-ece-helping-countries-track-and-improve-teaching-quality-in-early-childhood-education" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.brookings.edu/parents-as-community-teachers/" target="_blank" rel="noopener">Parents as community teachers</a></h3>
   <p class="rd-cn">家长作为社区教师 — 组织：Escola 市立教授 Waldir Garcia 国家：巴西 教育程度：主要 组织类型：政府 家庭参与类型：建立关系和互动、促进参与和决策 注：有关 Escola 市立教授 Waldir Garcia 的更多策略，请参阅相关内容</p>
   <div class="rd-meta"><span>1,837 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/parents-as-community-teachers/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.brookings.edu/digital-parent-school-chat-groups/" target="_blank" rel="noopener">Digital parent-school chat groups</a></h3>
   <p class="rd-cn">数字家长学校聊天组 — 组织：Escola Municipal 教授 Waldir Garcia 国家：巴西 教育程度：主要 组织类型：政府 家庭参与类型：培养家长知识和宣传技能 注：欲了解 Escola Municipal 教授 Waldir Garcia 的更多策略，以及不同组织如何实施的示例</p>
   <div class="rd-meta"><span>1,945 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/digital-parent-school-chat-groups/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://theconversation.com/the-release-of-ai-chatbots-has-harmed-teens-learning-and-canada-needs-to-act-293195" target="_blank" rel="noopener">The release of AI chatbots has harmed teens’ learning and Canada needs to act</a></h3>
   <p class="rd-cn">社交媒体推出二十年后，Meta 于 8 月在美国就 Facebook 和 Instagram 对青少年福祉造成的负面影响达成和解。该公司支付了 180 亿美元并同意限制青少年的访问，以阻止美国政府的监管。</p>
   <div class="rd-meta"><span>1,071 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/the-release-of-ai-chatbots-has-harmed-teens-learning-and-canada-needs-to-act-293195" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNESCO">
   <div class="rd-top"><span class="rd-source">UNESCO</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank" rel="noopener">Safe learning environments: Preventing and addressing violence in and around school</a></h3>
   <p class="rd-cn">安全的学习环境：预防和解决学校内及周围的暴力 — 安全的学习环境：预防和解决学校内及周围的暴力 什么是校园暴力？校园暴力非常普遍，在所有国家都有发生，影响大量儿童和青少年。</p>
   <div class="rd-meta"><span>1,451 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNESCO">
   <div class="rd-top"><span class="rd-source">UNESCO</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.unesco.org/en/articles/bringing-climate-education-life-schools-hong-kong" target="_blank" rel="noopener">Bringing climate education to life in schools in Hong Kong</a></h3>
   <p class="rd-cn">在所有特色学校中，学生们都在参与将可持续发展带入日常学习的项目。他们探索可再生能源、生物多样性和海洋生态系统，调查当地的小气候，并研究如何使他们的学校变得更加可持续。</p>
   <div class="rd-meta"><span>421 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/articles/bringing-climate-education-life-schools-hong-kong" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-07</time></div>
   <h3><a href="https://www.reuters.com/world/europe/france-suspends-use-stun-grenades-police-student-protests-2026-10-07/" target="_blank" rel="noopener">France suspends use of stun grenades to police student protests</a></h3>
   <p class="rd-cn">一名 15 岁男孩的手在与防暴警察的冲突中被炸掉，加剧了抗议者对警察暴行的指控。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/europe/france-suspends-use-stun-grenades-police-student-protests-2026-10-07/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNESCO">
   <div class="rd-top"><span class="rd-source">UNESCO</span><span class="rd-free">免费</span><time>2026-05-06</time></div>
   <h3><a href="https://www.unesco.org/en/digital-education/learning-platforms-gateway/charter" target="_blank" rel="noopener">UNESCO-UNICEF-ITU Charter for Public Digital Learning Platforms</a></h3>
   <p class="rd-cn">联合国教科文组织-联合国儿童基金会-国际电联公共数字学习平台宪章 — 联合国教科文组织-联合国儿童基金会-国际电联公共数字学习平台宪章 关于宪章 联合国教科文组织-联合国儿童基金会-国际电联宪章鼓励各国政府及其合作伙伴建立、改进和维持数字学习平台，支持教育作为一项人权和公共利益。它阐明了数字学习平台的目的</p>
   <div class="rd-meta"><span>462 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/digital-education/learning-platforms-gateway/charter" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2020-12-02</time></div>
   <h3><a href="https://www.worldbank.org/en/topic/education/publication/realizing-future-of-learning-from-learning-poverty-to-learning-for-everyone-everywhere" target="_blank" rel="noopener">Realizing the Future of Learning: From Learning Poverty to Learning for Everyone, Everywhere</a></h3>
   <p class="rd-cn">实现学习的未来：从学习贫困到让每个人、每个地方都有学习 — 未来，学习应该让每个人、每个地方都充满乐趣、有目标、严谨 — 为了指导我们对各国的政策咨询和业务支持，该报告讨论了加速学习所需的政策行动，以及许多成功系统运作方式的特征。 - 这些已呈现</p>
   <div class="rd-meta"><span>264 词</span><span>·</span><span>约 1 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/topic/education/publication/realizing-future-of-learning-from-learning-poverty-to-learning-for-everyone-everywhere" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2024-05-01</time></div>
   <h3><a href="https://www.worldbank.org/en/news/press-release/2024/05/01/world-bank-announces-new-strategy-to-promote-green-resilient-and-inclusive-development-in-jamaica" target="_blank" rel="noopener">World Bank Announces New Strategy to Promote Green, Resilient and Inclusive Development in Jamaica</a></h3>
   <p class="rd-cn">世界银行宣布促进牙买加绿色、弹性和包容性发展的新战略 — 华盛顿特区，2024 年 5 月 2 日 — 世界银行集团董事会今天批准了与牙买加的新战略伙伴关系。这项2024-2027年期间的新计划侧重于推进绿色、韧性和包容性发展，同时也支持政府的电子发展</p>
   <div class="rd-meta"><span>600 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/press-release/2024/05/01/world-bank-announces-new-strategy-to-promote-green-resilient-and-inclusive-development-in-jamaica" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-01-27</time></div>
   <h3><a href="https://news.un.org/en/audio/2026/01/1166841" target="_blank" rel="noopener">‘We need to dismantle the myths’ surrounding AI in education</a></h3>
   <p class="rd-cn">“我们需要打破围绕人工智能在教育领域的神话” 沙菲卡·艾萨克：在联合国教科文组织，我们已经确定了几个关系重大的神话，如果我们想保护学习的未来，特别是为所有人提供公平和包容的学习，就需要打破这些神话。所以，最大的误区之一就是我们所说的教师替代者</p>
   <div class="rd-meta"><span>2,382 词</span><span>·</span><span>约 11 分钟</span><span class="rd-open"><a href="https://news.un.org/en/audio/2026/01/1166841" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2020-04-21</time></div>
   <h3><a href="https://news.un.org/en/story/2020/04/1062232" target="_blank" rel="noopener">Startling disparities in digital learning emerge as COVID-19 spreads: UN education agency</a></h3>
   <p class="rd-cn">随着 COVID-19 的传播，数字学习出现了惊人的差异：联合国教育机构 — 随着 COVID-19 的传播，数字学习出现了惊人的差异：联合国教育机构 联合国教育和文化机构、教科文组织及其合作伙伴的数据显示，由于 COVID-19，世界上大多数学生现在都呆在家里，这一流行病揭示了基于数字的远程学习方面的惊人差距。钍</p>
   <div class="rd-meta"><span>498 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2020/04/1062232" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
   <h3><a href="https://theconversation.com/4-questions-about-schoolwork-feedback-to-guide-young-students-learning-289183" target="_blank" rel="noopener">4 questions about schoolwork feedback to guide young students’ learning</a></h3>
   <p class="rd-cn">4 个关于指导年轻学生学习的作业反馈问题 — 当年轻学生数学成绩低时会发生什么？家长可能会说：“数学从来都不是你的强项。”老师可能会在计算旁边写上“粗心”。</p>
   <div class="rd-meta"><span>843 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/4-questions-about-schoolwork-feedback-to-guide-young-students-learning-289183" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
   <h3><a href="https://theconversation.com/south-africas-schools-reflect-an-unequal-society-what-can-teachers-do-about-it-292924" target="_blank" rel="noopener">South Africa’s schools reflect an unequal society: what can teachers do about it?</a></h3>
   <p class="rd-cn">南非的学校反映了一个不平等的社会：教师对此能做些什么？ — 南非的教育体系经常被描述为克服种族隔离遗留问题的关键。该国仍然是世界上最不平等的社会之一。</p>
   <div class="rd-meta"><span>1,087 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/south-africas-schools-reflect-an-unequal-society-what-can-teachers-do-about-it-292924" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.theguardian.com/world/2026/oct/13/greta-thunberg-student-protest-paris-france" target="_blank" rel="noopener">At least 160,000 people take to streets in third week of French school protests</a></h3>
   <p class="rd-cn">针对高中教育的抗议活动已持续到第三周，许多示威者谴责警察策略，超过 16 万中小学生、学生和工会成员在法国各地城市游行。周二在南特和蒙帕纳斯地区附近的游行结束时，防暴警察发射了催泪瓦斯。</p>
   <div class="rd-meta"><span>809 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/world/2026/oct/13/greta-thunberg-student-protest-paris-france" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.theguardian.com/science/2026/oct/14/focus-on-sounds-to-help-learn-a-language-study-suggests" target="_blank" rel="noopener">Stop making sense: focus on sounds to help learn a language, study suggests</a></h3>
   <p class="rd-cn">研究表明，如果你想真正擅长法语、阿拉伯语或匈牙利语，不要从死记硬背词汇和语法开始，而是关注它们的发音。一项关于人类如何学习现代语言的新研究发现，最有才华的语言学家的大脑将外来术语视为随机噪音，而不是单词</p>
   <div class="rd-meta"><span>524 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/science/2026/oct/14/focus-on-sounds-to-help-learn-a-language-study-suggests" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.reuters.com/world/europe/greta-thunberg-joins-french-teens-new-day-school-protests-2026-10-13/" target="_blank" rel="noopener">Greta Thunberg joins French teens on new day of school protests</a></h3>
   <p class="rd-cn">周二，瑞典活动家格蕾塔·通贝里 (Greta Thunberg) 加入了法国高中生的行列，要求更好的学习条件，原本基本和平的封锁和街头游行再次因飞行而受到破坏。</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/europe/greta-thunberg-joins-french-teens-new-day-school-protests-2026-10-13/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.oecd.org/en/blogs/2026/10/supporting-low-earners-while-making-work-pay-can-tax-systems-do-both.html" target="_blank" rel="noopener">Supporting low earners while making work pay: can tax systems do both?</a></h3>
   <p class="rd-cn">支持低收入者同时提供工作报酬：税收制度能否做到这两点？ — 经合组织在其最新版《工资征税》中通过研究经合组织国家劳动税的累进性（有效税率增加的程度）阐明了这种平衡行为……</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/blogs/2026/10/supporting-low-earners-while-making-work-pay-can-tax-systems-do-both.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-09-13</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2026_aa997c6e-en.html" target="_blank" rel="noopener">OECD Economic Surveys: United Kingdom 2026</a></h3>
   <p class="rd-cn">经合组织经济调查：英国 2026 — 关键矿产已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要 工作的未来 工作世界正在发生变化......</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-united-kingdom-2026_aa997c6e-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-09-13</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">OECD Digital Education Outlook 2026</a></h3>
   <p class="rd-cn">经合组织数字教育展望 2026 — 关键矿物已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要 工作的未来 工作世界正在发生变化......</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2025-10-16</time></div>
   <h3><a href="https://www.brookings.edu/articles/learning-from-teacher-evaluations-that-work/" target="_blank" rel="noopener">Learning from teacher evaluations that work</a></h3>
   <p class="rd-cn">对华盛顿特区公立学校高风险教师评估系统 IMPACT 的分析表明，虽然它提高了整体绩效，但也产生了不同种族和不同教师之间的不公平结果……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

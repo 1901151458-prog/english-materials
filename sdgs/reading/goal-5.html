@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 05</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 05 · GENDER EQUALITY</p>
 <h1>SDG 05 · 性别平等<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕照护经济、劳动与权利的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#ff3a21">SDG 05</span><div><h1>性别平等 · Gender Equality</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="on">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="ILO">ILO</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#ff3a21"><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2023-03-29</time></div>
   <h3><a href="https://www.worldbank.org/en/news/podcast/2023/03/30/unpaid-care-work-women-economic-prospects-growth-gender-equality-development-podcast" target="_blank" rel="noopener">Everyday Superheroes: Exploring Unpaid Care Work By Women | The Development Podcast</a></h3>
-  <p class="rd-cn">日常超级英雄：探索女性的无偿护理工作 发展播客 — 立即在您喜爱的平台上免费订阅 - 一栏 无酬护理工作对妇女的经济前景和增长有何影响？我们如何支持这些日常超级英雄？</p>
+  <p class="rd-cn">日常超级英雄：探索女性的无偿护理工作 发展播客 — 立即在您喜爱的平台上免费订阅 一栏 无酬护理工作对妇女的经济前景和增长有何影响？我们如何支持这些日常超级英雄？</p>
   <div class="rd-meta"><span>3,658 词</span><span>·</span><span>约 17 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/podcast/2023/03/30/unpaid-care-work-women-economic-prospects-growth-gender-equality-development-podcast" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2020-06-24</time></div>
   <h3><a href="https://www.brookings.edu/articles/the-gender-revolution-is-stalling-what-would-reinvigorate-it/" target="_blank" rel="noopener">The gender revolution is stalling—What would reinvigorate it?</a></h3>
   <p class="rd-cn">什么才能重振它？ — 性别革命正在停滞 — 什么才能重振它？过去 50 年来，性别平等方面取得了巨大进展，这些变化有时被称为“性别革命”。然而，自世纪之交以来，进展已经放缓，并且在某些指标上完全陷入停滞。</p>
   <div class="rd-meta"><span>2,186 词</span><span>·</span><span>约 10 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/the-gender-revolution-is-stalling-what-would-reinvigorate-it/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2020-07-22</time></div>
   <h3><a href="https://www.brookings.edu/articles/how-does-gender-equality-affect-women-in-retirement/" target="_blank" rel="noopener">How does gender equality affect women in retirement?</a></h3>
   <p class="rd-cn">性别平等如何影响退休女性？ — 性别平等如何影响退休女性？自第十九条修正案获得批准以来的 100 年来，无论从绝对值还是相对于男性而言，女性在教育程度、就业和收入方面都取得了巨大且广为人知的进步。</p>
   <div class="rd-meta"><span>1,992 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/how-does-gender-equality-affect-women-in-retirement/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-04-22</time></div>
   <h3><a href="https://www.reuters.com/business/world-at-work/number-top-women-bankers-edges-up-despite-us-backlash-study-shows-2026-04-22/" target="_blank" rel="noopener">Number of top women bankers edges up despite US backlash, study shows</a></h3>
-  <p class="rd-cn">伦敦，4 月 22 日（路透社）——一份新报告显示，在领先金融机构担任高级职位的女性人数已创历史新高，这表明多样性正在变得……</p>
+  <p class="rd-cn">一份新报告显示，在领先金融机构担任高级职位的女性人数已创历史新高，这表明多样性正在变得……</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/world-at-work/number-top-women-bankers-edges-up-despite-us-backlash-study-shows-2026-04-22/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2020-09-16</time></div>
   <h3><a href="https://www.brookings.edu/articles/the-fate-of-womens-rights-in-afghanistan/" target="_blank" rel="noopener">The fate of women’s rights in Afghanistan</a></h3>
   <p class="rd-cn">阿富汗妇女权利的命运 — 阿富汗妇女权利的命运 本文是 19A：布鲁金斯学会性别平等系列的一部分。在这个文章系列中，布鲁金斯学会的学者、公职人员和其他学科领域专家探讨了美国通过第十九条修正案 100 年后性别平等的现状。</p>
   <div class="rd-meta"><span>4,806 词</span><span>·</span><span>约 22 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/the-fate-of-womens-rights-in-afghanistan/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2022-06-15</time></div>
   <h3><a href="https://www.worldbank.org/en/events/2022/06/16/civil-society-policy-forum-annual-meetings-2022" target="_blank" rel="noopener">Civil Society Policy Forum Annual Meetings 2022</a></h3>
   <p class="rd-cn">2022 年民间社会政策论坛年会 — 民间社会政策论坛 (CSPF) 是世界银行集团-国际货币基金组织 (WBG-IMF) 春季会议和年会期间的一项重要活动。该论坛为民间社会组织（CSO）*提供了一个与世界银行集团和国际货币基金组织工作人员、同行、政府代表团等进行对话和交换意见的开放空间。</p>
   <div class="rd-meta"><span>194 词</span><span>·</span><span>约 1 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/events/2022/06/16/civil-society-policy-forum-annual-meetings-2022" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2021-02-10</time></div>
   <h3><a href="https://news.un.org/en/story/2021/02/1084412" target="_blank" rel="noopener">‘Women and girls belong in science’ declares UN chief</a></h3>
   <p class="rd-cn">联合国秘书长在周四的国际妇女和女孩科学日致辞中表示，“妇女和女孩属于科学” 联合国秘书长在周四的国际妇女和女孩科学日致辞中表示，关闭实验室和增加护理责任只是科学领域女性在 COVID-19 大流行期间面临的其中两个挑战。 “先进一代</p>
   <div class="rd-meta"><span>772 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2021/02/1084412" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-12-10</time></div>
   <h3><a href="https://www.theguardian.com/global-development/2025/dec/10/women-workplace-equality-gender-world-un-report" target="_blank" rel="noopener">‘The patriarchy runs deep’: women still getting a raw deal in the workplace as equality remains a dream</a></h3>
   <p class="rd-cn">“性别不平等是我们这个时代最根深蒂固、最重大的问题之一，”联合国妇女署项目主任乔斯林·朱（Jocelyn Chu）在回应今年《世界不平等报告》中的严峻数据时说道，该报告将性别不平等称为“全球经济的决定性和持久特征”。沃</p>
   <div class="rd-meta"><span>561 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/global-development/2025/dec/10/women-workplace-equality-gender-world-un-report" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2023-03-08</time></div>
   <h3><a href="https://www.reuters.com/world/economics-womens-voices-still-struggle-be-heard-2023-03-08/" target="_blank" rel="noopener">In economics, women&#x27;s voices still struggle to be heard</a></h3>
-  <p class="rd-cn">柏林，3 月 8 日（路透社）——去年 5 月，当西班牙经济部长纳迪亚·卡尔维诺 (Nadia Calvino) 发现她将是唯一一位排队参加宣传备受瞩目的马德里领导人论坛合影的女性时，她……</p>
+  <p class="rd-cn">去年 5 月，当西班牙经济部长纳迪亚·卡尔维诺 (Nadia Calvino) 发现她将是唯一一位排队参加宣传备受瞩目的马德里领导人论坛合影的女性时，她……</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/economics-womens-voices-still-struggle-be-heard-2023-03-08/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2021-11-30</time></div>
   <h3><a href="https://www.worldbank.org/en/country/uganda/publication/investing-in-gender-equality-in-uganda-is-smart-economics" target="_blank" rel="noopener">Investing in Gender Equality in Uganda is Smart Economics</a></h3>
   <p class="rd-cn">投资于乌干达的性别平等是明智的经济学 — 坎帕拉，2021 年 12 月 1 日 — 根据第 18 版《乌干达经济更新》(UEU)，如果能让更多妇女进入有利可图的经济活动的中心，乌干达的经济复苏将会更快、更强劲、更可持续。乌干达经济最新动态：将妇女置于乌干达经济复兴的中心</p>
   <div class="rd-meta"><span>573 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/uganda/publication/investing-in-gender-equality-in-uganda-is-smart-economics" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2018-11-27</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2018/11/28/blog-economic-gains-from-gender-inclusion-even-greater-than-you-thought" target="_blank" rel="noopener">Economic Gains from Gender Inclusion: Even Greater than You Thought</a></h3>
-  <p class="rd-cn">性别包容带来的经济收益：甚至比您想象的还要大 — [caption id=&quot;attachment_25131&quot;align=&quot;alignnone&quot;width=&quot;1024&quot;] 提高女性劳动力参与率可以比以前更大地推动经济增长......</p>
+  <p class="rd-cn">性别包容带来的经济收益：甚至比您想象的还要大 — 提高女性劳动力参与率可以比以前更大地推动经济增长......</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2018/11/28/blog-economic-gains-from-gender-inclusion-even-greater-than-you-thought" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2023-09-26</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2023/09/27/countries-that-close-gender-gaps-see-substantial-growth-returns" target="_blank" rel="noopener">Countries That Close Gender Gaps See Substantial Growth Returns</a></h3>
   <p class="rd-cn">缩小男性和女性工作比例之间的差距是政策制定者可以采取的非常重要的改革之一，以在中期增长前景最疲弱的情况下重振经济。</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2023/09/27/countries-that-close-gender-gaps-see-substantial-growth-returns" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-10-21</time></div>
   <h3><a href="https://www.reuters.com/world/asia-pacific/japans-takaichi-makes-history-women-ask-what-changes-now-2025-10-21/" target="_blank" rel="noopener">Japan’s new PM Sanae Takaichi makes history, but women ask what changes now?</a></h3>
   <p class="rd-cn">日本新首相高市早苗创造了历史，但女性们问现在发生了什么变化？ — 东京，10 月 22 日（路透社）— 高市早苗周二就任日本首位女首相，但她令人惊讶的男性主导内阁和社会保守记录已经留下了......</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/asia-pacific/japans-takaichi-makes-history-women-ask-what-changes-now-2025-10-21/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2024-11-19</time></div>
   <h3><a href="https://theconversation.com/women-are-still-being-paid-almost-30-000-a-year-less-than-men-and-the-gap-widens-with-age-243941" target="_blank" rel="noopener">Women are still being paid almost $30,000 a year less than men and the gap widens with age</a></h3>
   <p class="rd-cn">澳大利亚的性别薪酬差距一直在逐年缩小，但在澳大利亚私营公司中，这一比例仍超过 20%。但根据 2023-24 年首次收集的数据，首席执行官中的性别差距更大，达到 25%。</p>
   <div class="rd-meta"><span>1,048 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/women-are-still-being-paid-almost-30-000-a-year-less-than-men-and-the-gap-widens-with-age-243941" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2016-09-13</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2016/09/14/to-boost-growth-employ-more-women" target="_blank" rel="noopener">To Boost Growth: Employ More Women</a></h3>
   <p class="rd-cn">在去年的宣誓就职仪式上，贾斯汀·特鲁多总理被问及为何任命一个性别平衡的内阁，这对加拿大（以及世界上大多数国家）来说尚属首次。他回答说……</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2016/09/14/to-boost-growth-employ-more-women" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2025-11-11</time></div>
   <h3><a href="https://theconversation.com/progress-on-gender-equality-at-work-is-slow-and-uneven-new-index-finds-269378" target="_blank" rel="noopener">Progress on gender equality at work is slow and uneven, new index finds</a></h3>
   <p class="rd-cn">新的研究显示，过去十年来，工作场所的性别平等几乎没有改善，因为妇女在家中承担大部分无偿工作，导致有偿工作机会减少。薪资和职业发展方面的顽固差距，以及女性和男性从事的工作类型之间的深刻分歧，正在阻碍商业发展</p>
   <div class="rd-meta"><span>860 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/progress-on-gender-equality-at-work-is-slow-and-uneven-new-index-finds-269378" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2019-06-04</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2019/jun/04/gender-equality-world-system-parity-2030" target="_blank" rel="noopener">Men built this system. No wonder gender equality remains as far off as ever</a></h3>
   <p class="rd-cn">我不想撒谎；事实是这样的。世界上没有一个国家能够在 2030 年之前实现性别平等的消息让人们在新的一周开始时感到恼火。鉴于我们的世界领导人似乎不断未能实现从气候变化到贫困等改善事物的每一项措施的目标，我开始怀疑他们</p>
   <div class="rd-meta"><span>1,059 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2019/jun/04/gender-equality-world-system-parity-2030" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-07-01</time></div>
   <h3><a href="https://news.un.org/en/story/2025/07/1165161" target="_blank" rel="noopener">‘The margins of the budget’: Gender equality in developing countries underfunded by $420 billion annually</a></h3>
   <p class="rd-cn">“预算余量”：发展中国家的性别平等每年资金不足 4200 亿美元 —“预算余量”：发展中国家的性别平等每年资金不足 4200 亿美元 据联合国妇女署估计，发展中国家目前实现性别平等所需的资金缺口每年高达 4200 亿美元。这一差距意味着针对妇女和女童的计划和服务</p>
   <div class="rd-meta"><span>360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/07/1165161" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2024-06-27</time></div>
   <h3><a href="https://theconversation.com/how-divorce-is-boosting-gender-equality-in-sweden-new-study-233474" target="_blank" rel="noopener">How divorce is boosting gender equality in Sweden – new study</a></h3>
-  <p class="rd-cn">新研究——单身母亲是世界各地社会中最脆弱的群体之一。在瑞典，过去二十年里承担这些照顾责任的女性人数几乎减少了一半。</p>
+  <p class="rd-cn">单身母亲是世界各地社会中最脆弱的群体之一。在瑞典，过去二十年里承担这些照顾责任的女性人数几乎减少了一半。</p>
   <div class="rd-meta"><span>771 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/how-divorce-is-boosting-gender-equality-in-sweden-new-study-233474" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2019-08-22</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2019/aug/22/a-new-poll-shows-what-really-interests-pro-lifers-controlling-women" target="_blank" rel="noopener">A new poll shows what really interests &#x27;pro-lifers&#x27;: controlling women</a></h3>
   <p class="rd-cn">根据自称为“反堕胎”倡导者的说法，那些想要禁止堕胎和那些想要保持堕胎合法的人之间的根本分歧归结为一个问题：生命从何时开始？反堕胎倡导者宣扬生命始于受孕的观点；他们的运动名称小心翼翼地集中在</p>
   <div class="rd-meta"><span>1,115 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2019/aug/22/a-new-poll-shows-what-really-interests-pro-lifers-controlling-women" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-09-07</time></div>
   <h3><a href="https://news.un.org/en/story/2023/09/1140472" target="_blank" rel="noopener">Gender gap persists on road to the SDGs: UN Women</a></h3>
   <p class="rd-cn">联合国妇女署周四警告说，作为2030年可持续发展目标(SDG)的一部分，世界在缩小性别差距方面还远远落后。来自...的新性别快照报告</p>
   <div class="rd-meta"><span>466 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/09/1140472" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="ILO">
   <div class="rd-top"><span class="rd-source">ILO</span><span class="rd-free">免费</span><time>2026-02-18</time></div>
   <h3><a href="https://www.ilo.org/resource/news/uzbekistan-advances-dialogue-care-economy-promote-gender-equality-and" target="_blank" rel="noopener">Uzbekistan advances dialogue on care economy to promote gender equality and decent work</a></h3>
   <p class="rd-cn">乌兹别克斯坦推进关爱经济对话，以促进性别平等和体面工作 — 塔什干（国际劳工组织新闻） — 2026 年 2 月 19 日，政府、雇主组织和工人组织、青年代表、民间社会和国际合作伙伴与国际劳工组织和联合国开发计划署齐聚一堂，讨论......</p>
   <div class="rd-meta"><span>941 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.ilo.org/resource/news/uzbekistan-advances-dialogue-care-economy-promote-gender-equality-and" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="ILO">
   <div class="rd-top"><span class="rd-source">ILO</span><span class="rd-free">免费</span><time>2026-03-17</time></div>
   <h3><a href="https://www.ilo.org/resource/news/social-dialogue-advances-gender-equality-and-shared-care-responsibilities" target="_blank" rel="noopener">Social dialogue advances gender equality and shared care responsibilities in Latin America</a></h3>
-  <p class="rd-cn">LIMA（国际劳工组织新闻）——社会对话——通过集体谈判和公司实践等进程——正在将护理相关权利扩大到八个国家超出法定最低标准……</p>
+  <p class="rd-cn">社会对话——通过集体谈判和公司实践等进程——正在将护理相关权利扩大到八个国家超出法定最低标准……</p>
   <div class="rd-meta"><span>605 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.ilo.org/resource/news/social-dialogue-advances-gender-equality-and-shared-care-responsibilities" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-12</time></div>
   <h3><a href="https://www.theguardian.com/australia-news/2026/oct/13/more-part-time-bosses-and-co-ceos-could-keep-women-in-leadership-and-narrow-australias-pay-gap" target="_blank" rel="noopener">More part-time bosses and co-CEOs could keep women in leadership and narrow Australia’s pay gap</a></h3>
   <p class="rd-cn">研究表明，不均匀的照顾责任加上缺乏灵活的工作选择阻碍了女性担任高级职位……</p>
   <div class="rd-meta"><span>594 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/australia-news/2026/oct/13/more-part-time-bosses-and-co-ceos-could-keep-women-in-leadership-and-narrow-australias-pay-gap" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
   <h3><a href="https://www.theguardian.com/society/2026/oct/15/trans-women-no-longer-to-be-placed-on-female-only-wards-under-new-nhs-england-guidance" target="_blank" rel="noopener">Trans women no longer to be placed on female-only wards under new NHS England guidance</a></h3>
   <p class="rd-cn">规则意味着单性别病房、厕所和更衣室现在将由人们根据其生物性别使用……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

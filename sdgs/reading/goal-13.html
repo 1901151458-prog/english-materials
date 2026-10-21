@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 13</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 13 · CLIMATE ACTION</p>
 <h1>SDG 13 · 气候行动<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕减排、适应与气候正义的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#3f7e44">SDG 13</span><div><h1>气候行动 · Climate Action</h1><p>地球 Planet · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="on">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="Mongabay">Mongabay</button><button type="button" class="rd-filter" data-src="Phys.org">Phys.org</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNEP">UNEP</button><button type="button" class="rd-filter" data-src="WRI">WRI</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#3f7e44"><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://www.reuters.com/sustainability/cop/brazil-plans-cop30-finance-package-adapting-extreme-weather-2025-10-29/" target="_blank" rel="noopener">Brazil plans COP30 funding deals to address climate adaptation shortfall</a></h3>
   <p class="rd-cn">联合国报告强调到 2035 年气候适应需要 3100 亿美元 COP30 主席旨在制定适应融资方案 尽管美国立场不顾，巴西仍寻求向公众保证气候承诺......</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/cop/brazil-plans-cop30-finance-package-adapting-extreme-weather-2025-10-29/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://news.un.org/en/story/2025/10/1166212" target="_blank" rel="noopener">‘Yawning gap’ remains between climate adaptation funds and funding pledges</a></h3>
   <p class="rd-cn">气候适应基金和资金承诺之间仍然存在“巨大差距”联合国周三透露，发展中国家收到的资金还不到其适应日益容易受到极端天气影响的世界所需资金的10%，这将生命、生计和整个经济置于危险之中。这就是妈妈</p>
   <div class="rd-meta"><span>800 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/10/1166212" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://www.carbonbrief.org/un-report-five-charts-which-explain-the-gap-in-finance-for-climate-adaptation" target="_blank" rel="noopener">UN report: Five charts which explain the ‘gap’ in finance for climate adaptation</a></h3>
   <p class="rd-cn">联合国报告：解释气候适应资金“缺口”的五张图表 — 联合国报告：解释气候适应资金“缺口”的五张图表 发展中国家只获得了其为公民做好准备和改造基础设施以应对不断升级的气候影响所需的国际资金的一小部分。这是根据联合国环境署最新的适应差距报告得出的</p>
   <div class="rd-meta"><span>2,840 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/un-report-five-charts-which-explain-the-gap-in-finance-for-climate-adaptation" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Mongabay">
   <div class="rd-top"><span class="rd-source">Mongabay</span><span class="rd-free">免费</span><time>2025-11-26</time></div>
   <h3><a href="https://news.mongabay.com/2025/11/fossil-fuel-failure-eclipses-africas-wins-at-cop30/" target="_blank" rel="noopener">Fossil fuel failure eclipses Africa’s wins at COP30</a></h3>
   <p class="rd-cn">非洲谈判代表在公正过渡方面取得了重大进展，包括承认清洁烹饪和能源贫困，这标志着这些优先事项首次进入正式的联合国气候谈判。 - 适应融资有所进展，但仍然不足，富裕国家承诺实现三倍标准</p>
   <div class="rd-meta"><span>1,646 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://news.mongabay.com/2025/11/fossil-fuel-failure-eclipses-africas-wins-at-cop30/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2026-02-25</time></div>
   <h3><a href="https://www.wri.org/insights/ocean-climate-action-2025-ndcs" target="_blank" rel="noopener">New Climate Plans Put Unprecedented Focus on Ocean, but Miss Biggest Opportunities to Fight Warming</a></h3>
   <p class="rd-cn">新的气候计划前所未有地关注海洋，但错过了应对气候变暖的最大机遇 — 新的气候计划前所未有地关注海洋，但错过了应对气候变暖的最大机遇 2025 年提交的新国家气候计划 (NDC) 包括比以往更多的基于海洋的行动。但大多数人都错过了最大的减排机会。</p>
   <div class="rd-meta"><span>1,949 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/ocean-climate-action-2025-ndcs" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-09-24</time></div>
   <h3><a href="https://news.un.org/en/story/2025/09/1165947" target="_blank" rel="noopener">Sinking islands, vanishing forests: World leaders call for urgent climate action</a></h3>
   <p class="rd-cn">岛屿下沉、森林消失：世界领导人呼吁采取紧急气候行动 — 岛屿下沉、森林消失：世界领导人呼吁采取紧急气候行动从中美洲的雨林到太平洋的低洼环礁和非洲干旱的平原，各国领导人周三来到联合国大会，传达了一个共同的信息：气候变化不再是遥远的事情</p>
   <div class="rd-meta"><span>792 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/09/1165947" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2021-06-23</time></div>
   <h3><a href="https://www.carbonbrief.org/ccc-uk-will-miss-climate-goals-by-huge-margin-without-new-policies" target="_blank" rel="noopener">CCC: UK will miss climate goals by ‘huge margin’ without new policies</a></h3>
   <p class="rd-cn">CCC：如果没有新政策，英国将“大幅”达不到气候目标 — CCC：如果没有新政策，英国将“大幅”达不到气候目标 据气候变化委员会（CCC）称，英国政府再次未能提出足够的政策来实现其雄心勃勃的气候目标。近 500 页的内容审视了政府的净零排放和适应计划</p>
   <div class="rd-meta"><span>2,826 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/ccc-uk-will-miss-climate-goals-by-huge-margin-without-new-policies" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2023-12-20</time></div>
   <h3><a href="https://theconversation.com/why-the-cop28-climate-summit-mattered-and-what-to-watch-for-in-2024-220142" target="_blank" rel="noopener">Why the COP28 climate summit mattered, and what to watch for in 2024</a></h3>
   <p class="rd-cn">为什么 COP28 气候峰会很重要，以及 2024 年值得关注的事情 — 读完 2023 年 12 月举行的 COP28 联合国气候会议冗长的最终协议，你会在找到一个强有力的、活跃的动词之前走很长的路。对气候影响的长篇大论“关切地指出”，有时“严重关切”各国当前政策中的明显差距</p>
   <div class="rd-meta"><span>1,181 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/why-the-cop28-climate-summit-mattered-and-what-to-watch-for-in-2024-220142" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-02-19</time></div>
   <h3><a href="https://www.theguardian.com/environment/2025/feb/19/developing-world-urges-rich-nations-to-defy-trumps-climate-nihilism" target="_blank" rel="noopener">Developing world urges rich nations to defy Trump’s ‘climate nihilism’</a></h3>
   <p class="rd-cn">发展中国家呼吁富裕国家反抗美国总统唐纳德·特朗普，在气候行动上弥合全球分歧，以免将全球气温限制在安全水平的目标无可挽回地落空。来自发展中国家的外交官正在团结起来支持巴西，巴西将主办一场重要的会议</p>
   <div class="rd-meta"><span>1,407 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2025/feb/19/developing-world-urges-rich-nations-to-defy-trumps-climate-nihilism" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-02-19</time></div>
   <h3><a href="https://www.worldbank.org/en/country/uzbekistan/publication/state-funds-for-climate-action" target="_blank" rel="noopener">Prime Picks for a Green Pivot: Uzbekistan State Funds for Climate Action</a></h3>
   <p class="rd-cn">乌兹别克斯坦的绿色转型正在推进，但进一步的进展需要政府、国有金融机构（SOFI）和国有企业（SOE）以及私营部门之间加强合作。世界银行的报告《绿色支点的主要选择：乌兹别克斯坦国家气候行动基金》，</p>
   <div class="rd-meta"><span>509 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/uzbekistan/publication/state-funds-for-climate-action" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-10-15</time></div>
   <h3><a href="https://www.worldbank.org/en/country/thailand/publication/th-ccdr" target="_blank" rel="noopener">Thailand Country Climate and Development Report</a></h3>
   <p class="rd-cn">主要调查结果 泰国取得了显着的发展进步，但最近的经历并不那么乐观。自 2010 年以来，由于投资低迷、结构转型停滞和人口挑战加剧，经济增速已放缓至年均 2.6%。</p>
   <div class="rd-meta"><span>872 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/thailand/publication/th-ccdr" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">Why Long-Term Climate Strategies Are the Economic Planning Tool Governments Need Right Now</a></h3>
   <p class="rd-cn">为什么长期气候战略是政府现在需要的经济规划工具 — 为什么长期气候战略是政府现在需要的经济规划工具 长期气候战略是实用的经济规划工具，可以帮助政府管理波动、动员投资并使能源转型造福于人民和社区。在地缘政治定义的时代</p>
   <div class="rd-meta"><span>2,068 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2026/oct/14/green-politics-environmentalists-action" target="_blank" rel="noopener">For the future of green politics, look beyond the Green party</a></h3>
-  <p class="rd-cn">在霍尔本和圣潘克拉斯补选之后，人们不断讨论绿色政治的未来，但今年夏天早些时候，在金斯林和西诺福克发生了一场更严重的冲突——无论是在意义、象征意义还是预兆上。该委员会与其他数百个国家一起宣布 2021 年进入气候紧急状态，同时</p>
+  <p class="rd-cn">无论是在意义、象征意义还是预兆上。该委员会与其他数百个国家一起宣布 2021 年进入气候紧急状态，同时</p>
   <div class="rd-meta"><span>1,077 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2026/oct/14/green-politics-environmentalists-action" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNEP">
   <div class="rd-top"><span class="rd-source">UNEP</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.unep.org/en/where-we-work/north-america/unep-un-general-assembly/our-positions/un-environment-programme-and-4" target="_blank" rel="noopener">The UN Environment Programme and the nine tracks of the Climate Action Summit</a></h3>
   <p class="rd-cn">本立场说明于 2019 年 9 月发布，恰逢联合国大会第 74 届会议召开。联合国秘书长安东尼奥·古特雷斯的气候行动峰会挑战......</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unep.org/en/where-we-work/north-america/unep-un-general-assembly/our-positions/un-environment-programme-and-4" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNEP">
   <div class="rd-top"><span class="rd-source">UNEP</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.unep.org/en/publications/report/limiting-overshoot-navigating-exceedance-15degc-and-pathways-towards-return/executive-summary" target="_blank" rel="noopener">Executive summary - overshoot report</a></h3>
   <p class="rd-cn">内容提要 - 超调报告 - 1. 尽管国际社会在气候变化问题上取得了进展，但全球削减温室气体排放的行动还不够快，不足以避免全球变暖超过 1.5°C……</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unep.org/en/publications/report/limiting-overshoot-navigating-exceedance-15degc-and-pathways-towards-return/executive-summary" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Mongabay">
   <div class="rd-top"><span class="rd-source">Mongabay</span><span class="rd-free">免费</span><time>2024-08-14</time></div>
   <h3><a href="https://news.mongabay.com/2024/08/at-risk-groups-in-indonesia-demand-greater-say-in-climate-policymaking/" target="_blank" rel="noopener">At-risk groups in Indonesia demand greater say in climate policymaking</a></h3>
   <p class="rd-cn">代表广大社区团体的印度尼西亚非政府组织要求在该国正在起草的巴黎气候协议修订版减排承诺中拥有更大的发言权。 - 他们在一封公开信中指出，城乡贫困人口、残疾人、小农和渔民等群体</p>
   <div class="rd-meta"><span>1,750 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://news.mongabay.com/2024/08/at-risk-groups-in-indonesia-demand-greater-say-in-climate-policymaking/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WRI">
   <div class="rd-top"><span class="rd-source">WRI</span><span class="rd-free">免费</span><time>2023-05-10</time></div>
   <h3><a href="https://www.wri.org/insights/private-sector-climate-adaptation-finance" target="_blank" rel="noopener">What It Takes to Attract Private Investment to Climate Adaptation</a></h3>
   <p class="rd-cn">如何吸引私人投资参与气候适应 — 如何吸引私人投资参与气候适应 2022 年，可再生能源投资首次与化石燃料投资持平，标志着期待已久的气候友好型资金流向转变。虽然减少排放至关重要，但这只是全面减排的一方面</p>
   <div class="rd-meta"><span>1,904 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/private-sector-climate-adaptation-finance" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-07</time></div>
   <h3><a href="https://www.theguardian.com/environment/2026/oct/08/overseas-albanese-sees-the-very-definition-of-climate-injustice-but-at-home-he-still-wants-coal?amp%3BCMP=soc_567" target="_blank" rel="noopener">Overseas, Albanese sees ‘the very definition of climate injustice’ – but at home, he still wants coal</a></h3>
-  <p class="rd-cn">但在国内，他仍然想要煤炭——今年澳大利亚社区应对气候危机的行动中，不可能有比周三高等法院的判决更重要的时刻了。法院站在猎人谷的少数社区成员一边，推翻了州监管机构对一项合作协议的批准，这可能是一场历史性的胜利。</p>
+  <p class="rd-cn">今年澳大利亚社区应对气候危机的行动中，不可能有比周三高等法院的判决更重要的时刻了。法院站在猎人谷的少数社区成员一边，推翻了州监管机构对一项合作协议的批准，这可能是一场历史性的胜利。</p>
   <div class="rd-meta"><span>1,155 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2026/oct/08/overseas-albanese-sees-the-very-definition-of-climate-injustice-but-at-home-he-still-wants-coal?amp%3BCMP=soc_567" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2023-12-06</time></div>
   <h3><a href="https://www.worldbank.org/en/brief/2023/12/07/the-abcs-of-climate-action-in-east-asia-and-pacific" target="_blank" rel="noopener">The ABCs of Climate Action in East Asia and Pacific</a></h3>
   <p class="rd-cn">东亚和太平洋气候行动的基本知识 — 东亚和太平洋气候行动的基本知识 jcrpagetitle 东亚和太平洋气候行动的基本知识 jcrdescription 东亚和太平洋气候行动的基本知识提供了有关世界银行在东亚和太平洋国家气候行动五个主题领域所做努力的关键信息：</p>
   <div class="rd-meta"><span>4,155 词</span><span>·</span><span>约 19 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/brief/2023/12/07/the-abcs-of-climate-action-in-east-asia-and-pacific" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-07-01</time></div>
   <h3><a href="https://www.reuters.com/business/environment/net-zero-champion-europe-snared-by-climate-change-its-doorstep-2026-07-02/" target="_blank" rel="noopener">Net-zero champion Europe snared by climate change on its doorstep</a></h3>
   <p class="rd-cn">气候适应努力落后于净零驱动欧盟计划将认识到没有一种方法能够放之四海去年的热浪使产出下降了0.3%柏林/布鲁塞尔，7月2日（路透社）- 6月...</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/environment/net-zero-champion-europe-snared-by-climate-change-its-doorstep-2026-07-02/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-04-01</time></div>
   <h3><a href="https://www.reuters.com/sustainability/sustainable-finance-reporting/if-we-dont-invest-reducing-physical-climate-risk-now-well-pay-it-later--ecmii-2026-04-01/" target="_blank" rel="noopener">If we don’t invest in reducing physical climate risk now, we’ll pay for it later</a></h3>
   <p class="rd-cn">如果我们现在不投资减少物理气候风险，我们将在以后（4 月 1 日）付出代价，到 2025 年，物理气候风险的经济现实将受到严重打击。飓风导致佛罗里达州沿海地区的房屋保险保费大幅上涨和保险取消。英国洪水推高了索赔额...</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/sustainable-finance-reporting/if-we-dont-invest-reducing-physical-climate-risk-now-well-pay-it-later--ecmii-2026-04-01/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-10-28</time></div>
   <h3><a href="https://news.un.org/en/story/2025/10/1166204" target="_blank" rel="noopener">World enters ‘new era’ of climate action – but progress must accelerate</a></h3>
-  <p class="rd-cn">但进展必须加快——在敦促各国加快行动的同时，联合国气候变化执行秘书西蒙·斯蒂尔周二在发布有关最新国家气候的新报告后表达了乐观的基调……</p>
+  <p class="rd-cn">在敦促各国加快行动的同时，联合国气候变化执行秘书西蒙·斯蒂尔周二在发布有关最新国家气候的新报告后表达了乐观的基调……</p>
   <div class="rd-meta"><span>533 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/10/1166204" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2022-11-22</time></div>
   <h3><a href="https://www.carbonbrief.org/un-climate-chief-plans-shake-up-of-cop-annual-talks-after-criticism" target="_blank" rel="noopener">UN climate chief plans shake-up of COP annual talks after criticism</a></h3>
   <p class="rd-cn">联合国气候变化框架公约负责人西蒙·斯蒂尔表示，他打算审查缔约方会议进程，使其“尽可能有效”。在对此有争议的结论之后......</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/un-climate-chief-plans-shake-up-of-cop-annual-talks-after-criticism" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
   <h3><a href="https://theconversation.com/adaptation-policies-must-be-built-around-the-local-communities-facing-climate-change-293065" target="_blank" rel="noopener">Adaptation policies must be built around the local communities facing climate change</a></h3>
-  <p class="rd-cn">适应气候变化需要政府各部门加强合作与协调。</p>
+  <p class="rd-cn">文章聚焦SDG 13“减排、适应与气候正义”，从The Conversation的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>726 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://theconversation.com/adaptation-policies-must-be-built-around-the-local-communities-facing-climate-change-293065" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Phys.org">
   <div class="rd-top"><span class="rd-source">Phys.org</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
   <h3><a href="https://phys.org/news/2026-10-scorecard-colombia-high-emitting-countries.html" target="_blank" rel="noopener">Scorecard: Colombia gets top marks while high-emitting countries doing too little to protect health from climate change</a></h3>
   <p class="rd-cn">全球气候与健康联盟发布的最新健康国家数据中心记分卡发现，哥伦比亚将健康最深入地纳入其国家气候计划，紧随其后的是尼日利亚……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

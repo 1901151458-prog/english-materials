@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 03</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 03 · GOOD HEALTH AND WELL-BEING</p>
 <h1>SDG 03 · 良好健康与福祉<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕全民健康覆盖与卫生体系的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#4c9f38">SDG 03</span><div><h1>良好健康与福祉 · Good Health and Well-being</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="on">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="ILO">ILO</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WHO">WHO</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#4c9f38"><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-12-31</time></div>
   <h3><a href="https://www.theguardian.com/us-news/2025/dec/31/tracy-beth-hoeg-fda-vaccines" target="_blank" rel="noopener">‘She has no expertise’: the US medical community girds for Tracy Beth Høeg’s tenure at the FDA</a></h3>
   <p class="rd-cn">随着美国继续对其疫苗接种建议做出前所未有的改变，一个数字出人意料地出现：特雷西·贝丝·赫格 (Tracy Beth Høeg)，一位丹麦裔美国运动医生和流行病学家，她最初因对新冠疫苗在大流行中的怀疑而出名，并关注新冠疫苗接种后可能出现的死亡问题。</p>
   <div class="rd-meta"><span>1,593 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/us-news/2025/dec/31/tracy-beth-hoeg-fda-vaccines" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-01-28</time></div>
   <h3><a href="https://www.theguardian.com/us-news/2026/jan/28/democrats-universal-childcare-campaigns" target="_blank" rel="noopener">Why Democrats are suddenly embracing universal childcare</a></h3>
   <p class="rd-cn">2020 年弗朗西斯卡·洪 (Francesca Hong) 竞选威斯康星州议会时，儿童保育并不是她竞选活动的首要和中心内容。现在，这位民主党代表、餐馆老板和母亲正在竞选州长。</p>
   <div class="rd-meta"><span>1,662 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/us-news/2026/jan/28/democrats-universal-childcare-campaigns" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2022-07-20</time></div>
   <h3><a href="https://theconversation.com/despite-what-political-leaders-say-new-zealands-health-workforce-is-in-crisis-but-its-the-same-everywhere-else-187256" target="_blank" rel="noopener">Despite what political leaders say, New Zealand’s health workforce is in crisis – but it’s the same everywhere else</a></h3>
-  <p class="rd-cn">但其他地方都一样——本周早些时候，新西兰卫生部长安德鲁·利特尔(Andrew Little)阐述了大多数卫生工作者已经知道的事情。医疗保健的核心是人——被照顾的人和提供照顾的人。</p>
+  <p class="rd-cn">本周早些时候，新西兰卫生部长安德鲁·利特尔(Andrew Little)阐述了大多数卫生工作者已经知道的事情。医疗保健的核心是人——被照顾的人和提供照顾的人。</p>
   <div class="rd-meta"><span>974 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/despite-what-political-leaders-say-new-zealands-health-workforce-is-in-crisis-but-its-the-same-everywhere-else-187256" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WHO">
   <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2019-06-19</time></div>
   <h3><a href="https://www.who.int/health-topics/gender/strengthening-health-sector-response-to-gender-based-violence-in-humanitarian-emergencies" target="_blank" rel="noopener">Strengthening health sector response to gender-based violence in humanitarian emergencies</a></h3>
   <p class="rd-cn">性别与健康 性别是指社会建构的妇女、男子、女孩和男孩的特征。这包括与女性、男性、女孩或男孩相关的规范、行为和角色，以及彼此之间的关系。</p>
   <div class="rd-meta"><span>711 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.who.int/health-topics/gender/strengthening-health-sector-response-to-gender-based-violence-in-humanitarian-emergencies" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-07-19</time></div>
   <h3><a href="https://news.un.org/en/story/2023/07/1138892" target="_blank" rel="noopener">Lies about pandemic accord endangering future generations: WHO chief</a></h3>
   <p class="rd-cn">关于大流行病协议的谎言危及子孙后代：世界卫生组织总干事关于大流行病协议的谎言危及子孙后代：世界卫生组织总干事周三对有关会员国目前正在谈判的新的全球大流行病协议的虚假说法和阴谋论的持续传播表示担忧。谭德塞·阿德诺姆·Gh</p>
   <div class="rd-meta"><span>538 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/07/1138892" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2020-11-18</time></div>
   <h3><a href="https://theconversation.com/how-the-us-health-care-system-works-and-how-its-failures-are-worsening-the-pandemic-150271" target="_blank" rel="noopener">How the US health‑care system works — and how its failures are worsening the pandemic</a></h3>
-  <p class="rd-cn">以及它的失败如何导致疫情恶化——美国没有医疗系统——它有多个系统，缺乏连贯性。如果您是退伍军人，您可以享受全面的、集中协调的、政府运营的医疗服务。</p>
+  <p class="rd-cn">美国没有医疗系统——它有多个系统，缺乏连贯性。如果您是退伍军人，您可以享受全面的、集中协调的、政府运营的医疗服务。</p>
   <div class="rd-meta"><span>800 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/how-the-us-health-care-system-works-and-how-its-failures-are-worsening-the-pandemic-150271" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2020-05-13</time></div>
   <h3><a href="https://www.reuters.com/jp/article/indonesia-to-hike-health-insurance-premiums-amid-coronavirus-pandemic-idUSL4N2CW12Y/" target="_blank" rel="noopener">Indonesia to hike health insurance premiums amid coronavirus pandemic</a></h3>
-  <p class="rd-cn">雅加达，5月14日（路透社）——印度尼西亚将提高一家国有公司提供的健康保险保费，但也增加了最低费率的补贴，影响数以万计的...</p>
+  <p class="rd-cn">印度尼西亚将提高一家国有公司提供的健康保险保费，但也增加了最低费率的补贴，影响数以万计的...</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/jp/article/indonesia-to-hike-health-insurance-premiums-amid-coronavirus-pandemic-idUSL4N2CW12Y/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2022-05-11</time></div>
   <h3><a href="https://www.brookings.edu/articles/delivering-to-deserts-new-data-reveals-the-geography-of-digital-access-to-food-in-the-us/" target="_blank" rel="noopener">Delivering to deserts: New data reveals the geography of digital access to food in the U.S.</a></h3>
   <p class="rd-cn">交付到沙漠：新数据揭示了美国数字化食品获取的地理分布 — 交付到沙漠：新数据揭示了美国数字化获取食品的地理分布 电子商务服务的兴起和全球新冠肺炎 (COVID-19) 疫情已经改变了美国人的饮食方式。</p>
   <div class="rd-meta"><span>3,072 词</span><span>·</span><span>约 14 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/delivering-to-deserts-new-data-reveals-the-geography-of-digital-access-to-food-in-the-us/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-02-11</time></div>
   <h3><a href="https://theconversation.com/public-healthcare-and-contracting-out-can-it-work-global-review-presents-some-answers-274464" target="_blank" rel="noopener">Public healthcare and contracting out: can it work? Global review presents some answers</a></h3>
-  <p class="rd-cn">全民健康覆盖——确保每个人在需要时都能获得优质、负担得起的医疗保健——是可持续发展目标的具体目标之一。但实现这一目标的进展却难以捉摸，特别是在发展中国家。</p>
+  <p class="rd-cn">确保每个人在需要时都能获得优质、负担得起的医疗保健——是可持续发展目标的具体目标之一。但实现这一目标的进展却难以捉摸，特别是在发展中国家。</p>
   <div class="rd-meta"><span>1,068 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/public-healthcare-and-contracting-out-can-it-work-global-review-presents-some-answers-274464" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2021-05-05</time></div>
   <h3><a href="https://www.brookings.edu/articles/designing-a-public-option-that-would-reduce-health-care-provider-prices/" target="_blank" rel="noopener">Designing a public option that would reduce health care provider prices</a></h3>
   <p class="rd-cn">编者注：本分析是南加州大学-布鲁金斯学会谢弗健康政策倡议的一部分，该倡议是布鲁金斯学会经济研究中心和南加州大学谢弗健康政策与经济中心之间的合作伙伴关系。该倡议旨在通过 rigo 为全国医疗保健辩论提供信息</p>
   <div class="rd-meta"><span>6,162 词</span><span>·</span><span>约 28 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/designing-a-public-option-that-would-reduce-health-care-provider-prices/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-05-27</time></div>
   <h3><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-drops-covid-vaccine-recommendations-healthy-children-pregnant-women-2025-05-27/" target="_blank" rel="noopener">US drops COVID vaccine recommendation for healthy kids, pregnant women</a></h3>
   <p class="rd-cn">疾病预防控制中心停止为孕妇和健康儿童推荐新冠疫苗 疾病预防控制中心的新疫苗建议没有咨询顾问 FDA 专员声称没有证据表明在...</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-drops-covid-vaccine-recommendations-healthy-children-pregnant-women-2025-05-27/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-12-26</time></div>
   <h3><a href="https://news.un.org/en/story/2023/12/1145092" target="_blank" rel="noopener">2023 marked by achievements and &#x27;avoidable suffering&#x27;: WHO chief</a></h3>
   <p class="rd-cn">世界卫生组织（WHO）总干事周二表示，2023年以成就和“可避免的痛苦”为标志 世界卫生组织（WHO）总干事周二表示，2023年以成就和“可避免的痛苦”为标志 世界卫生组织（WHO）总干事周二表示，过去的一年见证了全球公共卫生领域的重大里程碑和挑战，但也带来了巨大的、可避免的痛苦。回顾 2023 年，这也是联合国机构成立 75 周年</p>
   <div class="rd-meta"><span>618 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/12/1145092" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WHO">
   <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2025-06-24</time></div>
   <h3><a href="https://www.who.int/teams/health-workforce/health-workers" target="_blank" rel="noopener">World Health Assembly resolutions and decisions</a></h3>
   <p class="rd-cn">要点 强大的初级卫生保健系统依赖于一支能够在不同环境下提供持续、以人为本的服务的综合卫生和护理人员队伍。随着各国面临劳动力短缺以及与老龄化、残疾和慢性病相关的护理需求不断增长，</p>
   <div class="rd-meta"><span>1,074 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.who.int/teams/health-workforce/health-workers" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-06-24</time></div>
   <h3><a href="https://www.theguardian.com/society/2025/jun/24/children-global-vaccine-rates-fall-study-finds" target="_blank" rel="noopener">Millions of children at risk as global vaccine rates fall, study finds</a></h3>
   <p class="rd-cn">同类最大规模的研究发现，由于持续的健康不平等以及错误信息和犹豫不决的情况，疫苗覆盖率停滞或逆转，全世界数百万儿童面临致命疾病的风险。在向世界各地数十亿儿童接种疫苗方面取得重大进展</p>
   <div class="rd-meta"><span>668 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/society/2025/jun/24/children-global-vaccine-rates-fall-study-finds" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2020-09-22</time></div>
   <h3><a href="https://www.brookings.edu/articles/a-new-contract-with-the-middle-class-health/" target="_blank" rel="noopener">A New Contract with the Middle Class</a></h3>
   <p class="rd-cn">健康 2020 年春季，COVID-19 改变了世界。短短几周内，数十万人丧生。</p>
   <div class="rd-meta"><span>3,185 词</span><span>·</span><span>约 14 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/a-new-contract-with-the-middle-class-health/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-09-19</time></div>
   <h3><a href="https://news.un.org/en/story/2023/09/1141042" target="_blank" rel="noopener">Global leaders discuss healthier future for all: Top 5 fast facts</a></h3>
   <p class="rd-cn">全球领导人讨论人人享有更健康的未来：5 个重要事实 — 全球领导人讨论人人享有更健康的未来：5 个重要事实 约 45 亿人（占全球人口的一半以上）无法获得足够的基本卫生服务，世界领导人和部长将在本周在联合国举行的一系列高级别会议上解决这一问题。没有健康，世界</p>
   <div class="rd-meta"><span>1,007 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/09/1141042" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2010-10-19</time></div>
   <h3><a href="https://www.reuters.com/sustainability/" target="_blank" rel="noopener">Sustainable Business News | Latest Eco Headlines | Reuters</a></h3>
   <p class="rd-cn">随着 OpenAI 高管公开呼吁制定联邦人工智能安全规则，该公司总裁资助的一个政治团体正在花费数百万美元选举反对......</p>
   <div class="rd-meta"><span>约 384 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2024-10-31</time></div>
   <h3><a href="https://www.worldbank.org/en/results/2024/11/01/transforming-health-the-world-bank-s-shift-from-crisis-response-to-building-health-system-resilience-in-latin-america-a" target="_blank" rel="noopener">Transforming Health: The World Bank&#x27;s Shift from Crisis Response to Building Health System Resilience in Latin America and the Caribbean</a></h3>
   <p class="rd-cn">卫生转型：世界银行从应对危机转向增强拉丁美洲和加勒比地区卫生系统的抵御能力 — 故事亮点 — COVID-19 应对：从 2020 年 3 月到 2022 年 2 月，世界银行拨款超过 14 亿美元用于加强大流行病防备，使拉丁美洲和加勒比地区 (LAC) 22 个国家的数百万人直接受益，其中包括 100 万维恩人</p>
   <div class="rd-meta"><span>2,765 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/results/2024/11/01/transforming-health-the-world-bank-s-shift-from-crisis-response-to-building-health-system-resilience-in-latin-america-a" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WHO">
   <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2025-10-23</time></div>
   <h3><a href="https://www.who.int/europe/activities/developing-the-second-european-programme-of-work" target="_blank" rel="noopener">Developing the Second European Programme of Work</a></h3>
   <p class="rd-cn">复杂、相互关联的危机、人工智能革命、老龄化社会、孤独、对科学和权威信任的崩溃：世卫组织欧洲区域正在经历前所未有的变革和动荡。认识到这些严峻的现实，世卫组织和该区域会员国开始采取行动</p>
   <div class="rd-meta"><span>846 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.who.int/europe/activities/developing-the-second-european-programme-of-work" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2026-10-16</time></div>
   <h3><a href="https://www.worldbank.org/en/news/statement/2026/10/16/health-works-vaccines-to-budgets-wbg-backs-proven-solutions-asean" target="_blank" rel="noopener">Health Works: From Vaccines to Health Budgets, World Bank Group Backs Proven Solutions to Reach 1.5 Billion People</a></h3>
   <p class="rd-cn">健康工程：从疫苗到卫生预算，世界银行集团支持行之有效的解决方案惠及 15 亿人 — 世界银行集团计划筹集 6.54 亿美元用于东南亚疫苗生产，并将全民健康覆盖 (UHC) 知识中心扩大到另外 7 个国家 曼谷，2026 年 10 月 16 日 — 世界银行集团 (WBG) 今天宣布，它正在动员更多资金</p>
   <div class="rd-meta"><span>1,211 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/statement/2026/10/16/health-works-vaccines-to-budgets-wbg-backs-proven-solutions-asean" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="ILO">
   <div class="rd-top"><span class="rd-source">ILO</span><span class="rd-free">免费</span><time>2024-12-05</time></div>
   <h3><a href="https://www.ilo.org/meetings-and-events/universal-health-coverage-universal-social-protection-joint-agenda-improve" target="_blank" rel="noopener">Universal Health Coverage &amp; Universal Social Protection: A joint agenda to improve health equity and well-being in the informal economy</a></h3>
   <p class="rd-cn">为庆祝 2024 年全民健康覆盖日，国际劳工组织和世界卫生组织将与 SPARKS 网络合作举办机构间研讨会，讨论改善健康的部门间行动……</p>
   <div class="rd-meta"><span>373 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.ilo.org/meetings-and-events/universal-health-coverage-universal-social-protection-joint-agenda-improve" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-12-05</time></div>
   <h3><a href="https://www.worldbank.org/en/topic/universalhealthcoverage/publication/2025-global-monitoring-report-gmr" target="_blank" rel="noopener">Tracking Universal Health Coverage (UHC): 2025 Global Monitoring Report</a></h3>
   <p class="rd-cn">追踪全民健康覆盖 (UHC)：2025 年全球监测报告 — 与二十年前相比，全球范围内，更多的人获得了所需的基本医疗保健，而经历与健康相关的经济困难的人口比例也有所减少。然而，进展已经...</p>
   <div class="rd-meta"><span>790 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/topic/universalhealthcoverage/publication/2025-global-monitoring-report-gmr" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WHO">
   <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2026-08-10</time></div>
   <h3><a href="https://www.afro.who.int/countries/nigeria/news/nigeria-strengthens-health-financing-capacity-universal-coverage" target="_blank" rel="noopener">Nigeria strengthens health financing capacity for universal coverage</a></h3>
   <p class="rd-cn">尼日利亚加强全民覆盖的卫生融资能力 — 阿布贾 — 当埃博尼州健康保险机构执行秘书 Divine Igwe 博士和参与州社会健康保险首席执行官 (CEO) 代表......</p>
   <div class="rd-meta"><span>1,058 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.afro.who.int/countries/nigeria/news/nigeria-strengthens-health-financing-capacity-universal-coverage" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="WHO">
   <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2025-12-16</time></div>
   <h3><a href="https://www.afro.who.int/countries/angola/news/angola-reinforces-commitment-financial-protection-universal-health-coverage" target="_blank" rel="noopener">Angola reinforces commitment to Financial Protection for Universal Health Coverage</a></h3>
   <p class="rd-cn">世界卫生组织 (WHO) 于 2025 年 12 月 12 日在罗安达庆祝全民健康覆盖日，主题为“全民健康覆盖的财务保护”。与...合作</p>
   <div class="rd-meta"><span>609 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.afro.who.int/countries/angola/news/angola-reinforces-commitment-financial-protection-universal-health-coverage" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2022-04-16</time></div>
   <h3><a href="https://www.theguardian.com/australia-news/2022/apr/17/anne-ruston-defends-past-comments-that-medicare-is-not-sustainable-after-pm-names-her-as-health-minister-if-re-elected" target="_blank" rel="noopener">Anne Ruston defends past comments that Medicare ‘is not sustainable’ after PM names her as health minister if re-elected</a></h3>
   <p class="rd-cn">部长表示，联盟党“不会削减医疗保险”，因为工党指责她想要“将全民医疗保健从全民医疗保健中剔除”。 工党表示，任命安妮·拉斯顿为卫生部长……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

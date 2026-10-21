@@ -23,3 +23,20 @@ body{background-image:radial-gradient(900px 520px at 10% -8%,rgba(30,95,163,.06)
 .model-tip{background:#f8fbfd;padding:9px 12px;border-left:3px solid #b8863b}
 .long-card{box-shadow:0 12px 30px -18px rgba(18,50,79,.5)}
 @media(max-width:640px){.rd-card{padding:14px}.model-card{padding:18px}.idx-card{padding:14px}}
+
+/* 阅读目标页增强 */
+.read-crumb{font-family:var(--font-sans);font-size:11px;letter-spacing:.04em;color:#a9c0d2;margin-bottom:18px}
+.read-crumb a{color:#e3c88f;border-bottom:1px dotted rgba(227,200,143,.4);padding-bottom:1px}
+.read-crumb a:hover{color:#fff;text-decoration:none}
+.goal-hero h1{font-size:clamp(26px,3.4vw,44px);letter-spacing:-.01em}
+.goal-hero .lead{max-width:760px}
+.rd-tools{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:18px 0 12px;padding:10px 12px;background:#fff;border:1px solid #dfe8f1;border-radius:12px}
+.rd-tools-label{font-family:var(--font-sans);font-size:10.5px;letter-spacing:.12em;color:#718596;margin-right:2px}
+.rd-filter{font-family:var(--font-sans);font-size:10.5px;cursor:pointer;border:1px solid #dce7f1;background:#fff;color:#4d6172;border-radius:999px;padding:4px 9px}
+.rd-filter:hover{border-color:#9fc0da;color:#155d90}
+.rd-filter.active{background:#12324f;border-color:#12324f;color:#fff}
+.rd-count{margin-left:auto;font-family:var(--font-sans);font-size:11px;color:#155d90;font-weight:600}
+.rd-card::before{background:linear-gradient(90deg,var(--goal-c,#1e5fa3),#177a4b)}
+.rd-card h3{font-size:15px}
+.rd-cn{font-size:12.8px}
+@media(max-width:640px){.rd-tools{padding:9px}.rd-count{width:100%;margin-left:0;text-align:right}}

@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 09</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 09 · INDUSTRY, INNOVATION AND INFRASTRUCTURE</p>
 <h1>SDG 09 · 产业、创新和基础设施<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕绿色产业、基础设施与创新的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#fd6925">SDG 09</span><div><h1>产业、创新和基础设施 · Industry, Innovation and Infrastructure</h1><p>繁荣 Prosperity · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="on">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#fd6925"><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2023-11-29</time></div>
   <h3><a href="https://www.imf.org/en/news/articles/2023/11/30/sp-fdmd-remarks-bernhard-harms-prize" target="_blank" rel="noopener">Europe in a Fragmented World</a></h3>
   <p class="rd-cn">下午好。很高兴今天能加入你们的行列。首先，我要感谢 Moritz 和 Sebnem 的热情介绍。 Sebnem 是一位杰出的研究员和亲爱的朋友，我从他那里得到了......</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/news/articles/2023/11/30/sp-fdmd-remarks-bernhard-harms-prize" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2026-05-27</time></div>
   <h3><a href="https://www.carbonbrief.org/qa-can-china-turn-hydrogen-into-its-next-clean-energy-industry" target="_blank" rel="noopener">Q&amp;A: Can China turn hydrogen into its next clean-energy industry?</a></h3>
   <p class="rd-cn">问与答：中国能否将氢能转变为下一个清洁能源产业？ —问答：中国能否将氢能转变为下一个清洁能源产业？中国表示，氢能是一个关键的“未来产业”，对其能源转型和产业政策都很重要。</p>
   <div class="rd-meta"><span>2,581 词</span><span>·</span><span>约 12 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-can-china-turn-hydrogen-into-its-next-clean-energy-industry" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2024-01-24</time></div>
   <h3><a href="https://www.carbonbrief.org/analysis-clean-energy-was-top-driver-of-chinas-economic-growth-in-2023" target="_blank" rel="noopener">Analysis: Clean energy was top driver of China’s economic growth in 2023</a></h3>
   <p class="rd-cn">分析：清洁能源是 2023 年中国经济增长的首要推动力 — 分析：清洁能源是 2023 年中国经济增长的首要推动力 2023 年，清洁能源为中国经济贡献了创纪录的 11.4 亿元人民币（1.6 万亿美元），占投资增长的全部，并且对经济增长的贡献比任何其他部门都大。 Carbon Brief 的新的逐个行业分析，基础</p>
   <div class="rd-meta"><span>4,161 词</span><span>·</span><span>约 19 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/analysis-clean-energy-was-top-driver-of-chinas-economic-growth-in-2023" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-21</time></div>
   <h3><a href="https://www.reuters.com/world/asia-pacific/apec-finance-ministers-agree-boost-policy-coordination-chinas-lan-says-2026-10-21/" target="_blank" rel="noopener">APEC finance ministers agree to boost policy coordination, China&#x27;s Lan says</a></h3>
   <p class="rd-cn">亚太经合组织(APEC)论坛各成员经济体财长同意加强宏观经济政策沟通和协调，应对外部风险……</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/asia-pacific/apec-finance-ministers-agree-boost-policy-coordination-chinas-lan-says-2026-10-21/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2018-11-21</time></div>
   <h3><a href="https://news.un.org/en/story/2018/11/1026261" target="_blank" rel="noopener">After decade of progress, rural areas of Latin America, Caribbean slide back into poverty – UN report</a></h3>
   <p class="rd-cn">经过十年的进步，拉丁美洲和加勒比地区的农村地区重新陷入贫困 - 联合国报告 - 经过十年的进步，拉丁美洲和加勒比地区的农村地区重新陷入贫困 - 联合国报告 根据联合国粮食及农业组织的最新报告，拉丁美洲和加勒比地区的农村地区陷入贫困的人数十年来首次增加了 200 万人（</p>
   <div class="rd-meta"><span>583 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2018/11/1026261" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-02-18</time></div>
   <h3><a href="https://news.un.org/en/story/2026/02/1166993" target="_blank" rel="noopener">Decades of gains overshadowed as Asia-Pacific falls behind on sustainable development targets</a></h3>
   <p class="rd-cn">亚太地区在可持续发展目标方面落后，数十年的成果黯然失色 — 亚太地区在可持续发展目标方面落后，数十年的成果黯然失色 气候不作为、生物多样性丧失和排放量增加正在推动亚太地区进一步偏离可持续发展目标 (SDG)，到 2030 年，该地区将无法实现十分之九的目标。</p>
   <div class="rd-meta"><span>636 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/02/1166993" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-10-16</time></div>
   <h3><a href="https://www.brookings.edu/articles/critical-minerals-for-the-energy-transition/" target="_blank" rel="noopener">Critical minerals for the energy transition</a></h3>
   <p class="rd-cn">我们的能源系统摆脱化石燃料的转变将大幅增加世界对某些矿物的需求。本集介绍了其中一些关键矿物、当前的供应状况以及如何确保未来充足的供应。</p>
   <div class="rd-meta"><span>4,819 词</span><span>·</span><span>约 22 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/critical-minerals-for-the-energy-transition/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Carbon Brief">
   <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2016-03-16</time></div>
   <h3><a href="https://www.carbonbrief.org/budget-2016-key-climate-and-energy-announcements" target="_blank" rel="noopener">Budget 2016: key climate and energy announcements</a></h3>
   <p class="rd-cn">2016 年预算：气候和能源关键公告 — 2016 年预算：气候和能源关键公告 今天，财政大臣乔治·奥斯本 (George Osborne) 提交了一份预算，承诺“把下一代放在第一位”。但这是否补充了政府对气候变化的承诺？</p>
   <div class="rd-meta"><span>1,535 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/budget-2016-key-climate-and-energy-announcements" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2026/10/15/the-world-cant-afford-to-get-ai-wrong" target="_blank" rel="noopener">The World Can’t Afford to Get AI Wrong</a></h3>
   <p class="rd-cn">人工智能已经到来，并且已经对全球经济产生了深远的影响。流入人工智能的投资规模可能会超过建设铁路、……的巨额资金。</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2026/10/15/the-world-cant-afford-to-get-ai-wrong" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-05-07</time></div>
   <h3><a href="https://www.theguardian.com/brisbane-alive-with-opportunity/2025/may/02/innovation-in-the-sunshine-state-whats-behind-brisbanes-economic-boom" target="_blank" rel="noopener">Innovation in the sunshine state: what’s behind Brisbane’s economic boom?</a></h3>
   <p class="rd-cn">阳光之州的创新：布里斯班经济繁荣的背后是什么？ — 自然资源只是目前布里斯班热闹的原因之一。阳光和亚热带生活方式是布里斯班吸引力的一部分，但非凡的经济增长呢？</p>
   <div class="rd-meta"><span>856 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/brisbane-alive-with-opportunity/2025/may/02/innovation-in-the-sunshine-state-whats-behind-brisbanes-economic-boom" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2025-12-03</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2025/12/04/how-stablecoins-can-improve-payments-and-global-finance" target="_blank" rel="noopener">How Stablecoins Can Improve Payments and Global Finance</a></h3>
   <p class="rd-cn">尽管稳定币的市值约为比特币的 10%，但由于其与主流金融市场的相互联系，稳定币的影响力正在不断增长。</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2025/12/04/how-stablecoins-can-improve-payments-and-global-finance" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-09-29</time></div>
   <h3><a href="https://www.theguardian.com/business/2026/sep/29/andy-burnham-gb-grid-plan-energy-bills-electricity" target="_blank" rel="noopener">What is Burnham’s GB Grid plan and could it bring down energy bills?</a></h3>
   <p class="rd-cn">伯纳姆的英国电网计划是什么？它能否降低能源费用？ — 安迪·伯纳姆 (Andy Burnham) 作为首相首次在工党会议上发表讲话，解决了英国能源成本上升和经济增长缓慢的问题，并计划成立一个新的政府支持机构投资电网。 《卫报》首先披露了建立大不列颠电网的提议，该提议以该党为基础</p>
   <div class="rd-meta"><span>1,272 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/business/2026/sep/29/andy-burnham-gb-grid-plan-energy-bills-electricity" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2024-07-23</time></div>
   <h3><a href="https://theconversation.com/the-past-present-and-uncertain-future-of-the-uks-steel-industry-235081" target="_blank" rel="noopener">The past, present and uncertain future of the UK’s steel industry</a></h3>
   <p class="rd-cn">过去几年英国钢铁工业的处境一直令人不安。高能源成本、一波廉价中国进口产品、工厂关闭、新冠疫情和金融困境都造成了损失。</p>
   <div class="rd-meta"><span>927 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/the-past-present-and-uncertain-future-of-the-uks-steel-industry-235081" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2014-04-22</time></div>
   <h3><a href="https://theconversation.com/rural-australia-has-innovation-lessons-to-teach-us-all-24024" target="_blank" rel="noopener">Rural Australia has innovation lessons to teach us all</a></h3>
   <p class="rd-cn">创新这个词通常与计算机银行联系在一起，而不是与后围场联系在一起。但澳大利亚农业部门在研发方面实际上处于世界领先地位。</p>
   <div class="rd-meta"><span>975 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/rural-australia-has-innovation-lessons-to-teach-us-all-24024" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2025-10-21</time></div>
   <h3><a href="https://theconversation.com/why-canadas-next-big-infrastructure-investment-should-be-in-biomanufacturing-254377" target="_blank" rel="noopener">Why Canada’s next big infrastructure investment should be in biomanufacturing</a></h3>
   <p class="rd-cn">尽管加拿大在基础设施项目和国防上投资了数十亿美元，但一个关键的投资领域仍然被忽视：生物制造。生物制造是指按照人类使用所需的规模和质量生产疫苗和细胞疗法等生物制品。</p>
   <div class="rd-meta"><span>985 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/why-canadas-next-big-infrastructure-investment-should-be-in-biomanufacturing-254377" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-06-16</time></div>
   <h3><a href="https://www.brookings.edu/articles/why-do-we-have-government-regulations-and-how-can-we-improve-them/" target="_blank" rel="noopener">Why do we have government regulations, and how can we improve them?</a></h3>
   <p class="rd-cn">为什么我们有政府法规？我们如何改进它们？ — 关于监管的争论是经济政策中反复出现的一个特征，当政府寻求放松或扩大塑造市场的规则时，往往会重新出现。监管批评者认为，规则可能过于繁重，减缓创新，并给企业带来不必要的成本。</p>
   <div class="rd-meta"><span>4,472 词</span><span>·</span><span>约 20 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/why-do-we-have-government-regulations-and-how-can-we-improve-them/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2024-10-08</time></div>
   <h3><a href="https://news.un.org/en/story/2024/10/1155446" target="_blank" rel="noopener">Artificial intelligence: rooting out bias and stereotypes</a></h3>
   <p class="rd-cn">人工智能：根除偏见和刻板印象 — 人工智能：根除偏见和刻板印象 随着使用各种形式人工智能的在线工具变得越来越普遍，越来越多的人呼吁采取更多行动，以确保它们不会造成或延续刻板印象和性别偏见。九月联合国大会高级别周期间</p>
   <div class="rd-meta"><span>573 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/10/1155446" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2019-01-31</time></div>
   <h3><a href="https://www.worldbank.org/en/publication/wdr2020" target="_blank" rel="noopener">Trading for Development in the Age of Global Value Chains</a></h3>
   <p class="rd-cn">全球价值链 (GVC) 推动了 1990 年后国际贸易的激增，目前几乎占所有贸易的一半。这一转变实现了前所未有的经济趋同：贫穷国家迅速增长并开始赶上富裕国家。</p>
   <div class="rd-meta"><span>724 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/publication/wdr2020" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2024-05-30</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/article/2024/may/30/ugly-truth-ai-chatgpt-guzzling-resources-environment" target="_blank" rel="noopener">The ugly truth behind ChatGPT: AI is guzzling resources at planet-eating rates</a></h3>
-  <p class="rd-cn">当你想象科技行业时，你可能会想到物理空间中不存在的东西，比如手机上的应用程序和互联网浏览器。但存储所有这些信息所需的基础设施——位于商业园区和城市郊区的物理数据中心——消耗了大量的能源</p>
+  <p class="rd-cn">位于商业园区和城市郊区的物理数据中心——消耗了大量的能源</p>
   <div class="rd-meta"><span>797 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/article/2024/may/30/ugly-truth-ai-chatgpt-guzzling-resources-environment" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-06-20</time></div>
   <h3><a href="https://www.brookings.edu/articles/strengthening-americas-defense-industrial-base/" target="_blank" rel="noopener">Strengthening America’s defense industrial base</a></h3>
-  <p class="rd-cn">美国国防工业基础当前面临的挑战和趋势是什么？</p>
+  <p class="rd-cn">文章聚焦SDG 09“绿色产业、基础设施与创新”，从Brookings的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>2,862 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/strengthening-americas-defense-industrial-base/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-15</time></div>
   <h3><a href="https://www.reuters.com/business/retail-consumer/asmls-sold-out-outlook-forces-investors-look-beyond-demand-2026-10-15/" target="_blank" rel="noopener">ASML&#x27;s &#x27;sold out&#x27; outlook forces investors to look beyond demand</a></h3>
   <p class="rd-cn">今年 4 月，计算机芯片设备制造商 ASML 的首席执行官 Christophe Fouquet 告诉股东，欧洲最有价值的公司将“通过一切可能的方式”避免成为芯片行业的瓶颈。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/retail-consumer/asmls-sold-out-outlook-forces-investors-look-beyond-demand-2026-10-15/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2021-09-02</time></div>
   <h3><a href="https://www.worldbank.org/en/programs/egps/component" target="_blank" rel="noopener">Extractives Global Programmatic Support (EGPS)</a></h3>
   <p class="rd-cn">采掘业全球计划支持 (EGPS) — 解决石油、天然气和采矿活动的性别和其他身份因素差异化影响。 EGPS 支持政策和战略的实施，以增加有意义的……</p>
   <div class="rd-meta"><span>289 词</span><span>·</span><span>约 1 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/programs/egps/component" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-06-29</time></div>
   <h3><a href="https://www.worldbank.org/en/about/annual-report-2025/ifc" target="_blank" rel="noopener">International Finance Corporation (IFC)</a></h3>
   <p class="rd-cn">国际金融公司 (IFC) — 国际金融公司大规模动员私人资本，支持从微型企业到大型企业的企业，并创造就业机会，推动经济增长并减少...</p>
   <div class="rd-meta"><span>3,838 词</span><span>·</span><span>约 17 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/about/annual-report-2025/ifc" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-19</time></div>
   <h3><a href="https://www.reuters.com/business/autos-transportation/volkswagen-bet-xpeng-save-its-china-business-its-not-going-plan-2026-10-20/" target="_blank" rel="noopener">Volkswagen bet on Xpeng to save its China business. It&#x27;s not going to plan</a></h3>
   <p class="rd-cn">当大众汽车在 2023 年转向电动汽车制造商小鹏汽车来帮助解决其陷入困境的中国业务时，高管们将这种合作伙伴关系吹捧为快速开发适合中国的汽车的捷径。</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/autos-transportation/volkswagen-bet-xpeng-save-its-china-business-its-not-going-plan-2026-10-20/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-12</time></div>
   <h3><a href="https://www.theguardian.com/uni-a-new-wave-of-innovation/2026/oct/12/how-the-university-of-plymouth-is-driving-maritime-innovation" target="_blank" rel="noopener">Cleaner seas, smarter jobs: the university at the heart of maritime innovation</a></h3>
   <p class="rd-cn">当一座城市将世界一流的研究、雄心勃勃的企业和决心有所作为的社区聚集在一起时，会发生什么？在普利茅斯，它正在帮助改变我们海洋的未来 - 并且......</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

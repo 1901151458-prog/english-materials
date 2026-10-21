@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 16</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 16 · PEACE, JUSTICE AND STRONG INSTITUTIONS</p>
 <h1>SDG 16 · 和平、正义与强大机构<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕机构、问责与数据的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,128 +372,132 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#00689d">SDG 16</span><div><h1>和平、正义与强大机构 · Peace, Justice and Strong Institutions</h1><p>和平 Peace · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="on">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNDP">UNDP</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#00689d"><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://news.un.org/en/story/2025/10/1166218" target="_blank" rel="noopener">South Sudan at risk of return to war, UN investigators warn</a></h3>
   <p class="rd-cn">联合国任命的负责审查南苏丹人权状况的独立调查机构周三警告说，除非采取紧急国际行动，否则南苏丹将面临重新陷入全面冲突的风险。胡玛委员会在联合国大会上发言</p>
   <div class="rd-meta"><span>533 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/10/1166218" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2025-03-26</time></div>
   <h3><a href="https://www.brookings.edu/articles/anatomy-of-a-flood-the-derna-tragedys-lessons-for-libyan-governance/" target="_blank" rel="noopener">Anatomy of a flood: The Derna tragedy’s lessons for Libyan governance</a></h3>
   <p class="rd-cn">本文是“中东的发展、治理和安全：障碍和机遇”项目的一部分，该项目与日本国际协力机构合作，探讨中东和北非的治理失败如何阻碍稳定发展和人类安全。 S</p>
   <div class="rd-meta"><span>4,511 词</span><span>·</span><span>约 21 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/anatomy-of-a-flood-the-derna-tragedys-lessons-for-libyan-governance/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-03-25</time></div>
   <h3><a href="https://www.brookings.edu/articles/equality-as-a-guiding-principle-for-us-policy-on-israel-palestine/" target="_blank" rel="noopener">Equality as a guiding principle for US policy on Israel-Palestine</a></h3>
   <p class="rd-cn">平等作为美国以色列-巴勒斯坦政策的指导原则 — 执行摘要 自 2023 年 10 月 7 日以来，全球对以色列-巴勒斯坦问题的关注一直集中在加沙，这是可以理解的。但约旦河西岸正在上演一场平行且迅速恶化的危机。</p>
   <div class="rd-meta"><span>5,363 词</span><span>·</span><span>约 24 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/equality-as-a-guiding-principle-for-us-policy-on-israel-palestine/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNDP">
   <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2025-08-20</time></div>
   <h3><a href="https://www.undp.org/iraq/blog/path-forward-sustaining-momentum-equality-and-peace" target="_blank" rel="noopener">A Path Forward: Sustaining Momentum for Equality and Peace</a></h3>
   <p class="rd-cn">在过去的四十年里，几代伊拉克妇女经历了艰难而疲惫的时期，其特点是经历了战争、危机和战后恢复的持续过渡。他们一生的大部分时间...</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/iraq/blog/path-forward-sustaining-momentum-equality-and-peace" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-04-15</time></div>
   <h3><a href="https://theconversation.com/human-rights-and-the-rights-of-nature-are-linchpins-for-truly-sustainable-development-279023" target="_blank" rel="noopener">Human rights and the rights of nature are linchpins for truly sustainable development</a></h3>
   <p class="rd-cn">2015年，联合国成员国一致通过了可持续发展议程。其目标是确保发展“既满足当代人的需要，又不损害子孙后代满足这些需要的能力”（1987年布伦特兰报告，《我们共同的未来》）。</p>
   <div class="rd-meta"><span>1,396 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://theconversation.com/human-rights-and-the-rights-of-nature-are-linchpins-for-truly-sustainable-development-279023" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://news.un.org/en/story/2026/10/1168597" target="_blank" rel="noopener">Colombia: UN independent experts call for Ecopetrol to provide reparations to victims of armed conflict</a></h3>
   <p class="rd-cn">哥伦比亚：联合国独立专家呼吁 Ecopetrol 向武装冲突受害者提供赔偿 — 哥伦比亚：联合国独立专家呼吁 Ecopetrol 向武装冲突受害者提供赔偿 联合国独立专家周三对哥伦比亚和平特别管辖区最近一项涉及 Ecopetrol 石油公司的具有里程碑意义的企业责任裁决表示欢迎，呼吁对受害者进行赔偿</p>
   <div class="rd-meta"><span>468 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/10/1168597" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2016-12-14</time></div>
   <h3><a href="https://www.worldbank.org/en/events/2016/12/15/enhancing-the-quality-of-service-delivery" target="_blank" rel="noopener">Enhancing the Quality of Service Delivery</a></h3>
   <p class="rd-cn">国家政策执行能力的大难题 Matt Andrews（哈佛大学肯尼迪学院）、Lant Pritchett（哈佛大学肯尼迪学院）和 Michael Woolcock（世界银行） 我们将 102 个历史发展中国家 (HDC) 分为国家能力“非常弱”、“弱”、“中等”和“强”的国家。分析中</p>
   <div class="rd-meta"><span>900 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/events/2016/12/15/enhancing-the-quality-of-service-delivery" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2017-04-12</time></div>
   <h3><a href="https://www.brookings.edu/articles/why-international-law-serves-u-s-national-interests/" target="_blank" rel="noopener">Why international law serves U.S. national interests</a></h3>
   <p class="rd-cn">以下文章是与斯蒂芬·布雷耶大法官国际法讲座相关的出版物系列的一部分，三位杰出的演讲者在布鲁金斯学会发表了讲话。完整系列可在此处获取。</p>
   <div class="rd-meta"><span>3,257 词</span><span>·</span><span>约 15 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/why-international-law-serves-u-s-national-interests/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNDP">
   <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2026-10-07</time></div>
   <h3><a href="https://www.undp.org/publications/sdg-16-2026-voluntary-national-reviews-through-lens-peaceful-just-and-strong-institutions" target="_blank" rel="noopener">SDG 16: 2026 Voluntary National Reviews through the Lens of Peaceful, Just, and Strong Institutions</a></h3>
   <p class="rd-cn">可持续发展目标 16：从和平、公正和强大机构的角度进行 2026 年自愿国家审查 — 本报告从可持续发展目标 16：和平、公正和强大机构的角度审视了 2026 年高级别政治论坛上提出的 36 项自愿国家审查。该报告借鉴了世界各地的例子，分析了......</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/publications/sdg-16-2026-voluntary-national-reviews-through-lens-peaceful-just-and-strong-institutions" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-06-03</time></div>
   <h3><a href="https://www.theguardian.com/football/2026/jun/03/campaign-to-deliver-biggest-complaint-fifa-has-ever-received-launches-before-world-cup" target="_blank" rel="noopener">Campaign to deliver ‘biggest complaint Fifa has ever received’ launches before World Cup</a></h3>
   <p class="rd-cn">世界杯前一周，活动人士发起了一项旨在提供“国际足联收到过的最大投诉”的活动。由于球迷担心比赛的安全和门票费用，以及人权组织和足球比赛对国际足联的投诉不断，一场集体诉讼式的c</p>
   <div class="rd-meta"><span>737 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/football/2026/jun/03/campaign-to-deliver-biggest-complaint-fifa-has-ever-received-launches-before-world-cup" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-06-03</time></div>
   <h3><a href="https://www.theguardian.com/global-development/2026/jun/03/afghan-woman-legal-protection-laws-eu-taliban-europe" target="_blank" rel="noopener">A bird has better protection than an Afghan woman. Welcoming the Taliban to Europe is a slap in the face</a></h3>
   <p class="rd-cn">阿富汗的塔利班最近逮捕了我的三名家人，将他们囚禁起来，折磨了其中一人，并没收了我的房子。这是为了让我沉默。</p>
   <div class="rd-meta"><span>1,006 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/global-development/2026/jun/03/afghan-woman-legal-protection-laws-eu-taliban-europe" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-09-23</time></div>
   <h3><a href="https://news.un.org/en/story/2025/09/1165918" target="_blank" rel="noopener">UN’s Guterres to world leaders: Choose peace and cooperation over chaos</a></h3>
   <p class="rd-cn">联合国秘书长古特雷斯致世界领导人：选择和平与合作，而非混乱 联合国秘书长古特雷斯致世界领导人：选择和平与合作，而非混乱 联合国秘书长在大会高级别辩论开始时发出了一个鲜明的信息：世界充斥着相互重叠的危机——从战争和人道主义紧急情况到气候崩溃——各国领导人现在必须决定“什么样的世界”</p>
   <div class="rd-meta"><span>773 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/09/1165918" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-10-21</time></div>
   <h3><a href="https://www.theguardian.com/world/2025/oct/22/jewish-notables-open-letter-un-sanction-israel" target="_blank" rel="noopener">Jewish figures across the globe call on UN and world leaders to sanction Israel</a></h3>
   <p class="rd-cn">世界各地的犹太知名人士呼吁联合国和世界领导人对以色列实施制裁，因为他们称以色列在加沙的“不合理”行为相当于种族灭绝。包括前以色列官员、奥斯卡奖得主、作家和知识分子在内的 450 多名签署者签署了一份</p>
   <div class="rd-meta"><span>779 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/world/2025/oct/22/jewish-notables-open-letter-un-sanction-israel" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNDP">
   <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2025-09-16</time></div>
   <h3><a href="https://www.undp.org/stories/justice-beyond-courtroom-local-solutions-make-difference" target="_blank" rel="noopener">Justice beyond the courtroom: Local solutions that make a difference</a></h3>
   <p class="rd-cn">在法院和其他正式机构距离较远或成本过高的地方，习惯和非正式机制使人们能够诉诸司法。超过 50 亿人，约三分之二...</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/stories/justice-beyond-courtroom-local-solutions-make-difference" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2025-12-16</time></div>
   <h3><a href="https://theconversation.com/this-peace-deal-ended-europes-last-major-war-30-years-ago-it-provides-important-lessons-for-todays-fractured-world-270160" target="_blank" rel="noopener">This peace deal ended Europe’s last major war 30 years ago. It provides important lessons for today’s fractured world</a></h3>
   <p class="rd-cn">三十年前的本周，《代顿协议》在巴黎签署，结束了波斯尼亚战争，这是自 1945 年以来欧洲目睹的最具破坏性的冲突。在俄亥俄州代顿的一个空军基地进行了数周的紧张谈判，最终达成了解决冲突的方案。</p>
   <div class="rd-meta"><span>1,176 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/this-peace-deal-ended-europes-last-major-war-30-years-ago-it-provides-important-lessons-for-todays-fractured-world-270160" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2024-05-30</time></div>
   <h3><a href="https://live.worldbank.org/en/event/2025/world-bank-group-youth-summit" target="_blank" rel="noopener">Youth Summit 2025: Youth-Led Innovation for a Livable Planet</a></h3>
-  <p class="rd-cn">2025 年青年峰会：青年主导创新，打造宜居星球 — [Cynthia Mene] 早上好，下午好，晚上好，世界各地通过虚拟方式加入我们的每个人。欢迎在座的各位参加 2025 年世界银行青年峰会上激动人心的小组讨论。</p>
+  <p class="rd-cn">2025 年青年峰会：青年主导创新，打造宜居星球 — 早上好，下午好，晚上好，世界各地通过虚拟方式加入我们的每个人。欢迎在座的各位参加 2025 年世界银行青年峰会上激动人心的小组讨论。</p>
   <div class="rd-meta"><span>8,269 词</span><span>·</span><span>约 38 分钟</span><span class="rd-open"><a href="https://live.worldbank.org/en/event/2025/world-bank-group-youth-summit" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-09-24</time></div>
   <h3><a href="https://www.reuters.com/world/trump-tells-countries-quit-icc-few-follow-his-lead-2026-09-24/" target="_blank" rel="noopener">Trump tells countries to quit ICC. Few follow his lead</a></h3>
   <p class="rd-cn">纳奥罗加入了最近叛逃的委内瑞拉和乍得法院，欧洲和其他支持者集会支持海牙法院美国准备采取更严厉的措施反对联合国法庭，9月24日......</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/trump-tells-countries-quit-icc-few-follow-his-lead-2026-09-24/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2016-10-20</time></div>
   <h3><a href="https://www.worldbank.org/en/topic/fragilityconflictviolence/publication/the-challenge-of-stability-and-security-in-west-africa" target="_blank" rel="noopener">The Challenge of Stability and Security in West Africa</a></h3>
   <p class="rd-cn">自独立以来，西非的暴力性质发生了显着变化。 • 自独立以来，西非的绝大多数武装冲突都是国家内部冲突，其中包括五次大规模内战。 • 进入新千年，内战和大规模冲突的发生率下降</p>
   <div class="rd-meta"><span>336 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/topic/fragilityconflictviolence/publication/the-challenge-of-stability-and-security-in-west-africa" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2020-03-19</time></div>
   <h3><a href="https://theconversation.com/did-the-us-commit-crimes-in-afghanistan-international-prosecutors-want-to-find-out-133590" target="_blank" rel="noopener">Did the US commit crimes in Afghanistan? International prosecutors want to find out</a></h3>
   <p class="rd-cn">负责调查阿富汗战争罪行的国际检察官并不缺乏潜在目标。几乎自 2001 年底战斗开始以来，阿富汗士兵和军阀就一直被指控强奸、谋杀和绑架。</p>
   <div class="rd-meta"><span>974 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/did-the-us-commit-crimes-in-afghanistan-international-prosecutors-want-to-find-out-133590" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-02-19</time></div>
   <h3><a href="https://www.reuters.com/world/board-peace-live-updates-trump-will-lead-first-meeting-while-hamas-tightens-grip-2026-02-19/" target="_blank" rel="noopener">Trump leads first Board of Peace meeting as Hamas tightens grip in Gaza - as it happened</a></h3>
-  <p class="rd-cn">正如所发生的那样——凡妮莎·巴林特克是安大略省多伦多的实时页面记者。她所在的团队为世界上最大的新闻报道提供实时多媒体报道。她之前曾在...</p>
+  <p class="rd-cn">凡妮莎·巴林特克是安大略省多伦多的实时页面记者。她所在的团队为世界上最大的新闻报道提供实时多媒体报道。她之前曾在...</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/board-peace-live-updates-trump-will-lead-first-meeting-while-hamas-tightens-grip-2026-02-19/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-10-08</time></div>
   <h3><a href="https://www.reuters.com/company/international-criminal-court/" target="_blank" rel="noopener">International Criminal Court</a></h3>
   <p class="rd-cn">诺贝尔和平奖获得者纳维·皮莱周二敦促美国恢复其为世界其他地区捍卫人权和自由的传统角色，因为华盛顿正在努力……</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/company/international-criminal-court/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-09-13</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-ukraine-2025_940cee85-en.html" target="_blank" rel="noopener">OECD Economic Surveys: Ukraine 2025</a></h3>
   <p class="rd-cn">经合组织经济调查：乌克兰 2025 — 关键矿产已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要 工作的未来 工作世界正在发生变化......</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-ukraine-2025_940cee85-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-09-13</time></div>
   <h3><a href="https://www.oecd.org/en/about/news/speech-statements/2026/08/why-nations-flourish-clear-commercial-laws-and-controls-on-corruption.html" target="_blank" rel="noopener">Why Nations Flourish: Clear Commercial Laws and Controls on Corruption</a></h3>
   <p class="rd-cn">关键矿产已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要工作的未来工作世界正在发生变化……</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/about/news/speech-statements/2026/08/why-nations-flourish-clear-commercial-laws-and-controls-on-corruption.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-09-28</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2026/sep/28/donald-trump-nobel-peace-prize-volodymyr-zelenskyy" target="_blank" rel="noopener">Donald Trump? Please no. Here’s who actually deserves this year’s Nobel peace prize</a></h3>
   <p class="rd-cn">博彩市场对美国总统和弗拉基米尔·泽连斯基有利。但确保和平最重要的工作是由那些远离聚光灯的人完成的，该组织的代理主任 Haakon Gjerløw 说。</p>
   <div class="rd-meta"><span>807 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2026/sep/28/donald-trump-nobel-peace-prize-volodymyr-zelenskyy" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-06-05</time></div>
   <h3><a href="https://www.theguardian.com/us-news/2025/jun/05/marco-rubio-sanctions-icc-judges-israel-gaza" target="_blank" rel="noopener">Rubio imposes sanctions on four ICC judges for ‘targeting’ US and Israel</a></h3>
   <p class="rd-cn">美国国务卿援引法院对以色列官员发出逮捕令的“非法行为”。美国正在对国际刑事法院的四名法官实施制裁……</p>
@@ -436,5 +507,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

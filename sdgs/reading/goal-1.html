@@ -284,6 +284,72 @@
 .idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
 <link rel="stylesheet" href="theme.css?v=2">
 </head>
@@ -296,7 +362,8 @@
 </header>
 <div class="sdg-band" aria-hidden="true"></div>
 <main>
-<section class="sdg-hero"><div class="sdg-wrap sdg-hero-inner">
+<section class="sdg-hero goal-hero"><div class="sdg-wrap sdg-hero-inner">
+<div class="read-crumb"><a href="./index.html?v=25">国际阅读室</a> / SDG 01</div>
 <p class="sdg-kicker"><span class="dot"></span>SDG 01 · NO POVERTY</p>
 <h1>SDG 01 · 无贫穷<br><em>25 篇免费国际文章</em></h1>
 <p class="lead">围绕贫困测量、社会保护与再分配的 25 篇免费阅读：国际媒体、研究机构与政策报告混合。每篇附中文速览、字数与阅读时间，点击标题或“阅读原文”直达。</p>
@@ -305,136 +372,141 @@
 <section class="sdg-section"><div class="sdg-wrap">
 <div class="goal-page-head"><span class="num" style="--c:#e5243b">SDG 01</span><div><h1>无贫穷 · No Poverty</h1><p>人 People · 25 篇 · 免费阅读</p></div></div>
 <div class="goal-nav"><a href="goal-1.html?v=25" style="--c:#e5243b" class="on">01</a><a href="goal-2.html?v=25" style="--c:#dda63a" class="">02</a><a href="goal-3.html?v=25" style="--c:#4c9f38" class="">03</a><a href="goal-4.html?v=25" style="--c:#c5192d" class="">04</a><a href="goal-5.html?v=25" style="--c:#ff3a21" class="">05</a><a href="goal-6.html?v=25" style="--c:#26bde2" class="">06</a><a href="goal-7.html?v=25" style="--c:#fcc30b" class="">07</a><a href="goal-8.html?v=25" style="--c:#a21942" class="">08</a><a href="goal-9.html?v=25" style="--c:#fd6925" class="">09</a><a href="goal-10.html?v=25" style="--c:#dd1367" class="">10</a><a href="goal-11.html?v=25" style="--c:#fd9d24" class="">11</a><a href="goal-12.html?v=25" style="--c:#bf8b2e" class="">12</a><a href="goal-13.html?v=25" style="--c:#3f7e44" class="">13</a><a href="goal-14.html?v=25" style="--c:#0a97d9" class="">14</a><a href="goal-15.html?v=25" style="--c:#56c02b" class="">15</a><a href="goal-16.html?v=25" style="--c:#00689d" class="">16</a><a href="goal-17.html?v=25" style="--c:#19486a" class="">17</a></div>
+<div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
+<button type="button" class="rd-filter active" data-src="all">全部</button>
+<button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNDP">UNDP</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid"><article class="rd-card">
+<div class="rd-grid" style="--goal-c:#e5243b"><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2022-04-27</time></div>
   <h3><a href="https://www.imf.org/en/publications/books/issues/2022/10/07/promoting-inclusive-growth-in-the-middle-east-and-north-africa-challenges-and-opportunities-512107" target="_blank" rel="noopener">Promoting Inclusive Growth in the Middle East and North Africa: Challenges and Opportunities in a Post-Pandemic World</a></h3>
   <p class="rd-cn">尽管大流行前在减贫、识字率和寿命方面取得了一些进展，但中东和北非 (MENA) 的许多经济体一直在努力确保经济的好处……</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/publications/books/issues/2022/10/07/promoting-inclusive-growth-in-the-middle-east-and-north-africa-challenges-and-opportunities-512107" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2022-01-26</time></div>
   <h3><a href="https://theconversation.com/social-care-how-gypsy-roma-and-traveller-children-face-discrimination-across-europe-and-the-uk-170312" target="_blank" rel="noopener">Social care: how Gypsy, Roma and Traveller children face discrimination across Europe and the UK</a></h3>
-  <p class="rd-cn">在整个欧洲——从意大利到匈牙利——罗姆儿童在机构照顾中所占比例过高。这在东欧尤其严重。</p>
+  <p class="rd-cn">从意大利到匈牙利——罗姆儿童在机构照顾中所占比例过高。这在东欧尤其严重。</p>
   <div class="rd-meta"><span>838 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/social-care-how-gypsy-roma-and-traveller-children-face-discrimination-across-europe-and-the-uk-170312" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2022-11-23</time></div>
   <h3><a href="https://www.worldbank.org/en/news/press-release/2022/11/24/ph-reducing-inequality-key-to-becoming-a-middle-class-society-free-of-poverty" target="_blank" rel="noopener">PHILIPPINES: Reducing Inequality Key to Becoming a Middle-Class Society Free of Poverty</a></h3>
   <p class="rd-cn">菲律宾：减少不平等是成为无贫困中产阶级社会的关键 — 马尼拉，2022 年 11 月 24 日 — 支持就业和工人、提高教育质量和改善教育机会、促进农村发展和加强社会保护的政策可以减少不平等，从而增加菲律宾人民改善福祉的机会。在一个</p>
   <div class="rd-meta"><span>776 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/press-release/2022/11/24/ph-reducing-inequality-key-to-becoming-a-middle-class-society-free-of-poverty" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2017-09-20</time></div>
   <h3><a href="https://theconversation.com/in-the-caribbean-colonialism-and-inequality-mean-hurricanes-hit-harder-84106" target="_blank" rel="noopener">In the Caribbean, colonialism and inequality mean hurricanes hit harder</a></h3>
   <p class="rd-cn">飓风玛丽亚是本季第 15 个热带低气压，现在正在袭击加勒比地区，而就在飓风艾尔玛对该地区造成严重破坏的两周后。 9 月 19 日午夜刚过，多米尼克总理罗斯福·斯凯里特 (Roosevelt Skerrit) 在 Facebook 上写道，多米尼克遭受的破坏“令人难以置信”。</p>
   <div class="rd-meta"><span>1,031 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/in-the-caribbean-colonialism-and-inequality-mean-hurricanes-hit-harder-84106" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2016-10-19</time></div>
   <h3><a href="https://www.brookings.edu/articles/time-for-justice-tackling-race-inequalities-in-health-and-housing/" target="_blank" rel="noopener">Time for justice: Tackling race inequalities in health and housing</a></h3>
   <p class="rd-cn">以下简介是布鲁金斯学会“美国大创意”的一部分，这是一项全机构范围的倡议，布鲁金斯学会的学者们在其中确定了国家面临的最大问题，并提供了如何解决这些问题的想法。 21 世纪的前几十年，就像之前的几十年一样，对于黑人来说是艰难的</p>
   <div class="rd-meta"><span>4,821 词</span><span>·</span><span>约 22 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/time-for-justice-tackling-race-inequalities-in-health-and-housing/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2019-12-18</time></div>
   <h3><a href="https://www.worldbank.org/en/country/lesotho/publication/lesotho-poverty-assessment-poverty-and-inequality-remain-widespread-despite-decline" target="_blank" rel="noopener">Lesotho Poverty Assessment: Poverty and Inequality Remain Widespread Despite Decline</a></h3>
-  <p class="rd-cn">马塞卢，2019 年 12 月 18 日——根据世界银行和莱索托统计局最近发布的贫困评估报告，尽管莱索托今天的贫困率低于 15 年前，但贫困和不平等现象仍然居高不下。莱索托贫困评估：进展与问题</p>
+  <p class="rd-cn">根据世界银行和莱索托统计局最近发布的贫困评估报告，尽管莱索托今天的贫困率低于 15 年前，但贫困和不平等现象仍然居高不下。莱索托贫困评估：进展与问题</p>
   <div class="rd-meta"><span>723 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/lesotho/publication/lesotho-poverty-assessment-poverty-and-inequality-remain-widespread-despite-decline" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2023-05-17</time></div>
   <h3><a href="https://www.reuters.com/world/asia-pacific/six-pacific-countries-high-risk-debt-distress-world-bank-2023-05-18/" target="_blank" rel="noopener">Six Pacific countries at high risk of debt distress, World Bank says</a></h3>
   <p class="rd-cn">世界银行表示，六个太平洋国家面临债务困境的高风险 — 惠灵顿，5 月 18 日（路透社）— 世界银行在一份报告中表示，六个太平洋国家面临债务困境的高风险，部分原因是政府为应对 COVID-19 危机而支出。</p>
   <div class="rd-meta"><span>约 444 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/asia-pacific/six-pacific-countries-high-risk-debt-distress-world-bank-2023-05-18/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNDP">
   <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2024-10-16</time></div>
   <h3><a href="https://www.undp.org/speeches/statement-international-day-eradication-poverty" target="_blank" rel="noopener">Statement International Day for the Eradication of Poverty</a></h3>
   <p class="rd-cn">今天，世界大部分地区继续从 COVID-19 大流行的社会经济影响中恢复，这场大流行导致 2020 年极端贫困人口几十年来首次增加。确实，很多...</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/speeches/statement-international-day-eradication-poverty" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-02-11</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-philippines-2026_f0e0c581-en.html" target="_blank" rel="noopener">OECD Economic Surveys: Philippines 2026</a></h3>
   <p class="rd-cn">经合组织经济调查：菲律宾 2026 — 关键矿产已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要 工作的未来 工作世界正在发生变化......</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-philippines-2026_f0e0c581-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-06-10</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2026/jun/10/economists-maths-growth-doomed-strategy-un-agencies-political-leaders" target="_blank" rel="noopener">We economists have done the maths: ‘growth’ is a doomed strategy – there is a better way</a></h3>
-  <p class="rd-cn">有更好的方法——我们生活在一个制造稀缺的时代。在一个比以往任何时候都更加富裕的世界，大约十分之一的世界人口仍然生活在极端贫困之中。</p>
+  <p class="rd-cn">我们生活在一个制造稀缺的时代。在一个比以往任何时候都更加富裕的世界，大约十分之一的世界人口仍然生活在极端贫困之中。</p>
   <div class="rd-meta"><span>1,226 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2026/jun/10/economists-maths-growth-doomed-strategy-un-agencies-political-leaders" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2020-06-10</time></div>
   <h3><a href="https://www.imf.org/en/blogs/articles/2020/06/11/blog061120-the-global-economic-reset-promoting-a-more-inclusive-recovery" target="_blank" rel="noopener">The Global Economic Reset—Promoting a More Inclusive Recovery</a></h3>
-  <p class="rd-cn">促进更具包容性的复苏——政策制定者必须竭尽全力促进更具包容性的复苏，使社会各阶层受益。这就是为什么政策制定者必须尽一切努力促进......</p>
+  <p class="rd-cn">政策制定者必须竭尽全力促进更具包容性的复苏，使社会各阶层受益。这就是为什么政策制定者必须尽一切努力促进......</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2020/06/11/blog061120-the-global-economic-reset-promoting-a-more-inclusive-recovery" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="OECD">
   <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2019-04-10</time></div>
   <h3><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">Social Protection System Review of Indonesia</a></h3>
-  <p class="rd-cn">如何应用有效治理来利用人工智能的好处并降低其风险...</p>
+  <p class="rd-cn">文章聚焦SDG 01“贫困测量、社会保护与再分配”，从OECD的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="IMF">
   <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2024-03-06</time></div>
   <h3><a href="https://www.imf.org/en/publications/wp/issues/2024/03/08/strengthening-income-stabilization-through-social-protection-in-emerging-and-developing-545498" target="_blank" rel="noopener">Strengthening Income Stabilization through Social Protection in Emerging and Developing Economies: The Brazilian Experience</a></h3>
   <p class="rd-cn">社会保护计划对于稳定家庭收入至关重要，尤其是在危机期间。巴西应对这一流行病的 Auxilio 紧急 (AE) 计划证明了……的价值。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/publications/wp/issues/2024/03/08/strengthening-income-stabilization-through-social-protection-in-emerging-and-developing-545498" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-11-05</time></div>
   <h3><a href="https://news.un.org/en/story/2025/11/1166282" target="_blank" rel="noopener">Not just dreams, but rights: Social justice in focus at Doha summit</a></h3>
   <p class="rd-cn">不仅是梦想，还有权利：多哈峰会聚焦社会正义 — 不仅是梦想，还有权利：多哈峰会聚焦社会正义 将社会正义置于全球政策制定核心的努力成为周三第二届社会发展问题世界峰会的焦点，各国领导人齐聚一堂，召开高级别论坛，推动协调行动，落实新通过的《社会正义宣言》。</p>
   <div class="rd-meta"><span>605 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/11/1166282" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-03-04</time></div>
   <h3><a href="https://www.brookings.edu/articles/wages-and-productivity-in-mexico-under-usmca/" target="_blank" rel="noopener">Wages and productivity in Mexico under USMCA</a></h3>
   <p class="rd-cn">本章是 USMCA 2026 年展望的一部分。本章分析了墨西哥在多大程度上缩小了与美国和加拿大的工资差距。</p>
   <div class="rd-meta"><span>3,172 词</span><span>·</span><span>约 14 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/wages-and-productivity-in-mexico-under-usmca/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Conversation">
   <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2026-02-04</time></div>
   <h3><a href="https://theconversation.com/anti-poverty-programmes-can-change-how-people-see-the-state-and-each-other-274303" target="_blank" rel="noopener">Anti‑poverty programmes can change how people see the state and each other</a></h3>
   <p class="rd-cn">当洪水冲毁喀麦隆北部沃杜·奥马尔的家时，他和他的家人不仅失去了住所，还失去了希望。然后政府支持的现金转移到来了。</p>
   <div class="rd-meta"><span>1,300 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://theconversation.com/anti-poverty-programmes-can-change-how-people-see-the-state-and-each-other-274303" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Brookings">
   <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-12-04</time></div>
   <h3><a href="https://www.brookings.edu/articles/opioids-in-europe-preparing-for-a-third-wave/" target="_blank" rel="noopener">Opioids in Europe: Preparing for a third wave</a></h3>
   <p class="rd-cn">欧洲的阿片类药物：为第三次浪潮做准备 — 执行摘要 虽然合成阿片类药物给北美带来了历史上最高水平的毒品相关死亡，但欧洲的毒品格局是由不同的文化、政治和地理因素塑造的，迄今为止，这些因素的危害有限。美国阿片类药物相关死亡率是历史时期的10倍以上</p>
   <div class="rd-meta"><span>561 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/opioids-in-europe-preparing-for-a-third-wave/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-07-01</time></div>
   <h3><a href="https://www.theguardian.com/world/2026/jul/01/how-extreme-heat-is-exposing-extreme-inequality" target="_blank" rel="noopener">How extreme heat is exposing extreme inequality</a></h3>
   <p class="rd-cn">可以称之为两次热浪经历的故事。由于酷热的天气让西欧大部分地区陷入瘫痪，一位居住在巴黎的美国作家断言，对许多人来说，高温并不像大多数媒体所暗示的那样“几乎是世界末日”。</p>
   <div class="rd-meta"><span>741 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/world/2026/jul/01/how-extreme-heat-is-exposing-extreme-inequality" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-09-30</time></div>
   <h3><a href="https://www.reuters.com/practical-law-the-journal/litigation/history-pro-bono-us-2025-10-01/" target="_blank" rel="noopener">History of Pro Bono in the US</a></h3>
   <p class="rd-cn">讨论美国公益和法律援助的演变，强调公共利益法的重要里程碑。公益周强调对公益服务的需求 公益咨询的发展......</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/practical-law-the-journal/litigation/history-pro-bono-us-2025-10-01/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2024-10-15</time></div>
   <h3><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">Two billion women without access to social protection</a></h3>
   <p class="rd-cn">20 亿妇女无法获得社会保障 — 20 亿妇女无法获得社会保障 联合国妇女署的一份报告显示，从现金福利到医疗保健和养老金等各种政策并未惠及足够多的妇女和女童，导致她们在全球范围内更容易陷入贫困。当世界准备纪念国际根除日时</p>
   <div class="rd-meta"><span>470 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="World Bank">
   <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-04-15</time></div>
   <h3><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">KEY FINDINGS Overcoming Poverty and Inequality in the Philippines: Past, Present, and Prospects for the Future</a></h3>
   <p class="rd-cn">主要调查结果 克服菲律宾的贫困和不平等：过去、现在和未来的前景 — 菲律宾在减少贫困方面取得了重大进展，但收入不平等最近才开始下降。由于高增长率和结构转型，1985 年至...</p>
   <div class="rd-meta"><span>631 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UNDP">
   <div class="rd-top"><span class="rd-source">UNDP</span><span class="rd-free">免费</span><time>2025-10-14</time></div>
   <h3><a href="https://www.undp.org/events/undp-second-world-summit-social-development" target="_blank" rel="noopener">UNDP at the Second World Summit for Social Development</a></h3>
   <p class="rd-cn">联合国开发计划署出席第二届社会发展问题世界峰会 — 纽约 – 第二届社会发展问题世界峰会 (WSSD2) 将于 2025 年 11 月 4 日至 6 日在卡塔尔多哈举行。在不平等现象日益扩大以及主要人口、气候和...</p>
   <div class="rd-meta"><span>约 396 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.undp.org/events/undp-second-world-summit-social-development" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="The Guardian">
   <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2019-11-12</time></div>
   <h3><a href="https://www.theguardian.com/society/2019/nov/13/children-act-changed-family-life-children-better" target="_blank" rel="noopener">Thirty years on, has the Children Act changed family life for the better?</a></h3>
   <p class="rd-cn">三十年过去了，《儿童法》是否让家庭生活变得更好了？ — 政治家、社会工作者、家长和法律专家讨论这项影响深远的法案是否成功地将儿童利益放在首位，前卫生部长弗吉尼亚·博顿利 (Virginia Bottomley)</p>
   <div class="rd-meta"><span>2,776 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/society/2019/nov/13/children-act-changed-family-life-children-better" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="UN News">
   <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-05-12</time></div>
   <h3><a href="https://news.un.org/en/story/2026/05/1167492" target="_blank" rel="noopener">From childhood to university, economic inequality shapes life chances worldwide</a></h3>
-  <p class="rd-cn">经济不平等正在给儿童的健康、学习和未来机会留下深刻的印记——其影响远远超出了课堂、联合国儿童基金会、联合国儿童基金会和联合国教育……</p>
+  <p class="rd-cn">其影响远远超出了课堂、联合国儿童基金会、联合国儿童基金会和联合国教育……</p>
   <div class="rd-meta"><span>806 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/05/1167492" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card">
+</article><article class="rd-card" data-source="Reuters">
   <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2024-11-12</time></div>
   <h3><a href="https://www.reuters.com/world/americas/latin-america-poverty-hits-33-year-low-inequality-prevails-un-report-says-2024-11-12/" target="_blank" rel="noopener">Latin America poverty hits 33-year low but inequality prevails, UN report says</a></h3>
-  <p class="rd-cn">圣地亚哥，11月12日（路透社）——在巴西、联合国拉丁美洲和加勒比经济委员会（拉加经委会）取得进展的带动下，拉丁美洲贫困水平将在2023年降至33年低点……</p>
+  <p class="rd-cn">在巴西、联合国拉丁美洲和加勒比经济委员会（拉加经委会）取得进展的带动下，拉丁美洲贫困水平将在2023年降至33年低点……</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/americas/latin-america-poverty-hits-33-year-low-inequality-prevails-un-report-says-2024-11-12/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
 </article></div>
 <div class="essay-nav" style="margin-top:26px"><a href="./index.html?v=25">← 返回阅读室</a><a href="../index.html?v=25">SDG 作文文库 →</a></div>
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
+<script src="reading-filter.js?v=2"></script>
 </body>
 </html>

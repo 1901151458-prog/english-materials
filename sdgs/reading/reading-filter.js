@@ -1,0 +1,18 @@
+(function(){
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.rd-filter'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.rd-card'));
+  var count = document.getElementById('rdCount');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var src = b.getAttribute('data-src');
+      btns.forEach(function(x){ x.classList.toggle('active', x === b); });
+      var n = 0;
+      cards.forEach(function(c){
+        var show = src === 'all' || c.getAttribute('data-source') === src;
+        c.style.display = show ? '' : 'none';
+        if(show) n++;
+      });
+      if(count) count.textContent = n + ' 篇';
+    });
+  });
+})();

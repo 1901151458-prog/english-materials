@@ -247,6 +247,72 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
+.rd-card{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(18,50,79,.035);transition:transform .15s,box-shadow .15s,border-color .15s}
+.rd-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08)}
+.rd-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-family:var(--font-sans);font-size:10.5px;color:#8294a5}
+.rd-source{color:#155d90;background:#eef6fc;border:1px solid #d4e7f4;border-radius:999px;padding:2px 8px;font-weight:600}
+.rd-free{color:#1c6b4a;background:#eaf7f0;border:1px solid #cfe9da;border-radius:999px;padding:2px 7px;font-weight:600}
+.rd-card h3{margin:9px 0 7px;font-size:14.5px;line-height:1.5;font-weight:600}
+.rd-card h3 a{color:var(--sdg-navy);text-decoration:none}
+.rd-card h3 a:hover{color:var(--sdg-blue);text-decoration:underline;text-underline-offset:2px}
+.rd-cn{margin:0 0 10px;font-size:12.5px;line-height:1.8;color:#4d6172;flex:1}
+.rd-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-family:var(--font-sans);font-size:11px;color:#8093a4;border-top:1px dashed #e4edf4;padding-top:8px;margin-top:auto}
+.rd-open{margin-left:auto}
+.rd-open a{color:var(--sdg-blue);font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:860px){.rd-grid{grid-template-columns:1fr}}
+.goal-page-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.goal-page-head .num{width:52px;height:52px;border-radius:13px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:14px}
+.goal-page-head h1{margin:0;font-size:clamp(24px,3vw,34px);color:var(--sdg-navy);letter-spacing:-.01em}
+.goal-page-head p{margin:5px 0 0;font-size:12.5px;color:#718596}
+.goal-nav{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.goal-nav a{font-family:var(--font-sans);font-size:10.5px;padding:5px 8px;border:1px solid #dce7f1;border-radius:7px;color:#1d2b38;background:#fff}
+.goal-nav a:hover{border-color:var(--c);text-decoration:none}
+.goal-nav a.on{background:var(--c);border-color:var(--c);color:#fff}
+.summary-box{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 6px;font-size:12.5px;line-height:1.85;color:#4d6172}
+.summary-box b{color:var(--sdg-navy)}
+.card-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:780px){.card-index{grid-template-columns:1fr}}
+.idx-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--sdg-ink);transition:transform .15s,box-shadow .15s,border-color .15s}
+.idx-card:hover{transform:translateY(-2px);border-color:#c5d8e8;box-shadow:0 10px 24px rgba(18,50,79,.08);text-decoration:none}
+.idx-num{width:44px;height:44px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;font-family:var(--font-en);font-weight:700;font-size:12px;flex:none}
+.idx-card h3{margin:0;font-size:15px;color:var(--sdg-navy)}
+.idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
+.idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
+
 .model-intro{background:#fff;border:1px solid #dfe8f1;border-radius:12px;padding:16px 18px;margin:0 0 16px;font-size:12.5px;line-height:1.85;color:#4d6172}
 .model-intro b{color:var(--sdg-navy)}
 .model-card{background:#fff;border:1px solid #dfe8f1;border-radius:14px;padding:22px 24px;margin:0 0 14px;box-shadow:0 1px 2px rgba(18,50,79,.035)}
@@ -291,28 +357,28 @@
 <div class="model-intro"><b>4 篇微范文怎么用：</b>不要背整篇。先抄结构（问题—证据—反驳—方案—号召），再替换成你自己的例子与数据。每篇 130–170 词，正好是雅思 Task 2 一段或高考续写/议论文的规模。</div>
 <article class="model-card">
   <div class="model-kicker">MODEL A · 135 WORDS</div>
-  <h2>Why learning Is Not Inevitable</h2>
+  <h2>Why Learning Is Not Inevitable</h2>
   <p class="model-prompt">写作任务：以“优质教育”为主题，写一篇 130–170 词的短议论文/演讲。</p>
   <p class="model-text">The learning crisis is not only about access to school; it is about what happens inside the classroom. Millions of children finish primary school without the ability to read a simple text with comprehension. The common objection is that the first priority should be getting every child into school. But access without learning turns a promise into a ritual; quality and equity must advance together. A credible response starts with an effort to invest in teacher education and professional support. It should also use assessment to improve learning rather than rank children and govern AI in classrooms with privacy and teacher judgment. None of this is technically impossible. What is missing is the political decision to measure learning by capability, not by years of attendance. Until then, learning remains a promise that every crisis exposes.</p>
   <div class="model-meta"><span>自创范文</span><span>约 135 词</span><span>建议 10 分钟仿写</span><span>可配合长文精读</span></div>
   <p class="model-tip">中文提示：问题—方案型：用 130–160 词完成“问题—证据—反驳—三项方案—号召”。注意每句都推进论证，不写空泛口号。</p>
 </article><article class="model-card">
   <div class="model-kicker">MODEL B · 116 WORDS</div>
-  <h2>The Strongest Objection to learning—and Why It Fails</h2>
+  <h2>The Strongest Objection to Learning—and Why It Fails</h2>
   <p class="model-prompt">写作任务：以“优质教育”为主题，写一篇 130–170 词的短议论文/演讲。</p>
   <p class="model-text">Critics often argue that the first priority should be getting every child into school. The objection is not frivolous: scarce resources and competing priorities are real. Yet it mistakes a constraint for a verdict. Millions of children finish primary school without the ability to read a simple text with comprehension. A better approach is not to abandon ambition but to invest in teacher education and professional support, to use assessment to improve learning rather than rank children, and to govern AI in classrooms with privacy and teacher judgment. Once the costs of inaction are counted, the choice to measure learning by capability, not by years of attendance becomes not a luxury but a condition of stability.</p>
   <div class="model-meta"><span>自创范文</span><span>约 116 词</span><span>建议 10 分钟仿写</span><span>可配合长文精读</span></div>
   <p class="model-tip">中文提示：反驳型：先承认对方有合理处，再指出其把“约束”误当成“结论”。适合雅思/托福高分论证段。</p>
 </article><article class="model-card">
   <div class="model-kicker">MODEL C · 127 WORDS</div>
-  <h2>Three Reforms That Would Move learning</h2>
+  <h2>Three Reforms That Would Move Learning</h2>
   <p class="model-prompt">写作任务：以“优质教育”为主题，写一篇 130–170 词的短议论文/演讲。</p>
   <p class="model-text">Three reforms would move learning forward. First, governments should invest in teacher education and professional support. Second, they should use assessment to improve learning rather than rank children. Third, they should govern AI in classrooms with privacy and teacher judgment. These are not separate items on a wish list; they reinforce one another. Millions of children finish primary school without the ability to read a simple text with comprehension. The obstacle is that the first priority should be getting every child into school. But access without learning turns a promise into a ritual; quality and equity must advance together. What is required is not a miracle but a sequence of deliberate political choices—choices that begin when citizens measure learning by capability, not by years of attendance.</p>
   <div class="model-meta"><span>自创范文</span><span>约 127 词</span><span>建议 10 分钟仿写</span><span>可配合长文精读</span></div>
   <p class="model-tip">中文提示：三点政策型：First / Second / Third 结构清楚，但要用“相互强化”一句把三点连成整体。</p>
 </article><article class="model-card">
   <div class="model-kicker">MODEL D · 139 WORDS</div>
-  <h2>A Letter to a Student Who Wants to Change learning</h2>
+  <h2>A Letter to a Student Who Wants to Change Learning</h2>
   <p class="model-prompt">写作任务：以“优质教育”为主题，写一篇 130–170 词的短议论文/演讲。</p>
   <p class="model-text">Dear student, You do not have to solve learning in a single essay. Start by naming the problem precisely: The learning crisis is not only about access to school; it is about what happens inside the classroom. Then confront the strongest objection: the first priority should be getting every child into school. Answer it with evidence and argument: access without learning turns a promise into a ritual; quality and equity must advance together. Finally, propose something concrete: invest in teacher education and professional support; use assessment to improve learning rather than rank children; govern AI in classrooms with privacy and teacher judgment. Your voice will not be heard because it is loud; it will be heard because it is specific. Write as if a policymaker might read you—and make it hard for them to reply with a slogan.</p>
   <div class="model-meta"><span>自创范文</span><span>约 139 词</span><span>建议 10 分钟仿写</span><span>可配合长文精读</span></div>
