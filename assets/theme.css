@@ -435,3 +435,29 @@ html[data-theme="dark"] .zh-block h2{color:#eaf4fd !important}
 html[data-theme="dark"] .zh-block p{color:#c3d3e2 !important}
 html[data-theme="dark"] .zh-note{color:#93a9bc !important;border-top-color:#2a4054 !important}
 html[data-theme="dark"] .zh-mark{color:#e3b96b !important}
+
+/* SDG 文库卡片：背景深色、卡片中间调、文字亮色 */
+html[data-theme="dark"] .sdg-card{
+  background:linear-gradient(180deg,#1b3041 0%,#152534 100%) !important;
+  border-color:#34526b !important;
+  color:#dfeaf4 !important;
+  box-shadow:0 1px 2px rgba(0,0,0,.35),0 16px 36px rgba(0,0,0,.26) !important;
+}
+html[data-theme="dark"] .sdg-card:hover{
+  border-color:#6b9dc1 !important;
+  box-shadow:0 2px 6px rgba(0,0,0,.4),0 20px 44px rgba(0,0,0,.34) !important;
+}
+html[data-theme="dark"] .sdg-card h3{color:#f0f7fe !important}
+html[data-theme="dark"] .sdg-card h3 .cn{color:#b8ccdc !important}
+html[data-theme="dark"] .sdg-card p{color:#c6d7e5 !important}
+html[data-theme="dark"] .sdg-card .sdg-foot{
+  color:#9fb6c8 !important;
+  border-top-color:#2e4a60 !important;
+}
+html[data-theme="dark"] .sdg-card .sdg-foot .more{color:#8ecbf2 !important}
+html[data-theme="dark"] .sdg-card .sdg-tag{
+  background:#243f55 !important;
+  border-color:#3f647f !important;
+  color:#d6eaf8 !important;
+}
+html[data-theme="dark"] .sdg-card::before{background:linear-gradient(90deg,#6fb5e0,#69c79c) !important}
