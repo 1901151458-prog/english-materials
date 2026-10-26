@@ -461,3 +461,11 @@ html[data-theme="dark"] .sdg-card .sdg-tag{
   color:#d6eaf8 !important;
 }
 html[data-theme="dark"] .sdg-card::before{background:linear-gradient(90deg,#6fb5e0,#69c79c) !important}
+
+/* ── 细节：焦点环 / 悬停 / 选区 ── */
+html[data-theme="dark"] ::selection{background:rgba(125,183,232,.32);color:#fff}
+html[data-theme="light"] ::selection{background:rgba(30,95,163,.16)}
+a:focus-visible,button:focus-visible,.theme-toggle:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
+.card{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+html[data-theme="light"] .card:hover{border-color:#9bbbd6;box-shadow:0 14px 34px rgba(22,55,82,.10)}
+html[data-theme="dark"] .card:hover{border-color:var(--blue)}
