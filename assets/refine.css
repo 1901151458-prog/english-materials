@@ -249,3 +249,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
+
+/* 资料目录：年级筛选 */
+.grade-filter{position:sticky;top:var(--nav-h,64px);z-index:30;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 22px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px)}
+.gf-btn{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:6px 13px;font:inherit;font-size:13px;line-height:1.4;cursor:pointer;transition:border-color .15s ease,color .15s ease,background .15s ease}
+.gf-btn:hover{border-color:var(--blue);color:var(--ink)}
+.gf-btn.is-on{background:var(--blue);border-color:var(--blue);color:#fff}
+.gf-count{margin-left:auto;font-size:12px;color:var(--muted);white-space:nowrap}
+@media(max-width:700px){.grade-filter{top:0;padding:8px;gap:6px;flex-wrap:nowrap;overflow-x:auto}.gf-btn{white-space:nowrap}.gf-count{display:none}}

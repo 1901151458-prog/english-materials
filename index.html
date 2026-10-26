@@ -13,9 +13,9 @@
 <meta name="theme-color" content="#1a365d">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/base.min.css?v=1">
-<link rel="stylesheet" href="assets/refine.min.css?v=1">
+<link rel="stylesheet" href="assets/refine.min.css?v=2">
 <link rel="stylesheet" href="assets/theme.min.css?v=2">
-<script src="assets/theme.min.js?v=1"></script>
+<script src="assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
 </head>
 <body>
@@ -48,6 +48,16 @@
           <p>目前收录 11 份资料，按年级排序。</p>
         </div>
       </div>
+<div class="grade-filter" id="gradeFilter" role="group" aria-label="按年级筛选资料">
+          <button type="button" class="gf-btn is-on" data-grade="all" aria-pressed="true">全部</button>
+          <button type="button" class="gf-btn" data-grade="七上" aria-pressed="false">七上</button>
+          <button type="button" class="gf-btn" data-grade="七下" aria-pressed="false">七下</button>
+          <button type="button" class="gf-btn" data-grade="八上" aria-pressed="false">八上</button>
+          <button type="button" class="gf-btn" data-grade="八下" aria-pressed="false">八下</button>
+          <button type="button" class="gf-btn" data-grade="九上" aria-pressed="false">九上</button>
+          <button type="button" class="gf-btn" data-grade="综合" aria-pressed="false">综合</button>
+          <span class="gf-count" id="gradeCount" aria-live="polite">11 份</span>
+        </div>
       <div class="cards">
         <a class="card" href="vocab-5-books/">
           <div class="card-top">
@@ -387,5 +397,38 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var bar=document.getElementById('gradeFilter');
+  if(!bar) return;
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#materials .cards .card'));
+  cards.forEach(function(card){
+    var tag=(card.querySelector('.card-tag')||{}).textContent||'';
+    var mg=tag.match(/([七八九])年级([上下])册/);
+    var grade=/七上\s*[–-]\s*九上/.test(tag)?'综合' : (mg ? mg[1]+mg[2] : '综合');
+    card.dataset.grade=grade;
+  });
+  var count=document.getElementById('gradeCount');
+  var nav=document.querySelector('.site-nav');
+  if(nav) document.documentElement.style.setProperty('--nav-h',nav.offsetHeight+'px');
+  function apply(g){
+    var shown=0;
+    cards.forEach(function(card){
+      var on=g==='all'||card.dataset.grade===g;
+      card.hidden=!on; if(on) shown++;
+    });
+    bar.querySelectorAll('.gf-btn').forEach(function(b){
+      var on=b.dataset.grade===g;
+      b.classList.toggle('is-on',on); b.setAttribute('aria-pressed',on?'true':'false');
+    });
+    if(count) count.textContent=shown+' 份';
+  }
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('.gf-btn'):null;
+    if(b) apply(b.dataset.grade);
+  });
+  apply('all');
+})();
+</script>
 </body>
 </html>

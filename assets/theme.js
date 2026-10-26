@@ -1,9 +1,10 @@
 /* 英语资料站 · 深色/浅色主题切换 */
 (function () {
-  var KEY = 'em-theme';
+  var KEY = 'dsh-theme';
+  var OLD = 'em-theme';
   var html = document.documentElement;
   var stored = 'dark';
-  try { stored = localStorage.getItem(KEY) || 'dark'; } catch (e) {}
+  try { stored = localStorage.getItem(KEY) || localStorage.getItem(OLD) || 'dark'; } catch (e) {}
   if (stored !== 'light' && stored !== 'dark') stored = 'dark';
   html.setAttribute('data-theme', stored);
   html.style.colorScheme = stored === 'dark' ? 'dark' : 'light';
@@ -20,7 +21,7 @@
   function setTheme(theme) {
     html.setAttribute('data-theme', theme);
     html.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
-    try { localStorage.setItem(KEY, theme); } catch (e) {}
+    try { localStorage.setItem(KEY, theme); try { localStorage.setItem(OLD, theme); } catch (e) {} } catch (e) {}
     document.querySelectorAll('.theme-toggle').forEach(updateButton);
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute('content', theme === 'dark' ? '#0b131b' : '#1a365d');
