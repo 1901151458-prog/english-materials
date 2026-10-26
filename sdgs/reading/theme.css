@@ -40,3 +40,14 @@ body{background-image:radial-gradient(900px 520px at 10% -8%,rgba(30,95,163,.06)
 .rd-card h3{font-size:15px}
 .rd-cn{font-size:12.8px}
 @media(max-width:640px){.rd-tools{padding:9px}.rd-count{width:100%;margin-left:0;text-align:right}}
+
+/* 阅读室：搜索 / 收藏 / 已读 */
+.rd-searchbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.rd-searchbar input{flex:1;min-width:220px;border:1px solid #d5e2ee;border-radius:10px;padding:9px 13px;font:inherit;font-size:13px;background:#fff;color:#1d2b38}
+.rd-searchbar input:focus{outline:none;border-color:#8db4d6;box-shadow:0 0 0 4px rgba(30,106,150,.12)}
+.rd-fav-only,.rd-unread-only{border:1px solid #d5e2ee;background:#fff;color:#4d6275;border-radius:999px;padding:7px 12px;font:inherit;font-size:12px;cursor:pointer}
+.rd-fav-only.active,.rd-unread-only.active{background:#12324f;border-color:#12324f;color:#fff}
+.rd-fav{border:1px solid #d5e2ee;background:#fff;color:#7a8c9d;border-radius:999px;padding:2px 8px;font:inherit;font-size:10px;cursor:pointer;margin-left:auto}
+.rd-fav[aria-pressed="true"]{color:#b8863b;border-color:#dcc39b;background:#fdf8ef}
+.rd-card.is-read{opacity:.72}
+.rd-card.is-read h3 a{color:#6d7f8f}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>搜索 · 初中英语资料站</title>
+<meta name="description" content="搜索初中英语资料站的词汇、词形、写作范文与 SDG 阅读文章。">
+<meta name="theme-color" content="#1a365d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/base.min.css?v=1">
+<link rel="stylesheet" href="assets/refine.min.css?v=2">
+<link rel="stylesheet" href="assets/theme.min.css?v=2">
+<link rel="stylesheet" href="/search-widget.css?v=1">
+<script src="assets/theme.min.js?v=2"></script>
+<script src="/sw-register.js?v=3" defer></script>
+<link rel="manifest" href="/english-materials/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="./index.html" aria-label="初中英语资料站 · 返回首页"><span class="brand-mark" aria-hidden="true">英</span><span class="brand-text"><strong>初中英语资料站</strong><small>人教版 2024 新版</small></span></a>
+  <nav class="site-nav" aria-label="主导航"><a href="./index.html">首页</a><a href="sdgs/">SDG 写作</a><a href="vocab-5-books/">五册词汇</a><a href="essays-7a/">写作范文</a><a class="nav-strong" href="search.html" aria-current="page">搜索</a></nav>
+</div></header>
+<main><section class="section"><div class="container">
+  <div class="section-head"><div><h2>搜索资料</h2><p>输入词汇、词形、范文主题或 SDG 文章关键词；支持中文和英文。</p></div></div>
+  <div class="dsh-page">
+    <div class="dsh-search"><form role="search"><input class="dsh-input" id="siteSearch" type="search" placeholder="例如：environment、七上、范文、poverty…" aria-label="搜索英语资料站"><button class="dsh-btn" type="submit">搜索</button></form>
+    <div class="dsh-results dsh-results--page" id="siteResults" hidden></div></div>
+  </div>
+  <p style="margin:12px 0 0;font-size:12px;color:var(--muted)">搜索范围：站内页面、五册词汇、词形变化、写作范文与 425 篇 SDG 阅读文章。</p>
+</div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><p>初中英语资料站 · 搜索</p><p><a href="./index.html">返回首页</a> · <a href="sdgs/">SDG 文库</a></p></div></footer>
+<script src="/search-widget.js?v=1"></script>
+<script>DshSearch.init({input:'#siteSearch',results:'#siteResults',index:'/english-materials/assets/search-index.json',closeOnClick:false,limit:30});</script>
+</body>
+</html>
