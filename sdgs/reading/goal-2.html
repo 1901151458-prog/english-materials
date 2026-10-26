@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,15 +383,16 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WFP">WFP</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#dda63a"><article class="rd-card" id="rd-1" data-source="Reuters">
-  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-04-29</time></div>
+<div class="rd-grid" style="--goal-c:#dda63a"><article class="rd-card" id="rd-1" data-pick="1" data-source="Reuters">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-04-29</time></div>
   <h3><a href="https://www.reuters.com/world/middle-east/more-than-1-million-lebanon-expected-face-acute-food-insecurity-hunger-monitor-2026-04-29/" target="_blank" rel="noopener">More than 1 million in Lebanon expected to face acute food insecurity, hunger monitor says</a></h3>
   <p class="rd-cn">IPC 表示，家庭将难以满足基本粮食需求。地区冲突推高了燃料和粮食价格。农业部长表示，该行业将需要“数年”时间才能恢复。农民受到连续两年的严重打击……</p>
   <div class="rd-meta"><span>约 384 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/middle-east/more-than-1-million-lebanon-expected-face-acute-food-insecurity-hunger-monitor-2026-04-29/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-2" data-source="The Conversation">
-  <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-free">免费</span><time>2025-11-26</time></div>
+</article><article class="rd-card" id="rd-2" data-pick="1" data-source="The Conversation">
+  <div class="rd-top"><span class="rd-source">The Conversation</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-11-26</time></div>
   <h3><a href="https://theconversation.com/food-insecurity-is-on-the-rise-a-look-at-the-worlds-hunger-hotspots-270581" target="_blank" rel="noopener">Food insecurity is on the rise: a look at the world’s ‘hunger hotspots’</a></h3>
   <p class="rd-cn">2025 年 11 月 12 日，联合国粮食及农业组织 (FAO) 和世界粮食计划署 (WFP) 发布了一份联合报告，对全球粮食安全状况敲响了警钟。两个机构都警告说，“防止数百万人面临严重粮食不安全的窗口正在缩小”。</p>
   <div class="rd-meta"><span>1,013 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/food-insecurity-is-on-the-rise-a-look-at-the-worlds-hunger-hotspots-270581" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,13 +431,13 @@
   <h3><a href="https://news.un.org/en/story/2022/07/1122032" target="_blank" rel="noopener">World is moving backwards on eliminating hunger and malnutrition, UN report reveals</a></h3>
   <p class="rd-cn">联合国报告显示，世界在消除饥饿和营养不良方面正在倒退 — 联合国报告显示，世界在消除饥饿和营养不良方面正在倒退 根据一份新的联合国报告，到 2021 年，全球受饥饿影响的人数将增至 8.28 亿，该报告提供了新的证据，表明世界正在倒退，偏离了结束可持续发展目标</p>
   <div class="rd-meta"><span>1,295 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2022/07/1122032" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-08-05</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-08-05</time></div>
   <h3><a href="https://www.theguardian.com/environment/2026/aug/05/el-nino-could-push-50m-people-acute-hunger-next-year" target="_blank" rel="noopener">El Niño could push 50m people into acute hunger before end of next year</a></h3>
   <p class="rd-cn">据预测，快速发展的厄尔尼诺天气系统可能会在明年底之前使大约 5000 万人陷入严重饥饿。此外，由于非洲部分地区连年干旱，数亿人已经面临危险程度的饥饿。</p>
   <div class="rd-meta"><span>670 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2026/aug/05/el-nino-could-push-50m-people-acute-hunger-next-year" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-11" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2020-08-05</time></div>
+</article><article class="rd-card" id="rd-11" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2020-08-05</time></div>
   <h3><a href="https://www.worldbank.org/en/news/immersive-story/2020/08/06/beyond-the-pandemic-harnessing-the-digital-revolution-to-set-food-systems-on-a-better-course" target="_blank" rel="noopener">Beyond the Pandemic: Harnessing the Digital Revolution to Set Food Systems on a Better Course</a></h3>
   <p class="rd-cn">超越流行病：利用数字革命让粮食系统走上更好的道路 — 作者：Julian Lampietti、Ghada El Abed 和 Kateryna Schroeder [tweetquote:[tweetText=冠状病毒大流行最引人注目的图像之一是农民将牛奶倾倒、砸碎鸡蛋、将蔬菜重新耕种到土壤中，与消费者面对空荡荡的商店货架和食品分配处的长队之间的对比。</p>
   <div class="rd-meta"><span>3,274 词</span><span>·</span><span>约 15 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/immersive-story/2020/08/06/beyond-the-pandemic-harnessing-the-digital-revolution-to-set-food-systems-on-a-better-course" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -445,8 +446,8 @@
   <h3><a href="https://www.reuters.com/world/americas/global-hunger-declines-across-continents-climate-trade-risks-loom-un-says-2026-07-21/" target="_blank" rel="noopener">Global hunger declines across continents but climate, trade risks loom, UN says</a></h3>
   <p class="rd-cn">报告预计，到 2025 年，将有 6.45 亿人面临饥饿，占全球人口的 7.8% 非洲饥饿人口最多，为 3.09 亿人，占非洲人口的五分之一 粮农组织首席经济学家警告说，厄尔尼诺现象...</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/americas/global-hunger-declines-across-continents-climate-trade-risks-loom-un-says-2026-07-21/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-10-20</time></div>
   <h3><a href="https://news.un.org/en/story/2026/10/1168631" target="_blank" rel="noopener">‘One step away from famine’: Inside Afghanistan’s hunger crisis</a></h3>
   <p class="rd-cn">“距离饥荒仅一步之遥”：阿富汗的饥饿危机内部 “距离饥荒仅一步之遥”：阿富汗的饥饿危机内部 在极端饥饿警告之后，阿富汗各地正在展开一个痛苦的现实：食物是可用的，但数百万人仍然无法获得。这是联合国援助协调办公室发言人奥尔加·切列夫科 (Olga Cherevko) 的说法，她刚刚从联合国援助归来。</p>
   <div class="rd-meta"><span>671 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2026/10/1168631" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

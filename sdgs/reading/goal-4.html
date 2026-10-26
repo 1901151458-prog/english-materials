@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,10 +383,11 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNESCO">UNESCO</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#c5192d"><article class="rd-card" id="rd-1" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-09-30</time></div>
+<div class="rd-grid" style="--goal-c:#c5192d"><article class="rd-card" id="rd-1" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-09-30</time></div>
   <h3><a href="https://www.brookings.edu/articles/what-kind-of-brazil-will-emerge-from-this-election/" target="_blank" rel="noopener">What kind of Brazil will emerge from this election?</a></h3>
   <p class="rd-cn">这次选举将会出现什么样的巴西？ — 该合集提供了有关巴西 2026 年选举影响的指南。有关犯罪和安全状况的姊妹篇，请参阅 Vanda Felbab-Brown 的评论：“犯罪和安全成为巴西选举的中心舞台。” 10月4日，巴西将进行第一轮总统大选投票</p>
   <div class="rd-meta"><span>2,957 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/what-kind-of-brazil-will-emerge-from-this-election/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,8 +431,8 @@
   <h3><a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank" rel="noopener">Safe learning environments: Preventing and addressing violence in and around school</a></h3>
   <p class="rd-cn">安全的学习环境：预防和解决学校内及周围的暴力 — 安全的学习环境：预防和解决学校内及周围的暴力 什么是校园暴力？校园暴力非常普遍，在所有国家都有发生，影响大量儿童和青少年。</p>
   <div class="rd-meta"><span>1,451 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/health-education/safe-learning-environments" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="UNESCO">
-  <div class="rd-top"><span class="rd-source">UNESCO</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="UNESCO">
+  <div class="rd-top"><span class="rd-source">UNESCO</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.unesco.org/en/articles/bringing-climate-education-life-schools-hong-kong" target="_blank" rel="noopener">Bringing climate education to life in schools in Hong Kong</a></h3>
   <p class="rd-cn">在所有特色学校中，学生们都在参与将可持续发展带入日常学习的项目。他们探索可再生能源、生物多样性和海洋生态系统，调查当地的小气候，并研究如何使他们的学校变得更加可持续。</p>
   <div class="rd-meta"><span>421 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/articles/bringing-climate-education-life-schools-hong-kong" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -445,8 +446,8 @@
   <h3><a href="https://www.unesco.org/en/digital-education/learning-platforms-gateway/charter" target="_blank" rel="noopener">UNESCO-UNICEF-ITU Charter for Public Digital Learning Platforms</a></h3>
   <p class="rd-cn">联合国教科文组织-联合国儿童基金会-国际电联公共数字学习平台宪章 — 联合国教科文组织-联合国儿童基金会-国际电联公共数字学习平台宪章 关于宪章 联合国教科文组织-联合国儿童基金会-国际电联宪章鼓励各国政府及其合作伙伴建立、改进和维持数字学习平台，支持教育作为一项人权和公共利益。它阐明了数字学习平台的目的</p>
   <div class="rd-meta"><span>462 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unesco.org/en/digital-education/learning-platforms-gateway/charter" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2020-12-02</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2020-12-02</time></div>
   <h3><a href="https://www.worldbank.org/en/topic/education/publication/realizing-future-of-learning-from-learning-poverty-to-learning-for-everyone-everywhere" target="_blank" rel="noopener">Realizing the Future of Learning: From Learning Poverty to Learning for Everyone, Everywhere</a></h3>
   <p class="rd-cn">实现学习的未来：从学习贫困到让每个人、每个地方都有学习 — 未来，学习应该让每个人、每个地方都充满乐趣、有目标、严谨 — 为了指导我们对各国的政策咨询和业务支持，该报告讨论了加速学习所需的政策行动，以及许多成功系统运作方式的特征。 - 这些已呈现</p>
   <div class="rd-meta"><span>264 词</span><span>·</span><span>约 1 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/topic/education/publication/realizing-future-of-learning-from-learning-poverty-to-learning-for-everyone-everywhere" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -455,8 +456,8 @@
   <h3><a href="https://www.worldbank.org/en/news/press-release/2024/05/01/world-bank-announces-new-strategy-to-promote-green-resilient-and-inclusive-development-in-jamaica" target="_blank" rel="noopener">World Bank Announces New Strategy to Promote Green, Resilient and Inclusive Development in Jamaica</a></h3>
   <p class="rd-cn">世界银行宣布促进牙买加绿色、弹性和包容性发展的新战略 — 华盛顿特区，2024 年 5 月 2 日 — 世界银行集团董事会今天批准了与牙买加的新战略伙伴关系。这项2024-2027年期间的新计划侧重于推进绿色、韧性和包容性发展，同时也支持政府的电子发展</p>
   <div class="rd-meta"><span>600 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/press-release/2024/05/01/world-bank-announces-new-strategy-to-promote-green-resilient-and-inclusive-development-in-jamaica" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-15" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2026-01-27</time></div>
+</article><article class="rd-card" id="rd-15" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-01-27</time></div>
   <h3><a href="https://news.un.org/en/audio/2026/01/1166841" target="_blank" rel="noopener">‘We need to dismantle the myths’ surrounding AI in education</a></h3>
   <p class="rd-cn">“我们需要打破围绕人工智能在教育领域的神话” 沙菲卡·艾萨克：在联合国教科文组织，我们已经确定了几个关系重大的神话，如果我们想保护学习的未来，特别是为所有人提供公平和包容的学习，就需要打破这些神话。所以，最大的误区之一就是我们所说的教师替代者</p>
   <div class="rd-meta"><span>2,382 词</span><span>·</span><span>约 11 分钟</span><span class="rd-open"><a href="https://news.un.org/en/audio/2026/01/1166841" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -490,8 +491,8 @@
   <h3><a href="https://www.reuters.com/world/europe/greta-thunberg-joins-french-teens-new-day-school-protests-2026-10-13/" target="_blank" rel="noopener">Greta Thunberg joins French teens on new day of school protests</a></h3>
   <p class="rd-cn">周二，瑞典活动家格蕾塔·通贝里 (Greta Thunberg) 加入了法国高中生的行列，要求更好的学习条件，原本基本和平的封锁和街头游行再次因飞行而受到破坏。</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/world/europe/greta-thunberg-joins-french-teens-new-day-school-protests-2026-10-13/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-22" data-source="OECD">
-  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
+</article><article class="rd-card" id="rd-22" data-pick="1" data-source="OECD">
+  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-10-13</time></div>
   <h3><a href="https://www.oecd.org/en/blogs/2026/10/supporting-low-earners-while-making-work-pay-can-tax-systems-do-both.html" target="_blank" rel="noopener">Supporting low earners while making work pay: can tax systems do both?</a></h3>
   <p class="rd-cn">支持低收入者同时提供工作报酬：税收制度能否做到这两点？ — 经合组织在其最新版《工资征税》中通过研究经合组织国家劳动税的累进性（有效税率增加的程度）阐明了这种平衡行为……</p>
   <div class="rd-meta"><span>约 420 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/blogs/2026/10/supporting-low-earners-while-making-work-pay-can-tax-systems-do-both.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

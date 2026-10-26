@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,6 +383,7 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WRI">WRI</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
 <div class="rd-grid" style="--goal-c:#fcc30b"><article class="rd-card" id="rd-1" data-source="Carbon Brief">
@@ -445,13 +446,13 @@
   <h3><a href="https://www.carbonbrief.org/qa-what-the-draghi-report-says-about-eu-climate-action-and-energy" target="_blank" rel="noopener">Q&amp;A: What the Draghi report says about EU climate action and energy</a></h3>
   <p class="rd-cn">问答：德拉吉报告对欧盟气候行动和能源的看法 — 问答：德拉吉报告对欧盟气候行动和能源的看法 9 月 9 日，人们期待已久的意大利前总理马里奥·德拉吉发布了关于欧盟竞争力的报告。欧洲竞争力报告的未来重点关注气候和能源，制定了联合脱碳和</p>
   <div class="rd-meta"><span>3,256 词</span><span>·</span><span>约 15 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-what-the-draghi-report-says-about-eu-climate-action-and-energy" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2021-03-10</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2021-03-10</time></div>
   <h3><a href="https://news.un.org/en/story/2021/03/1086882" target="_blank" rel="noopener">Recognizing ‘historic tipping point’, UN begins push towards more sustainable energy future</a></h3>
   <p class="rd-cn">认识到“历史性转折点”，联合国开始推动更加可持续的能源未来 — 认识到“历史性转折点”，联合国开始推动更加可持续的能源未来 联合国秘书长周三表示，可再生能源“对于建设可持续、繁荣与和平的未来至关重要”，并加速推动清洁能源和气候行动。 “我们的挑战很明确：实现新的目标</p>
   <div class="rd-meta"><span>681 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2021/03/1086882" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-14" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2024-02-07</time></div>
+</article><article class="rd-card" id="rd-14" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-02-07</time></div>
   <h3><a href="https://www.theguardian.com/environment/2024/feb/08/parliament-house-protest-renewable-energy-plan-barnaby-joyce-pauline-hanson-matt-canavan-craig-kelly" target="_blank" rel="noopener">Reckless or reasonable? Factchecking the claims of anti-renewable activists</a></h3>
   <p class="rd-cn">周二，社区团体、活动人士和政界人士在议会大厦草坪上集会，反对联邦政府计划到 2030 年电网使用 82% 可再生能源。这次抗议活动被称为“鲁莽的可再生能源集会”，其中包括反对气候变化行动的熟悉人士，其中包括</p>
   <div class="rd-meta"><span>1,472 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2024/feb/08/parliament-house-protest-renewable-energy-plan-barnaby-joyce-pauline-hanson-matt-canavan-craig-kelly" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -460,8 +461,8 @@
   <h3><a href="https://news.un.org/en/story/2023/09/1140357" target="_blank" rel="noopener">‘Without renewables, there can be no future’: 5 ways to power the energy transition</a></h3>
   <p class="rd-cn">“没有可再生能源，就没有未来”：推动能源转型的 5 种方式 — “没有可再生能源，就没有未来”：推动能源转型的 5 种方式 联合国秘书长安东尼奥·古特雷斯在国际蓝天清洁空气日之前表示，向可再生能源转型是确保人类生存的关键，因为“没有可再生能源，就没有未来”</p>
   <div class="rd-meta"><span>847 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/09/1140357" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-16" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2024-03-06</time></div>
+</article><article class="rd-card" id="rd-16" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-03-06</time></div>
   <h3><a href="https://www.brookings.edu/articles/harsh-times-north-america-geopolitics-and-the-new-energy-map/" target="_blank" rel="noopener">Harsh times? North America, geopolitics, and the new energy map</a></h3>
   <p class="rd-cn">本章是《2024 年 USMCA 展望》的一部分。中美贸易紧张局势、供应链中断、俄罗斯-乌克兰战争以及全球秩序的整体不稳定，凸显了美国-墨西哥-加拿大协议 (USMCA) 框架在区域层面提供的可预测性的价值。</p>
   <div class="rd-meta"><span>2,428 词</span><span>·</span><span>约 11 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/harsh-times-north-america-geopolitics-and-the-new-energy-map/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -470,8 +471,8 @@
   <h3><a href="https://www.wri.org/insights/pakistan-solar-energy-boom" target="_blank" rel="noopener">The Perfect Storm Fueling Pakistan’s Solar Boom</a></h3>
   <p class="rd-cn">推动巴基斯坦太阳能热潮的完美风暴 虽然能源转型通常被认为是需要长期规划、国际气候融资或产业政策的复杂政治进程，但巴基斯坦证明了不同的故事是可能的。巴基斯坦见证了一场最迅速、最出乎意料的灾难</p>
   <div class="rd-meta"><span>1,771 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/pakistan-solar-energy-boom" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-18" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-05-27</time></div>
+</article><article class="rd-card" id="rd-18" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-05-27</time></div>
   <h3><a href="https://www.worldbank.org/en/news/feature/2025/05/27/improving-healthcare-access-through-renewable-energy" target="_blank" rel="noopener">Improving Healthcare Access Through Renewable Energy</a></h3>
   <p class="rd-cn">通过可再生能源改善医疗服务 — first letter 12 月 23 日星期一，Justinien 医院弥漫着一种正常的感觉；海地北部地区最重要的医院。尽管持续且出人意料的降雨影响了该地区一个多星期，但情况仍然如此。</p>
   <div class="rd-meta"><span>555 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/feature/2025/05/27/improving-healthcare-access-through-renewable-energy" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -490,8 +491,8 @@
   <h3><a href="https://www.theguardian.com/smarter-homes-lower-bills/2026/oct/13/smart-home-guide-how-does-yours-compare" target="_blank" rel="noopener">Welcome to the smart home – how does yours compare?</a></h3>
   <p class="rd-cn">您的智能家居相比如何？ — 准备好探索一个充满科技、居住舒适且节省账单的住宅了吗？进行互动之旅，看看您可以实现什么......</p>
   <div class="rd-meta"><span>1,725 词</span><span>·</span><span>约 8 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/smarter-homes-lower-bills/2026/oct/13/smart-home-guide-how-does-yours-compare" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-22" data-source="Reuters">
-  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2022-05-10</time></div>
+</article><article class="rd-card" id="rd-22" data-pick="1" data-source="Reuters">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2022-05-10</time></div>
   <h3><a href="https://www.reuters.com/newsletters/reuters-power-up/" target="_blank" rel="noopener">Newsletter: Reuters Power Up</a></h3>
   <p class="rd-cn">时事通讯：Reuters Power Up — 您需要了解的有关全球能源行业以及推动向可再生燃料过渡的力量的一切信息。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/newsletters/reuters-power-up/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

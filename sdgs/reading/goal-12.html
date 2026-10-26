@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,15 +383,16 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Phys.org">Phys.org</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNEP">UNEP</button><button type="button" class="rd-filter" data-src="WRI">WRI</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#bf8b2e"><article class="rd-card" id="rd-1" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2024-01-31</time></div>
+<div class="rd-grid" style="--goal-c:#bf8b2e"><article class="rd-card" id="rd-1" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-01-31</time></div>
   <h3><a href="https://www.theguardian.com/environment/2024/jan/31/raw-materials-extraction-2060-un-report" target="_blank" rel="noopener">Extraction of raw materials to rise by 60% by 2060, says UN report</a></h3>
   <p class="rd-cn">根据《卫报》看到的一份未发表的联合国分析报告，到 2060 年，全球原材料开采量预计将增加 60%，这将对气候和环境造成灾难性后果。由于工业化、城市化和人口增长，自 1970 年以来自然资源开采量猛增近 400%</p>
   <div class="rd-meta"><span>760 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2024/jan/31/raw-materials-extraction-2060-un-report" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-2" data-source="Reuters">
-  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2026-07-29</time></div>
+</article><article class="rd-card" id="rd-2" data-pick="1" data-source="Reuters">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-07-29</time></div>
   <h3><a href="https://www.reuters.com/sustainability/society-equity/feeding-circular-economy-rise-upcycled-food--ecmii-2026-07-29/" target="_blank" rel="noopener">Feeding the circular economy: The rise in upcycled food</a></h3>
   <p class="rd-cn">来自汤森路透旗下《Ethical Corporation》杂志的行业洞察。 2025 年，全球升级食品市场规模将达到 668 亿美元，到 2035 年可能会翻一番，占每年生产的食品总量的近五分之一……</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/society-equity/feeding-circular-economy-rise-upcycled-food--ecmii-2026-07-29/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -445,13 +446,13 @@
   <h3><a href="https://www.unep.org/en/what-we-do/food-systems/circular-food-systems/consumer-information-and-sustainable-lifestyles" target="_blank" rel="noopener">Consumer information and sustainable lifestyles</a></h3>
   <p class="rd-cn">可持续生活方式和粮食系统密切相关，因为日常个人选择可以对全球粮食生产和消费模式产生重大影响。然而，成员国和...</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.unep.org/en/what-we-do/food-systems/circular-food-systems/consumer-information-and-sustainable-lifestyles" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2023-07-12</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2023-07-12</time></div>
   <h3><a href="https://www.worldbank.org/en/news/feature/2023/07/12/we-are-losing-our-treasure-the-west-african-coastal-areas-tackle-plastic-waste" target="_blank" rel="noopener">“We are losing our treasure”: the West African coastal areas tackle plastic waste</a></h3>
   <p class="rd-cn">“我们正在失去我们的宝藏”：西非沿海地区处理塑料垃圾 — first letter “这些袋子是达喀尔居民每天使用的 500 万个塑料袋中的一部分，然后将它们丢弃在街上”。莫豆·法尔（又名“莫豆先生”）穿着由从街上收集的塑料垃圾制成的奇特服装。</p>
   <div class="rd-meta"><span>905 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/feature/2023/07/12/we-are-losing-our-treasure-the-west-african-coastal-areas-tackle-plastic-waste" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-14" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2024-07-10</time></div>
+</article><article class="rd-card" id="rd-14" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-07-10</time></div>
   <h3><a href="https://news.un.org/en/story/2024/07/1151931" target="_blank" rel="noopener">Digital boom could well be a bust for the environment, warns UN trade agency</a></h3>
   <p class="rd-cn">联合国贸易机构警告说，数字繁荣很可能会破坏环境 - 联合国贸易机构警告说，数字繁荣很可能破坏环境 您知道生产一台重 2 公斤 (kg) 的计算机需要惊人的 800 公斤原材料吗？或者去年比特币数据挖掘所需的能源达到 121 太瓦——超过了大多数人的消耗量</p>
   <div class="rd-meta"><span>1,064 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/07/1151931" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -500,8 +501,8 @@
   <h3><a href="https://www.carbonbrief.org/qa-how-chinas-two-new-policy-aims-to-help-cut-emissions" target="_blank" rel="noopener">Q&amp;A: How China’s ‘two new’ policy aims to help cut emissions</a></h3>
   <p class="rd-cn">中国山东省青州市一家报废机动车回收企业内待拆解的汽车。图片来源：Sipa US / Alamy Stock Photo。中国中央政府列出...</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/qa-how-chinas-two-new-policy-aims-to-help-cut-emissions" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-24" data-source="OECD">
-  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2021-11-18</time></div>
+</article><article class="rd-card" id="rd-24" data-pick="1" data-source="OECD">
+  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2021-11-18</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-france-2021_289a0a17-en.html" target="_blank" rel="noopener">OECD Economic Surveys: France 2021</a></h3>
   <p class="rd-cn">文章聚焦SDG 12“消费、废弃物与循环经济”，从OECD的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-france-2021_289a0a17-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,10 +383,11 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#fd6925"><article class="rd-card" id="rd-1" data-source="IMF">
-  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2023-11-29</time></div>
+<div class="rd-grid" style="--goal-c:#fd6925"><article class="rd-card" id="rd-1" data-pick="1" data-source="IMF">
+  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2023-11-29</time></div>
   <h3><a href="https://www.imf.org/en/news/articles/2023/11/30/sp-fdmd-remarks-bernhard-harms-prize" target="_blank" rel="noopener">Europe in a Fragmented World</a></h3>
   <p class="rd-cn">下午好。很高兴今天能加入你们的行列。首先，我要感谢 Moritz 和 Sebnem 的热情介绍。 Sebnem 是一位杰出的研究员和亲爱的朋友，我从他那里得到了......</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/news/articles/2023/11/30/sp-fdmd-remarks-bernhard-harms-prize" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,8 +431,8 @@
   <h3><a href="https://www.imf.org/en/blogs/articles/2026/10/15/the-world-cant-afford-to-get-ai-wrong" target="_blank" rel="noopener">The World Can’t Afford to Get AI Wrong</a></h3>
   <p class="rd-cn">人工智能已经到来，并且已经对全球经济产生了深远的影响。流入人工智能的投资规模可能会超过建设铁路、……的巨额资金。</p>
   <div class="rd-meta"><span>约 432 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2026/10/15/the-world-cant-afford-to-get-ai-wrong" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-05-07</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-05-07</time></div>
   <h3><a href="https://www.theguardian.com/brisbane-alive-with-opportunity/2025/may/02/innovation-in-the-sunshine-state-whats-behind-brisbanes-economic-boom" target="_blank" rel="noopener">Innovation in the sunshine state: what’s behind Brisbane’s economic boom?</a></h3>
   <p class="rd-cn">阳光之州的创新：布里斯班经济繁荣的背后是什么？ — 自然资源只是目前布里斯班热闹的原因之一。阳光和亚热带生活方式是布里斯班吸引力的一部分，但非凡的经济增长呢？</p>
   <div class="rd-meta"><span>856 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/brisbane-alive-with-opportunity/2025/may/02/innovation-in-the-sunshine-state-whats-behind-brisbanes-economic-boom" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -460,18 +461,18 @@
   <h3><a href="https://theconversation.com/why-canadas-next-big-infrastructure-investment-should-be-in-biomanufacturing-254377" target="_blank" rel="noopener">Why Canada’s next big infrastructure investment should be in biomanufacturing</a></h3>
   <p class="rd-cn">尽管加拿大在基础设施项目和国防上投资了数十亿美元，但一个关键的投资领域仍然被忽视：生物制造。生物制造是指按照人类使用所需的规模和质量生产疫苗和细胞疗法等生物制品。</p>
   <div class="rd-meta"><span>985 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://theconversation.com/why-canadas-next-big-infrastructure-investment-should-be-in-biomanufacturing-254377" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-16" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-06-16</time></div>
+</article><article class="rd-card" id="rd-16" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-06-16</time></div>
   <h3><a href="https://www.brookings.edu/articles/why-do-we-have-government-regulations-and-how-can-we-improve-them/" target="_blank" rel="noopener">Why do we have government regulations, and how can we improve them?</a></h3>
   <p class="rd-cn">为什么我们有政府法规？我们如何改进它们？ — 关于监管的争论是经济政策中反复出现的一个特征，当政府寻求放松或扩大塑造市场的规则时，往往会重新出现。监管批评者认为，规则可能过于繁重，减缓创新，并给企业带来不必要的成本。</p>
   <div class="rd-meta"><span>4,472 词</span><span>·</span><span>约 20 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/why-do-we-have-government-regulations-and-how-can-we-improve-them/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-17" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2024-10-08</time></div>
+</article><article class="rd-card" id="rd-17" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-10-08</time></div>
   <h3><a href="https://news.un.org/en/story/2024/10/1155446" target="_blank" rel="noopener">Artificial intelligence: rooting out bias and stereotypes</a></h3>
   <p class="rd-cn">人工智能：根除偏见和刻板印象 — 人工智能：根除偏见和刻板印象 随着使用各种形式人工智能的在线工具变得越来越普遍，越来越多的人呼吁采取更多行动，以确保它们不会造成或延续刻板印象和性别偏见。九月联合国大会高级别周期间</p>
   <div class="rd-meta"><span>573 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/10/1155446" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-18" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2019-01-31</time></div>
+</article><article class="rd-card" id="rd-18" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2019-01-31</time></div>
   <h3><a href="https://www.worldbank.org/en/publication/wdr2020" target="_blank" rel="noopener">Trading for Development in the Age of Global Value Chains</a></h3>
   <p class="rd-cn">全球价值链 (GVC) 推动了 1990 年后国际贸易的激增，目前几乎占所有贸易的一半。这一转变实现了前所未有的经济趋同：贫穷国家迅速增长并开始赶上富裕国家。</p>
   <div class="rd-meta"><span>724 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/publication/wdr2020" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,15 +383,16 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Carbon Brief">Carbon Brief</button><button type="button" class="rd-filter" data-src="Mongabay">Mongabay</button><button type="button" class="rd-filter" data-src="Phys.org">Phys.org</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNEP">UNEP</button><button type="button" class="rd-filter" data-src="WRI">WRI</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#3f7e44"><article class="rd-card" id="rd-1" data-source="Reuters">
-  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
+<div class="rd-grid" style="--goal-c:#3f7e44"><article class="rd-card" id="rd-1" data-pick="1" data-source="Reuters">
+  <div class="rd-top"><span class="rd-source">Reuters</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://www.reuters.com/sustainability/cop/brazil-plans-cop30-finance-package-adapting-extreme-weather-2025-10-29/" target="_blank" rel="noopener">Brazil plans COP30 funding deals to address climate adaptation shortfall</a></h3>
   <p class="rd-cn">联合国报告强调到 2035 年气候适应需要 3100 亿美元 COP30 主席旨在制定适应融资方案 尽管美国立场不顾，巴西仍寻求向公众保证气候承诺......</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/cop/brazil-plans-cop30-finance-package-adapting-extreme-weather-2025-10-29/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-2" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
+</article><article class="rd-card" id="rd-2" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-10-29</time></div>
   <h3><a href="https://news.un.org/en/story/2025/10/1166212" target="_blank" rel="noopener">‘Yawning gap’ remains between climate adaptation funds and funding pledges</a></h3>
   <p class="rd-cn">气候适应基金和资金承诺之间仍然存在“巨大差距”联合国周三透露，发展中国家收到的资金还不到其适应日益容易受到极端天气影响的世界所需资金的10%，这将生命、生计和整个经济置于危险之中。这就是妈妈</p>
   <div class="rd-meta"><span>800 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/10/1166212" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,8 +431,8 @@
   <h3><a href="https://www.theguardian.com/environment/2025/feb/19/developing-world-urges-rich-nations-to-defy-trumps-climate-nihilism" target="_blank" rel="noopener">Developing world urges rich nations to defy Trump’s ‘climate nihilism’</a></h3>
   <p class="rd-cn">发展中国家呼吁富裕国家反抗美国总统唐纳德·特朗普，在气候行动上弥合全球分歧，以免将全球气温限制在安全水平的目标无可挽回地落空。来自发展中国家的外交官正在团结起来支持巴西，巴西将主办一场重要的会议</p>
   <div class="rd-meta"><span>1,407 词</span><span>·</span><span>约 6 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/environment/2025/feb/19/developing-world-urges-rich-nations-to-defy-trumps-climate-nihilism" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-02-19</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-02-19</time></div>
   <h3><a href="https://www.worldbank.org/en/country/uzbekistan/publication/state-funds-for-climate-action" target="_blank" rel="noopener">Prime Picks for a Green Pivot: Uzbekistan State Funds for Climate Action</a></h3>
   <p class="rd-cn">乌兹别克斯坦的绿色转型正在推进，但进一步的进展需要政府、国有金融机构（SOFI）和国有企业（SOE）以及私营部门之间加强合作。世界银行的报告《绿色支点的主要选择：乌兹别克斯坦国家气候行动基金》，</p>
   <div class="rd-meta"><span>509 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/uzbekistan/publication/state-funds-for-climate-action" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -445,8 +446,8 @@
   <h3><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">Why Long-Term Climate Strategies Are the Economic Planning Tool Governments Need Right Now</a></h3>
   <p class="rd-cn">为什么长期气候战略是政府现在需要的经济规划工具 — 为什么长期气候战略是政府现在需要的经济规划工具 长期气候战略是实用的经济规划工具，可以帮助政府管理波动、动员投资并使能源转型造福于人民和社区。在地缘政治定义的时代</p>
   <div class="rd-meta"><span>2,068 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.wri.org/insights/long-term-climate-strategies-economic-planning-tools" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-10-14</time></div>
   <h3><a href="https://www.theguardian.com/commentisfree/2026/oct/14/green-politics-environmentalists-action" target="_blank" rel="noopener">For the future of green politics, look beyond the Green party</a></h3>
   <p class="rd-cn">无论是在意义、象征意义还是预兆上。该委员会与其他数百个国家一起宣布 2021 年进入气候紧急状态，同时</p>
   <div class="rd-meta"><span>1,077 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/commentisfree/2026/oct/14/green-politics-environmentalists-action" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -495,8 +496,8 @@
   <h3><a href="https://news.un.org/en/story/2025/10/1166204" target="_blank" rel="noopener">World enters ‘new era’ of climate action – but progress must accelerate</a></h3>
   <p class="rd-cn">在敦促各国加快行动的同时，联合国气候变化执行秘书西蒙·斯蒂尔周二在发布有关最新国家气候的新报告后表达了乐观的基调……</p>
   <div class="rd-meta"><span>533 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/10/1166204" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-23" data-source="Carbon Brief">
-  <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-free">免费</span><time>2022-11-22</time></div>
+</article><article class="rd-card" id="rd-23" data-pick="1" data-source="Carbon Brief">
+  <div class="rd-top"><span class="rd-source">Carbon Brief</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2022-11-22</time></div>
   <h3><a href="https://www.carbonbrief.org/un-climate-chief-plans-shake-up-of-cop-annual-talks-after-criticism" target="_blank" rel="noopener">UN climate chief plans shake-up of COP annual talks after criticism</a></h3>
   <p class="rd-cn">联合国气候变化框架公约负责人西蒙·斯蒂尔表示，他打算审查缔约方会议进程，使其“尽可能有效”。在对此有争议的结论之后......</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.carbonbrief.org/un-climate-chief-plans-shake-up-of-cop-annual-talks-after-criticism" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

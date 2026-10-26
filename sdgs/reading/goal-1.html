@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,10 +383,11 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="UNDP">UNDP</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#e5243b"><article class="rd-card" id="rd-1" data-source="IMF">
-  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2022-04-27</time></div>
+<div class="rd-grid" style="--goal-c:#e5243b"><article class="rd-card" id="rd-1" data-pick="1" data-source="IMF">
+  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2022-04-27</time></div>
   <h3><a href="https://www.imf.org/en/publications/books/issues/2022/10/07/promoting-inclusive-growth-in-the-middle-east-and-north-africa-challenges-and-opportunities-512107" target="_blank" rel="noopener">Promoting Inclusive Growth in the Middle East and North Africa: Challenges and Opportunities in a Post-Pandemic World</a></h3>
   <p class="rd-cn">尽管大流行前在减贫、识字率和寿命方面取得了一些进展，但中东和北非 (MENA) 的许多经济体一直在努力确保经济的好处……</p>
   <div class="rd-meta"><span>约 360 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/publications/books/issues/2022/10/07/promoting-inclusive-growth-in-the-middle-east-and-north-africa-challenges-and-opportunities-512107" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -440,8 +441,8 @@
   <h3><a href="https://www.imf.org/en/blogs/articles/2020/06/11/blog061120-the-global-economic-reset-promoting-a-more-inclusive-recovery" target="_blank" rel="noopener">The Global Economic Reset—Promoting a More Inclusive Recovery</a></h3>
   <p class="rd-cn">政策制定者必须竭尽全力促进更具包容性的复苏，使社会各阶层受益。这就是为什么政策制定者必须尽一切努力促进......</p>
   <div class="rd-meta"><span>约 408 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/blogs/articles/2020/06/11/blog061120-the-global-economic-reset-promoting-a-more-inclusive-recovery" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-12" data-source="OECD">
-  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2019-04-10</time></div>
+</article><article class="rd-card" id="rd-12" data-pick="1" data-source="OECD">
+  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2019-04-10</time></div>
   <h3><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">Social Protection System Review of Indonesia</a></h3>
   <p class="rd-cn">文章聚焦SDG 01“贫困测量、社会保护与再分配”，从OECD的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -450,13 +451,13 @@
   <h3><a href="https://www.imf.org/en/publications/wp/issues/2024/03/08/strengthening-income-stabilization-through-social-protection-in-emerging-and-developing-545498" target="_blank" rel="noopener">Strengthening Income Stabilization through Social Protection in Emerging and Developing Economies: The Brazilian Experience</a></h3>
   <p class="rd-cn">社会保护计划对于稳定家庭收入至关重要，尤其是在危机期间。巴西应对这一流行病的 Auxilio 紧急 (AE) 计划证明了……的价值。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/en/publications/wp/issues/2024/03/08/strengthening-income-stabilization-through-social-protection-in-emerging-and-developing-545498" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-14" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-11-05</time></div>
+</article><article class="rd-card" id="rd-14" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-11-05</time></div>
   <h3><a href="https://news.un.org/en/story/2025/11/1166282" target="_blank" rel="noopener">Not just dreams, but rights: Social justice in focus at Doha summit</a></h3>
   <p class="rd-cn">不仅是梦想，还有权利：多哈峰会聚焦社会正义 — 不仅是梦想，还有权利：多哈峰会聚焦社会正义 将社会正义置于全球政策制定核心的努力成为周三第二届社会发展问题世界峰会的焦点，各国领导人齐聚一堂，召开高级别论坛，推动协调行动，落实新通过的《社会正义宣言》。</p>
   <div class="rd-meta"><span>605 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/11/1166282" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-15" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2026-03-04</time></div>
+</article><article class="rd-card" id="rd-15" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-03-04</time></div>
   <h3><a href="https://www.brookings.edu/articles/wages-and-productivity-in-mexico-under-usmca/" target="_blank" rel="noopener">Wages and productivity in Mexico under USMCA</a></h3>
   <p class="rd-cn">本章是 USMCA 2026 年展望的一部分。本章分析了墨西哥在多大程度上缩小了与美国和加拿大的工资差距。</p>
   <div class="rd-meta"><span>3,172 词</span><span>·</span><span>约 14 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/wages-and-productivity-in-mexico-under-usmca/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -485,8 +486,8 @@
   <h3><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">Two billion women without access to social protection</a></h3>
   <p class="rd-cn">20 亿妇女无法获得社会保障 — 20 亿妇女无法获得社会保障 联合国妇女署的一份报告显示，从现金福利到医疗保健和养老金等各种政策并未惠及足够多的妇女和女童，导致她们在全球范围内更容易陷入贫困。当世界准备纪念国际根除日时</p>
   <div class="rd-meta"><span>470 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2024/10/1155701" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-21" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2025-04-15</time></div>
+</article><article class="rd-card" id="rd-21" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-04-15</time></div>
   <h3><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">KEY FINDINGS Overcoming Poverty and Inequality in the Philippines: Past, Present, and Prospects for the Future</a></h3>
   <p class="rd-cn">主要调查结果 克服菲律宾的贫困和不平等：过去、现在和未来的前景 — 菲律宾在减少贫困方面取得了重大进展，但收入不平等最近才开始下降。由于高增长率和结构转型，1985 年至...</p>
   <div class="rd-meta"><span>631 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/country/philippines/publication/key-findings-overcoming-poverty-and-inequality-in-ph-past-present-and-prospects-for-the-future" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

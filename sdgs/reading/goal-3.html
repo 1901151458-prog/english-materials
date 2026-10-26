@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,10 +383,11 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="ILO">ILO</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="WHO">WHO</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#4c9f38"><article class="rd-card" id="rd-1" data-source="The Guardian">
-  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-free">免费</span><time>2025-12-31</time></div>
+<div class="rd-grid" style="--goal-c:#4c9f38"><article class="rd-card" id="rd-1" data-pick="1" data-source="The Guardian">
+  <div class="rd-top"><span class="rd-source">The Guardian</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-12-31</time></div>
   <h3><a href="https://www.theguardian.com/us-news/2025/dec/31/tracy-beth-hoeg-fda-vaccines" target="_blank" rel="noopener">‘She has no expertise’: the US medical community girds for Tracy Beth Høeg’s tenure at the FDA</a></h3>
   <p class="rd-cn">随着美国继续对其疫苗接种建议做出前所未有的改变，一个数字出人意料地出现：特雷西·贝丝·赫格 (Tracy Beth Høeg)，一位丹麦裔美国运动医生和流行病学家，她最初因对新冠疫苗在大流行中的怀疑而出名，并关注新冠疫苗接种后可能出现的死亡问题。</p>
   <div class="rd-meta"><span>1,593 词</span><span>·</span><span>约 7 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/us-news/2025/dec/31/tracy-beth-hoeg-fda-vaccines" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,8 +431,8 @@
   <h3><a href="https://theconversation.com/public-healthcare-and-contracting-out-can-it-work-global-review-presents-some-answers-274464" target="_blank" rel="noopener">Public healthcare and contracting out: can it work? Global review presents some answers</a></h3>
   <p class="rd-cn">确保每个人在需要时都能获得优质、负担得起的医疗保健——是可持续发展目标的具体目标之一。但实现这一目标的进展却难以捉摸，特别是在发展中国家。</p>
   <div class="rd-meta"><span>1,068 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://theconversation.com/public-healthcare-and-contracting-out-can-it-work-global-review-presents-some-answers-274464" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2021-05-05</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2021-05-05</time></div>
   <h3><a href="https://www.brookings.edu/articles/designing-a-public-option-that-would-reduce-health-care-provider-prices/" target="_blank" rel="noopener">Designing a public option that would reduce health care provider prices</a></h3>
   <p class="rd-cn">编者注：本分析是南加州大学-布鲁金斯学会谢弗健康政策倡议的一部分，该倡议是布鲁金斯学会经济研究中心和南加州大学谢弗健康政策与经济中心之间的合作伙伴关系。该倡议旨在通过 rigo 为全国医疗保健辩论提供信息</p>
   <div class="rd-meta"><span>6,162 词</span><span>·</span><span>约 28 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/designing-a-public-option-that-would-reduce-health-care-provider-prices/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -440,13 +441,13 @@
   <h3><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-drops-covid-vaccine-recommendations-healthy-children-pregnant-women-2025-05-27/" target="_blank" rel="noopener">US drops COVID vaccine recommendation for healthy kids, pregnant women</a></h3>
   <p class="rd-cn">疾病预防控制中心停止为孕妇和健康儿童推荐新冠疫苗 疾病预防控制中心的新疫苗建议没有咨询顾问 FDA 专员声称没有证据表明在...</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-drops-covid-vaccine-recommendations-healthy-children-pregnant-women-2025-05-27/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-12" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2023-12-26</time></div>
+</article><article class="rd-card" id="rd-12" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2023-12-26</time></div>
   <h3><a href="https://news.un.org/en/story/2023/12/1145092" target="_blank" rel="noopener">2023 marked by achievements and &#x27;avoidable suffering&#x27;: WHO chief</a></h3>
   <p class="rd-cn">世界卫生组织（WHO）总干事周二表示，2023年以成就和“可避免的痛苦”为标志 世界卫生组织（WHO）总干事周二表示，2023年以成就和“可避免的痛苦”为标志 世界卫生组织（WHO）总干事周二表示，过去的一年见证了全球公共卫生领域的重大里程碑和挑战，但也带来了巨大的、可避免的痛苦。回顾 2023 年，这也是联合国机构成立 75 周年</p>
   <div class="rd-meta"><span>618 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2023/12/1145092" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-13" data-source="WHO">
-  <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-free">免费</span><time>2025-06-24</time></div>
+</article><article class="rd-card" id="rd-13" data-pick="1" data-source="WHO">
+  <div class="rd-top"><span class="rd-source">WHO</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-06-24</time></div>
   <h3><a href="https://www.who.int/teams/health-workforce/health-workers" target="_blank" rel="noopener">World Health Assembly resolutions and decisions</a></h3>
   <p class="rd-cn">要点 强大的初级卫生保健系统依赖于一支能够在不同环境下提供持续、以人为本的服务的综合卫生和护理人员队伍。随着各国面临劳动力短缺以及与老龄化、残疾和慢性病相关的护理需求不断增长，</p>
   <div class="rd-meta"><span>1,074 词</span><span>·</span><span>约 5 分钟</span><span class="rd-open"><a href="https://www.who.int/teams/health-workforce/health-workers" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -470,8 +471,8 @@
   <h3><a href="https://www.reuters.com/sustainability/" target="_blank" rel="noopener">Sustainable Business News | Latest Eco Headlines | Reuters</a></h3>
   <p class="rd-cn">随着 OpenAI 高管公开呼吁制定联邦人工智能安全规则，该公司总裁资助的一个政治团体正在花费数百万美元选举反对......</p>
   <div class="rd-meta"><span>约 384 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.reuters.com/sustainability/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-18" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2024-10-31</time></div>
+</article><article class="rd-card" id="rd-18" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2024-10-31</time></div>
   <h3><a href="https://www.worldbank.org/en/results/2024/11/01/transforming-health-the-world-bank-s-shift-from-crisis-response-to-building-health-system-resilience-in-latin-america-a" target="_blank" rel="noopener">Transforming Health: The World Bank&#x27;s Shift from Crisis Response to Building Health System Resilience in Latin America and the Caribbean</a></h3>
   <p class="rd-cn">卫生转型：世界银行从应对危机转向增强拉丁美洲和加勒比地区卫生系统的抵御能力 — 故事亮点 — COVID-19 应对：从 2020 年 3 月到 2022 年 2 月，世界银行拨款超过 14 亿美元用于加强大流行病防备，使拉丁美洲和加勒比地区 (LAC) 22 个国家的数百万人直接受益，其中包括 100 万维恩人</p>
   <div class="rd-meta"><span>2,765 词</span><span>·</span><span>约 13 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/results/2024/11/01/transforming-health-the-world-bank-s-shift-from-crisis-response-to-building-health-system-resilience-in-latin-america-a" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>

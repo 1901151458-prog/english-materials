@@ -351,7 +351,7 @@
 .idx-card p{margin:5px 0 0;font-size:11.5px;line-height:1.7;color:#667a8b}
 .idx-count{margin-left:auto;font-family:var(--font-sans);font-size:10.5px;color:#8093a4;white-space:nowrap}
 </style>
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 <link rel="stylesheet" href="../../assets/theme.min.css?v=2">
 <script src="../../assets/theme.min.js?v=2"></script>
 <script src="/sw-register.js?v=3" defer></script>
@@ -383,10 +383,11 @@
 <div class="rd-tools"><span class="rd-tools-label">来源筛选</span>
 <button type="button" class="rd-filter active" data-src="all">全部</button>
 <button type="button" class="rd-filter" data-src="Brookings">Brookings</button><button type="button" class="rd-filter" data-src="IMF">IMF</button><button type="button" class="rd-filter" data-src="OECD">OECD</button><button type="button" class="rd-filter" data-src="Reuters">Reuters</button><button type="button" class="rd-filter" data-src="The Conversation">The Conversation</button><button type="button" class="rd-filter" data-src="The Guardian">The Guardian</button><button type="button" class="rd-filter" data-src="UN News">UN News</button><button type="button" class="rd-filter" data-src="World Bank">World Bank</button>
+<button type="button" class="rd-filter rd-pick-filter" id="rdPickOnly" aria-pressed="false">只看精选</button>
 <span class="rd-count" id="rdCount">25 篇</span></div>
 <div class="summary-box"><b>怎么读：</b>先看中文速览判断是否与你的题目相关，再点原文核对数据与语境。字数与阅读时间按英文正文估算（约 220 词/分钟）；标“约”的是因原文抓取失败而按摘要估算的字数。部分站点可能要求注册，但均可免费阅读。</div>
-<div class="rd-grid" style="--goal-c:#dd1367"><article class="rd-card" id="rd-1" data-source="IMF">
-  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-free">免费</span><time>2016-08-31</time></div>
+<div class="rd-grid" style="--goal-c:#dd1367"><article class="rd-card" id="rd-1" data-pick="1" data-source="IMF">
+  <div class="rd-top"><span class="rd-source">IMF</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2016-08-31</time></div>
   <h3><a href="https://www.imf.org/external/pubs/ft/fandd/2016/09/book3.htm" target="_blank" rel="noopener">Capital without Borders: Wealth Managers and the One Percent</a></h3>
   <p class="rd-cn">《资本无国界：财富管理者和百分之一的人》 — 哈佛大学出版社，马萨诸塞州剑桥，2016 年，358 页，22.95 美元（布质）。畅销书作家约翰·格里沙姆（John Grisham）在坐下来写小说之前就以细致的研究而闻名。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.imf.org/external/pubs/ft/fandd/2016/09/book3.htm" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -430,8 +431,8 @@
   <h3><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">Social Protection System Review of Indonesia</a></h3>
   <p class="rd-cn">文章聚焦SDG 10“财富、税收与再分配”，从OECD的报道/研究视角提供案例、数据或政策分析，可作为议论文论据与背景阅读。</p>
   <div class="rd-meta"><span>约 350 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/social-protection-system-review-of-indonesia_788e9d71-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-10" data-source="World Bank">
-  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-free">免费</span><time>2021-06-09</time></div>
+</article><article class="rd-card" id="rd-10" data-pick="1" data-source="World Bank">
+  <div class="rd-top"><span class="rd-source">World Bank</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2021-06-09</time></div>
   <h3><a href="https://www.worldbank.org/en/news/press-release/2021/06/10/philippines-mandanas-ruling-provides-opportunities-for-improving-service-delivery-through-enhanced-decentralization" target="_blank" rel="noopener">PHILIPPINES: Mandanas Ruling Provides Opportunities for Improving Service Delivery Through Enhanced Decentralization</a></h3>
   <p class="rd-cn">菲律宾：曼达纳斯裁决为通过加强权力下放改善服务提供提供了机会 — 马尼拉，2021 年 6 月 10 日 – 随着该国开始实施，解决地方政府单位 (LGU) 之间财政资源不平等问题、提高地方政府单位的能力以及增强透明度和问责制是改善权力下放的关键</p>
   <div class="rd-meta"><span>693 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://www.worldbank.org/en/news/press-release/2021/06/10/philippines-mandanas-ruling-provides-opportunities-for-improving-service-delivery-through-enhanced-decentralization" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -440,8 +441,8 @@
   <h3><a href="https://www.theguardian.com/us-news/ng-interactive/2026/oct/02/midterm-races-control-congress-charts-visuals" target="_blank" rel="noopener">The US midterm races that will decide control of Congress – mapped</a></h3>
   <p class="rd-cn">将决定国会控制权的美国中期选举 - 绘制 - 阿尔瓦罗·多明格斯和安吉丽卡·阿尔佐纳/卫报设计/盖蒂图片社 将决定国会控制权的美国中期选举 -绘制这些图表解释了民主党需要采取什么措施来扭转参议院和众议院的局面 唐纳德·特朗普第二任期的转折点即将到来。 11 月 3 日，v</p>
   <div class="rd-meta"><span>2,042 词</span><span>·</span><span>约 9 分钟</span><span class="rd-open"><a href="https://www.theguardian.com/us-news/ng-interactive/2026/oct/02/midterm-races-control-congress-charts-visuals" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-12" data-source="Brookings">
-  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-free">免费</span><time>2015-02-04</time></div>
+</article><article class="rd-card" id="rd-12" data-pick="1" data-source="Brookings">
+  <div class="rd-top"><span class="rd-source">Brookings</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2015-02-04</time></div>
   <h3><a href="https://www.brookings.edu/articles/whats-really-happening-to-wealth-inequality/" target="_blank" rel="noopener">What’s Really Happening to Wealth Inequality?</a></h3>
   <p class="rd-cn">美国的金融不平等正在加剧，但增长的大部分集中在顶层。这不是“贫富”差距的扩大，而是“富人与其他人”的差距。</p>
   <div class="rd-meta"><span>847 词</span><span>·</span><span>约 4 分钟</span><span class="rd-open"><a href="https://www.brookings.edu/articles/whats-really-happening-to-wealth-inequality/" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -475,13 +476,13 @@
   <h3><a href="https://theconversation.com/bad-wealth-made-good-how-to-tackle-britains-twin-faultlines-of-low-growth-and-rising-inequality-269218" target="_blank" rel="noopener">Bad wealth made good: how to tackle Britain’s twin faultlines of low growth and rising inequality</a></h3>
   <p class="rd-cn">在 2024 年大选前夕，未来的首相凯尔·斯塔默 (Keir Starmer) 将创造财富列为工党的首要使命。 “这是我们国家前进的唯一途径，”他宣称。</p>
   <div class="rd-meta"><span>3,860 词</span><span>·</span><span>约 18 分钟</span><span class="rd-open"><a href="https://theconversation.com/bad-wealth-made-good-how-to-tackle-britains-twin-faultlines-of-low-growth-and-rising-inequality-269218" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-19" data-source="OECD">
-  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-free">免费</span><time>2026-01-06</time></div>
+</article><article class="rd-card" id="rd-19" data-pick="1" data-source="OECD">
+  <div class="rd-top"><span class="rd-source">OECD</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2026-01-06</time></div>
   <h3><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-portugal-2026_025b3445-en.html" target="_blank" rel="noopener">OECD Economic Surveys: Portugal 2026</a></h3>
   <p class="rd-cn">经合组织经济调查：葡萄牙 2026 — 关键矿产已成为经济安全的核心，因为它们对于能源和数字转型、国防和先进制造业至关重要 工作的未来 工作世界正在发生变化......</p>
   <div class="rd-meta"><span>约 372 词</span><span>·</span><span>约 2 分钟</span><span class="rd-open"><a href="https://www.oecd.org/en/publications/oecd-economic-surveys-portugal-2026_025b3445-en.html" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
-</article><article class="rd-card" id="rd-20" data-source="UN News">
-  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-free">免费</span><time>2025-07-01</time></div>
+</article><article class="rd-card" id="rd-20" data-pick="1" data-source="UN News">
+  <div class="rd-top"><span class="rd-source">UN News</span><span class="rd-pick">精选</span><span class="rd-free">免费</span><time>2025-07-01</time></div>
   <h3><a href="https://news.un.org/en/story/2025/07/1165146" target="_blank" rel="noopener">Spain and Brazil push global action to tax the super-rich and curb inequality</a></h3>
   <p class="rd-cn">西班牙和巴西推动全球行动，对超级富豪征税并遏制不平等 西班牙和巴西推动全球行动，对超级富豪征税并遏制不平等 西班牙和巴西发起了一项联合倡议，促进全球超级富豪提高税收贡献，旨在通过确保最富有的人缴纳公平份额来解决日益严重的不平等问题。在联合国第四届国际会议期间提出</p>
   <div class="rd-meta"><span>555 词</span><span>·</span><span>约 3 分钟</span><span class="rd-open"><a href="https://news.un.org/en/story/2025/07/1165146" target="_blank" rel="noopener">阅读原文 ↗</a></span></div>
@@ -515,6 +516,6 @@
 </div></section>
 </main>
 <footer class="sdg-footer"><div class="sdg-wrap"><div><strong>SDG 国际阅读室</strong><br>17 个目标 · 每个目标 25 篇</div><div><a href="./index.html?v=25">阅读室首页</a> · <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener">联合国 SDG 官网 ↗</a></div></div></footer>
-<script src="reading-filter.min.js?v=2"></script>
+<script src="reading-filter.min.js?v=3"></script>
 </body>
 </html>
