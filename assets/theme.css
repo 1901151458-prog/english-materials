@@ -469,3 +469,7 @@ a:focus-visible,button:focus-visible,.theme-toggle:focus-visible{outline:3px sol
 .card{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 html[data-theme="light"] .card:hover{border-color:#9bbbd6;box-shadow:0 14px 34px rgba(22,55,82,.10)}
 html[data-theme="dark"] .card:hover{border-color:var(--blue)}
+
+/* 深色主题：筛选按钮白字对比 */
+html[data-theme="dark"] .gf-btn.is-on{background:#1e5fa3;border-color:#1e5fa3;color:#fff}
+html[data-theme="dark"] .gf-btn.is-on:hover{background:#2673c2;border-color:#2673c2}
