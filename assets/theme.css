@@ -402,3 +402,36 @@ html[data-theme="dark"] .essay-card summary,
 html[data-theme="dark"] .essay-card .block-no,
 html[data-theme="dark"] .analysis-title,
 html[data-theme="dark"] .trans-title{filter:brightness(1.45)}
+
+/* SDG 长文详页 */
+html[data-theme="dark"] .essay-body blockquote{
+  background:linear-gradient(180deg,#142a3a,#10202c) !important;
+  border-left-color:var(--sdg-blue) !important;
+  color:#c5d6e4 !important;
+}
+html[data-theme="dark"] .essay-stat{
+  background:#132433 !important;
+  border-color:#2a4054 !important;
+}
+html[data-theme="dark"] .essay-stat b{color:#8ec5ec !important}
+html[data-theme="dark"] .essay-stat span{color:#9fb4c6 !important}
+html[data-theme="dark"] .side-card{
+  background:linear-gradient(180deg,#142433,#111e2a) !important;
+  border-color:#2a4054 !important;
+}
+html[data-theme="dark"] .side-card h3{color:#8ec5ec !important}
+html[data-theme="dark"] .side-card p,
+html[data-theme="dark"] .side-card li{color:#b9cbd9 !important}
+html[data-theme="dark"] .side-card .map b{color:#d6e7f4 !important}
+html[data-theme="dark"] .zh-toggle{
+  background:#142433 !important;
+  border-color:#34516a !important;
+  color:#a9d0ec !important;
+}
+html[data-theme="dark"] .zh-toggle:hover{background:#1a3043 !important;border-color:#6c9cc0 !important}
+html[data-theme="dark"] .zh-toggle.on{background:#24577f !important;border-color:#2f7eac !important;color:#fff !important}
+html[data-theme="dark"] .zh-block{border-top-color:#2a4054 !important}
+html[data-theme="dark"] .zh-block h2{color:#eaf4fd !important}
+html[data-theme="dark"] .zh-block p{color:#c3d3e2 !important}
+html[data-theme="dark"] .zh-note{color:#93a9bc !important;border-top-color:#2a4054 !important}
+html[data-theme="dark"] .zh-mark{color:#e3b96b !important}
