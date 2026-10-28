@@ -225,3 +225,6 @@ button{font-family:inherit}
   .site-nav a:not(.nav-strong){display:none}
   .site-nav .nav-strong{margin-left:0;padding:8px 14px;font-size:13px}
 }
+
+/* hidden attribute must win over .card/.btn display rules */
+[hidden]{display:none!important}
