@@ -1072,3 +1072,13 @@ body.hide-mean .word-row.revealed td { background: #fffdf3; }
 
   a[href]::after { content: none !important; }
 }
+
+/* 深色主题：册标题条原来沿用浅色渐变，浅蓝字在浅色底上发灰/发糊 */
+html[data-theme="dark"] .volume-head{
+  background:linear-gradient(90deg,rgba(125,183,232,.12),rgba(125,183,232,0));
+  border-bottom-color:var(--line);
+}
+html[data-theme="dark"] .volume-title,
+html[data-theme="dark"] .vol-name{color:#e7eff7}
+html[data-theme="dark"] .volume-meta{color:#a9c0d2}
+html[data-theme="dark"] .vol-badge{color:#08131d}
