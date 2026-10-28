@@ -404,7 +404,8 @@
 (function(){
   var bar=document.getElementById('gradeFilter');
   if(!bar) return;
-  var cards=Array.prototype.slice.call(document.querySelectorAll('#materials .cards .card'));
+  var cards=Array.prototype.slice.call(document.querySelectorAll('#materials .cards > a.card'));
+  var ghost=document.querySelector('#materials .card-ghost');
   cards.forEach(function(card){
     var tag=(card.querySelector('.card-tag')||{}).textContent||'';
     var mg=tag.match(/([七八九])年级([上下])册/);
@@ -416,6 +417,7 @@
   if(nav) document.documentElement.style.setProperty('--nav-h',nav.offsetHeight+'px');
   function apply(g){
     var shown=0;
+    if(ghost) ghost.style.display=(g==='all')?'':'none';
     cards.forEach(function(card){
       var on=g==='all'||card.dataset.grade===g;
       card.hidden=!on; card.style.display=on?'':'none'; if(on) shown++;
