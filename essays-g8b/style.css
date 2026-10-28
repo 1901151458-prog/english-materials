@@ -1208,3 +1208,8 @@ body.hide-cn .trans-text {
   }
   a[href]::after { content: none !important; }
 }
+
+/* 深色：A/B 组解析标题使用深色强调色，在深底上对比不足 */
+html[data-theme="dark"] .group-a .essay-extra summary{color:#f2b39a}
+html[data-theme="dark"] .group-b .essay-extra summary{color:#8fd6cf}
+html[data-theme="dark"] .essay-extra summary::before{color:var(--muted)}
