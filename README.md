@@ -198,5 +198,6 @@ git push
 | 资料 | 适用 | 内容 | 在线页面 | PDF |
 | --- | --- | --- | --- | --- |
 | 宾语从句专项 | 九年级上册 | 6 讲语法 + 48 道分级练习，配合 Unit 3 / Unit 4 | [打开](https://1901151458-prog.github.io/english-materials/object-clauses-g9/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-object-clauses.pdf) |
+| It is 句型专项 | 九年级上册 | 6 讲语法 + 48 道分级练习，配合 Unit 2 Inspiring People | [打开](https://1901151458-prog.github.io/english-materials/it-pattern-g9/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-it-patterns.pdf) |
 
-宾语从句专项同时提供 LaTeX 源码：`object-clauses-g9/object-clauses.tex`，可用 `xelatex` 编译。
+两个语法专项都提供 LaTeX 源码：`object-clauses-g9/object-clauses.tex` 与 `it-pattern-g9/it-patterns.tex`，可用 `xelatex` 编译。
