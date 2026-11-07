@@ -387,3 +387,11 @@ html[data-theme="dark"] .rg-card { background: var(--card); }
 .s-note { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.7; }
 .s-note .n-label { display: inline-block; margin: 0 4px 0 8px; padding: 0 5px; border-radius: 4px; background: var(--blue-soft); color: var(--blue); font-size: 11px; font-weight: 700; vertical-align: 1px; }
 .s-note .n-label:first-child { margin-left: 0; }
+
+/* 中英文全文大意 */
+.summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.summary-card { border: 1px solid var(--line); border-radius: 10px; padding: 13px 15px; background: #fbfdff; }
+html[data-theme="dark"] .summary-card { background: var(--card); }
+.summary-label { margin: 0 0 5px; font-size: 12px; font-weight: 700; letter-spacing: .05em; color: var(--blue); }
+.summary-card p:last-child { margin: 0; font-size: 13.5px; line-height: 1.9; color: var(--ink-2); }
+@media (max-width: 760px) { .summary-grid { grid-template-columns: 1fr; } }
