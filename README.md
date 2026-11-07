@@ -192,3 +192,11 @@ git push
 ## 许可证
 
 内容用于教学与学习；代码部分可自由使用。教材内容版权归人民教育出版社所有。
+
+## 语法专题
+
+| 资料 | 适用 | 内容 | 在线页面 | PDF |
+| --- | --- | --- | --- | --- |
+| 宾语从句专项 | 九年级上册 | 6 讲语法 + 48 道分级练习，配合 Unit 3 / Unit 4 | [打开](https://1901151458-prog.github.io/english-materials/object-clauses-g9/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-object-clauses.pdf) |
+
+宾语从句专项同时提供 LaTeX 源码：`object-clauses-g9/object-clauses.tex`，可用 `xelatex` 编译。
