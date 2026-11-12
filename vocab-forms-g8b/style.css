@@ -140,6 +140,14 @@ body {
   gap: 12px;
   margin-top: 24px;
 }
+
+.pdf-note {
+  margin: 10px 0 0;
+  color: var(--ink-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
 .page-actions .btn {
   min-height: 42px;
 }
