@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>语法总复习 · 全六册总入口 | 初中英语资料站</title>
+<meta name="description" content="人教版（新课纲版）初中英语语法总复习总入口：七上到九下六册语法板块集中在一页，41 讲、61 张表格、6 张 A4 速查表、24 个专项 1152 题，附跨册语法线索与全部可打印 PDF。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="初中英语资料站">
+<meta property="og:title" content="语法总复习 · 全六册总入口">
+<meta property="og:description" content="六册语法板块一页看全：41 讲 + 6 张速查表 + 24 个专项 1152 题 + 349 页合订本。">
+<meta name="theme-color" content="#1a365d">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/base.min.css?v=2">
+<link rel="stylesheet" href="../assets/refine.min.css?v=3">
+<link rel="stylesheet" href="../assets/theme.min.css?v=3">
+<script src="../assets/theme.min.js?v=2"></script>
+<script src="/sw-register.js?v=4" defer></script>
+<style>
+/* ===== 语法总入口 · 页面专属 ===== */
+.g-stats{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.g-stats li{display:flex;align-items:baseline;gap:6px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:13px;color:var(--muted)}
+.g-stats b{font-size:17px;color:var(--ink);font-weight:800}
+
+.quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 0}
+.quick a{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
+.quick a:hover{border-color:var(--blue);box-shadow:0 8px 22px rgba(30,95,163,.10);transform:translateY(-2px)}
+.quick .q-k{font-size:11.5px;letter-spacing:.04em;color:var(--blue);font-weight:700}
+.quick .q-t{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.45}
+.quick .q-d{font-size:12.5px;color:var(--muted);line-height:1.65}
+
+.bk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0 0}
+.bk{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:20px 22px}
+.bk-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.bk-top h3{margin:0;font-size:17px}
+.bk-meta{font-size:12px;color:var(--muted)}
+.bk-meta b{color:var(--ink)}
+.bk-warn{margin:0 0 12px;padding:8px 11px;border:1px solid #e11d48;border-radius:8px;background:rgba(225,29,72,.08);font-size:11.5px;line-height:1.6;color:#e11d48;font-weight:600}
+.sec-title{font-size:12px;color:var(--muted);margin:14px 0 7px;letter-spacing:.04em;font-weight:700}
+.sec-title:first-of-type{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips a{display:inline-block;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:color-mix(in srgb,var(--bg) 60%,transparent);font-size:12.5px;color:var(--ink);text-decoration:none;line-height:1.4;transition:border-color .12s ease,color .12s ease}
+.chips a:hover{border-color:var(--blue);color:var(--blue)}
+.chips a .n{color:var(--muted);font-size:11px;margin-right:4px}
+.bk-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.bk-links a{font-size:12.5px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);text-decoration:none;color:var(--blue);background:transparent}
+.bk-links a:hover{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 8%,transparent)}
+.bk-links a.pri{background:var(--blue);border-color:var(--blue);color:#fff}
+
+.trace{margin:22px 0 0;display:flex;flex-direction:column;gap:12px}
+.tr-row{display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.tr-name{font-size:13.5px;font-weight:800;color:var(--ink);line-height:1.5}
+.tr-name small{display:block;font-weight:400;font-size:11px;color:var(--muted);margin-top:3px}
+.tr-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.tr-flow a{display:inline-flex;align-items:baseline;gap:5px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;text-decoration:none;color:var(--ink);background:color-mix(in srgb,var(--bg) 55%,transparent)}
+.tr-flow a:hover{border-color:var(--blue);color:var(--blue)}
+.tr-flow a i{font-style:normal;font-size:10.5px;color:var(--muted);font-weight:700}
+.tr-flow .arw{color:var(--line-strong);font-size:12px}
+.tr-flow a.last{border-color:var(--blue);color:var(--blue);font-weight:600}
+
+.dl-wrap{margin:22px 0 0;overflow-x:auto}
+.dl-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+.dl-tbl th,.dl-tbl td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+.dl-tbl th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.03em;white-space:nowrap}
+.dl-tbl td a{color:var(--blue);text-decoration:none}
+.dl-tbl td a:hover{text-decoration:underline}
+.dl-tbl tr:hover td{background:color-mix(in srgb,var(--blue) 4%,transparent)}
+
+.usage{margin:22px 0 0;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.usage ol,.usage ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.95;color:var(--muted)}
+.usage b{color:var(--ink)}
+
+@media(max-width:900px){.quick{grid-template-columns:1fr}.bk-grid{grid-template-columns:1fr}.tr-row{grid-template-columns:1fr;gap:9px}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="初中英语资料站 · 返回首页">
+      <span class="brand-mark" aria-hidden="true">英</span>
+      <span class="brand-text"><strong>初中英语资料站</strong><small>人教版 新课纲版</small></span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="./index.html" aria-current="page">语法总复习</a>
+      <a href="#books">六册</a>
+      <a href="#trace">语法线索</a>
+      <a href="#downloads">打印版</a>
+      <a class="nav-strong" href="#books">开始</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <nav class="breadcrumb" aria-label="面包屑">
+      <a href="../index.html">首页</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span aria-current="page">语法总复习</span>
+    </nav>
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>语法 · 全六册总入口</p>
+      <h1 id="page-title">初中英语语法总复习</h1>
+      <p class="page-subtitle">人教版（新课纲版）· 七年级上册 → 九年级下册 · 按教材书末 Grammar 附录整理</p>
+      <p class="page-lead">六册语法板块集中在这一页：每册的 <b>语法总结</b>（按讲）、<b>A4 速查表</b>、<b>4 个专项练习</b>，以及可打印的 <b>总结 PDF / 专项讲义 / 合订本</b>。下面的「语法线索」把同一考点跨册串起来，复习时可以先看线索，再进对应那一讲。</p>
+      <ul class="g-stats">
+        <li><b>6</b> 册</li>
+        <li><b>41</b> 讲</li>
+        <li><b>61</b> 张表格</li>
+        <li><b>24</b> 个专项</li>
+        <li><b>1152</b> 道分级题</li>
+        <li><b>349</b> 页合订本</li>
+      </ul>
+      <div class="page-actions">
+        <a class="btn btn-primary" href="../assets/pdf/grammar-all-book.pdf" download>下载总复习合订本</a>
+        <a class="btn btn-ghost" href="#trace">看语法线索</a>
+        <a class="btn btn-ghost" href="#downloads">全部打印版</a>
+      </div>
+    </section>
+
+    <div class="quick">
+      <a href="../assets/pdf/grammar-all-book.pdf" download>
+        <span class="q-k">一次下全</span>
+        <span class="q-t">总复习合订本（349 页）</span>
+        <span class="q-d">六册 41 讲 + 6 张速查表 + 24 个专项，含总目录与「册 → 部分」两级书签。</span>
+      </a>
+      <a href="#books">
+        <span class="q-k">按册找</span>
+        <span class="q-t">六册语法总结</span>
+        <span class="q-d">每册按教材附录顺序分讲，点板块名直接跳到对应讲；每册另配一页纸速查表。</span>
+      </a>
+      <a href="../assets/pdf/grammar-all-book.pdf" download>
+        <span class="q-k">刷题</span>
+        <span class="q-t">24 个专项 · 1152 题</span>
+        <span class="q-d">每册 4 个专项、每个 48 题、6 级递进；网页可在线作答，PDF 带答案与解析。</span>
+      </a>
+    </div>
+
+    <section class="section" id="books" aria-labelledby="h-books">
+      <div class="section-head">
+        <div>
+          <h2 id="h-books">六册语法板块</h2>
+          <p>按教材顺序排列。点板块名跳到该讲；每册底部是速查表、4 个专项与打印版入口。</p>
+        </div>
+      </div>
+
+      <div class="bk-grid">
+
+        <!-- 七上 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>七年级上册</h3>
+            <span class="bk-meta"><b>9</b> 讲 · <b>12</b> 表</span>
+          </div>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g7a-grammar/#lesson-1"><span class="n">01</span>词类</a>
+            <a href="../g7a-grammar/#lesson-2"><span class="n">02</span>名词</a>
+            <a href="../g7a-grammar/#lesson-3"><span class="n">03</span>冠词</a>
+            <a href="../g7a-grammar/#lesson-4"><span class="n">04</span>代词</a>
+            <a href="../g7a-grammar/#lesson-5"><span class="n">05</span>数词</a>
+            <a href="../g7a-grammar/#lesson-6"><span class="n">06</span>动词</a>
+            <a href="../g7a-grammar/#lesson-7"><span class="n">07</span>介词</a>
+            <a href="../g7a-grammar/#lesson-8"><span class="n">08</span>一般现在时</a>
+            <a href="../g7a-grammar/#lesson-9"><span class="n">09</span>句子种类</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题）</p>
+          <div class="chips">
+            <a href="../g7a-nouns/">名词与所有格</a>
+            <a href="../g7a-articles/">冠词与代词</a>
+            <a href="../g7a-numbers/">数词与介词</a>
+            <a href="../g7a-present/">一般现在时与句子种类</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g7a-grammar/">语法总结</a>
+            <a href="../g7a-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g7a-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g7a-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+        <!-- 七下 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>七年级下册</h3>
+            <span class="bk-meta"><b>7</b> 讲 · <b>6</b> 表</span>
+          </div>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g7b-grammar/#lesson-1"><span class="n">01</span>名词</a>
+            <a href="../g7b-grammar/#lesson-2"><span class="n">02</span>形容词</a>
+            <a href="../g7b-grammar/#lesson-3"><span class="n">03</span>副词</a>
+            <a href="../g7b-grammar/#lesson-4"><span class="n">04</span>情态动词</a>
+            <a href="../g7b-grammar/#lesson-5"><span class="n">05</span>物主代词</a>
+            <a href="../g7b-grammar/#lesson-6"><span class="n">06</span>现在进行时</a>
+            <a href="../g7b-grammar/#lesson-7"><span class="n">07</span>一般过去时</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题）</p>
+          <div class="chips">
+            <a href="../g7b-nouns/">名词</a>
+            <a href="../g7b-adjadv/">形容词与副词</a>
+            <a href="../g7b-pronouns-modals/">物主代词与情态动词</a>
+            <a href="../g7b-tenses/">时态（进行时 + 过去时）</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g7b-grammar/">语法总结</a>
+            <a href="../g7b-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g7b-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g7b-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+        <!-- 八上 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>八年级上册</h3>
+            <span class="bk-meta"><b>7</b> 讲 · <b>6</b> 表</span>
+          </div>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g8a-grammar/#lesson-1"><span class="n">01</span>不定代词</a>
+            <a href="../g8a-grammar/#lesson-2"><span class="n">02</span>比较级与最高级：构成</a>
+            <a href="../g8a-grammar/#lesson-3"><span class="n">03</span>比较级与最高级：用法</a>
+            <a href="../g8a-grammar/#lesson-4"><span class="n">04</span>情态动词 can / could</a>
+            <a href="../g8a-grammar/#lesson-5"><span class="n">05</span>一般将来时</a>
+            <a href="../g8a-grammar/#lesson-6"><span class="n">06</span>句子种类</a>
+            <a href="../g8a-grammar/#lesson-7"><span class="n">07</span>句子成分与五种基本句型</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题）</p>
+          <div class="chips">
+            <a href="../g8a-pronouns/">不定代词</a>
+            <a href="../g8a-comparatives/">比较级与最高级</a>
+            <a href="../g8a-future/">一般将来时与情态动词</a>
+            <a href="../g8a-sentences/">句子种类与句子成分</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g8a-grammar/">语法总结</a>
+            <a href="../g8a-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g8a-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g8a-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+        <!-- 八下 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>八年级下册</h3>
+            <span class="bk-meta"><b>7</b> 讲 · <b>7</b> 表</span>
+          </div>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g8b-grammar/#lesson-1"><span class="n">01</span>反身代词</a>
+            <a href="../g8b-grammar/#lesson-2"><span class="n">02</span>情态动词 should / could</a>
+            <a href="../g8b-grammar/#lesson-3"><span class="n">03</span>过去进行时</a>
+            <a href="../g8b-grammar/#lesson-4"><span class="n">04</span>现在完成时</a>
+            <a href="../g8b-grammar/#lesson-5"><span class="n">05</span>动词不定式</a>
+            <a href="../g8b-grammar/#lesson-6"><span class="n">06</span>连词</a>
+            <a href="../g8b-grammar/#lesson-7"><span class="n">07</span>状语从句</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题）</p>
+          <div class="chips">
+            <a href="../g8b-tenses/">时态（过去进行 + 现在完成）</a>
+            <a href="../g8b-infinitives/">动词不定式</a>
+            <a href="../g8b-clauses/">连词与状语从句</a>
+            <a href="../g8b-pronouns/">反身代词与情态动词</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g8b-grammar/">语法总结</a>
+            <a href="../g8b-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g8b-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g8b-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+        <!-- 九上 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>九年级上册</h3>
+            <span class="bk-meta"><b>6</b> 讲 · <b>3</b> 表（教材附录 3 大板块）</span>
+          </div>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g9-grammar/#lesson-1"><span class="n">01</span>教材附录总览</a>
+            <a href="../g9-grammar/#lesson-2"><span class="n">02</span>动词的语态（被动语态）</a>
+            <a href="../g9-grammar/#lesson-3"><span class="n">03</span>宾语从句</a>
+            <a href="../g9-grammar/#lesson-4"><span class="n">04</span>关系从句</a>
+            <a href="../g9-grammar/#lesson-5"><span class="n">05</span>非限制性关系从句</a>
+            <a href="../g9-grammar/#lesson-6"><span class="n">06</span>it 句型专题</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题）</p>
+          <div class="chips">
+            <a href="../passive-voice-g9/">被动语态</a>
+            <a href="../object-clauses-g9/">宾语从句</a>
+            <a href="../relative-clauses-g9/">关系从句</a>
+            <a href="../it-pattern-g9/">it 句型</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g9-grammar/">语法总结</a>
+            <a href="../g9-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g9-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g9-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+        <!-- 九下 -->
+        <article class="bk">
+          <div class="bk-top">
+            <h3>九年级下册（网传版）</h3>
+            <span class="bk-meta"><b>5</b> 讲 · <b>7</b> 表</span>
+          </div>
+          <p class="bk-warn">⚠ 网传版本 · 非官方教材 · 学生请勿使用，仅供教师参考</p>
+          <p class="sec-title">语法总结</p>
+          <div class="chips">
+            <a href="../g9x-grammar/#lesson-1"><span class="n">01</span>动词的时态</a>
+            <a href="../g9x-grammar/#lesson-2"><span class="n">02</span>情态动词（推测）</a>
+            <a href="../g9x-grammar/#lesson-3"><span class="n">03</span>冠词</a>
+            <a href="../g9x-grammar/#lesson-4"><span class="n">04</span>句子类型</a>
+            <a href="../g9x-grammar/#lesson-5"><span class="n">05</span>构词法</a>
+          </div>
+          <p class="sec-title">配套专项（各 48 题 · 仅供教师参考）</p>
+          <div class="chips">
+            <a href="../g9x-tenses/">动词的时态</a>
+            <a href="../g9x-modals/">情态动词与冠词</a>
+            <a href="../g9x-sentences/">句子类型</a>
+            <a href="../g9x-wordform/">构词法</a>
+          </div>
+          <div class="bk-links">
+            <a class="pri" href="../g9x-grammar/">语法总结</a>
+            <a href="../g9x-grammar/cheatsheet/">一页纸速查表</a>
+            <a href="../assets/pdf/g9x-grammar-summary.pdf" download>总结 PDF</a>
+            <a href="../assets/pdf/g9x-grammar-book.pdf" download>合订本</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="trace" aria-labelledby="h-trace">
+      <div class="section-head">
+        <div>
+          <h2 id="h-trace">语法线索：同一考点跨册在哪</h2>
+          <p>教材把同一个语法点分散在不同册次逐步加深。下面按「线」串起来，箭头从左到右是由浅入深。</p>
+        </div>
+      </div>
+
+      <div class="trace">
+
+        <div class="tr-row">
+          <p class="tr-name">时态线<small>六册时态</small></p>
+          <div class="tr-flow">
+            <a href="../g7a-grammar/#lesson-8">一般现在时<i>七上</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-6">现在进行时<i>七下</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-7">一般过去时<i>七下</i></a><span class="arw">→</span>
+            <a href="../g8a-grammar/#lesson-5">一般将来时<i>八上</i></a><span class="arw">→</span>
+            <a href="../g8b-grammar/#lesson-3">过去进行时<i>八下</i></a><span class="arw">→</span>
+            <a href="../g8b-grammar/#lesson-4">现在完成时<i>八下</i></a><span class="arw">→</span>
+            <a class="last" href="../g9x-grammar/#lesson-1">六种时态总览<i>九下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">从句线<small>从句 → 复合句</small></p>
+          <div class="tr-flow">
+            <a href="../g8b-grammar/#lesson-7">状语从句<i>八下</i></a><span class="arw">→</span>
+            <a href="../g9-grammar/#lesson-3">宾语从句<i>九上</i></a><span class="arw">→</span>
+            <a href="../g9-grammar/#lesson-4">关系从句<i>九上</i></a><span class="arw">→</span>
+            <a href="../g9-grammar/#lesson-5">非限制性关系从句<i>九上</i></a><span class="arw">→</span>
+            <a class="last" href="../g9x-grammar/#lesson-4">简单句 / 并列句 / 复合句<i>九下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">语态线<small>主动 → 被动</small></p>
+          <div class="tr-flow">
+            <a href="../g9-grammar/#lesson-2">动词的语态（被动语态）<i>九上</i></a><span class="arw">→</span>
+            <a class="last" href="../passive-voice-g9/">被动语态专项 48 题</a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">情态动词线<small>能力 → 推测</small></p>
+          <div class="tr-flow">
+            <a href="../g7a-grammar/#lesson-6">can 表能力<i>七上</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-4">can/could、may、must、have to<i>七下</i></a><span class="arw">→</span>
+            <a href="../g8a-grammar/#lesson-4">can / could 能力与请求<i>八上</i></a><span class="arw">→</span>
+            <a href="../g8b-grammar/#lesson-2">should / could 建议<i>八下</i></a><span class="arw">→</span>
+            <a class="last" href="../g9x-grammar/#lesson-2">must / can't / may 表推测<i>九下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">代词线<small>五类代词</small></p>
+          <div class="tr-flow">
+            <a href="../g7a-grammar/#lesson-4">人称·物主·指示代词<i>七上</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-5">名词性物主代词<i>七下</i></a><span class="arw">→</span>
+            <a href="../g8a-grammar/#lesson-1">不定代词<i>八上</i></a><span class="arw">→</span>
+            <a class="last" href="../g8b-grammar/#lesson-1">反身代词<i>八下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">词类线<small>十大词类</small></p>
+          <div class="tr-flow">
+            <a href="../g7a-grammar/#lesson-1">词类总表<i>七上</i></a><span class="arw">→</span>
+            <a href="../g7a-grammar/#lesson-2">名词<i>七上</i></a>
+            <a href="../g7b-grammar/#lesson-1">名词复数<i>七下</i></a><span class="arw">→</span>
+            <a href="../g7a-grammar/#lesson-3">冠词<i>七上</i></a>
+            <a href="../g9x-grammar/#lesson-3">冠词三分类<i>九下</i></a><span class="arw">→</span>
+            <a href="../g7a-grammar/#lesson-5">数词<i>七上</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-2">形容词<i>七下</i></a>
+            <a href="../g8a-grammar/#lesson-2">比较等级<i>八上</i></a><span class="arw">→</span>
+            <a href="../g7b-grammar/#lesson-3">副词<i>七下</i></a><span class="arw">→</span>
+            <a href="../g7a-grammar/#lesson-7">介词<i>七上</i></a><span class="arw">→</span>
+            <a class="last" href="../g8b-grammar/#lesson-6">连词<i>八下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">句型线<small>句子结构与种类</small></p>
+          <div class="tr-flow">
+            <a href="../g7a-grammar/#lesson-9">句子种类（陈述/疑问）<i>七上</i></a><span class="arw">→</span>
+            <a href="../g8a-grammar/#lesson-6">四种句子种类<i>八上</i></a><span class="arw">→</span>
+            <a href="../g8a-grammar/#lesson-7">句子成分与五种基本句型<i>八上</i></a><span class="arw">→</span>
+            <a class="last" href="../g9x-grammar/#lesson-4">简单句 / 并列句 / 复合句<i>九下</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">非谓语与句式<small>不定式 / it 句型</small></p>
+          <div class="tr-flow">
+            <a href="../g8b-grammar/#lesson-5">动词不定式<i>八下</i></a><span class="arw">→</span>
+            <a class="last" href="../g9-grammar/#lesson-6">it 句型专题<i>九上</i></a>
+          </div>
+        </div>
+
+        <div class="tr-row">
+          <p class="tr-name">构词法<small>九下新增</small></p>
+          <div class="tr-flow">
+            <a href="../g9x-grammar/#lesson-5">合成 / 派生 / 转化 / 缩写<i>九下</i></a><span class="arw">→</span>
+            <a class="last" href="../g9x-wordform/">构词法专项 48 题</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="downloads" aria-labelledby="h-dl">
+      <div class="section-head">
+        <div>
+          <h2 id="h-dl">全部打印版</h2>
+          <p>总结 PDF 按册；专项讲义带答案与解析；合订本含封面与书签；最上面一份是全六册总复习。</p>
+        </div>
+      </div>
+      <div class="dl-wrap">
+        <table class="dl-tbl">
+          <thead>
+            <tr><th scope="col">类别</th><th scope="col">七上</th><th scope="col">七下</th><th scope="col">八上</th><th scope="col">八下</th><th scope="col">九上</th><th scope="col">九下</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">语法总结 PDF</th>
+              <td><a href="../assets/pdf/g7a-grammar-summary.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g7b-grammar-summary.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8a-grammar-summary.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8b-grammar-summary.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9-grammar-summary.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9x-grammar-summary.pdf" download>PDF</a></td>
+            </tr>
+            <tr>
+              <th scope="row">A4 速查表 PDF</th>
+              <td><a href="../assets/pdf/g7a-grammar-cheatsheet.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g7b-grammar-cheatsheet.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8a-grammar-cheatsheet.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8b-grammar-cheatsheet.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9-grammar-cheatsheet.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9x-grammar-cheatsheet.pdf" download>PDF</a></td>
+            </tr>
+            <tr>
+              <th scope="row">单册合订本</th>
+              <td><a href="../assets/pdf/g7a-grammar-book.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g7b-grammar-book.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8a-grammar-book.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g8b-grammar-book.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9-grammar-book.pdf" download>PDF</a></td>
+              <td><a href="../assets/pdf/g9x-grammar-book.pdf" download>PDF</a></td>
+            </tr>
+            <tr>
+              <th scope="row">专项讲义（4 份 / 册）</th>
+              <td><a href="../g7a-nouns/">名词</a>·<a href="../g7a-articles/">冠词代词</a>·<a href="../g7a-numbers/">数词介词</a>·<a href="../g7a-present/">现在时</a></td>
+              <td><a href="../g7b-nouns/">名词</a>·<a href="../g7b-adjadv/">形副</a>·<a href="../g7b-pronouns-modals/">物主情态</a>·<a href="../g7b-tenses/">时态</a></td>
+              <td><a href="../g8a-pronouns/">不定代词</a>·<a href="../g8a-comparatives/">比较级</a>·<a href="../g8a-future/">将来时</a>·<a href="../g8a-sentences/">句子</a></td>
+              <td><a href="../g8b-tenses/">时态</a>·<a href="../g8b-infinitives/">不定式</a>·<a href="../g8b-clauses/">从句</a>·<a href="../g8b-pronouns/">代词</a></td>
+              <td><a href="../passive-voice-g9/">被动</a>·<a href="../object-clauses-g9/">宾从</a>·<a href="../relative-clauses-g9/">关系</a>·<a href="../it-pattern-g9/">it</a></td>
+              <td><a href="../g9x-tenses/">时态</a>·<a href="../g9x-modals/">情态冠词</a>·<a href="../g9x-sentences/">句型</a>·<a href="../g9x-wordform/">构词</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="usage">
+        <p style="margin:0 0 8px;font-size:13.5px;color:var(--muted);line-height:1.85"><b>总复习合订本（全六册 349 页）</b>：<a href="../assets/pdf/grammar-all-book.pdf" download style="color:var(--blue);text-decoration:none">grammar-all-book.pdf</a> —— 六册 41 讲 + 6 张速查表 + 24 个专项，含总目录与两级书签。</p>
+        <p style="margin:0;font-size:12px;color:var(--muted);line-height:1.8">⚠ 合订本与九下相关文件中，九年级下册为<b>网传版本</b>（官方版预计 2027 年发布），非官方教材，学生请勿使用，仅供教师参考。</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="h-how">
+      <div class="section-head">
+        <div>
+          <h2 id="h-how">怎么用这一页</h2>
+          <p>按目的选入口，不必从头看到尾。</p>
+        </div>
+      </div>
+      <div class="usage">
+        <ol>
+          <li><b>要打印一份带走</b>：直接下「总复习合订本」（349 页），或按册下「单册合订本」（56–59 页）。</li>
+          <li><b>考前快速过一遍</b>：先看六册各自的一页纸速查表，再回来看下面「语法线索」把串不起来的地方补上。</li>
+          <li><b>某个考点没懂</b>：在「语法线索」里找到它属于哪条线，点对应册次的板块名，跳到那一讲的原文表格与例句。</li>
+          <li><b>要刷题</b>：按册进 4 个专项（每个 48 题、6 级递进），网页在线作答即时给解析；需要纸质版用对应专项讲义 PDF。</li>
+          <li><b>教学备课</b>：九下相关内容为网传版，仅作参考，请以官方教材为准。</li>
+        </ol>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>本页汇总人教版（新课纲版）初中英语六册教材书末 Grammar 附录的整理内容，表格与例句取自教材原文，仅供学习与教学参考。</p>
+    <p>⚠ 九年级下册为网传电子版整理，非官方教材，学生请勿使用，仅供教师参考。</p>
+    <p>反馈与建议：<a href="https://github.com/1901151458-prog/english-materials">GitHub 仓库</a></p>
+    <p class="footer-meta">语法总复习 · 更新于 2026-11-12 · <a href="../index.html">返回首页</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // 平滑滚动到锚点
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href').slice(1);
+      var el = id && document.getElementById(id);
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.replaceState(null, '', '#' + id); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
