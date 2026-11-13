@@ -111,12 +111,7 @@
       'border-bottom:1.6px dashed rgba(43,125,233,.65);transition:border-color .18s,background .18s}',
       '.dict-hl.is-solid{border-bottom-style:solid;border-bottom-color:var(--blue,#1e5fa3);',
       'background:color-mix(in srgb,var(--blue,#1e5fa3) 9%,transparent)}',
-      '.dict-bubble{position:absolute;z-index:9994;pointer-events:none;padding:5px 10px;border-radius:8px;',
-      'background:var(--card,#fff);color:var(--ink,#111);border:1px solid var(--line,#e0e8f2);',
-      'box-shadow:0 8px 22px rgba(0,0,0,.24);font:600 12px/1.3 system-ui,"Microsoft YaHei",sans-serif;',
-      'white-space:nowrap;transform:translateX(-50%);opacity:0;transition:opacity .14s}',
-      '.dict-bubble.is-on{opacity:1}',
-      '@media print{.dict-fab,.dict-bar,.dict-icon,.dict-hint,.dict-hl,.dict-bubble{display:none!important}}'
+      '@media print{.dict-fab,.dict-bar,.dict-icon,.dict-hint,.dict-hl{display:none!important}}'
     ].join('');
     document.head.appendChild(st);
   }
@@ -184,7 +179,7 @@
   }
 
   /* ---------- 悬停标记（鼠标移到英文词上） ---------- */
-  var hlEls = [], bubbleEl = null, hoverTimer = 0;
+  var hlEls = [], hoverTimer = 0;
   var lastKey = '', lastMoveTs = 0;
 
   function isCoarse() {
@@ -234,7 +229,6 @@
       if (hlEls[i].parentNode) hlEls[i].parentNode.removeChild(hlEls[i]);
     }
     hlEls = [];
-    if (bubbleEl) bubbleEl.classList.remove('is-on');
     lastKey = '';
   }
 
@@ -260,21 +254,6 @@
     }
     if (!first) return;
 
-    if (!bubbleEl) {
-      bubbleEl = document.createElement('div');
-      bubbleEl.className = 'dict-bubble no-print';
-      bubbleEl.textContent = '双击查词';
-      document.body.appendChild(bubbleEl);
-    }
-    /* 气泡优先放词的下方，下方空间不足再放上方 */
-    var cx = first.left + window.scrollX + first.width / 2;
-    var below = first.bottom + window.scrollY + 7;
-    var above = first.top + window.scrollY - 31;
-    var roomBelow = first.bottom + 44 < window.innerHeight;
-    bubbleEl.style.left = Math.max(52, Math.min(cx, (window.scrollX + window.innerWidth) - 52)) + 'px';
-    bubbleEl.style.top = (roomBelow ? below : above) + 'px';
-    bubbleEl.classList.add('is-on');
-
     /* 停留 120ms：虚线 → 实线，表示"确认可查" */
     hoverTimer = setTimeout(function () {
       for (var k = 0; k < hlEls.length; k++) hlEls[k].classList.add('is-solid');
@@ -287,7 +266,7 @@
     if (e.buttons) { clearHover(); return; }            /* 拖选时不标记 */
     var t = e.target;
     if (inEditable(t) || t === fab || (fab && fab.contains(t)) ||
-        (bar && bar.contains(t)) || (bubbleEl && bubbleEl.contains(t))) {
+        (bar && bar.contains(t))) {
       clearHover();
       return;
     }
