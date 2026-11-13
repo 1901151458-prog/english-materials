@@ -107,7 +107,16 @@
       '.dict-hint::after{content:"";position:absolute;right:24px;bottom:-5px;width:9px;height:9px;',
       'background:var(--card,#fff);border-right:1px solid var(--line,#e0e8f2);',
       'border-bottom:1px solid var(--line,#e0e8f2);transform:rotate(45deg)}',
-      '@media print{.dict-fab,.dict-bar,.dict-icon,.dict-hint{display:none!important}}'
+      '.dict-hl{position:absolute;pointer-events:none;z-index:9993;border-radius:2px;',
+      'border-bottom:1.6px dashed rgba(43,125,233,.65);transition:border-color .18s,background .18s}',
+      '.dict-hl.is-solid{border-bottom-style:solid;border-bottom-color:var(--blue,#1e5fa3);',
+      'background:color-mix(in srgb,var(--blue,#1e5fa3) 9%,transparent)}',
+      '.dict-bubble{position:absolute;z-index:9994;pointer-events:none;padding:5px 10px;border-radius:8px;',
+      'background:var(--card,#fff);color:var(--ink,#111);border:1px solid var(--line,#e0e8f2);',
+      'box-shadow:0 8px 22px rgba(0,0,0,.24);font:600 12px/1.3 system-ui,"Microsoft YaHei",sans-serif;',
+      'white-space:nowrap;transform:translateX(-50%);opacity:0;transition:opacity .14s}',
+      '.dict-bubble.is-on{opacity:1}',
+      '@media print{.dict-fab,.dict-bar,.dict-icon,.dict-hint,.dict-hl,.dict-bubble{display:none!important}}'
     ].join('');
     document.head.appendChild(st);
   }
@@ -172,6 +181,127 @@
     document.body.appendChild(hintEl);
     requestAnimationFrame(function () { if (hintEl) hintEl.classList.add('is-on'); });
     hintTimer = setTimeout(closeHint, 5000);
+  }
+
+  /* ---------- 悬停标记（鼠标移到英文词上） ---------- */
+  var hlEls = [], bubbleEl = null, hoverTimer = 0;
+  var lastKey = '', lastMoveTs = 0;
+
+  function isCoarse() {
+    return !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+  }
+
+  function caretAt(x, y) {
+    if (document.caretRangeFromPoint) return document.caretRangeFromPoint(x, y);
+    if (document.caretPositionFromPoint) {
+      var pos = document.caretPositionFromPoint(x, y);
+      if (!pos) return null;
+      var r = document.createRange();
+      try { r.setStart(pos.offsetNode, pos.offset); r.collapse(true); } catch (e) { return null; }
+      return r;
+    }
+    return null;
+  }
+
+  /* 从鼠标落点找出完整英文单词 */
+  var WORD_RE_HL = /[A-Za-z][A-Za-z'’\-]*/g;
+
+  function wordAtCaret(cr) {
+    if (!cr) return null;
+    var node = cr.startContainer;
+    if (!node || node.nodeType !== 3) return null;      /* 只处理纯文本节点 */
+    var text = node.nodeValue || '';
+    if (!text) return null;
+    var off = cr.startOffset;
+    WORD_RE_HL.lastIndex = 0;
+    var m, hit = null;
+    while ((m = WORD_RE_HL.exec(text))) {
+      var st = m.index, en = st + m[0].length;
+      if ((off >= st && off <= en) || (off - 1 >= st && off - 1 < en)) {
+        hit = { s: st, e: en, w: m[0] };
+        break;
+      }
+    }
+    if (!hit || hit.w.length < 2) return null;          /* 单字母（a / I）不标记 */
+    var r = document.createRange();
+    try { r.setStart(node, hit.s); r.setEnd(node, hit.e); } catch (e) { return null; }
+    return { range: r, word: hit.w, key: hit.w + '@' + hit.s };
+  }
+
+  function clearHover() {
+    clearTimeout(hoverTimer);
+    for (var i = 0; i < hlEls.length; i++) {
+      if (hlEls[i].parentNode) hlEls[i].parentNode.removeChild(hlEls[i]);
+    }
+    hlEls = [];
+    if (bubbleEl) bubbleEl.classList.remove('is-on');
+    lastKey = '';
+  }
+
+  function paintHover(info) {
+    clearHover();
+    lastKey = info.key;
+    var rects = info.range.getClientRects();
+    if (!rects.length) return;
+
+    var first = null;
+    for (var i = 0; i < rects.length; i++) {
+      var r = rects[i];
+      if (r.width < 1 || r.height < 1) continue;
+      if (!first) first = r;
+      var d = document.createElement('div');
+      d.className = 'dict-hl no-print';
+      d.style.left = (r.left + window.scrollX) + 'px';
+      d.style.top = (r.top + window.scrollY) + 'px';
+      d.style.width = r.width + 'px';
+      d.style.height = r.height + 'px';
+      document.body.appendChild(d);
+      hlEls.push(d);
+    }
+    if (!first) return;
+
+    if (!bubbleEl) {
+      bubbleEl = document.createElement('div');
+      bubbleEl.className = 'dict-bubble no-print';
+      bubbleEl.textContent = '双击查剑桥';
+      document.body.appendChild(bubbleEl);
+    }
+    /* 气泡优先放词的下方，下方空间不足再放上方 */
+    var cx = first.left + window.scrollX + first.width / 2;
+    var below = first.bottom + window.scrollY + 7;
+    var above = first.top + window.scrollY - 31;
+    var roomBelow = first.bottom + 44 < window.innerHeight;
+    bubbleEl.style.left = Math.max(52, Math.min(cx, (window.scrollX + window.innerWidth) - 52)) + 'px';
+    bubbleEl.style.top = (roomBelow ? below : above) + 'px';
+    bubbleEl.classList.add('is-on');
+
+    /* 停留 120ms：虚线 → 实线，表示"确认可查" */
+    hoverTimer = setTimeout(function () {
+      for (var k = 0; k < hlEls.length; k++) hlEls[k].classList.add('is-solid');
+    }, 120);
+  }
+
+  function onHoverMove(e) {
+    if (!state.on) return;
+    if (isCoarse()) return;
+    if (e.buttons) { clearHover(); return; }            /* 拖选时不标记 */
+    var t = e.target;
+    if (inEditable(t) || t === fab || (fab && fab.contains(t)) ||
+        (bar && bar.contains(t)) || (bubbleEl && bubbleEl.contains(t))) {
+      clearHover();
+      return;
+    }
+    var info = wordAtCaret(caretAt(e.clientX, e.clientY));
+    if (!info) { clearHover(); return; }
+    if (info.key === lastKey) return;
+    paintHover(info);
+  }
+
+  function onHoverMoveThrottled(e) {
+    var now = Date.now();
+    if (now - lastMoveTs < 55) return;
+    lastMoveTs = now;
+    onHoverMove(e);
   }
 
   /* ---------- 选中浮条 ---------- */
@@ -347,6 +477,13 @@
     mountBar();
     bind();
     watchTable();
+    /* 桌面端：鼠标悬停标记英文词 */
+    if (!isCoarse()) {
+      document.addEventListener('mousemove', onHoverMoveThrottled, { passive: true });
+      document.addEventListener('scroll', clearHover, { passive: true });
+      window.addEventListener('resize', clearHover);
+      document.addEventListener('mouseleave', clearHover);
+    }
     if (state.on) setTimeout(maybeShowHint, 900);
   }
 
