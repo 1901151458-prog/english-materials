@@ -263,7 +263,7 @@
     if (!bubbleEl) {
       bubbleEl = document.createElement('div');
       bubbleEl.className = 'dict-bubble no-print';
-      bubbleEl.textContent = '双击查剑桥';
+      bubbleEl.textContent = '双击查词';
       document.body.appendChild(bubbleEl);
     }
     /* 气泡优先放词的下方，下方空间不足再放上方 */
