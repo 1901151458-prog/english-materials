@@ -29,6 +29,7 @@
     wrong: [],
     startTs: 0,
     showIpa: true,
+    accent: 'us',
     answered: false,
     warned: false,
     composing: false,
@@ -42,6 +43,8 @@
   var daily = lsGet(LS_DAILY, { goal: 20, days: {} });
   if (!daily.days) daily.days = {};
   if (!daily.goal) daily.goal = 20;
+  var ACCENT_LS = 'em-typing-accent';
+  state.accent = lsGet(ACCENT_LS, 'us') === 'uk' ? 'uk' : 'us';
 
   /* ---------- 数据 ---------- */
   /* 按需加载某一册的完整词条 */
@@ -341,6 +344,8 @@
 
     $('#wc-feedback').innerHTML = '';
     $('#wc-memo').className = 'wc-memo';
+    var ab = $('#btn-accent');
+    if (ab) ab.textContent = '口音：' + (state.accent === 'uk' ? '英音' : '美音');
 
     /* 进度 */
     var n = state.queue.length;
@@ -360,6 +365,51 @@
   function fmtTime(s) {
     var m = Math.floor(s / 60), sec = s % 60;
     return (m ? m + ':' : '') + (sec < 10 && m ? '0' : '') + sec + '秒';
+  }
+
+  /* ---------- 发音（浏览器自带 TTS） ---------- */
+  var ttsOk = typeof window.speechSynthesis !== 'undefined' &&
+              typeof window.SpeechSynthesisUtterance !== 'undefined';
+
+  function pickVoice() {
+    if (!ttsOk) return null;
+    var want = state.accent === 'uk' ? 'en-GB' : 'en-US';
+    var vs = [];
+    try { vs = window.speechSynthesis.getVoices() || []; } catch (e) { return null; }
+    if (!vs.length) return null;
+    var exact = null, anyEn = null;
+    for (var i = 0; i < vs.length; i++) {
+      var lg = (vs[i].lang || '').replace('_', '-');
+      if (!exact && lg === want) exact = vs[i];
+      if (!anyEn && /^en/i.test(lg)) anyEn = vs[i];
+      if (exact) break;
+    }
+    return exact || anyEn || null;
+  }
+
+  function speakWord(word) {
+    if (!ttsOk || !word) return false;
+    try {
+      window.speechSynthesis.cancel();
+      var u = new window.SpeechSynthesisUtterance(String(word).replace(/_/g, ' '));
+      u.lang = state.accent === 'uk' ? 'en-GB' : 'en-US';
+      u.rate = 0.88;
+      u.pitch = 1;
+      var v = pickVoice();
+      if (v) u.voice = v;
+      window.speechSynthesis.speak(u);
+      return true;
+    } catch (e) { return false; }
+  }
+
+  function speakCurrent() {
+    var w = state.queue[state.idx];
+    if (!w) return;
+    var ok = speakWord(w.word);
+    var fb = $('#wc-feedback');
+    if (!ok && fb) {
+      fb.innerHTML = '<span class="fb-hint">当前浏览器不支持朗读，可换 Chrome / Edge 试试</span>';
+    }
   }
 
   function norm(s) {
@@ -560,6 +610,69 @@
 
   function clearWrong(k) { delete wrongBook[k]; lsSet(LS_WRONG, wrongBook); }
 
+  /* ---------- 学习统计 ---------- */
+  function renderStats() {
+    var totalWords = 0, totalChapters = 0, accSum = 0, accN = 0;
+    Object.keys(daily.days).forEach(function (k) { totalWords += (daily.days[k].words || 0); });
+    Object.keys(prog).forEach(function (k) {
+      var r = prog[k];
+      totalChapters += (r.done || 0);
+      if (r.best) { accSum += r.best; accN++; }
+    });
+    var avgAcc = accN ? Math.round(accSum / accN) : 0;
+    var streak = streakDays();
+
+    var ov = $('#stats-overview');
+    if (ov) {
+      ov.innerHTML = [
+        box(totalWords, '累计练词'),
+        box(totalChapters, '完成章节'),
+        box(avgAcc + '%', '平均正确率'),
+        box(streak, '连续打卡天')
+      ].join('');
+    }
+
+    /* 最近 7 天柱状 */
+    var chart = $('#stats-chart');
+    if (chart) {
+      var days = [], maxV = 1;
+      for (var i = 6; i >= 0; i--) {
+        var d = new Date();
+        d.setDate(d.getDate() - i);
+        var key = dateKey(d);
+        var rec = daily.days[key];
+        var v = rec ? (rec.words || 0) : 0;
+        if (v > maxV) maxV = v;
+        days.push({ key: key, v: v, label: (d.getMonth() + 1) + '/' + d.getDate(), today: i === 0 });
+      }
+      chart.innerHTML = days.map(function (x) {
+        var h = Math.max(3, Math.round(x.v / maxV * 88));
+        return '<div class="chart-bar' + (x.today ? ' is-today' : '') + '">' +
+          '<b>' + (x.v || '') + '</b>' +
+          '<i style="height:' + h + 'px"></i>' +
+          '<span>' + x.label + (x.today ? ' 今天' : '') + '</span></div>';
+      }).join('');
+    }
+
+    /* 各册完成度 */
+    var vols = $('#stats-vols');
+    if (vols) {
+      vols.innerHTML = state.volumes.map(function (vol) {
+        var p = volProgress(vol);
+        var pct = p.words ? Math.round(p.doneWords / p.words * 100) : 0;
+        return '<div class="vol-progress">' +
+          '<span class="vp-name">' + esc(vol.short) + '</span>' +
+          '<span class="vp-bar"><i style="width:' + pct + '%"></i></span>' +
+          '<span class="vp-num">' + p.doneWords + ' / ' + p.words + ' 词 · ' + pct + '%</span>' +
+          '</div>';
+      }).join('');
+    }
+  }
+
+  function box(v, label) {
+    return '<div class="stat-box"><div class="sv">' + v + '</div><div class="sl">' + label + '</div></div>';
+  }
+
   /* ---------- 错词本视图 ---------- */
   function renderWrongBook() {
     var keys = Object.keys(wrongBook);
@@ -623,6 +736,13 @@
       var act = b.getAttribute('data-act');
       if (act === 'back') { state.view = 'home'; clearChapterRows(); showView('home'); renderHome(); }
       else if (act === 'ipa') { state.showIpa = !state.showIpa; b.textContent = state.showIpa ? '隐藏音标' : '显示音标'; renderPractice(); }
+      else if (act === 'speak') { speakCurrent(); }
+      else if (act === 'accent') {
+        state.accent = state.accent === 'us' ? 'uk' : 'us';
+        lsSet(ACCENT_LS, state.accent);
+        b.textContent = '口音：' + (state.accent === 'uk' ? '英音' : '美音');
+        speakCurrent();
+      }
       else if (act === 'hint') { hintFirst(); }
       else if (act === 'giveup') { giveUp(); }
       else if (act === 'wrongbook') {
@@ -632,6 +752,7 @@
       }
       else if (act === 'review-all') { reviewWrong(); }
       else if (act === 'set-goal') { cycleGoal(); }
+      else if (act === 'stats') { clearChapterRows(); showView('stats'); renderStats(); }
       else if (act === 'again') {
         var u = state.unit;
         if (!u || !u.unit) return;
@@ -662,6 +783,13 @@
         if (state.view === 'wrong') renderWrongBook();
       }
     });
+
+    /* 点音标朗读 */
+    var ipaEl = $('#wc-ipa');
+    if (ipaEl) {
+      ipaEl.style.cursor = 'pointer';
+      ipaEl.addEventListener('click', function () { speakCurrent(); });
+    }
 
     var inp = $('#type-input');
 
@@ -706,6 +834,11 @@
       } else if (e.key === 'Tab') {
         e.preventDefault();
         hintFirst();
+      } else if (e.key === 's' || e.key === 'S') {
+        if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          speakCurrent();
+        }
       }
     });
     document.addEventListener('keydown', function (e) {

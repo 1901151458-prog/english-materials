@@ -69,6 +69,7 @@
 
     <div class="wc-tools" style="justify-content:flex-start;margin:16px 0 4px">
       <button class="primary" data-act="wrongbook" id="btn-review" disabled>错词本</button>
+      <button data-act="stats">学习统计</button>
     </div>
 
     <div class="book-grid" id="book-grid"></div>
@@ -93,7 +94,7 @@
       <div class="word-card" id="word-card">
         <span class="wc-pos" id="wc-pos"></span>
         <p class="wc-mean" id="wc-mean">—</p>
-        <p class="wc-ipa" id="wc-ipa"></p>
+        <p class="wc-ipa" id="wc-ipa" title="点击朗读"></p>
 
         <div class="type-wrap">
           <input class="type-input" id="type-input" type="text" autocomplete="off" autocorrect="off"
@@ -101,6 +102,8 @@
         </div>
 
         <div class="wc-tools">
+          <button data-act="speak" id="btn-speak" title="朗读这个单词（快捷键 S）">🔊 朗读</button>
+          <button data-act="accent" id="btn-accent" title="切换美音/英音">口音：美音</button>
           <button data-act="hint">提示（Tab）</button>
           <button data-act="giveup">看答案</button>
           <button data-act="ipa" id="btn-ipa">隐藏音标</button>
@@ -109,6 +112,27 @@
         <div class="wc-feedback" id="wc-feedback"></div>
         <div class="wc-memo" id="wc-memo"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ========== 学习统计 ========== -->
+  <div class="view" id="view-stats">
+    <div class="practice-top">
+      <button class="pt-back" data-act="home">← 返回</button>
+      <span class="pt-title">学习统计</span>
+      <div class="pstats"><span id="stats-range"></span></div>
+    </div>
+
+    <div class="stats-grid" id="stats-overview"></div>
+
+    <div class="stats-section">
+      <h3>最近 7 天练习量</h3>
+      <div class="chart-bars" id="stats-chart"></div>
+    </div>
+
+    <div class="stats-section">
+      <h3>各册完成度</h3>
+      <div id="stats-vols"></div>
     </div>
   </div>
 
