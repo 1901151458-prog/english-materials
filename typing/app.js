@@ -43,9 +43,11 @@
       var qv = Number(q.get('vol'));
       var qu = q.get('unit');
       if (qv >= 1 && qv <= state.volumes.length && qu) {
-        var vol = state.volumes[qv - 1];
-        var unit = vol.units.filter(function (u) { return u.id === qu; })[0];
-        if (unit) startWords(vol, unit, unit.words.slice());
+        var homeVol = state.volumes[qv - 1];
+        if (homeVol && homeVol.units.some(function (u) { return u.id === qu; })) {
+          /* 走 startUnit，保证按 20 词分章 */
+          startUnit(qv - 1, qu);
+        }
       }
     } else {
       $('#app').innerHTML = '<div class="empty"><h3>词库加载失败</h3><p>请刷新页面重试。</p></div>';
