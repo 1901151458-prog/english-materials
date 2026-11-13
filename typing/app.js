@@ -24,7 +24,8 @@
     wrong: [],
     startTs: 0,
     showIpa: true,
-    answered: false
+    answered: false,
+    chapter: { index: 0, total: 1 }
   };
 
   var prog = lsGet(LS_PROG, {});
@@ -56,8 +57,17 @@
     var done = 0, wordsTotal = 0, wordsDone = 0;
     vol.units.forEach(function (u) {
       var key = keyOf(vol.no, u.id);
+      var chTotal = Math.max(1, Math.ceil(u.words.length / CHAPTER));
       wordsTotal += u.words.length;
-      if (prog[key]) { done++; wordsDone += Math.min(prog[key].done || 0, u.words.length); }
+      var d = prog[key];
+      if (d) {
+        var chDone = Math.min(d.done || 0, chTotal);
+        if (chDone >= chTotal) done++;
+        /* 已练词数按整章估算，末章按实际剩余 */
+        var n = 0;
+        for (var ci = 0; ci < chDone; ci++) n += Math.min(CHAPTER, u.words.length - ci * CHAPTER);
+        wordsDone += n;
+      }
     });
     return { units: totalUnits, doneUnits: done, words: wordsTotal, doneWords: wordsDone };
   }
@@ -76,11 +86,12 @@
       var chips = vol.units.map(function (u) {
         var key = unitKey(vol, u);
         var d = prog[key];
-        var done = d ? Math.min(d.done || 0, u.words.length) : 0;
-        var cls = done >= u.words.length ? 'unit-chip is-done' : 'unit-chip';
+        var chTotal = Math.max(1, Math.ceil(u.words.length / CHAPTER));
+        var chDone = d ? Math.min(d.done || 0, chTotal) : 0;
+        var cls = chDone >= chTotal ? 'unit-chip is-done' : 'unit-chip';
         return '<button class="' + cls + '" data-vol="' + vi + '" data-unit="' + u.id + '" ' +
           'title="' + esc(u.label) + ' · ' + u.words.length + ' 词">' +
-          esc(u.label) + '<span class="uc-n">' + u.words.length + '</span></button>';
+          esc(u.label) + '<span class="uc-n">' + (chTotal > 1 ? chDone + '/' + chTotal + '章' : u.words.length + '词') + '</span></button>';
       }).join('');
       return '<article class="book-card">' +
         '<h3><span class="bno">' + vol.no + '</span>' + esc(vol.name) + '</h3>' +
@@ -109,13 +120,19 @@
     var vol = state.volumes[volIndex];
     var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
     if (!unit) return;
-    startWords(vol, unit, unit.words.slice());
+    var total = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    var key = unitKey(vol, unit);
+    var done = prog[key] ? Math.min(prog[key].done || 0, total) : 0;
+    var ch = Math.min(done, total - 1);
+    var slice = unit.words.slice(ch * CHAPTER, ch * CHAPTER + CHAPTER);
+    startWords(vol, unit, slice, { index: ch, total: total });
   }
 
-  function startWords(vol, unit, words) {
+  function startWords(vol, unit, words, chInfo) {
     state.volIndex = vol.no - 1;
     state.view = 'practice';
     state.unit = { vol: vol, unit: unit };
+    state.chapter = chInfo || { index: 0, total: 1 };
     state.queue = words.slice();
     state.idx = 0;
     state.correct = 0;
@@ -287,17 +304,27 @@
     if (state.unit) {
       var key = unitKey(state.unit.vol, state.unit.unit);
       var rec = prog[key] || { done: 0, best: 0, total: total };
-      rec.done = Math.min(total, (rec.done || 0) + 1);
-      rec.total = total;
+      rec.done = Math.max(rec.done || 0, state.chapter.index + 1);
+      rec.chapters = state.chapter.total;
+      rec.size = state.chapter.index === 0 || !rec.size ? total : rec.size;
       rec.best = Math.max(rec.best || 0, acc);
       rec.ts = Date.now();
       prog[key] = rec;
       lsSet(LS_PROG, prog);
     }
 
+    var chTxt = state.chapter.total > 1
+      ? '第 ' + (state.chapter.index + 1) + ' / ' + state.chapter.total + ' 章'
+      : '';
     $('#res-title').textContent = acc === 100 ? '全部正确 🎉' : '这一章完成';
     $('#res-sub').textContent = (state.unit ? state.unit.vol.short + ' · ' + state.unit.unit.label : '') +
-      ' · 共 ' + total + ' 词';
+      (chTxt ? ' · ' + chTxt : '') + ' · 共 ' + total + ' 词';
+    var nextBtn = $('#res-next');
+    if (nextBtn) {
+      var hasNext = state.chapter.index + 1 < state.chapter.total;
+      nextBtn.style.display = hasNext ? '' : 'none';
+      nextBtn.textContent = hasNext ? '下一章 →' : '';
+    }
     $('#res-acc').textContent = acc + '%';
     $('#res-wrong').textContent = wrongN;
     $('#res-time').textContent = fmtTime(sec);
@@ -352,7 +379,24 @@
       else if (act === 'review') { reviewWrong(); }
       else if (act === 'again') {
         var u = state.unit;
-        if (u && u.unit) startWords(u.vol, u.unit, u.unit.words ? u.unit.words.slice() : state.queue.slice());
+        if (!u || !u.unit) return;
+        var t2 = Math.max(1, Math.ceil(u.unit.words.length / CHAPTER));
+        var ci = Math.min(state.chapter.index + 1, t2 - 1);
+        startWords(u.vol, u.unit, u.unit.words.slice(ci * CHAPTER, ci * CHAPTER + CHAPTER),
+          { index: ci, total: t2 });
+      }
+      else if (act === 'next') {
+        var u2 = state.unit;
+        if (!u2 || !u2.unit) return;
+        var t3 = Math.max(1, Math.ceil(u2.unit.words.length / CHAPTER));
+        var ci2 = Math.min(state.chapter.index + 1, t3 - 1);
+        startWords(u2.vol, u2.unit, u2.unit.words.slice(ci2 * CHAPTER, ci2 * CHAPTER + CHAPTER),
+          { index: ci2, total: t3 });
+      }
+      else if (act === 'restart') {
+        var u3 = state.unit;
+        if (!u3 || !u3.unit) return;
+        startUnit(u3.vol.no - 1, u3.unit.id);
       }
       else if (act === 'home') { showView('home'); renderHome(); }
       else if (act === 'clear-wrong') {
