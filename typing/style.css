@@ -63,6 +63,7 @@
 .type-input:focus{border-color:var(--blue,#1e5fa3);box-shadow:0 0 0 4px color-mix(in srgb,var(--blue,#1e5fa3) 16%,transparent)}
 .type-input.is-bad{border-color:#e05d5d;box-shadow:0 0 0 4px rgba(224,93,93,.16)}
 .type-input.is-good{border-color:#2f9e6e;box-shadow:0 0 0 4px rgba(47,158,110,.16)}
+.type-input.is-typing{border-color:var(--line-strong)}
 .type-input::placeholder{color:var(--muted-2);font-weight:400;letter-spacing:0}
 
 .wc-tools{display:flex;justify-content:center;gap:9px;margin-top:18px;flex-wrap:wrap}

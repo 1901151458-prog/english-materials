@@ -25,6 +25,8 @@
     startTs: 0,
     showIpa: true,
     answered: false,
+    warned: false,
+    composing: false,
     chapter: { index: 0, total: 1 }
   };
 
@@ -174,6 +176,8 @@
     inp.value = '';
     inp.className = 'type-input';
     inp.disabled = false;
+    state.warned = false;
+    state.answered = false;
     inp.focus();
 
     $('#wc-feedback').innerHTML = '';
@@ -203,30 +207,54 @@
     return String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
   }
 
-  function checkTyped() {
+  /* 输入判定：是答案前缀 → 正常输入中；偏离 → 只提示一次；完全匹配 → 通过 */
+  function handleInput() {
     var w = state.queue[state.idx];
     if (!w || state.answered) return;
     var inp = $('#type-input');
     var val = norm(inp.value);
-    if (!val) return;
+    var target = norm(w.word);
 
-    if (val === norm(w.word)) {
-      /* 正确 */
+    /* 空输入：清掉一切状态 */
+    if (!val) {
+      inp.classList.remove('is-bad', 'is-good', 'is-typing');
+      $('#wc-feedback').innerHTML = '';
+      state.warned = false;
+      return;
+    }
+
+    /* 完全正确 → 通过 */
+    if (val === target) {
       state.answered = true;
       state.correct++;
+      inp.classList.remove('is-bad', 'is-typing');
       inp.classList.add('is-good');
       $('#wc-feedback').innerHTML = '<span class="fb-good">✓ 正确</span>';
       setTimeout(function () { state.idx++; renderPractice(); }, 260);
-    } else {
-      /* 错误：抖动提示，允许继续修改（不推进） */
+      return;
+    }
+
+    /* 是答案的前缀 → 正常打字中，不报错 */
+    if (target.indexOf(val) === 0) {
+      state.warned = false;                 /* 回到正确轨道，重置提示 */
+      inp.classList.remove('is-bad', 'is-good');
+      inp.classList.add('is-typing');
+      $('#wc-feedback').innerHTML = '<span class="fb-hint">继续，还差 ' +
+        (target.length - val.length) + ' 个字母</span>';
+      return;
+    }
+
+    /* 偏离答案 → 只提示一次，不反复抖 */
+    inp.classList.remove('is-typing', 'is-good');
+    inp.classList.add('is-bad');
+    if (!state.warned) {
+      state.warned = true;
       var card = $('#word-card');
       card.classList.add('is-bad');
-      inp.classList.add('is-bad');
       setTimeout(function () { card.classList.remove('is-bad'); }, 340);
-      setTimeout(function () { inp.classList.remove('is-bad'); }, 500);
-      registerWrong(w);
-      showHint(w);
+      registerWrong(w);                     /* 每个词只记一次错 */
     }
+    showHint(w);
   }
 
   function showHint(w) {
@@ -284,6 +312,8 @@
     var inp = $('#type-input');
     inp.value = first;
     inp.focus();
+    state.warned = false;
+    handleInput();
   }
 
   function showMemo(w) {
@@ -408,25 +438,45 @@
     });
 
     var inp = $('#type-input');
+
+    /* 输入法组合期间不校验，避免拼音字母被误判为拼错 */
+    inp.addEventListener('compositionstart', function () { state.composing = true; });
+    inp.addEventListener('compositionend', function () {
+      state.composing = false;
+      handleInput();
+    });
+
     inp.addEventListener('input', function () {
-      /* 输入法可能带中文，直接过滤提示 */
       var hasCJK = /[\u4e00-\u9fa5]/.test(inp.value);
       if (hasCJK) {
         inp.value = inp.value.replace(/[\u4e00-\u9fa5]/g, '');
         $('#wc-feedback').innerHTML = '<span class="fb-hint">请切换到英文输入法</span>';
       }
-      if (!state.answered) checkTyped();
+      if (state.composing) return;
+      handleInput();
     });
+
     inp.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         e.preventDefault();
         if (state.answered) return;
-        if (!inp.value.trim()) {
+        var w = state.queue[state.idx];
+        if (!w) return;
+        var val = norm(inp.value);
+        if (!val) {
           $('#wc-feedback').innerHTML = '<span class="fb-hint">先输入答案，或按 Tab 提示</span>';
           return;
         }
-        /* Enter 强制校验一次（若已正确会自动推进） */
-        checkTyped();
+        if (val === norm(w.word)) { handleInput(); return; }
+        /* 回车提交但不完整/不对：明确提示，记一次错 */
+        if (!state.warned) { state.warned = true; registerWrong(w); }
+        var card = $('#word-card');
+        card.classList.add('is-bad');
+        setTimeout(function () { card.classList.remove('is-bad'); }, 340);
+        inp.classList.remove('is-typing');
+        inp.classList.add('is-bad');
+        $('#wc-feedback').innerHTML = '<span class="fb-bad">✗ 还没输对</span> <span class="fb-hint">' +
+          (norm(w.word).indexOf(val) === 0 ? '继续输入，或按 Tab 提示' : '检查一下拼写，或按 Tab 提示') + '</span>';
       } else if (e.key === 'Tab') {
         e.preventDefault();
         hintFirst();
