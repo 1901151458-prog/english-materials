@@ -1,193 +1,197 @@
 # 初中英语资料站
 
-人教版（新课纲版）初中英语学习资料整理 · 静态站点（GitHub Pages）
+人教版（新课纲版）初中英语学习资料整理 —— 按册、按单元、按考点组织，可搜索、可打印、可下载 PDF。
 
-**在线访问：<https://1901151458-prog.github.io/english-materials/>**
+**🌐 在线站点**：<https://1901151458-prog.github.io/english-materials/>
 
-## 已收录资料
+---
 
-| 资料 | 适用 | 规模 | 在线页面 | PDF |
-| --- | --- | --- | --- | --- |
-| 初中五册黑体词汇与助记汇总 | 七上–九上 | 5 册 · 42 单元 · 1,298 条黑体词 · 10 类助记 | [打开](https://1901151458-prog.github.io/english-materials/vocab-5-books/) | [下载（109 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/vocab-5books-2024.pdf) |
-| U1–U8 黑体词词形变化整理 | 九年级上册 | 8 个单元 · 327 个黑体词 · 2,013 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) | [下载（18 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-vocab-forms.pdf) |
-| U1–U8 黑体词词形变化整理（八下） | 八年级下册 | 8 个单元 · 290 个黑体词 · 1,363 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8b/) | [下载（15 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-vocab-forms.pdf) |
-| U1–U8 黑体词词形变化整理（八上） | 八年级上册 | 8 个单元 · 324 个黑体词 · 1,564 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g8a/) | [下载（17 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-u1-u8-vocab-forms.pdf) |
-| U1–U8 书面表达范文集 | 九年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 |
-| U1–U8 书面表达范文集（八下） | 八年级下册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g8b/) | [下载（53 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-u1-u8-writing-essays.pdf) |
-| U1–U8 书面表达范文集（八上） | 八年级上册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g8a/) | [下载（52 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-u1-u8-writing-essays.pdf) |
-| U1–U8 书面表达范文集（七下） | 七年级下册 | 8 个单元 · 80 篇范文 · 64 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g7b/) | [下载（52 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7b-u1-u8-writing-essays.pdf) |
-| U1–U7 书面表达范文集（七上） | 七年级上册 | 7 个单元 · 70 篇范文 · 56 条写作常用句型 | [打开](https://1901151458-prog.github.io/english-materials/essays-g7a/) | [下载（47 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7a-u1-u7-writing-essays.pdf) |
-| U1–U8 黑体词词形变化整理（七下） | 七年级下册 | 8 个单元 · 286 个黑体词 · 1,166 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g7b/) | [下载（14 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7b-u1-u8-vocab-forms.pdf) |
-| U1–U7 黑体词词形变化整理（七上） | 七年级上册 | 7 个单元 · 184 个黑体词 · 716 个词形与派生词 | [打开](https://1901151458-prog.github.io/english-materials/vocab-forms-g7a/) | [下载（9 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g7a-u1-u7-vocab-forms.pdf) | [打开](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) | [下载（56 页）](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-u1-u8-writing-essays.pdf) |
+## 站点概览
 
-## 资料简介
+| 板块 | 规模 | 入口 |
+| --- | --- | --- |
+| **词汇** | 6 册黑体词词形变化 + 六册词汇助记总表（47 单元 1,504 条） | [词汇总入口](https://1901151458-prog.github.io/english-materials/vocab-hub/) |
+| **语法** | 6 册 41 讲 + 6 张 A4 速查表 + 24 个专项 1,152 题 | [语法总复习](https://1901151458-prog.github.io/english-materials/grammar/) |
+| **课文** | 6 册 47 页 163 篇课文全解 + 1,304 道练习 | [课文全解](https://1901151458-prog.github.io/english-materials/reading/) |
+| **范文** | 6 册 44 单元 440 篇范文 + 352 条写作句型 | [范文总入口](https://1901151458-prog.github.io/english-materials/essays/) |
 
-### 一、初中五册黑体词汇与助记汇总（词汇 · 七上–九上）
+另有两套独立词汇测试、SDG 高级作文文库、拓展阅读（三份政治文献 / 四书经典 / 国际组织官网）。
 
-- 以人民教育出版社官方电子教材（新课纲版）各册分单元词表的**粗体（黑体）词条**为唯一判定标准，覆盖七年级上册至九年级上册 5 册 42 单元，共 **1,298 条**。
-- 每条含：序号、单词、国际音标、词性、释义、**助记技巧**（词根 / 联想 / 拆分 / 近形 / 谐音 / 拼读 / 搭配 / 词源 / 图像 / 辨析，共 10 类）。
-- 旧版 1,819 条按官方黑体口径校订为 1,298 条；跨册/跨单元错位的词已归位，校订明细见 PDF 前言。
-- 网站支持搜索（单词/音标/释义/助记）、按册/单元/词性/助记类型筛选、遮住释义自测、A4 打印；PDF 109 页可直接下载打印。
+---
 
-### 二、U1–U8 黑体词词形变化整理（词汇 · 九年级上册）
+## 一、词汇
 
-- 词表来自人教版（新课纲版）九年级上册英语教材的单元词汇表，只收录其中要求掌握的黑体词。
-- 每个黑体词逐个列出：三单、过去式、过去分词、现在分词、复数、比较级与派生词。
-- **黑色加粗**：2022 版课标初中考纲词汇及其常规词形变化；**绿色加粗**：考纲外拓展同根词（已对照剑桥词典核对）；**蓝色文字**：中文词性、词形说明。
-- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 18 页。
+入口：[`vocab-hub/`](https://1901151458-prog.github.io/english-materials/vocab-hub/)
 
-### 三、U1–U8 黑体词词形变化整理（词汇 · 八年级下册）
+### 1. 黑体词词形变化（6 册）
 
-- 词表来自人教版（新课纲版）八年级下册英语教材的单元词汇表，只收录其中要求掌握的黑体词（8 个单元、290 词）。
-- 每个黑体词逐个列出：三单、过去式、过去分词、现在分词、复数、比较级与拓展同根词。
-- **黑色加粗**：本词的常规词形变化（三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级）；**绿色加粗**：拓展同根词（已逐条核对）；**蓝色文字**：中文词性、词形说明。
-- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 15 页。
+| 册 | 单元 | 页面 |
+| --- | --- | --- |
+| 七年级上册 | U1–U7 | [`vocab-forms-g7a/`](https://1901151458-prog.github.io/english-materials/vocab-forms-g7a/) |
+| 七年级下册 | U1–U8 | [`vocab-forms-g7b/`](https://1901151458-prog.github.io/english-materials/vocab-forms-g7b/) |
+| 八年级上册 | U1–U8 | [`vocab-forms-g8a/`](https://1901151458-prog.github.io/english-materials/vocab-forms-g8a/) |
+| 八年级下册 | U1–U8 | [`vocab-forms-g8b/`](https://1901151458-prog.github.io/english-materials/vocab-forms-g8b/) |
+| 九年级上册 | U1–U8 | [`vocab-forms-u1-u8/`](https://1901151458-prog.github.io/english-materials/vocab-forms-u1-u8/) |
+| 九年级下册 ⚠️网传版 | U1–U5 | [`vocab-forms-g9x/`](https://1901151458-prog.github.io/english-materials/vocab-forms-g9x/) |
 
-### 四、U1–U8 黑体词词形变化整理（词汇 · 八年级上册）
+逐词列出三单、过去式、过去分词、现在分词、复数、比较级与派生词；考纲词形与考纲外拓展同根词分色标注。每册配黑白打印版与填空自测版 PDF。
 
-- 词表来自人教版（新课纲版）八年级上册英语教材的单元词汇表，只收录其中要求掌握的黑体词（8 个单元、324 词）。
-- 每个黑体词逐个列出：三单、过去式、过去分词、现在分词、复数、比较级与拓展同根词。
-- **黑色加粗**：本词的常规词形变化；**绿色加粗**：拓展同根词；**蓝色文字**：中文词性、词形说明。
-- 网站支持搜索、按单元/词性筛选、隐藏拓展词、自测模式、A4 打印；PDF 17 页。
+### 2. 六册黑体词汇与助记总表
 
-### 五、U1–U8 书面表达范文集（写作 · 九年级上册）
+[`vocab-5-books/`](https://1901151458-prog.github.io/english-materials/vocab-5-books/) — 47 单元 1,504 条黑体词，配音标、词性、释义与 10 类助记（词根 / 联想 / 谐音等），支持搜索、按册按单元筛选、遮住释义自测与 A4 打印。
 
-- 依据人教新版（新课纲版）九年级上册各单元话题整理，面向成都市中考英语书面表达备考。
-- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
-- 全书 8 个单元、80 篇范文、64 条句型；范文话题贴近成都生活（天府绿道、成都大运会、城市音乐厅等）。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 56 页。
+---
 
-### 六、U1–U8 书面表达范文集（写作 · 八年级下册）
+## 二、语法
 
-- 依据人教版（新课纲版）八年级下册 8 个单元话题编写，面向初二下学期与成都市中考英语书面表达。
-- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
-- 全书 8 个单元、80 篇范文、64 条句型；话题覆盖放松、健康、成长、自然奇观、自然灾害、跨文化礼仪、阅读、志愿服务。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
+入口：[`grammar/`](https://1901151458-prog.github.io/english-materials/grammar/) — **六册语法板块集中一页**，含 9 条跨册语法线索（时态线 / 从句线 / 语态线 / 情态动词线 / 代词线 / 词类线 / 句型线 / 非谓语 / 构词法）。
 
-### 七、U1–U8 书面表达范文集（写作 · 八年级上册）
+### 1. 语法总结（6 册，共 41 讲）
 
-- 依据人教版（新课纲版）八年级上册 8 个单元话题编写，面向初二上学期与成都市中考英语书面表达。
-- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
-- 全书 8 个单元、80 篇范文、64 条句型；话题覆盖假期、家庭与家务、朋友异同、动植物、美食、计划与梦想、未来生活、沟通。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
+| 册 | 讲数 | 页面 | 速查表 | PDF |
+| --- | ---: | --- | --- | --- |
+| 七年级上册 | 9 | [`g7a-grammar/`](https://1901151458-prog.github.io/english-materials/g7a-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g7a-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g7a-grammar-summary.pdf) |
+| 七年级下册 | 7 | [`g7b-grammar/`](https://1901151458-prog.github.io/english-materials/g7b-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g7b-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g7b-grammar-summary.pdf) |
+| 八年级上册 | 7 | [`g8a-grammar/`](https://1901151458-prog.github.io/english-materials/g8a-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g8a-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g8a-grammar-summary.pdf) |
+| 八年级下册 | 7 | [`g8b-grammar/`](https://1901151458-prog.github.io/english-materials/g8b-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g8b-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g8b-grammar-summary.pdf) |
+| 九年级上册 | 6 | [`g9-grammar/`](https://1901151458-prog.github.io/english-materials/g9-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g9-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-grammar-summary.pdf) |
+| 九年级下册 ⚠️网传版 | 5 | [`g9x-grammar/`](https://1901151458-prog.github.io/english-materials/g9x-grammar/) | [速查表](https://1901151458-prog.github.io/english-materials/g9x-grammar/cheatsheet/) | [PDF](https://1901151458-prog.github.io/english-materials/assets/pdf/g9x-grammar-summary.pdf) |
 
-### 八、U1–U8 书面表达范文集（写作 · 七年级下册）
+### 2. 专项练习（24 个，各 48 题，共 1,152 题）
 
-- 依据人教版（新课纲版）七年级下册 8 个单元话题编写，面向初一下学期与成都市中考英语书面表达。
-- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
-- 全书 8 个单元、80 篇范文、64 条句型；话题覆盖动物朋友、规则与秩序、保持健康、健康饮食、此时此刻、天气与出行、难忘的一天、故事与寓言。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
+| 册 | 专项 |
+| --- | --- |
+| 七上 | [名词与所有格](https://1901151458-prog.github.io/english-materials/g7a-nouns/) · [冠词与代词](https://1901151458-prog.github.io/english-materials/g7a-articles/) · [数词与介词](https://1901151458-prog.github.io/english-materials/g7a-numbers/) · [一般现在时与句子种类](https://1901151458-prog.github.io/english-materials/g7a-present/) |
+| 七下 | [名词](https://1901151458-prog.github.io/english-materials/g7b-nouns/) · [形容词与副词](https://1901151458-prog.github.io/english-materials/g7b-adjadv/) · [物主代词与情态动词](https://1901151458-prog.github.io/english-materials/g7b-pronouns-modals/) · [时态](https://1901151458-prog.github.io/english-materials/g7b-tenses/) |
+| 八上 | [不定代词](https://1901151458-prog.github.io/english-materials/g8a-pronouns/) · [比较级与最高级](https://1901151458-prog.github.io/english-materials/g8a-comparatives/) · [一般将来时与情态动词](https://1901151458-prog.github.io/english-materials/g8a-future/) · [句子种类与句子成分](https://1901151458-prog.github.io/english-materials/g8a-sentences/) |
+| 八下 | [时态](https://1901151458-prog.github.io/english-materials/g8b-tenses/) · [动词不定式](https://1901151458-prog.github.io/english-materials/g8b-infinitives/) · [连词与状语从句](https://1901151458-prog.github.io/english-materials/g8b-clauses/) · [反身代词与情态动词](https://1901151458-prog.github.io/english-materials/g8b-pronouns/) |
+| 九上 | [被动语态](https://1901151458-prog.github.io/english-materials/passive-voice-g9/) · [宾语从句](https://1901151458-prog.github.io/english-materials/object-clauses-g9/) · [关系从句](https://1901151458-prog.github.io/english-materials/relative-clauses-g9/) · [it 句型](https://1901151458-prog.github.io/english-materials/it-pattern-g9/) |
+| 九下 ⚠️ | [动词的时态](https://1901151458-prog.github.io/english-materials/g9x-tenses/) · [情态动词与冠词](https://1901151458-prog.github.io/english-materials/g9x-modals/) · [句子类型](https://1901151458-prog.github.io/english-materials/g9x-sentences/) · [构词法](https://1901151458-prog.github.io/english-materials/g9x-wordform/) |
 
-### 九、U1–U7 书面表达范文集（写作 · 七年级上册）
+每个专项 6 级 × 8 题，网页可在线作答、即时给解析；另配 LaTeX 讲义 PDF（含答案解析）。
 
-- 依据人教版（新课纲版）七年级上册 7 个单元话题编写，面向初一上学期与成都市中考英语书面表达。
-- 每单元：**8 条写作常用句型** + **A 组 5 篇满分范文**（配亮点解析与亮点句）+ **B 组 5 篇好背好文**（配参考译文）。
-- 全书 7 个单元、70 篇范文、56 条句型；话题覆盖自我介绍、家庭、学校、最喜欢的学科、社团、我的一天、生日。
-- 网站支持按单元浏览、全文检索、遮住中文自测、展开解析/译文、复制范文正文、A4 打印；PDF 由脚本生成。
+### 3. 打印版
 
-### 十、U1–U8 黑体词词形变化整理（词汇 · 七年级下册）
+| 类型 | 说明 |
+| --- | --- |
+| 总结 PDF | 每册 8–9 页，含全部表格与例句 |
+| A4 速查表 | 每册 1 页，9 个板块压缩到单页 |
+| 专项讲义 | 24 份，各 12–13 页，含 48 题与解析 |
+| 单册合订本 | 6 份，56–59 页（封面 + 总结 + 速查表 + 4 专项） |
+| **总复习合订本** | **349 页**，全六册合一 · [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/grammar-all-book.pdf) |
 
-- 依据人教版（新课纲版）七年级下册 8 个单元 286 个黑体词，逐词列出三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级，以及拓展同根词。
-- 8 个单元 · 286 个黑体词 · 1,166 个词形与派生词（常规词形 477 + 拓展词形 689）。
-- 网站支持按单元浏览、搜索、词性筛选、隐藏/显示拓展词、自测模式、A4 打印；PDF 由脚本生成（14 页）。
-- 三个词（however / among / although）无合适词形，按「—」说明展示。
+---
 
-### 十一、U1–U7 黑体词词形变化整理（词汇 · 七年级上册）
+## 三、课文
 
-- 依据人教版（新课纲版）七年级上册正式单元 U1–U7 的 184 个黑体词，逐词列出三单 / 过去式 / 过去分词 / 现在分词 / 复数 / 比较级 / 最高级，以及拓展同根词。
-- 7 个单元 · 184 个黑体词 · 716 个词形与派生词（常规词形 287 + 拓展词形 429）；Starter Units 词汇不在本表范围。
-- 网站支持按单元浏览、搜索、词性筛选、隐藏/显示拓展词、自测模式、A4 打印；PDF 由脚本生成（9 页）。
-- AM / PM / whom 无合适词形，按「—」说明展示。
+入口：[`reading/`](https://1901151458-prog.github.io/english-materials/reading/) — **六册 47 页 163 篇**，按册按单元直达。
 
-## 词汇测试（独立站点）
+| 册 | 页 | 篇 | 入口 |
+| --- | ---: | ---: | --- |
+| 七年级上册 | 10（3 Starter + 7 Unit） | 29 | [`g7a/`](https://1901151458-prog.github.io/english-materials/g7a/) |
+| 七年级下册 | 8 | 26 | [`g7b/`](https://1901151458-prog.github.io/english-materials/g7b/) |
+| 八年级上册 | 8 | 24 | [`g8a/`](https://1901151458-prog.github.io/english-materials/g8a/) |
+| 八年级下册 | 8 | 32 | [`g8b/`](https://1901151458-prog.github.io/english-materials/g8b/) |
+| 九年级上册 | 8 | 32 | [`g9/`](https://1901151458-prog.github.io/english-materials/g9/) |
+| 九年级下册 ⚠️ | 5 | 20 | [`g9b/`](https://1901151458-prog.github.io/english-materials/g9b/) |
 
-两套在线词汇量自测工具，独立部署、打开即用；5 秒一题、即时判分、连续 10 题答错自动结束，测完自动定级、估算词汇量并生成错词清单。
+每篇课文按 **逐句批注翻译 → 中英文大意 → 词汇 → 短语与固定搭配 → 语法点 → 难句解析 → 阅读指引 → 8 道练习** 的顺序精读；课文原文按教材版面逐句转写（扫描版教材逐页读图核对）。
 
-| 测试 | 适用 | 规模 | 在线地址 |
-| --- | --- | --- | --- |
-| 初中英语词汇量快速定级测试单 | 初二 / 初三 | 100 题 · 5 级 × 20 题 · 5 秒/题 | <https://1901151458-prog.github.io/english-vocab-test/> |
-| 英语词汇量 CEFR 定级测试 | 英语整体词汇水平 | 120 题 · CEFR A1–C2 · 5 秒/题 | <https://1901151458-prog.github.io/cefr-vocab-test/> |
+---
 
-## 拓展阅读
+## 四、范文
 
-- **《世界人权宣言》中英对照**（30 条 · 简体 / 繁體 / English 三语对照）：<https://1901151458-prog.github.io/UDHR/>
-  - 每条附「思想来源」伸缩说明（儒家 / 基督教典籍与历史渊源）和「求助与监督渠道」，可展开阅读；
-  - 适合主题阅读、议论文素材积累与公民教育拓展，手机/电脑均可直接打开。
-- **四书经典：论语 / 大学 / 中庸 / 孟子（朱熹《四书章句集注》本 · 英译对照 · 测试版）**：<https://1901151458-prog.github.io/sishu/>
-  - 四书全部上线：论语二十篇、大学（经一章、传十章）、中庸三十三章、孟子七篇十四卷；原文（简体、繁體）、朱熹集注、James Legge 英译对照；以中华书局《四书章句集注》为主要依据，不设白话译文与练习题；
-  - 支持三语/单语切换、字号调整、阅读进度、复制原文与 A4 打印；后续可扩展到《学而》整篇 16 章。
+入口：[`essays/`](https://1901151458-prog.github.io/english-materials/essays/) — **六册 44 单元 440 篇**，每单元配 8 条写作句型 + A 组 5 篇满分范文（配亮点解析）+ B 组 5 篇好背好文（配参考译文）。支持深链直达单元（`#u1`）与单篇（`#u1-a1`）。
+
+| 册 | 单元 | 范文 | 入口 |
+| --- | ---: | ---: | --- |
+| 七年级上册 | 7 | 70 | [`essays-g7a/`](https://1901151458-prog.github.io/english-materials/essays-g7a/) |
+| 七年级下册 | 8 | 80 | [`essays-g7b/`](https://1901151458-prog.github.io/english-materials/essays-g7b/) |
+| 八年级上册 | 8 | 80 | [`essays-g8a/`](https://1901151458-prog.github.io/english-materials/essays-g8a/) |
+| 八年级下册 | 8 | 80 | [`essays-g8b/`](https://1901151458-prog.github.io/english-materials/essays-g8b/) |
+| 九年级上册 | 8 | 80 | [`essays-u1-u8/`](https://1901151458-prog.github.io/english-materials/essays-u1-u8/) |
+| 九年级下册 ⚠️ | 5 | 50 | [`essays-g9x/`](https://1901151458-prog.github.io/english-materials/essays-g9x/) |
+
+合计 352 条高分写作句型。五册配 LaTeX/PDF 讲义。
+
+---
+
+## 五、其他资料
+
+### 词汇测试（独立站点）
+
+| 测试 | 内容 |
+| --- | --- |
+| [初中英语词汇量快速定级测试](https://1901151458-prog.github.io/english-vocab-test/) | 100 题 · 5 级 × 20 题 · 5 秒一题 · 自动定级并生成错词清单 |
+| [英语词汇量 CEFR 定级测试](https://1901151458-prog.github.io/cefr-vocab-test/) | 120 题 · A1–C2 六级 · 给出 CEFR 等级与能力描述 |
+
+### 拓展阅读
+
+| 资料 | 说明 |
+| --- | --- |
+| [SDG 写作与阅读文库](https://1901151458-prog.github.io/english-materials/sdgs/) | 17 篇 C1/C2 政策议论文 + 425 篇国际阅读 + 85 篇自创范文，配中文译文与联合国官网深链 |
+| [大宪章 + 独立宣言 + 人权宣言](https://1901151458-prog.github.io/UDHR/) | 三份政治文献，简体中文 / 繁體中文 / English 三语对照 |
+| [四书经典](https://1901151458-prog.github.io/sishu/) | 四书 + 礼记 / 孝经 / 易经 / 宋明理学名篇，竖排注疏、中英对照、朗诵版 |
+| 国际组织官网 | [联合国](https://www.un.org/zh/) · [英联邦](https://thecommonwealth.org/) · [欧盟](https://european-union.europa.eu/index_en) |
+
+---
 
 ## 目录结构
 
+```text
+english-materials/
+├── index.html              # 站点首页（四大板块总入口）
+├── 404.html / search.html  # 404 与站内搜索
+│
+├── vocab-hub/              # 词汇总入口
+├── vocab-forms-g7a…u1-u8/  # 6 册黑体词词形变化
+├── vocab-5-books/          # 六册黑体词助记总表
+│
+├── grammar/                # 语法总入口（含跨册语法线索）
+├── g7a-grammar…g9x-grammar/# 6 册语法总结（各含 cheatsheet/）
+├── g7a-nouns…g9x-wordform/ # 24 个语法专项（每个 48 题）
+│
+├── reading/                # 课文全解总入口
+├── g7a/ … g9b/             # 6 册课文（各含 unit*-reading/ 单元页）
+│
+├── essays/                 # 范文总入口
+├── essays-g7a…g9x/         # 6 册书面表达范文集
+│
+├── sdgs/                   # SDG 高级作文文库
+├── assets/
+│   ├── pdf/                # 81 个 PDF（总结 / 速查表 / 讲义 / 合订本 / 词形变化）
+│   ├── essays*/            # 范文数据（data.js）
+│   └── base.css / refine.css / theme.css
+├── LICENSE                 # MIT（仅代码）
+├── CONTENT_LICENSE.md      # 内容授权（三类分层）
+└── README.md
 ```
-index.html                             # 首页（资料目录）
-assets/
-  base.css                             # 全站共用样式
-  favicon.svg
-  pdf/
-    vocab-5books-2024.pdf              # 五册词汇与助记（109 页 A4）
-    g9-u1-u8-vocab-forms.pdf           # 九上词形表（18 页 A4）
-    g8b-u1-u8-vocab-forms.pdf          # 八下词形表（15 页 A4）
-    g9-u1-u8-writing-essays.pdf        # 范文集（56 页 A4）
-  vocab-5-books/                       # 五册词汇数据与逻辑
-    data.js / logic.js / app.js
-  vocab-forms/                         # 九上词形表数据与逻辑
-    data.js / logic.js / app.js
-  vocab-forms-g8b/                     # 八下词形表数据与逻辑
-    data.js / logic.js / app.js
-  vocab-forms-g8a/                     # 八上词形表数据与逻辑
-    data.js / logic.js / app.js
-  essays/                              # 范文集数据与逻辑
-    data.js / logic.js / app.js
-vocab-5-books/
-  index.html                           # 五册词汇互动页面
-  style.css
-vocab-forms-u1-u8/
-  index.html                           # 九上词形变化互动页面
-  style.css
-vocab-forms-g8b/
-  index.html                           # 八下词形变化互动页面
-  style.css
-vocab-forms-g8a/
-  index.html                           # 八上词形变化互动页面
-  style.css
-essays-u1-u8/
-  index.html                           # 书面表达范文集页面
-  style.css
-source/
-  vocab-5books.tex                     # 五册词汇 LaTeX 源文件
-  vocab-forms-u1-u8.tex                # 九上词形表 LaTeX 源文件
-  vocab-forms-g8b.tex                  # 八下词形表 LaTeX 源文件
-  vocab-forms-g8a.tex                  # 八上词形表 LaTeX 源文件
-  writing-essays-u1-u8.tex             # 范文集 LaTeX 源文件
-.nojekyll                              # 让 GitHub Pages 原样发布，不走 Jekyll
-```
+
+---
 
 ## 本地预览
 
-直接双击 `index.html` 即可（无需构建、无外部依赖、无统计脚本）；也可以起一个本地服务器：
-
 ```bash
+git clone https://github.com/1901151458-prog/english-materials.git
+cd english-materials
 python -m http.server 8080
 # 浏览器打开 http://localhost:8080
 ```
 
-## 更新 / 新增资料
+页面为纯静态 HTML/CSS/JS，无需构建。
 
-```bash
-git add -A
-git commit -m "更新说明"
-git push
-```
-
-新增资料时：在站点根目录建立资料页面（或页面文件夹），在 `index.html` 的资料目录里加一张卡片，并同步更新本 README 的表格。
+---
 
 ## 数据与标注
 
-- 五册词汇以人教社官方电子教材（新课纲版）分单元词表粗体词条为准；助记由程序与人工整理，仅作记忆线索，不替代词典。
-- 词形变化依据教材词汇表整理；拓展同根词对照 [Cambridge Dictionary](https://dictionary.cambridge.org/) 核对。
-- 范文依据教材单元话题与成都市中考书面表达要求整理；文中专有名词可在考场上按题目替换。
-- 资料仅供学习与教学参考，可自由用于课堂教学与家庭辅导，请保留出处；发现疏漏欢迎提 Issue。
+- **教材依据**：人教版（新课纲版 / 2024 修订版）教材，词汇以各册词汇表黑体词条为准，语法按教材书末 Grammar 附录整理，课文按教材版面逐句转写。
+- **词形变化**：依据教材词汇表整理；拓展同根词对照 [Cambridge Dictionary](https://dictionary.cambridge.org/) 核对。
+- **范文**：依据教材单元话题与成都市中考书面表达要求自编，非教材原文；文中专有名词可在考场上按题目替换。
+- **练习题**：全部自编，6 级递进（每级 8 题），配解析。
+- **外部引用**：SDG 相关内容引用联合国公开材料并附官方深链；大学经典与三份政治文献属公有领域。
+- **PDF 生成**：语法讲义使用 `ctexart` 排版，源码在各目录内，`xelatex` 编译两次即可复现。
+
+---
 
 ## 内容来源与授权
 
@@ -214,15 +218,6 @@ git push
 
 ### 免责说明
 
+- ⚠️ **九年级下册全部内容基于网传电子版教材整理**（官方版预计 2027 年发布），非官方内容，**学生请勿作为学习依据，仅供教师参考**。
 - 本站为个人整理的**学习辅助资料**，非官方教材或教辅。
-- 九年级下册基于**网传电子版**整理（官方版预计 2027 年发布），**学生请勿作为学习依据，仅供教师参考**。
-- 内容按「现状」提供，发现疏漏请提 [Issue](https://github.com/1901151458-prog/english-materials/issues)。
-
-## 语法专题
-
-| 资料 | 适用 | 内容 | 在线页面 | PDF |
-| --- | --- | --- | --- | --- |
-| 宾语从句专项 | 九年级上册 | 6 讲语法 + 48 道分级练习，配合 Unit 3 / Unit 4 | [打开](https://1901151458-prog.github.io/english-materials/object-clauses-g9/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-object-clauses.pdf) |
-| It is 句型专项 | 九年级上册 | 6 讲语法 + 48 道分级练习，配合 Unit 2 Inspiring People | [打开](https://1901151458-prog.github.io/english-materials/it-pattern-g9/) | [下载](https://1901151458-prog.github.io/english-materials/assets/pdf/g9-it-patterns.pdf) |
-
-两个语法专项都提供 LaTeX 源码：`object-clauses-g9/object-clauses.tex` 与 `it-pattern-g9/it-patterns.tex`，可用 `xelatex` 编译。
+- 内容按「现状」提供，发现疏漏或错误请提 [Issue](https://github.com/1901151458-prog/english-materials/issues)。
