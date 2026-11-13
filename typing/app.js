@@ -79,8 +79,8 @@
       if (qv >= 1 && qv <= state.volumes.length && qu) {
         var homeVol = state.volumes[qv - 1];
         if (homeVol && homeVol.units.some(function (u) { return u.id === qu; })) {
-          /* 走 startUnit，保证按 20 词分章 */
-          startUnit(qv - 1, qu);
+          /* 走 startChapter：按 20 词分章 + 按需加载该册 */
+          startChapter(qv - 1, qu, 0);
         }
       }
     } else {
@@ -214,18 +214,6 @@
   }
 
   /* ---------- 练习 ---------- */
-  function startUnit(volIndex, unitId) {
-    var vol = state.volumes[volIndex];
-    var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
-    if (!unit) return;
-    var total = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
-    var key = unitKey(vol, unit);
-    var done = prog[key] ? Math.min(prog[key].done || 0, total) : 0;
-    var ch = Math.min(done, total - 1);
-    var slice = unit.words.slice(ch * CHAPTER, ch * CHAPTER + CHAPTER);
-    startWords(vol, unit, slice, { index: ch, total: total });
-  }
-
   function startChapter(volIndex, unitId, ch) {
     var volMeta = state.volumes[volIndex];
     var unitMeta = volMeta.units.filter(function (u) { return u.id === unitId; })[0];
