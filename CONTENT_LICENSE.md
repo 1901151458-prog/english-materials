@@ -2,6 +2,9 @@
 
 本仓库（[english-materials](https://github.com/1901151458-prog/english-materials)）同时包含**代码**与**文字内容**，两者授权不同。使用前请先确认你要用的是哪一类。
 
+> 根目录的 [LICENSE](LICENSE)（MIT）**仅覆盖代码部分**（HTML 模板、CSS、JavaScript、构建脚本）。
+> 页面内的教材转录与自编文字内容，授权见本文档。
+
 ---
 
 ## 一、三类内容，三种授权
