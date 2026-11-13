@@ -1,0 +1,316 @@
+/* 剑桥词典查词助手 —— 双击查词 / 选中浮条 / 词表图标
+ * 无依赖；开关与词典偏好存 localStorage。
+ * 用法：页面末尾加 <script src="{rel}assets/dict.js"></script>
+ */
+(function () {
+  'use strict';
+  if (window.__emDictLoaded) return;
+  window.__emDictLoaded = true;
+
+  var ON_KEY = 'em-dict-on';
+  var LANG_KEY = 'em-dict-lang';
+  var fromLS = function (k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } };
+  var toLS = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
+
+  var state = {
+    on: fromLS(ON_KEY, '1') !== '0',
+    lang: fromLS(LANG_KEY, 'zh')       // zh = 英汉，en = 英英
+  };
+
+  var DICTS = {
+    cambridge: {
+      label: '剑桥',
+      url: function (w) {
+        return 'https://dictionary.cambridge.org/dictionary/' +
+          (state.lang === 'en' ? 'english' : 'english-chinese-simplified') + '/' + w;
+      }
+    },
+    youdao: {
+      label: '有道',
+      url: function (w) { return 'https://dict.youdao.com/result?word=' + encodeURIComponent(w) + '&lang=en'; }
+    },
+    bing: {
+      label: '必应',
+      url: function (w) { return 'https://cn.bing.com/dict/search?q=' + encodeURIComponent(w); }
+    }
+  };
+
+  /* ---------- 文本处理 ---------- */
+  var WORD_RE = /^[A-Za-z][A-Za-z'’\- .]{0,60}$/;
+
+  function clean(s) {
+    if (!s) return '';
+    s = String(s).replace(/[\u200b-\u200d\ufeff]/g, '');
+    s = s.replace(/[.,;:!?()\[\]{}<>"“”‘’«»…、，。；：！？（）【】《》]/g, ' ');
+    s = s.replace(/\s+/g, ' ').trim();
+    return s;
+  }
+
+  function toSlug(s) {
+    return s.toLowerCase().replace(/['’]/g, '').replace(/\s+/g, '-');
+  }
+
+  function usable(s) {
+    if (!s) return false;
+    if (!WORD_RE.test(s)) return false;
+    var words = s.split(/\s+/);
+    if (words.length > 5) return false;
+    if (!/[A-Za-z]/.test(s)) return false;
+    return true;
+  }
+
+  function open(word, which) {
+    var w = toSlug(word);
+    if (!w) return;
+    var d = DICTS[which] || DICTS.cambridge;
+    var url = d.url(w);
+    var win = window.open(url, '_blank', 'noopener');
+    if (win) { try { win.opener = null; } catch (e) {} }
+  }
+
+  /* ---------- 样式 ---------- */
+  function injectStyle() {
+    if (document.getElementById('em-dict-css')) return;
+    var st = document.createElement('style');
+    st.id = 'em-dict-css';
+    st.textContent = [
+      '.dict-fab{position:fixed;right:16px;bottom:16px;z-index:9990;display:flex;align-items:center;gap:6px;',
+      'height:38px;padding:0 13px;border-radius:19px;border:1px solid var(--line,#e0e8f2);',
+      'background:var(--card,#fff);color:var(--ink,#111);font:600 13px/1 system-ui,"Microsoft YaHei",sans-serif;',
+      'box-shadow:0 6px 20px rgba(0,0,0,.18);cursor:pointer;user-select:none;transition:transform .15s,opacity .15s}',
+      '.dict-fab:hover{transform:translateY(-2px)}',
+      '.dict-fab[data-on="0"]{opacity:.62}',
+      '.dict-fab .dict-dot{width:8px;height:8px;border-radius:50%;background:#1e5fa3}',
+      '.dict-fab[data-on="0"] .dict-dot{background:#9aa7b8}',
+      '.dict-bar{position:absolute;z-index:9992;display:none;gap:2px;padding:4px;border-radius:9px;',
+      'border:1px solid var(--line,#e0e8f2);background:var(--card,#fff);box-shadow:0 8px 26px rgba(0,0,0,.24)}',
+      '.dict-bar.is-on{display:flex}',
+      '.dict-bar a{display:block;padding:6px 10px;border-radius:6px;color:var(--ink,#111);',
+      'font:600 12.5px/1 system-ui,"Microsoft YaHei",sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}',
+      '.dict-bar a:hover{background:color-mix(in srgb,var(--blue,#1e5fa3) 12%,transparent);color:var(--blue,#1e5fa3)}',
+      '.dict-bar .dict-w{max-width:150px;overflow:hidden;text-overflow:ellipsis;color:var(--muted,#667);font-weight:500;',
+      'padding:6px 8px 6px 6px;border-right:1px solid var(--line,#e0e8f2);margin-right:2px}',
+      '.dict-icon{display:inline-flex;align-items:center;justify-content:center;margin-left:6px;',
+      'width:20px;height:20px;border-radius:6px;text-decoration:none;vertical-align:-4px;',
+      'color:var(--blue,#1e5fa3);background:color-mix(in srgb,var(--blue,#1e5fa3) 10%,transparent);',
+      'opacity:.72;transition:opacity .12s,background .12s,transform .12s}',
+      '.dict-icon:hover{opacity:1;background:color-mix(in srgb,var(--blue,#1e5fa3) 22%,transparent);transform:translateY(-1px)}',
+      '.dict-icon svg{width:12px;height:12px;display:block}',
+      '@media print{.dict-fab,.dict-bar,.dict-icon{display:none!important}}'
+    ].join('');
+    document.head.appendChild(st);
+  }
+
+  /* ---------- 右下角开关 ---------- */
+  var fab = null;
+  function mountFab() {
+    if (fab || !document.body) return;
+    fab = document.createElement('div');
+    fab.className = 'dict-fab no-print';
+    fab.setAttribute('role', 'button');
+    fab.setAttribute('tabindex', '0');
+    fab.title = '词典查词：双击英文单词，或选中短语点浮条。点击开关。';
+    fab.innerHTML = '<span class="dict-dot"></span><span class="dict-txt"></span>';
+    fab.addEventListener('click', function () {
+      state.on = !state.on;
+      toLS(ON_KEY, state.on ? '1' : '0');
+      syncFab();
+    });
+    fab.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fab.click(); }
+    });
+    document.body.appendChild(fab);
+    syncFab();
+  }
+
+  function syncFab() {
+    if (!fab) return;
+    fab.setAttribute('data-on', state.on ? '1' : '0');
+    fab.querySelector('.dict-txt').textContent = state.on
+      ? '词典 · ' + (state.lang === 'en' ? '英英' : '英汉')
+      : '词典已关';
+    fab.title = state.on
+      ? '双击英文单词查词；选中短语出现浮条。点击关闭。'
+      : '词典查词已关闭。点击开启。';
+  }
+
+  /* ---------- 选中浮条 ---------- */
+  var bar = null, barWord = '', barTimer = 0;
+
+  function mountBar() {
+    if (bar || !document.body) return;
+    bar = document.createElement('div');
+    bar.className = 'dict-bar no-print';
+    bar.innerHTML = '<span class="dict-w"></span>' +
+      '<a data-d="cambridge">剑桥</a><a data-d="youdao">有道</a><a data-d="bing">必应</a>';
+    bar.addEventListener('mousedown', function (e) { e.preventDefault(); e.stopPropagation(); });
+    bar.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[data-d]') : null;
+      if (!a) return;
+      e.preventDefault();
+      open(barWord, a.getAttribute('data-d'));
+      hideBar();
+    });
+    document.body.appendChild(bar);
+  }
+
+  function showBar(word, x, y) {
+    mountBar();
+    barWord = word;
+    bar.querySelector('.dict-w').textContent = word;
+    bar.classList.add('is-on');
+    var w = bar.offsetWidth || 230;
+    var left = Math.max(8, Math.min(x - w / 2, window.innerWidth - w - 8));
+    var top = y - bar.offsetHeight - 10;
+    if (top < 8) top = y + 18;
+    bar.style.left = left + window.scrollX + 'px';
+    bar.style.top = top + window.scrollY + 'px';
+  }
+
+  function hideBar() {
+    if (bar) bar.classList.remove('is-on');
+    barWord = '';
+  }
+
+  function selectionRect(sel) {
+    try {
+      var r = sel.getRangeAt(0).getBoundingClientRect();
+      if (r && (r.width || r.height)) return { x: r.left + r.width / 2, y: r.top };
+    } catch (e) {}
+    return null;
+  }
+
+  /* ---------- 事件 ---------- */
+  function inEditable(node) {
+    while (node && node !== document.body) {
+      var tag = (node.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || node.isContentEditable) return true;
+      node = node.parentNode;
+    }
+    return false;
+  }
+
+  function selectedWord() {
+    var sel = window.getSelection ? window.getSelection() : null;
+    if (!sel || sel.isCollapsed) return '';
+    var raw = clean(sel.toString());
+    return usable(raw) ? raw : '';
+  }
+
+  function bind() {
+    /* 双击：直接打开剑桥 */
+    document.addEventListener('dblclick', function (e) {
+      if (!state.on) return;
+      if (inEditable(e.target)) return;
+      var sel = window.getSelection();
+      var raw = clean(sel ? sel.toString() : '');
+      if (!usable(raw)) return;
+      /* 双击可能只选中一个词；若选区含中文则忽略 */
+      e.preventDefault();
+      open(raw, 'cambridge');
+      hideBar();
+    }, true);
+
+    /* 拖选：显示浮条 */
+    document.addEventListener('mouseup', function (e) {
+      if (!state.on) return;
+      if (e.target === fab || (bar && bar.contains(e.target))) return;
+      if (inEditable(e.target)) return;
+      clearTimeout(barTimer);
+      barTimer = setTimeout(function () {
+        var word = selectedWord();
+        if (!word) { hideBar(); return; }
+        var sel = window.getSelection();
+        var pos = sel ? selectionRect(sel) : null;
+        showBar(word, pos ? pos.x : e.pageX, pos ? pos.y : e.pageY);
+      }, 30);
+    });
+
+    /* 点击空白处收起浮条 */
+    document.addEventListener('mousedown', function (e) {
+      if (bar && bar.classList.contains('is-on') && !bar.contains(e.target)) hideBar();
+    });
+
+    /* 移动端（触屏）：选区变化后出现浮条。桌面端不介入，避免与 mouseup 抢定时器 */
+    var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (coarse) {
+      document.addEventListener('selectionchange', function () {
+        if (!state.on) return;
+        clearTimeout(barTimer);
+        barTimer = setTimeout(function () {
+          var word = selectedWord();
+          if (!word) { hideBar(); return; }
+          var sel = window.getSelection();
+          var pos = sel ? selectionRect(sel) : null;
+          if (pos) showBar(word, pos.x, pos.y);
+        }, 260);
+      });
+    }
+
+    /* 键盘：Ctrl/Cmd + 单击 也可以查 */
+    document.addEventListener('click', function (e) {
+      if (!state.on) return;
+      if (!(e.ctrlKey || e.metaKey)) return;
+      if (inEditable(e.target)) return;
+      var raw = clean(window.getSelection ? window.getSelection().toString() : '');
+      if (!usable(raw)) return;
+      e.preventDefault();
+      open(raw, 'cambridge');
+    });
+  }
+
+  /* ---------- 词表页：给词头加图标 ---------- */
+  function dictIcon(word) {
+    var a = document.createElement('a');
+    a.className = 'dict-icon no-print';
+    a.href = DICTS.cambridge.url(toSlug(word));
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.title = '剑桥词典：' + word;
+    a.setAttribute('aria-label', '查「' + word + '」的剑桥词典');
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" ' +
+      'stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/>' +
+      '<path d="M15.5 15.5 21 21"/></svg>';
+    return a;
+  }
+
+  function decorate() {
+    var rows = document.querySelectorAll('tr.word-row');
+    for (var i = 0; i < rows.length; i++) {
+      var tr = rows[i];
+      if (tr.getAttribute('data-dict') === '1') continue;
+      var word = tr.getAttribute('data-word');
+      if (!word) continue;
+      var cell = tr.querySelector('.word-cell');
+      if (!cell) continue;
+      tr.setAttribute('data-dict', '1');
+      cell.appendChild(dictIcon(word));
+    }
+  }
+
+  var obs = null;
+  function watchTable() {
+    decorate();
+    if (obs || !window.MutationObserver) return;
+    obs = new MutationObserver(function () {
+      clearTimeout(watchTable._t);
+      watchTable._t = setTimeout(decorate, 120);
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+  }
+
+  /* ---------- 启动 ---------- */
+  function start() {
+    injectStyle();
+    mountFab();
+    mountBar();
+    bind();
+    watchTable();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
