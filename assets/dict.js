@@ -74,14 +74,17 @@
     var st = document.createElement('style');
     st.id = 'em-dict-css';
     st.textContent = [
-      '.dict-fab{position:fixed;right:16px;bottom:16px;z-index:9990;display:flex;align-items:center;gap:6px;',
-      'height:38px;padding:0 13px;border-radius:19px;border:1px solid var(--line,#e0e8f2);',
+      '.dict-fab{position:fixed;right:16px;bottom:16px;z-index:9990;display:flex;align-items:center;gap:8px;',
+      'min-height:46px;padding:6px 14px;border-radius:23px;border:1px solid var(--line,#e0e8f2);',
       'background:var(--card,#fff);color:var(--ink,#111);font:600 13px/1 system-ui,"Microsoft YaHei",sans-serif;',
       'box-shadow:0 6px 20px rgba(0,0,0,.18);cursor:pointer;user-select:none;transition:transform .15s,opacity .15s}',
       '.dict-fab:hover{transform:translateY(-2px)}',
       '.dict-fab[data-on="0"]{opacity:.62}',
-      '.dict-fab .dict-dot{width:8px;height:8px;border-radius:50%;background:#1e5fa3}',
+      '.dict-fab .dict-dot{width:8px;height:8px;border-radius:50%;background:#1e5fa3;flex:none}',
       '.dict-fab[data-on="0"] .dict-dot{background:#9aa7b8}',
+      '.dict-fab .dict-txt{display:flex;flex-direction:column;gap:2px;text-align:left;line-height:1.2}',
+      '.dict-fab .dict-txt b{font-size:13px;font-weight:700;letter-spacing:.2px}',
+      '.dict-fab .dict-txt small{font-size:10.5px;font-weight:500;opacity:.6;letter-spacing:.2px}',
       '.dict-bar{position:absolute;z-index:9992;display:none;gap:2px;padding:4px;border-radius:9px;',
       'border:1px solid var(--line,#e0e8f2);background:var(--card,#fff);box-shadow:0 8px 26px rgba(0,0,0,.24)}',
       '.dict-bar.is-on{display:flex}',
@@ -96,7 +99,7 @@
       'opacity:.72;transition:opacity .12s,background .12s,transform .12s}',
       '.dict-icon:hover{opacity:1;background:color-mix(in srgb,var(--blue,#1e5fa3) 22%,transparent);transform:translateY(-1px)}',
       '.dict-icon svg{width:12px;height:12px;display:block}',
-      '.dict-hint{position:fixed;right:16px;bottom:64px;z-index:9991;max-width:238px;',
+      '.dict-hint{position:fixed;right:16px;bottom:74px;z-index:9991;max-width:238px;',
       'padding:9px 12px;border-radius:11px;border:1px solid var(--line,#e0e8f2);background:var(--card,#fff);',
       'color:var(--ink,#111);box-shadow:0 10px 28px rgba(0,0,0,.22);cursor:pointer;',
       'font:500 12.5px/1.55 system-ui,"Microsoft YaHei",sans-serif;',
@@ -125,7 +128,8 @@
     fab.setAttribute('role', 'button');
     fab.setAttribute('tabindex', '0');
     fab.title = '词典查词：双击英文单词，或选中短语点浮条。点击开关。';
-    fab.innerHTML = '<span class="dict-dot"></span><span class="dict-txt"></span>';
+    fab.innerHTML = '<span class="dict-dot"></span>' +
+      '<span class="dict-txt"><b></b><small></small></span>';
     fab.addEventListener('click', function () {
       state.on = !state.on;
       toLS(ON_KEY, state.on ? '1' : '0');
@@ -142,9 +146,17 @@
   function syncFab() {
     if (!fab) return;
     fab.setAttribute('data-on', state.on ? '1' : '0');
-    fab.querySelector('.dict-txt').textContent = state.on
-      ? '词典 · ' + (state.lang === 'en' ? '英英' : '英汉')
-      : '词典已关';
+    var b = fab.querySelector('.dict-txt b');
+    var sm = fab.querySelector('.dict-txt small');
+    if (state.on) {
+      b.textContent = '词典 · ' + (state.lang === 'en' ? '英英' : '英汉');
+      sm.textContent = '双击查词';
+      sm.style.opacity = '';
+    } else {
+      b.textContent = '词典已关';
+      sm.textContent = '点击开启';
+      sm.style.opacity = '.45';
+    }
     fab.title = state.on
       ? '双击英文单词查词；选中短语出现浮条。点击关闭。'
       : '词典查词已关闭。点击开启。';
