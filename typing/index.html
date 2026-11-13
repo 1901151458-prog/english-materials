@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>打字背单词 · 人教版初中英语 | 初中英语资料站</title>
+<meta name="description" content="人教版（新课纲版）初中英语打字背单词：看中文打英文，打错必须重打，练拼写的同时练键盘手感。按单元 20 词一章，进度存在本地，附错词本复习。">
+<meta property="og:title" content="打字背单词 · 人教版初中英语">
+<meta property="og:url" content="https://1901151458-prog.github.io/english-materials/typing/">
+<meta property="og:image" content="https://1901151458-prog.github.io/english-materials/assets/og-cover.png">
+<meta name="theme-color" content="#1a365d">
+<link rel="canonical" href="https://1901151458-prog.github.io/english-materials/typing/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="初中英语资料站">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://1901151458-prog.github.io/english-materials/assets/og-cover.png">
+<link rel="stylesheet" href="../assets/base.min.css?v=2">
+<link rel="stylesheet" href="./style.min.css?v=1">
+<link rel="stylesheet" href="../assets/refine.min.css?v=3">
+<link rel="stylesheet" href="../assets/theme.min.css?v=3">
+</head>
+<body>
+<a class="skip-link" href="#app">跳到正文</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">英</span>
+      <span class="brand-text"><strong>初中英语资料站</strong><small>人教版 新课纲版</small></span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../index.html#materials">资料</a>
+      <a href="../vocab-hub/index.html">词汇</a>
+      <a href="./index.html" aria-current="page">背单词</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="container" id="app">
+
+  <!-- ========== 选择页 ========== -->
+  <div class="view is-on" id="view-home">
+    <div class="page-hero">
+      <span class="eyebrow"><span class="dot"></span>打字背单词</span>
+      <h1>看中文，打英文</h1>
+      <p class="lead">看着中文释义把英文单词完整敲一遍 —— 拼错就重打，练拼写的同时练键盘手感。按单元 20 词一章，进度自动存在本机。</p>
+      <div class="hero-stats">
+        <span><b>6</b> 册</span>
+        <span><b>47</b> 单元</span>
+        <span><b>1504</b> 词</span>
+        <span><b>20</b> 词/章</span>
+        <span>错词本已收 <b id="wrong-count">0</b> 词</span>
+      </div>
+    </div>
+
+    <div class="wc-tools" style="justify-content:flex-start;margin:16px 0 4px">
+      <button class="primary" data-act="review" id="btn-review" disabled>复习错词</button>
+      <button data-act="clear-wrong">清空错词本</button>
+    </div>
+
+    <div class="book-grid" id="book-grid"></div>
+
+    <p class="kbd-hint">练习时：<kbd>Tab</kbd> 提示首字母 · <kbd>Esc</kbd> 返回选册 · 打对自动进入下一词</p>
+  </div>
+
+  <!-- ========== 练习页 ========== -->
+  <div class="view" id="view-practice">
+    <div class="practice-top">
+      <button class="pt-back" data-act="back">← 退出</button>
+      <span class="pt-title" id="pt-title">练习</span>
+      <div class="pbar"><i id="pbar-i"></i></div>
+      <div class="pstats">
+        <span id="pt-count">0 / 0</span>
+        <span>正确率 <b id="pt-acc">100%</b></span>
+        <span id="pt-time">0秒</span>
+      </div>
+    </div>
+
+    <div class="card-stage">
+      <div class="word-card" id="word-card">
+        <span class="wc-pos" id="wc-pos"></span>
+        <p class="wc-mean" id="wc-mean">—</p>
+        <p class="wc-ipa" id="wc-ipa"></p>
+
+        <div class="type-wrap">
+          <input class="type-input" id="type-input" type="text" autocomplete="off" autocorrect="off"
+                 autocapitalize="off" spellcheck="false" placeholder="在这里打出英文单词" inputmode="latin">
+        </div>
+
+        <div class="wc-tools">
+          <button data-act="hint">提示（Tab）</button>
+          <button data-act="giveup">看答案</button>
+          <button data-act="ipa" id="btn-ipa">隐藏音标</button>
+        </div>
+
+        <div class="wc-feedback" id="wc-feedback"></div>
+        <div class="wc-memo" id="wc-memo"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 结果页 ========== -->
+  <div class="view" id="view-result">
+    <div class="result-card">
+      <h2 id="res-title">这一章完成</h2>
+      <p class="res-sub" id="res-sub"></p>
+      <div class="res-stats">
+        <div class="res-stat"><div class="n" id="res-acc">100%</div><div class="l">正确率</div></div>
+        <div class="res-stat"><div class="n" id="res-wrong">0</div><div class="l">错词</div></div>
+        <div class="res-stat"><div class="n" id="res-time">0秒</div><div class="l">用时</div></div>
+      </div>
+      <div class="res-wrong" id="res-wrong-wrap" style="display:none">
+        <h3>本章错词</h3>
+        <div class="wl" id="res-wrong-list"></div>
+      </div>
+      <div class="res-actions">
+        <button class="primary" data-act="again">再来一章</button>
+        <button data-act="home">返回选册</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>人教版（新课纲版）初中英语 · 打字背单词 · 数据全部来自教材词汇表黑体词</p>
+    <p>练习进度与错词本仅保存在本机浏览器，不上传任何服务器。</p>
+  </div>
+</footer>
+
+<script src="../assets/theme.min.js?v=2"></script>
+<script src="../assets/vocab-5-books/data.js"></script>
+<script src="./app.min.js"></script>
+<script src="../assets/dict.min.js"></script>
+</body>
+</html>
