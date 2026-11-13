@@ -96,7 +96,18 @@
       'opacity:.72;transition:opacity .12s,background .12s,transform .12s}',
       '.dict-icon:hover{opacity:1;background:color-mix(in srgb,var(--blue,#1e5fa3) 22%,transparent);transform:translateY(-1px)}',
       '.dict-icon svg{width:12px;height:12px;display:block}',
-      '@media print{.dict-fab,.dict-bar,.dict-icon{display:none!important}}'
+      '.dict-hint{position:fixed;right:16px;bottom:64px;z-index:9991;max-width:238px;',
+      'padding:9px 12px;border-radius:11px;border:1px solid var(--line,#e0e8f2);background:var(--card,#fff);',
+      'color:var(--ink,#111);box-shadow:0 10px 28px rgba(0,0,0,.22);cursor:pointer;',
+      'font:500 12.5px/1.55 system-ui,"Microsoft YaHei",sans-serif;',
+      'opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease}',
+      '.dict-hint.is-on{opacity:1;transform:translateY(0)}',
+      '.dict-hint b{font-weight:700;color:var(--blue,#1e5fa3)}',
+      '.dict-hint .dict-hint-sub{display:block;margin-top:3px;font-size:11.5px;opacity:.68;font-weight:400}',
+      '.dict-hint::after{content:"";position:absolute;right:24px;bottom:-5px;width:9px;height:9px;',
+      'background:var(--card,#fff);border-right:1px solid var(--line,#e0e8f2);',
+      'border-bottom:1px solid var(--line,#e0e8f2);transform:rotate(45deg)}',
+      '@media print{.dict-fab,.dict-bar,.dict-icon,.dict-hint{display:none!important}}'
     ].join('');
     document.head.appendChild(st);
   }
@@ -115,6 +126,7 @@
       state.on = !state.on;
       toLS(ON_KEY, state.on ? '1' : '0');
       syncFab();
+      if (!state.on) closeHint();
     });
     fab.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fab.click(); }
@@ -132,6 +144,34 @@
     fab.title = state.on
       ? '双击英文单词查词；选中短语出现浮条。点击关闭。'
       : '词典查词已关闭。点击开启。';
+  }
+
+  /* ---------- 首次访问提示 ---------- */
+  var hintEl = null, hintTimer = 0;
+
+  function closeHint() {
+    if (!hintEl) return;
+    clearTimeout(hintTimer);
+    var el = hintEl;
+    hintEl = null;
+    el.classList.remove('is-on');
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 320);
+  }
+
+  function maybeShowHint() {
+    if (!state.on) return;
+    if (fromLS('em-dict-hint', '0') === '1') return;
+    if (hintEl) return;
+    toLS('em-dict-hint', '1');
+    hintEl = document.createElement('div');
+    hintEl.className = 'dict-hint no-print';
+    hintEl.setAttribute('role', 'status');
+    hintEl.innerHTML = '<b>双击</b>英文单词即可查剑桥词典' +
+      '<span class="dict-hint-sub">选中短语还能选有道 / 必应 · 点此关闭</span>';
+    hintEl.addEventListener('click', closeHint);
+    document.body.appendChild(hintEl);
+    requestAnimationFrame(function () { if (hintEl) hintEl.classList.add('is-on'); });
+    hintTimer = setTimeout(closeHint, 5000);
   }
 
   /* ---------- 选中浮条 ---------- */
@@ -207,6 +247,7 @@
       if (!usable(raw)) return;
       /* 双击可能只选中一个词；若选区含中文则忽略 */
       e.preventDefault();
+      closeHint();
       open(raw, 'cambridge');
       hideBar();
     }, true);
@@ -306,6 +347,7 @@
     mountBar();
     bind();
     watchTable();
+    if (state.on) setTimeout(maybeShowHint, 900);
   }
 
   if (document.readyState === 'loading') {
