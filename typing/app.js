@@ -761,7 +761,7 @@
       else if (act === 'restart') {
         var u3 = state.unit;
         if (!u3 || !u3.unit) return;
-        startUnit(u3.vol.no - 1, u3.unit.id);
+        startChapter(u3.vol.no - 1, u3.unit.id, 0);
       }
       else if (act === 'home') { state.view = 'home'; clearChapterRows(); showView('home'); renderHome(); }
       else if (act === 'clear-wrong') {
