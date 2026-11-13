@@ -148,3 +148,20 @@
   .wrong-item .wi-ipa{min-width:auto}
   .wrong-item .wi-mean{flex-basis:100%;order:3}
 }
+
+/* 今日目标卡 */
+.daily-card{margin:18px 0 6px;padding:14px 18px;border-radius:14px;background:var(--card);
+  border:1px solid var(--line);max-width:520px}
+.dc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.dc-title{font-size:13.5px;font-weight:700;color:var(--ink)}
+.dc-streak{font-size:12px;font-weight:600;color:var(--blue,#1e5fa3);
+  padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--blue,#1e5fa3) 12%,transparent)}
+.dc-bar{height:8px;border-radius:999px;background:var(--soft);overflow:hidden}
+.dc-bar i{display:block;height:100%;width:0;border-radius:999px;
+  background:linear-gradient(90deg,#2b7de9,#4aa3f0);transition:width .35s}
+.dc-bar.is-done i{background:linear-gradient(90deg,#2f9e6e,#4ec08b)}
+.dc-meta{display:flex;align-items:center;justify-content:space-between;margin-top:9px;font-size:12.5px;color:var(--muted)}
+.dc-set{padding:4px 10px;border-radius:7px;border:1px solid var(--line);background:transparent;
+  color:var(--muted);font-size:12px;cursor:pointer;font-family:inherit;transition:all .12s}
+.dc-set:hover{border-color:var(--line-strong);color:var(--ink)}
+@media (max-width:640px){.daily-card{max-width:none;padding:12px 14px}}

@@ -55,6 +55,18 @@
       </div>
     </div>
 
+    <div class="daily-card" id="daily-card">
+      <div class="dc-head">
+        <span class="dc-title">今日目标</span>
+        <span class="dc-streak" id="dc-streak">连续 0 天</span>
+      </div>
+      <div class="dc-bar"><i id="dc-bar"></i></div>
+      <div class="dc-meta">
+        <span id="dc-count">0 / 20 词</span>
+        <button class="dc-set" data-act="set-goal" title="点击切换每日目标">改目标</button>
+      </div>
+    </div>
+
     <div class="wc-tools" style="justify-content:flex-start;margin:16px 0 4px">
       <button class="primary" data-act="wrongbook" id="btn-review" disabled>错词本</button>
     </div>
@@ -151,7 +163,7 @@
 </footer>
 
 <script src="../assets/theme.min.js?v=2"></script>
-<script src="../assets/vocab-5-books/data.js"></script>
+<script src="./data/index.js"></script>
 <script src="./app.min.js"></script>
 <script src="../assets/dict.min.js"></script>
 </body>

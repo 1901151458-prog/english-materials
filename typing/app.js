@@ -5,6 +5,8 @@
   var CHAPTER = 20;
   var LS_PROG = 'em-typing-prog';
   var LS_WRONG = 'em-typing-wrong';
+  var LS_DAILY = 'em-typing-daily';
+  var GOAL_OPTS = [10, 20, 30, 50];
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -12,8 +14,11 @@
   function lsGet(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 
+  var volCache = {};            /* 已加载的册完整数据 */
+
   var state = {
     book: null,
+    index: null,
     volumes: [],
     view: 'home',
     volIndex: 0,
@@ -34,13 +39,35 @@
 
   var prog = lsGet(LS_PROG, {});
   var wrongBook = lsGet(LS_WRONG, {});
+  var daily = lsGet(LS_DAILY, { goal: 20, days: {} });
+  if (!daily.days) daily.days = {};
+  if (!daily.goal) daily.goal = 20;
 
   /* ---------- 数据 ---------- */
+  /* 按需加载某一册的完整词条 */
+  function loadVol(no, cb, onErr) {
+    if (volCache[no]) return cb(volCache[no]);
+    var s = document.createElement('script');
+    s.src = 'data/v' + no + '.js';
+    s.async = true;
+    s.onload = function () {
+      var d = window.TYPING_VOL;
+      window.TYPING_VOL = null;
+      if (!d) { if (onErr) onErr(); return; }
+      volCache[no] = d;
+      cb(d);
+    };
+    s.onerror = function () { if (onErr) onErr(); };
+    document.head.appendChild(s);
+  }
+
   function boot() {
-    if (window.VOCAB_BOOK && window.VOCAB_BOOK.volumes) {
-      state.book = window.VOCAB_BOOK;
-      state.volumes = window.VOCAB_BOOK.volumes;
+    if (window.TYPING_INDEX && window.TYPING_INDEX.volumes) {
+      state.index = window.TYPING_INDEX;
+      state.book = window.TYPING_INDEX;
+      state.volumes = window.TYPING_INDEX.volumes;
       renderHome();
+      renderDaily();
       bindOnce();
       /* 支持 ?vol=1&unit=<unitId> 直达练习 */
       var q = new URLSearchParams(location.search);
@@ -63,19 +90,80 @@
     var done = 0, wordsTotal = 0, wordsDone = 0;
     vol.units.forEach(function (u) {
       var key = keyOf(vol.no, u.id);
-      var chTotal = Math.max(1, Math.ceil(u.words.length / CHAPTER));
-      wordsTotal += u.words.length;
+      var cnt = unitCount(u);
+      var chTotal = Math.max(1, Math.ceil(cnt / CHAPTER));
+      wordsTotal += cnt;
       var d = prog[key];
       if (d) {
         var chDone = Math.min(d.done || 0, chTotal);
         if (chDone >= chTotal) done++;
-        /* 已练词数按整章估算，末章按实际剩余 */
         var n = 0;
-        for (var ci = 0; ci < chDone; ci++) n += Math.min(CHAPTER, u.words.length - ci * CHAPTER);
+        for (var ci = 0; ci < chDone; ci++) n += Math.min(CHAPTER, cnt - ci * CHAPTER);
         wordsDone += n;
       }
     });
     return { units: totalUnits, doneUnits: done, words: wordsTotal, doneWords: wordsDone };
+  }
+
+  /* 单元词数：索引里的 unit 用 count，加载后的完整 unit 用 words.length */
+  function unitCount(u) {
+    if (typeof u.count === 'number') return u.count;
+    return (u.words || []).length;
+  }
+
+  /* ---------- 每日目标 / 打卡 ---------- */
+  function dateKey(d) {
+    d = d || new Date();
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' + m : m) + '-' + (day < 10 ? '0' + day : day);
+  }
+
+  function addDaily(n) {
+    var k = dateKey();
+    var rec = daily.days[k] || { words: 0 };
+    rec.words = (rec.words || 0) + n;
+    daily.days[k] = rec;
+    /* 只保留最近 120 天 */
+    var keys = Object.keys(daily.days).sort();
+    while (keys.length > 120) delete daily.days[keys.shift()];
+    lsSet(LS_DAILY, daily);
+    renderDaily();
+  }
+
+  function streakDays() {
+    var n = 0, d = new Date(), i = 0;
+    while (i < 400) {
+      var rec = daily.days[dateKey(d)];
+      var ok = rec && (rec.words || 0) >= daily.goal;
+      if (i === 0) {
+        if (ok) n++;                 /* 今天未达成不算断 */
+      } else {
+        if (!ok) break;
+        n++;
+      }
+      d.setDate(d.getDate() - 1);
+      i++;
+    }
+    return n;
+  }
+
+  function renderDaily() {
+    var bar = $('#dc-bar'), cnt = $('#dc-count'), st = $('#dc-streak');
+    if (!bar) return;
+    var rec = daily.days[dateKey()] || { words: 0 };
+    var w = rec.words || 0, goal = daily.goal || 20;
+    var pct = Math.min(100, Math.round(w / goal * 100));
+    bar.style.width = pct + '%';
+    if (bar.parentNode) bar.parentNode.classList.toggle('is-done', w >= goal);
+    if (cnt) cnt.textContent = w + ' / ' + goal + ' 词' + (w >= goal ? ' · 已达成 ✓' : '');
+    if (st) st.textContent = '连续 ' + streakDays() + ' 天';
+  }
+
+  function cycleGoal() {
+    var i = GOAL_OPTS.indexOf(daily.goal);
+    daily.goal = GOAL_OPTS[(i + 1) % GOAL_OPTS.length];
+    lsSet(LS_DAILY, daily);
+    renderDaily();
   }
 
   function keyOf(volNo, unitId) { return 'v' + volNo + '-' + unitId; }
@@ -92,12 +180,13 @@
       var chips = vol.units.map(function (u) {
         var key = unitKey(vol, u);
         var d = prog[key];
-        var chTotal = Math.max(1, Math.ceil(u.words.length / CHAPTER));
+        var cnt = unitCount(u);
+        var chTotal = Math.max(1, Math.ceil(cnt / CHAPTER));
         var chDone = d ? Math.min(d.done || 0, chTotal) : 0;
         var cls = chDone >= chTotal ? 'unit-chip is-done' : 'unit-chip';
         return '<button class="' + cls + '" data-vol="' + vi + '" data-unit="' + u.id + '" ' +
-          'title="' + esc(u.label) + ' · ' + u.words.length + ' 词">' +
-          esc(u.label) + '<span class="uc-n">' + (chTotal > 1 ? chDone + '/' + chTotal + '章' : u.words.length + '词') + '</span></button>';
+          'title="' + esc(u.label) + ' · ' + cnt + ' 词">' +
+          esc(u.label) + '<span class="uc-n">' + (chTotal > 1 ? chDone + '/' + chTotal + '章' : cnt + '词') + '</span></button>';
       }).join('');
       return '<article class="book-card">' +
         '<h3><span class="bno">' + vol.no + '</span>' + esc(vol.name) + '</h3>' +
@@ -135,13 +224,21 @@
   }
 
   function startChapter(volIndex, unitId, ch) {
-    var vol = state.volumes[volIndex];
-    var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
-    if (!unit) return;
-    var total = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    var volMeta = state.volumes[volIndex];
+    var unitMeta = volMeta.units.filter(function (u) { return u.id === unitId; })[0];
+    if (!unitMeta) return;
+    var total = Math.max(1, Math.ceil(unitCount(unitMeta) / CHAPTER));
     ch = Math.max(0, Math.min(ch, total - 1));
-    startWords(vol, unit, unit.words.slice(ch * CHAPTER, ch * CHAPTER + CHAPTER),
-      { index: ch, total: total });
+
+    /* 第二次点同一单元时已缓存，不会重复加载 */
+    loadVol(volMeta.no, function (vol) {
+      var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
+      if (!unit) return;
+      startWords(vol, unit, unit.words.slice(ch * CHAPTER, ch * CHAPTER + CHAPTER),
+        { index: ch, total: total });
+    }, function () {
+      alert('词库加载失败，请检查网络后重试');
+    });
   }
 
   /* 点单元：多章时展开章节选择，单章直接开始 */
@@ -149,7 +246,7 @@
     var vol = state.volumes[volIndex];
     var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
     if (!unit) return;
-    var chapters = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    var chapters = Math.max(1, Math.ceil(unitCount(unit) / CHAPTER));
     if (chapters <= 1) {
       clearChapterRows();
       startChapter(volIndex, unitId, 0);
@@ -170,14 +267,15 @@
     clearChapterRows();
     if (existing) return;                       /* 再点一次收起 */
 
-    var chapters = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    var cnt = unitCount(unit);
+    var chapters = Math.max(1, Math.ceil(cnt / CHAPTER));
     var key = unitKey(state.volumes[volIndex], unit);
     var done = prog[key] ? Math.min(prog[key].done || 0, chapters) : 0;
 
     var row = document.createElement('div');
     row.className = 'chapter-row';
     for (var c = 0; c < chapters; c++) {
-      var n = Math.min(CHAPTER, unit.words.length - c * CHAPTER);
+      var n = Math.min(CHAPTER, cnt - c * CHAPTER);
       var b = document.createElement('button');
       b.className = 'ch' + (c < done ? ' is-done' : '');
       b.setAttribute('data-ch', String(c));
@@ -290,6 +388,7 @@
       state.correct++;
       state.streak++;
       if (state.streak > state.maxStreak) state.maxStreak = state.streak;
+      addDaily(1);
       inp.classList.remove('is-bad', 'is-typing');
       inp.classList.add('is-good');
       $('#wc-feedback').innerHTML = '<span class="fb-good">✓ 正确</span>';
@@ -344,7 +443,9 @@
     var exists = state.wrong.filter(function (x) { return x.word === w.word; });
     if (!exists.length) state.wrong.push(w);
     var k = w.word.toLowerCase();
-    var rec = wrongBook[k] || { count: 0, word: w.word, meaning: w.meaning, pos: w.pos, ipa: w.ipa, vol: state.unit ? state.unit.vol.name : '' };
+    var rec = wrongBook[k] || { count: 0, word: w.word, meaning: w.meaning, pos: w.pos, ipa: w.ipa,
+      vol: state.unit ? state.unit.vol.name : '', volNo: state.unit ? state.unit.vol.no : 0 };
+    if (!rec.volNo && state.unit && state.unit.vol) rec.volNo = state.unit.vol.no;
     rec.count++;
     rec.ts = Date.now();
     wrongBook[k] = rec;
@@ -397,7 +498,7 @@
     var sec = Math.round((Date.now() - state.startTs) / 1000);
 
     /* 记录进度 */
-    if (state.unit) {
+    if (state.unit && state.unit.unit && state.unit.unit.words) {
       var key = unitKey(state.unit.vol, state.unit.unit);
       var rec = prog[key] || { done: 0, best: 0, total: total };
       rec.done = Math.max(rec.done || 0, state.chapter.index + 1);
@@ -530,17 +631,19 @@
         renderWrongBook();
       }
       else if (act === 'review-all') { reviewWrong(); }
+      else if (act === 'set-goal') { cycleGoal(); }
       else if (act === 'again') {
         var u = state.unit;
         if (!u || !u.unit) return;
+        if (!u.unit.words) { reviewWrong(); return; }   /* 错词复习模式：重来一遍 */
         var t2 = Math.max(1, Math.ceil(u.unit.words.length / CHAPTER));
-        var ci = Math.min(state.chapter.index + 1, t2 - 1);
+        var ci = Math.min(state.chapter.index, t2 - 1);
         startWords(u.vol, u.unit, u.unit.words.slice(ci * CHAPTER, ci * CHAPTER + CHAPTER),
           { index: ci, total: t2 });
       }
       else if (act === 'next') {
         var u2 = state.unit;
-        if (!u2 || !u2.unit) return;
+        if (!u2 || !u2.unit || !u2.unit.words) return;
         var t3 = Math.max(1, Math.ceil(u2.unit.words.length / CHAPTER));
         var ci2 = Math.min(state.chapter.index + 1, t3 - 1);
         startWords(u2.vol, u2.unit, u2.unit.words.slice(ci2 * CHAPTER, ci2 * CHAPTER + CHAPTER),
