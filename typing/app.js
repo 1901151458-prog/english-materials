@@ -27,6 +27,8 @@
     answered: false,
     warned: false,
     composing: false,
+    streak: 0,
+    maxStreak: 0,
     chapter: { index: 0, total: 1 }
   };
 
@@ -132,6 +134,62 @@
     startWords(vol, unit, slice, { index: ch, total: total });
   }
 
+  function startChapter(volIndex, unitId, ch) {
+    var vol = state.volumes[volIndex];
+    var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
+    if (!unit) return;
+    var total = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    ch = Math.max(0, Math.min(ch, total - 1));
+    startWords(vol, unit, unit.words.slice(ch * CHAPTER, ch * CHAPTER + CHAPTER),
+      { index: ch, total: total });
+  }
+
+  /* 点单元：多章时展开章节选择，单章直接开始 */
+  function onUnitTap(volIndex, unitId, chipEl) {
+    var vol = state.volumes[volIndex];
+    var unit = vol.units.filter(function (u) { return u.id === unitId; })[0];
+    if (!unit) return;
+    var chapters = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    if (chapters <= 1) {
+      clearChapterRows();
+      startChapter(volIndex, unitId, 0);
+      return;
+    }
+    toggleChapters(volIndex, unit, chipEl);
+  }
+
+  function clearChapterRows() {
+    var all = document.querySelectorAll('.chapter-row');
+    for (var i = 0; i < all.length; i++) all[i].parentNode.removeChild(all[i]);
+  }
+
+  function toggleChapters(volIndex, unit, chipEl) {
+    var card = chipEl.closest ? chipEl.closest('.book-card') : null;
+    if (!card) return;
+    var existing = card.querySelector('.chapter-row');
+    clearChapterRows();
+    if (existing) return;                       /* 再点一次收起 */
+
+    var chapters = Math.max(1, Math.ceil(unit.words.length / CHAPTER));
+    var key = unitKey(state.volumes[volIndex], unit);
+    var done = prog[key] ? Math.min(prog[key].done || 0, chapters) : 0;
+
+    var row = document.createElement('div');
+    row.className = 'chapter-row';
+    for (var c = 0; c < chapters; c++) {
+      var n = Math.min(CHAPTER, unit.words.length - c * CHAPTER);
+      var b = document.createElement('button');
+      b.className = 'ch' + (c < done ? ' is-done' : '');
+      b.setAttribute('data-ch', String(c));
+      b.setAttribute('data-vol', String(volIndex));
+      b.setAttribute('data-unit', unit.id);
+      b.innerHTML = '第' + (c + 1) + ' 章' + (c < done ? ' ✓' : '') +
+        '<span class="ch-n">' + n + ' 词</span>';
+      row.appendChild(b);
+    }
+    card.appendChild(row);
+  }
+
   function startWords(vol, unit, words, chInfo) {
     state.volIndex = vol.no - 1;
     state.view = 'practice';
@@ -141,6 +199,8 @@
     state.idx = 0;
     state.correct = 0;
     state.wrong = [];
+    state.streak = 0;
+    state.maxStreak = 0;
     state.startTs = Date.now();
     state.answered = false;
     showView('practice');
@@ -156,6 +216,7 @@
   }
 
   function showView(name) {
+    state.view = name;
     $$('.view').forEach(function (v) { v.classList.toggle('is-on', v.id === 'view-' + name); });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -227,6 +288,8 @@
     if (val === target) {
       state.answered = true;
       state.correct++;
+      state.streak++;
+      if (state.streak > state.maxStreak) state.maxStreak = state.streak;
       inp.classList.remove('is-bad', 'is-typing');
       inp.classList.add('is-good');
       $('#wc-feedback').innerHTML = '<span class="fb-good">✓ 正确</span>';
@@ -292,6 +355,7 @@
     var w = state.queue[state.idx];
     if (!w || state.answered) return;
     state.answered = true;
+    state.streak = 0;
     registerWrong(w);
     var inp = $('#type-input');
     inp.value = w.word;
@@ -360,6 +424,9 @@
     $('#res-acc').textContent = acc + '%';
     $('#res-wrong').textContent = wrongN;
     $('#res-time').textContent = fmtTime(sec);
+    var spd = sec > 3 ? Math.round(total / (sec / 60)) : 0;
+    $('#res-speed').textContent = spd;
+    $('#res-streak').textContent = state.maxStreak;
 
     var wl = $('#res-wrong-list');
     if (wrongN) {
@@ -392,23 +459,77 @@
 
   function clearWrong(k) { delete wrongBook[k]; lsSet(LS_WRONG, wrongBook); }
 
+  /* ---------- 错词本视图 ---------- */
+  function renderWrongBook() {
+    var keys = Object.keys(wrongBook);
+    var totalEl = $('#wb-total');
+    if (totalEl) totalEl.textContent = keys.length;
+    var list = $('#wrong-list');
+    var actions = $('#wb-actions');
+    if (!list) return;
+    if (!keys.length) {
+      list.innerHTML = '<div class="empty"><h3>错词本是空的</h3>' +
+        '<p>练习中答错的词会自动收进这里，可以反复复习。</p></div>';
+      if (actions) actions.style.display = 'none';
+      return;
+    }
+    if (actions) actions.style.display = '';
+    var items = keys.map(function (k) { return wrongBook[k]; });
+    items.sort(function (a, b) { return (b.count || 1) - (a.count || 1); });
+    list.innerHTML = items.map(function (r) {
+      return '<div class="wrong-item">' +
+        '<span class="wi-word">' + esc(r.word) + '</span>' +
+        '<span class="wi-ipa">' + esc(r.ipa || '') + '</span>' +
+        '<span class="wi-mean">' + esc(r.meaning || '') + '</span>' +
+        '<span class="wi-count">错 ' + (r.count || 1) + ' 次</span>' +
+        '<button class="wi-del" data-del="' + esc(String(r.word).toLowerCase()) + '" ' +
+        'title="从错词本移除" aria-label="移除 ' + esc(r.word) + '">×</button>' +
+        '</div>';
+    }).join('');
+  }
+
   /* ---------- 事件 ---------- */
   function bindOnce() {
     var app = $('#app');
     app.addEventListener('click', function (e) {
+      /* 章节按钮 */
+      var chBtn = e.target.closest ? e.target.closest('.ch') : null;
+      if (chBtn) {
+        startChapter(Number(chBtn.getAttribute('data-vol')),
+          chBtn.getAttribute('data-unit'), Number(chBtn.getAttribute('data-ch')));
+        return;
+      }
+      /* 错词单删 */
+      var delBtn = e.target.closest ? e.target.closest('.wi-del') : null;
+      if (delBtn) {
+        var dk = delBtn.getAttribute('data-del');
+        if (dk) {
+          delete wrongBook[dk];
+          lsSet(LS_WRONG, wrongBook);
+          renderWrongBook();
+          renderHome();
+        }
+        return;
+      }
+      /* 单元：多章展开章节选择，单章直接开始 */
       var chip = e.target.closest ? e.target.closest('.unit-chip') : null;
       if (chip) {
-        startUnit(Number(chip.getAttribute('data-vol')), chip.getAttribute('data-unit'));
+        onUnitTap(Number(chip.getAttribute('data-vol')), chip.getAttribute('data-unit'), chip);
         return;
       }
       var b = e.target.closest ? e.target.closest('[data-act]') : null;
       if (!b) return;
       var act = b.getAttribute('data-act');
-      if (act === 'back') { state.view = 'home'; showView('home'); renderHome(); }
+      if (act === 'back') { state.view = 'home'; clearChapterRows(); showView('home'); renderHome(); }
       else if (act === 'ipa') { state.showIpa = !state.showIpa; b.textContent = state.showIpa ? '隐藏音标' : '显示音标'; renderPractice(); }
       else if (act === 'hint') { hintFirst(); }
       else if (act === 'giveup') { giveUp(); }
-      else if (act === 'review') { reviewWrong(); }
+      else if (act === 'wrongbook') {
+        clearChapterRows();
+        showView('wrong');
+        renderWrongBook();
+      }
+      else if (act === 'review-all') { reviewWrong(); }
       else if (act === 'again') {
         var u = state.unit;
         if (!u || !u.unit) return;
@@ -430,10 +551,12 @@
         if (!u3 || !u3.unit) return;
         startUnit(u3.vol.no - 1, u3.unit.id);
       }
-      else if (act === 'home') { showView('home'); renderHome(); }
+      else if (act === 'home') { state.view = 'home'; clearChapterRows(); showView('home'); renderHome(); }
       else if (act === 'clear-wrong') {
-        wrongBook = {}; lsSet(LS_WRONG, wrongBook); renderHome();
-        alert('错词本已清空');
+        if (!confirm('确定清空全部错词吗？此操作不可撤销。')) return;
+        wrongBook = {}; lsSet(LS_WRONG, wrongBook);
+        renderHome();
+        if (state.view === 'wrong') renderWrongBook();
       }
     });
 
@@ -484,7 +607,7 @@
     });
     document.addEventListener('keydown', function (e) {
       if (state.view !== 'practice') return;
-      if (e.key === 'Escape') { state.view = 'home'; showView('home'); renderHome(); }
+      if (e.key === 'Escape') { clearChapterRows(); showView('home'); renderHome(); }
     });
   }
 

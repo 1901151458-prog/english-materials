@@ -56,8 +56,7 @@
     </div>
 
     <div class="wc-tools" style="justify-content:flex-start;margin:16px 0 4px">
-      <button class="primary" data-act="review" id="btn-review" disabled>复习错词</button>
-      <button data-act="clear-wrong">清空错词本</button>
+      <button class="primary" data-act="wrongbook" id="btn-review" disabled>错词本</button>
     </div>
 
     <div class="book-grid" id="book-grid"></div>
@@ -101,6 +100,22 @@
     </div>
   </div>
 
+  <!-- ========== 错词本 ========== -->
+  <div class="view" id="view-wrong">
+    <div class="practice-top">
+      <button class="pt-back" data-act="home">← 返回</button>
+      <span class="pt-title">错词本</span>
+      <div class="pstats"><span>共 <b id="wb-total">0</b> 词</span></div>
+    </div>
+    <div class="wrong-panel">
+      <div class="wrong-list" id="wrong-list"></div>
+      <div class="res-actions" style="margin-top:18px" id="wb-actions">
+        <button class="primary" data-act="review-all">复习全部错词</button>
+        <button data-act="clear-wrong">清空错词本</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== 结果页 ========== -->
   <div class="view" id="view-result">
     <div class="result-card">
@@ -110,6 +125,8 @@
         <div class="res-stat"><div class="n" id="res-acc">100%</div><div class="l">正确率</div></div>
         <div class="res-stat"><div class="n" id="res-wrong">0</div><div class="l">错词</div></div>
         <div class="res-stat"><div class="n" id="res-time">0秒</div><div class="l">用时</div></div>
+        <div class="res-stat"><div class="n" id="res-speed">0</div><div class="l">词/分钟</div></div>
+        <div class="res-stat"><div class="n" id="res-streak">0</div><div class="l">最长连对</div></div>
       </div>
       <div class="res-wrong" id="res-wrong-wrap" style="display:none">
         <h3>本章错词</h3>
