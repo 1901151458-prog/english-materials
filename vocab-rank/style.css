@@ -1,0 +1,103 @@
+/* 词汇助记 · 难度考频排序 */
+.page-hero{padding:26px 0 10px}
+.page-hero .eyebrow{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;
+  background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:12.5px;font-weight:600}
+.page-hero .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--blue,#1e5fa3)}
+.page-hero h1{margin:12px 0 8px;font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.3px}
+.page-hero .lead{max-width:860px;margin:0;color:var(--muted);font-size:14.5px;line-height:1.8}
+.page-hero .lead b{color:var(--ink-2)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.hero-stats span{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.hero-stats b{color:var(--ink);font-weight:700}
+
+/* 排序说明 */
+.rank-note{margin:14px 0 0;padding:10px 14px;border-radius:10px;background:var(--card);
+  border:1px solid var(--line);max-width:860px;font-size:13px;color:var(--muted)}
+.rank-note summary{cursor:pointer;font-weight:600;color:var(--ink-2);outline:none}
+.rank-note summary:hover{color:var(--blue,#1e5fa3)}
+.rank-note-body{padding-top:8px;line-height:1.75}
+.rank-note-body p{margin:0 0 6px}
+.rank-note-body b{color:var(--ink-2)}
+.rank-note-warn{color:#d99a3a;font-size:12.5px}
+
+/* 工具栏 */
+.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0;align-items:center}
+.rk-search{flex:1;min-width:220px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);
+  background:var(--paper);color:var(--ink);font-size:14px;outline:none;font-family:inherit;
+  transition:border-color .15s,box-shadow .15s}
+.rk-search:focus{border-color:var(--blue,#1e5fa3);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue,#1e5fa3) 15%,transparent)}
+.rk-search::placeholder{color:var(--muted-2)}
+.rk-select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);
+  color:var(--ink-2);font-size:13px;font-family:inherit;cursor:pointer;outline:none}
+.rk-select:focus{border-color:var(--blue,#1e5fa3)}
+.rk-btn{padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--soft);
+  color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .12s}
+.rk-btn:hover{border-color:var(--line-strong);color:var(--ink)}
+
+.rk-meta{margin:14px 0 10px;font-size:12.5px;color:var(--muted)}
+.rk-meta b{color:var(--ink-2)}
+
+/* 词条卡片 */
+.rk-list{display:flex;flex-direction:column;gap:9px}
+.rk-item{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;transition:border-color .12s}
+.rk-item:hover{border-color:var(--line-strong)}
+.rk-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.rk-no{flex:none;width:34px;font-size:12px;color:var(--muted-2);font-variant-numeric:tabular-nums;text-align:right}
+.rk-word{font-size:17px;font-weight:700;color:var(--ink);letter-spacing:.2px}
+.rk-ipa{font-size:12.5px;color:var(--muted);font-family:"Segoe UI",system-ui,sans-serif}
+.rk-pos{font-size:11.5px;color:var(--muted);padding:2px 7px;border-radius:5px;background:var(--soft);font-weight:600}
+.rk-badge{font-size:11px;padding:2px 7px;border-radius:5px;font-weight:600;
+  background:color-mix(in srgb,var(--blue,#1e5fa3) 13%,transparent);color:var(--blue,#1e5fa3)}
+.rk-badge.is-func{background:rgba(150,150,150,.16);color:var(--muted)}
+.rk-badge.is-phrase{background:rgba(217,154,58,.16);color:#d99a3a}
+
+.rk-body{display:flex;gap:16px;margin-top:7px;padding-left:44px;flex-wrap:wrap}
+.rk-mean{flex:1;min-width:200px;color:var(--ink-2);font-size:14px;line-height:1.6}
+.rk-rank{display:flex;gap:14px;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.rk-rank span{display:inline-flex;align-items:center;gap:4px}
+.stars{letter-spacing:1px;font-size:11px;color:var(--blue,#1e5fa3);font-weight:700}
+.stars .off{color:var(--line-strong);font-weight:400}
+
+.rk-memo{margin-top:8px;padding-left:44px}
+.rk-memo details{border:none}
+.rk-memo summary{cursor:pointer;font-size:12.5px;color:var(--muted);list-style:none;outline:none}
+.rk-memo summary::-webkit-details-marker{display:none}
+.rk-memo summary::before{content:'▸ ';color:var(--blue,#1e5fa3);font-weight:700}
+.rk-memo details[open] summary::before{content:'▾ '}
+.rk-memo summary:hover{color:var(--ink-2)}
+.rk-memo-text{margin-top:6px;padding:10px 13px;border-radius:9px;background:var(--soft);
+  color:var(--muted);font-size:13px;line-height:1.75}
+.rk-memo-text .mm-tag{display:inline-block;padding:1px 6px;border-radius:4px;background:var(--line);
+  color:var(--ink-2);font-size:11px;font-weight:600;margin-right:5px}
+
+.rk-src{margin-top:7px;padding-left:44px;font-size:11.5px;color:var(--muted-2)}
+
+/* 分页 */
+.rk-pager{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:24px 0 10px}
+.rk-pager button{padding:7px 13px;border-radius:8px;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);font-size:13px;cursor:pointer;font-family:inherit;transition:all .12s}
+.rk-pager button:hover:not(:disabled){border-color:var(--blue,#1e5fa3);color:var(--blue,#1e5fa3)}
+.rk-pager button.is-on{background:var(--blue,#1e5fa3);border-color:transparent;color:#fff;font-weight:700}
+.rk-pager button:disabled{opacity:.4;cursor:not-allowed}
+.rk-pager .gap{padding:7px 4px;color:var(--muted-2)}
+
+.rk-empty{text-align:center;padding:50px 20px;color:var(--muted)}
+.rk-empty p{margin:8px 0 0;font-size:14px}
+
+.rk-foot{margin:26px 0 0;padding-top:14px;border-top:1px solid var(--line);
+  color:var(--muted-2);font-size:12px;line-height:1.7}
+
+@media (max-width:640px){
+  .rk-body,.rk-memo,.rk-src{padding-left:0}
+  .rk-no{width:24px}
+  .rk-word{font-size:16px}
+  .toolbar{gap:7px}
+  .rk-search{min-width:100%}
+  .rk-select,.rk-btn{flex:1}
+}
+@media print{
+  .toolbar,.rk-pager,.rank-note,header,footer{display:none!important}
+  .rk-item{break-inside:avoid}
+}

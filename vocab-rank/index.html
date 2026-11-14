@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>词汇助记 · 难度考频排序 | 初中英语资料站</title>
+<meta name="description" content="人教版（新课纲版）初中英语 1504 个黑体词助记，按单词难度与考频综合排序：难度低、考频高的排前面，先背最值得背的词。支持按册筛选、搜索、切换排序方式。">
+<meta property="og:title" content="词汇助记 · 难度考频排序">
+<meta name="og:description" content="1504 个黑体词按难度与考频排序，难度低、考频高优先。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="初中英语资料站">
+<meta property="og:url" content="https://1901151458-prog.github.io/english-materials/vocab-rank/">
+<meta property="og:image" content="https://1901151458-prog.github.io/english-materials/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://1901151458-prog.github.io/english-materials/assets/og-cover.png">
+<link rel="canonical" href="https://1901151458-prog.github.io/english-materials/vocab-rank/">
+<meta name="theme-color" content="#1a365d">
+<link rel="stylesheet" href="../assets/base.min.css?v=2">
+<link rel="stylesheet" href="./style.min.css?v=1">
+<link rel="stylesheet" href="../assets/refine.min.css?v=3">
+<link rel="stylesheet" href="../assets/theme.min.css?v=3">
+</head>
+<body>
+<a class="skip-link" href="#list">跳到词表</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">英</span>
+      <span class="brand-text"><strong>初中英语资料站</strong><small>人教版 新课纲版</small></span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../vocab-hub/index.html">词汇</a>
+      <a href="../typing/index.html">背单词</a>
+      <a href="./index.html" aria-current="page">词汇排序</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="container">
+
+  <div class="page-hero">
+    <span class="eyebrow"><span class="dot"></span>词汇助记 · 难度考频排序</span>
+    <h1>先背最值得背的词</h1>
+    <p class="lead">
+      把六册 <b>1,504 个黑体词</b>按「<b>难度低</b> + <b>考频高</b>」综合排序：简单又常考的词排在最前，生僻长难词排在最后。
+      每个词都带助记，可以直接从这里顺着刷一遍。
+    </p>
+    <div class="hero-stats" id="hero-stats">
+      <span><b>1,504</b> 词</span>
+      <span><b>6</b> 册</span>
+      <span>难度低 · 考频高优先</span>
+    </div>
+    <details class="rank-note">
+      <summary>排序依据是什么？</summary>
+      <div class="rank-note-body">
+        <p><b>考频分</b>：用 Google 最常用 1 万英文词表（按频率排名）换算。排名越靠前分越高；短语取其中最常用的成分；词表里没有的词按最低档计。</p>
+        <p><b>难度分</b>：年级（七上最低 → 九下最高）+ 词长 + 音节数 + 是否为短语。</p>
+        <p><b>综合分</b> = 考频分 − 难度分 × 0.85。另外纯语法功能词（as / more / than…）和缩写（PM / AM…）会降权，因为它们不需要背助记。</p>
+        <p class="rank-note-warn">⚠ 难度与考频均为<b>估算值</b>，用于排序参考，不代表官方考纲分级。</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" class="rk-search" id="rk-search" placeholder="搜单词 / 释义 / 助记，如 price 或 价格" autocomplete="off">
+    <select class="rk-select" id="rk-book" aria-label="按册筛选">
+      <option value="0">全部六册</option>
+    </select>
+    <select class="rk-select" id="rk-sort" aria-label="排序方式">
+      <option value="smart">智能排序（难度低+考频高）</option>
+      <option value="freq">只按考频（高→低）</option>
+      <option value="diff">只按难度（低→高）</option>
+      <option value="alpha">字母顺序（A→Z）</option>
+    </select>
+    <button class="rk-btn" id="rk-clear" type="button">清空</button>
+  </div>
+
+  <div class="rk-meta" id="rk-meta">共 1,504 词</div>
+
+  <div class="rk-list" id="list"></div>
+
+  <div class="rk-pager" id="rk-pager"></div>
+
+  <p class="rk-foot">
+    数据来源：人教版（新课纲版）初中英语六册教材词汇表黑体词 · 助记为本站整理。
+    难度与考频为估算值，仅供排序参考。
+  </p>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>人教版（新课纲版）初中英语 · 词汇助记 · 难度考频排序</p>
+    <p>词表与助记整理自教材，仅供学习与教学参考。</p>
+  </div>
+</footer>
+
+<script src="../assets/theme.min.js?v=2"></script>
+<script src="./data.js"></script>
+<script src="./app.min.js"></script>
+<script src="../assets/dict.min.js"></script>
+</body>
+</html>
