@@ -1,4 +1,4 @@
-/* 剑桥词典查词助手 —— 双击查词 / 选中浮条 / 词表图标
+/* 剑桥词典查词助手 —— 右键查词 / 选中浮条 / 词表图标
  * 无依赖；开关与词典偏好存 localStorage。
  * 用法：页面末尾加 <script src="{rel}assets/dict.js"></script>
  */
@@ -127,7 +127,7 @@
     fab.className = 'dict-fab no-print';
     fab.setAttribute('role', 'button');
     fab.setAttribute('tabindex', '0');
-    fab.title = '词典查词：双击英文单词，或选中短语点浮条。点击开关。';
+    fab.title = '词典查词：右键英文单词，或选中短语点浮条。点击开关。';
     fab.innerHTML = '<span class="dict-dot"></span>' +
       '<span class="dict-txt"><b></b><small></small></span>';
     fab.addEventListener('click', function () {
@@ -150,7 +150,7 @@
     var sm = fab.querySelector('.dict-txt small');
     if (state.on) {
       b.textContent = '词典 · ' + (state.lang === 'en' ? '英英' : '英汉');
-      sm.textContent = '双击查词';
+      sm.textContent = '右键查词';
       sm.style.opacity = '';
     } else {
       b.textContent = '词典已关';
@@ -158,7 +158,7 @@
       sm.style.opacity = '.45';
     }
     fab.title = state.on
-      ? '双击英文单词查词；选中短语出现浮条。点击关闭。'
+      ? '右键英文单词查词；选中短语出现浮条。点击关闭。'
       : '词典查词已关闭。点击开启。';
   }
 
@@ -182,7 +182,7 @@
     hintEl = document.createElement('div');
     hintEl.className = 'dict-hint no-print';
     hintEl.setAttribute('role', 'status');
-    hintEl.innerHTML = '<b>双击</b>英文单词即可查剑桥词典' +
+    hintEl.innerHTML = '<b>右键</b>英文单词即可查剑桥词典' +
       '<span class="dict-hint-sub">选中短语还能选有道 / 必应 · 点此关闭</span>';
     hintEl.addEventListener('click', closeHint);
     document.body.appendChild(hintEl);
@@ -359,14 +359,20 @@
   }
 
   function bind() {
-    /* 双击：直接打开剑桥 */
-    document.addEventListener('dblclick', function (e) {
+    /* 右键：直接打开剑桥（优先用选中文字，否则取鼠标下的英文词） */
+    document.addEventListener('contextmenu', function (e) {
       if (!state.on) return;
-      if (inEditable(e.target)) return;
-      var sel = window.getSelection();
-      var raw = clean(sel ? sel.toString() : '');
-      if (!usable(raw)) return;
-      /* 双击可能只选中一个词；若选区含中文则忽略 */
+      if (inEditable(e.target)) return;              /* 输入框保留系统菜单 */
+      if (fab && fab.contains(e.target)) return;
+      if (bar && bar.contains(e.target)) return;
+
+      var raw = clean(window.getSelection ? window.getSelection().toString() : '');
+      if (!usable(raw)) {
+        var info = wordAtCaret(caretAt(e.clientX, e.clientY));
+        raw = info ? info.word : '';
+      }
+      if (!usable(raw)) return;                      /* 不是英文词 → 保留系统菜单 */
+
       e.preventDefault();
       closeHint();
       open(raw, 'cambridge');
