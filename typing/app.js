@@ -826,11 +826,6 @@
       } else if (e.key === 'Tab') {
         e.preventDefault();
         hintFirst();
-      } else if (e.key === 's' || e.key === 'S') {
-        if (!e.ctrlKey && !e.metaKey && !e.altKey) {
-          e.preventDefault();
-          speakCurrent();
-        }
       }
     });
     document.addEventListener('keydown', function (e) {
