@@ -192,3 +192,12 @@
   .vol-progress .vp-name{width:auto}
   .vol-progress .vp-num{width:auto;margin-left:auto}
 }
+
+/* 单击题面发音 */
+.word-card .wc-pos,
+.word-card .wc-mean,
+.word-card .wc-ipa{cursor:pointer}
+.word-card .wc-mean:hover,
+.word-card .wc-ipa:hover{color:var(--blue,#1e5fa3)}
+#wc-ipa:not(:empty)::after{content:' 🔊';font-size:.74em;opacity:.5;vertical-align:middle;letter-spacing:0}
+#wc-ipa:hover::after{opacity:.9}

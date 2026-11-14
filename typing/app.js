@@ -29,7 +29,7 @@
     wrong: [],
     startTs: 0,
     showIpa: true,
-    accent: 'us',
+    accent: 'uk',
     answered: false,
     warned: false,
     composing: false,
@@ -44,7 +44,7 @@
   if (!daily.days) daily.days = {};
   if (!daily.goal) daily.goal = 20;
   var ACCENT_LS = 'em-typing-accent';
-  state.accent = lsGet(ACCENT_LS, 'us') === 'uk' ? 'uk' : 'us';
+  state.accent = lsGet(ACCENT_LS, 'uk') === 'us' ? 'us' : 'uk';
 
   /* ---------- 数据 ---------- */
   /* 按需加载某一册的完整词条 */
@@ -772,11 +772,15 @@
       }
     });
 
-    /* 点音标朗读 */
-    var ipaEl = $('#wc-ipa');
-    if (ipaEl) {
-      ipaEl.style.cursor = 'pointer';
-      ipaEl.addEventListener('click', function () { speakCurrent(); });
+    /* 单击题面（词性/释义/音标）即朗读，按钮与输入框除外 */
+    var card = $('#word-card');
+    if (card) {
+      card.addEventListener('click', function (e) {
+        var t = e.target;
+        if (!t || !t.closest) return;
+        if (t.closest('button, input, textarea, select, a, label')) return;
+        speakCurrent();
+      });
     }
 
     var inp = $('#type-input');
