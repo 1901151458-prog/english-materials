@@ -277,3 +277,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .org-card .org-url{font-family:ui-monospace,"SFMono-Regular",Consolas,"Courier New",monospace;font-size:11.5px;color:var(--blue);margin-top:11px;word-break:break-all}
 .org-note{margin:13px 2px 0;font-size:12px;color:var(--muted);line-height:1.8}
 @media(max-width:820px){.org-grid{grid-template-columns:1fr}}
+
+/* ---------- 网传版警示条（九下） ---------- */
+.warn-banner{margin:18px 0 0;padding:14px 18px;border:2px solid #e11d48;border-left-width:8px;
+  border-radius:10px;background:rgba(225,29,72,.08);font-size:14px;line-height:1.85;color:var(--ink-2)}
+.warn-banner .warn-title{margin:0 0 6px;font-weight:700;font-size:15px;color:#e11d48}
+.warn-banner .warn-title::before{content:"\26A0  "}
+.warn-banner p{margin:0}
+.warn-banner b{color:var(--ink);font-weight:700}
+@media print{.warn-banner{border-color:#000;background:#fff;color:#000}
+  .warn-banner .warn-title{color:#000}
+  .warn-banner b{color:#000}}
