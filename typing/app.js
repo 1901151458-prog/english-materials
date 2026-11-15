@@ -785,6 +785,25 @@
 
     var inp = $('#type-input');
 
+    /* 移动端：软键盘弹出后保证词卡完整可见 */
+    function keepCardVisible() {
+      if (!window.matchMedia || !window.matchMedia('(pointer: coarse)').matches) return;
+      setTimeout(function () {
+        var card = $('#word-card');
+        if (!card || document.activeElement !== inp) return;
+        var vh = (window.visualViewport ? window.visualViewport.height : window.innerHeight);
+        var r = card.getBoundingClientRect();
+        var over = r.bottom - (vh - 12);
+        if (over > 0) window.scrollBy({ top: over + 14, behavior: 'smooth' });
+      }, 320);
+    }
+    inp.addEventListener('focus', keepCardVisible);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', function () {
+        if (document.activeElement === inp) keepCardVisible();
+      });
+    }
+
     /* 输入法组合期间不校验，避免拼音字母被误判为拼错 */
     inp.addEventListener('compositionstart', function () { state.composing = true; });
     inp.addEventListener('compositionend', function () {
