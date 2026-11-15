@@ -1,4 +1,4 @@
-/* 课文朗读 —— 点句子朗读 / 每篇「朗读全文」
+/* 课文朗读 —— 每篇「朗读全文」（点单词发音由 speak.js 负责）
  * 仅在含 .s-en 的课文全解页自动启用；复用浏览器 TTS（英式发音）
  */
 (function () {
@@ -156,29 +156,13 @@
   }
 
   /* ---------- 绑定 ---------- */
-  function bindSentences() {
-    var all = document.querySelectorAll('.s-en, .g-sent, .d-sent');
-    for (var i = 0; i < all.length; i++) {
-      (function (p) {
-        if (p.getAttribute('data-ra')) return;
-        p.setAttribute('data-ra', '1');
-        p.setAttribute('title', '点击朗读');
-        p.style.cursor = 'pointer';
-        p.addEventListener('click', function (e) {
-          e.stopPropagation();
-          if (st.playing) { stopAll(); }
-          speakOne(p);
-        });
-      })(all[i]);
-    }
-  }
-
   /* 页面离开时停掉声音 */
   window.addEventListener('pagehide', function () { stopAll(); });
 
   function init() {
+    /* 只保留「朗读全文」按钮；单击句子读整句已取消，
+       全站统一由 speak.js 只读被点击的单词 */
     mountButtons();
-    bindSentences();
   }
 
   if (document.readyState === 'loading') {

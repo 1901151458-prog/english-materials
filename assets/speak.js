@@ -2,9 +2,9 @@
  *
  * 设计：
  *   - 事件委托（document click），对静态页、JS 渲染页同样有效
- *   - 纯英文文本节点 → 读整句；中英混排 → 读光标处的单词
+ *   - 单击任意英文位置 → 只读光标处的那个单词
  *   - 排除链接/按钮/输入框/词典浮条，避免误触
- *   - 课文页已有 read-aloud.js 的 .s-en/.g-sent/.d-sent 交给它处理，不重复读
+ *   - 课文页的「朗读全文」按钮仍由 read-aloud.js 负责
  *   - 复用 Chrome TTS 的坑规避：语音预热、cancel 后延迟、paused resume
  */
 (function () {
@@ -15,6 +15,9 @@
   var ttsOk = typeof window.speechSynthesis !== 'undefined' &&
               typeof window.SpeechSynthesisUtterance !== 'undefined';
   if (!ttsOk) return;
+
+  /* 背单词页已有自己的发音逻辑（整句/连续读），不重复接管 */
+  if (document.getElementById('type-input') || document.getElementById('word-card')) return;
 
   var LANG = 'en-GB';
   var RATE = 0.9;
@@ -84,10 +87,16 @@
 
   var EN_WORD = /[A-Za-z][A-Za-z'’\-]*/g;
 
-  function isMostlyEnglish(s) {
-    var en = (s.match(/[A-Za-z]/g) || []).length;
-    var cn = (s.match(/[\u4e00-\u9fff]/g) || []).length;
-    return en > 0 && cn === 0;
+  /* 只取光标处的单个英文单词 */
+  function wordAt(text, off) {
+    if (!text || !/[A-Za-z]/.test(text)) return '';
+    var m, best = '', after = '';
+    EN_WORD.lastIndex = 0;
+    while ((m = EN_WORD.exec(text))) {
+      if (off >= m.index && off <= m.index + m[0].length) { best = m[0]; break; }
+      if (!after && m.index > off) after = m[0];
+    }
+    return best || after;
   }
 
   function englishAt(x, y) {
@@ -96,30 +105,16 @@
     var node = range.startContainer;
     if (!node) return '';
 
-    /* 文本节点：判断纯英文 → 读整句；否则读光标处单词 */
+    /* 文本节点：读光标处单词 */
     if (node.nodeType === 3) {
-      var text = node.nodeValue || '';
-      if (!/[A-Za-z]/.test(text)) return '';
-      if (isMostlyEnglish(text)) return text.trim().slice(0, 320);
-
-      var off = range.startOffset || 0;
-      var m, best = '';
-      EN_WORD.lastIndex = 0;
-      while ((m = EN_WORD.exec(text))) {
-        if (off >= m.index && off <= m.index + m[0].length) { best = m[0]; break; }
-      }
-      if (!best) {
-        EN_WORD.lastIndex = 0;
-        m = EN_WORD.exec(text);
-        best = m ? m[0] : '';
-      }
-      return best;
+      return wordAt(node.nodeValue || '', range.startOffset || 0);
     }
 
-    /* 元素节点：仅当内容整体为英文时读 */
+    /* 元素节点（点在空白/padding 上）：取该元素内第一个英文单词 */
     if (node.nodeType === 1) {
-      var t = (node.textContent || '').replace(/\s+/g, ' ').trim();
-      if (t && t.length <= 320 && isMostlyEnglish(t)) return t;
+      var t = (node.textContent || '');
+      var mm = /[A-Za-z][A-Za-z'’\-]*/.exec(t);
+      return mm ? mm[0] : '';
     }
     return '';
   }
@@ -149,16 +144,13 @@
     if (!t) return;
     if (t.closest && t.closest(SKIP)) return;
 
-    /* 课文页的句子交给 read-aloud.js，避免读两遍 */
-    if (t.closest && t.closest('.s-en, .g-sent, .d-sent')) return;
-
     /* 防抖：300ms 内重复点击忽略（双击选词、连点） */
     var now = Date.now();
     if (now - lastAt < 300) { lastAt = now; return; }
     lastAt = now;
 
     var text = englishAt(e.clientX, e.clientY);
-    if (!text || !/[A-Za-z]{2,}/.test(text)) return;
+    if (!text || !/[A-Za-z]/.test(text)) return;
 
     /* 选中的文字优先（用户拖选时不要打断） */
     var sel = window.getSelection ? window.getSelection().toString() : '';
