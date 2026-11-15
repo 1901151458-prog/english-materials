@@ -87,6 +87,14 @@
 
   var EN_WORD = /[A-Za-z][A-Za-z'’\-]*/g;
 
+  /* 元素内第一个英文单词（caret 失败时的回退） */
+  function firstWordIn(el) {
+    if (!el) return '';
+    var t = el.textContent || '';
+    var m = /[A-Za-z][A-Za-z'\u2019\-]*/.exec(t);
+    return m ? m[0] : '';
+  }
+
   /* 只取光标处的单个英文单词 */
   function wordAt(text, off) {
     if (!text || !/[A-Za-z]/.test(text)) return '';
@@ -99,11 +107,14 @@
     return best || after;
   }
 
-  function englishAt(x, y) {
+  function englishAt(x, y, fallbackEl) {
     var range = caretRange(x, y);
-    if (!range) return '';
+    if (!range || !range.startContainer) {
+      /* caret 取不到（某些元素 user-select:none / SVG 等）→ 回退到点击元素的文本 */
+      return firstWordIn(fallbackEl);
+    }
     var node = range.startContainer;
-    if (!node) return '';
+    if (!node) return firstWordIn(fallbackEl);
 
     /* 文本节点：读光标处单词 */
     if (node.nodeType === 3) {
@@ -149,7 +160,7 @@
     if (now - lastAt < 300) { lastAt = now; return; }
     lastAt = now;
 
-    var text = englishAt(e.clientX, e.clientY);
+    var text = englishAt(e.clientX, e.clientY, t);
     if (!text || !/[A-Za-z]/.test(text)) return;
 
     /* 选中的文字优先（用户拖选时不要打断） */
