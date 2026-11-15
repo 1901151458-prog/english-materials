@@ -315,3 +315,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
   .passage-head .ra-all{margin-left:0;width:100%;text-align:center}
   .passage-head .ra-all{order:9}
 }
+
+/* ---------- 全站单击发音：点击高亮 ---------- */
+.is-speaking{background:color-mix(in srgb,var(--blue,#1e5fa3) 15%,transparent)!important;
+  border-radius:4px;transition:background .15s ease}
+@media print{.is-speaking{background:none!important}}
