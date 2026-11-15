@@ -288,3 +288,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 @media print{.warn-banner{border-color:#000;background:#fff;color:#000}
   .warn-banner .warn-title{color:#000}
   .warn-banner b{color:#000}}
+
+/* 完整导航（7 项）：移动端不再隐藏；品牌单独一行，导航另起一行居中 */
+@media (max-width:620px){
+  .header-inner{flex-wrap:wrap;gap:6px;justify-content:center}
+  .site-nav--full{flex:1 1 100%;flex-wrap:wrap;justify-content:center;gap:2px 3px;margin-top:2px}
+  .site-nav--full a{display:inline-block !important;padding:6px 10px;font-size:12.5px}
+  .site-nav--full .theme-toggle{margin-left:0}
+}
