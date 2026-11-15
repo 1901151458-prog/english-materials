@@ -44,6 +44,19 @@
   if (!daily.days) daily.days = {};
   if (!daily.goal) daily.goal = 20;
   var ACCENT_LS = 'em-typing-accent';
+
+  /* 预热浏览器语音列表（Chrome 首次 getVoices 可能返回空，需要监听 voiceschanged） */
+  (function warmUpVoices() {
+    if (typeof window.speechSynthesis === 'undefined') return;
+    try {
+      window.speechSynthesis.getVoices();
+      if (window.speechSynthesis.addEventListener) {
+        window.speechSynthesis.addEventListener('voiceschanged', function () {});
+      } else {
+        window.speechSynthesis.onvoiceschanged = function () {};
+      }
+    } catch (e) {}
+  })();
   state.accent = lsGet(ACCENT_LS, 'uk') === 'us' ? 'us' : 'uk';
 
   /* ---------- 数据 ---------- */
@@ -375,17 +388,37 @@
     return exact || anyEn || null;
   }
 
+  var speakTimer = 0;
+
   function speakWord(word) {
     if (!ttsOk || !word) return false;
+    var synth = window.speechSynthesis;
+    var text = String(word).replace(/_/g, ' ');
+    var lang = state.accent === 'uk' ? 'en-GB' : 'en-US';
+
+    function fire() {
+      try {
+        var u = new window.SpeechSynthesisUtterance(text);
+        u.lang = lang;
+        u.rate = 0.88;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        synth.speak(u);
+      } catch (e) {}
+    }
+
     try {
-      window.speechSynthesis.cancel();
-      var u = new window.SpeechSynthesisUtterance(String(word).replace(/_/g, ' '));
-      u.lang = state.accent === 'uk' ? 'en-GB' : 'en-US';
-      u.rate = 0.88;
-      u.pitch = 1;
-      var v = pickVoice();
-      if (v) u.voice = v;
-      window.speechSynthesis.speak(u);
+      /* Chrome 长时间未用会进入 paused，先恢复 */
+      if (synth.paused) { try { synth.resume(); } catch (e) {} }
+
+      clearTimeout(speakTimer);
+      if (synth.speaking || synth.pending) {
+        /* 关键：cancel 后立即 speak 在 Chrome 上会被吞，延后 60ms */
+        try { synth.cancel(); } catch (e) {}
+        speakTimer = setTimeout(fire, 60);
+      } else {
+        fire();
+      }
       return true;
     } catch (e) { return false; }
   }
@@ -393,10 +426,26 @@
   function speakCurrent() {
     var w = state.queue[state.idx];
     if (!w) return;
+    var btn = $('#btn-speak');
+    if (btn && btn.classList) {
+      btn.classList.add('is-playing');
+      setTimeout(function () { btn.classList.remove('is-playing'); }, 420);
+    }
     var ok = speakWord(w.word);
     var fb = $('#wc-feedback');
     if (!ok && fb) {
       fb.innerHTML = '<span class="fb-hint">当前浏览器不支持朗读，可换 Chrome / Edge 试试</span>';
+      return;
+    }
+    /* 真实环境里若 300ms 后仍未开始播报，提示可能被浏览器拦截 */
+    if (ttsOk) {
+      setTimeout(function () {
+        if (!window.speechSynthesis || !(window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+          if (fb && !fb.textContent.trim()) {
+            fb.innerHTML = '<span class="fb-hint">没听到声音？点一下页面任意处再试，或检查系统音量</span>';
+          }
+        }
+      }, 700);
     }
   }
 
@@ -779,6 +828,7 @@
         var t = e.target;
         if (!t || !t.closest) return;
         if (t.closest('button, input, textarea, select, a, label')) return;
+        if (t.closest('.wc-feedback, .wc-memo, .wc-tools')) return;   /* 只认题面区 */
         speakCurrent();
       });
     }

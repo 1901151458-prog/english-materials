@@ -226,3 +226,7 @@
 .word-card .wc-ipa:hover{color:var(--blue,#1e5fa3)}
 #wc-ipa:not(:empty)::after{content:' 🔊';font-size:.74em;opacity:.5;vertical-align:middle;letter-spacing:0}
 #wc-ipa:hover::after{opacity:.9}
+
+/* 朗读按钮点击反馈 */
+#btn-speak.is-playing{background:var(--blue,#1e5fa3);border-color:transparent;color:#fff}
+@media print{#btn-speak{display:none!important}}
