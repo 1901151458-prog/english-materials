@@ -17,9 +17,24 @@
     lang: fromLS(LANG_KEY, 'zh')       // zh = 英汉，en = 英英
   };
 
-  /* 桌面端 = 右键；触屏设备 = 长按。文案按设备自适应 */
+  /* 是否触屏设备：多重检测，比单看 pointer:coarse 兼容性好（微信/部分安卓内核不支持 media query） */
+  function isTouchDevice() {
+    try {
+      if ('ontouchstart' in window) return true;
+      if (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0) return true;
+      if (typeof navigator !== 'undefined' && navigator.msMaxTouchPoints > 0) return true;
+      if (window.matchMedia) {
+        if (window.matchMedia('(pointer: coarse)').matches) return true;
+        if (window.matchMedia('(any-pointer: coarse)').matches) return true;
+        if (window.matchMedia('(hover: none)').matches) return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  /* 桌面端 = 右键；触屏设备 = 长按 */
   function actWord() {
-    return (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) ? '长按' : '右键';
+    return isTouchDevice() ? '长按' : '右键';
   }
 
   var DICTS = {
@@ -200,7 +215,7 @@
   var lastKey = '', lastMoveTs = 0;
 
   function isCoarse() {
-    return !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+    return isTouchDevice();
   }
 
   function caretAt(x, y) {
