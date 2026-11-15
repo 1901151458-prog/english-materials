@@ -22,7 +22,6 @@
   var LANG = 'en-GB';
   var RATE = 0.9;
   var timer = 0;
-  var lastAt = 0;
 
   /* ---------- 语音预热 ---------- */
   try {
@@ -48,27 +47,61 @@
     return exact || anyEn || null;
   }
 
+  var lastErr = '';
+
   function speak(text) {
     try {
       var synth = window.speechSynthesis;
+      if (!text) return false;
+
       var u = new window.SpeechSynthesisUtterance(String(text));
       u.lang = LANG;
       u.rate = RATE;
+      u.volume = 1;
       var v = pickVoice();
       if (v) u.voice = v;
+      u.onerror = function (ev) { lastErr = (ev && ev.error) || 'unknown'; };
 
-      if (synth.paused) { try { synth.resume(); } catch (e) {} }
+      /* 无条件清理队列：Chrome 里残留的 utterance 会让后续 speak 静默失效 */
       clearTimeout(timer);
-      if (synth.speaking || synth.pending) {
-        try { synth.cancel(); } catch (e) {}
-        timer = setTimeout(function () {
-          try { synth.speak(u); } catch (e) {}
-        }, 60);
-      } else {
-        synth.speak(u);
-      }
+      try { synth.cancel(); } catch (e) {}
+      try { synth.resume(); } catch (e) {}
+
+      /* cancel 后立即 speak 在 Chrome 上会被吞，延后 150ms */
+      timer = setTimeout(function () {
+        try { synth.speak(u); } catch (e) { lastErr = String(e); }
+        /* 1.2s 后仍未开始播报 → 给出可见提示 */
+        setTimeout(function () {
+          if (synth.speaking || synth.pending) return;
+          if (!lastErr && synth.getVoices && !synth.getVoices().length) lastErr = 'no-voice';
+          if (lastErr === 'not-allowed') {
+            toast('朗读被浏览器拦截：请先点一下页面空白处再试');
+          } else if (lastErr === 'no-voice') {
+            toast('未检测到英文语音包：请在系统设置中安装英语语音');
+          } else if (lastErr) {
+            toast('朗读失败（' + lastErr + '）：可刷新页面后重试');
+          }
+          /* 无错误但也没开始播报：不打扰，避免误报 */
+        }, 1800);
+      }, 150);
       return true;
     } catch (e) { return false; }
+  }
+
+  /* 轻量提示条 */
+  var toastEl = null, toastTimer = 0;
+  function toast(msg) {
+    if (!msg) return;
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'speak-toast';
+      toastEl.setAttribute('role', 'status');
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('is-on'); }, 3600);
   }
 
   /* ---------- 取点击位置的文本 ---------- */
@@ -154,11 +187,6 @@
     var t = e.target;
     if (!t) return;
     if (t.closest && t.closest(SKIP)) return;
-
-    /* 防抖：300ms 内重复点击忽略（双击选词、连点） */
-    var now = Date.now();
-    if (now - lastAt < 300) { lastAt = now; return; }
-    lastAt = now;
 
     var text = englishAt(e.clientX, e.clientY, t);
     if (!text || !/[A-Za-z]/.test(text)) return;

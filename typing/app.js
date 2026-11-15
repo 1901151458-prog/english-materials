@@ -408,17 +408,12 @@
     }
 
     try {
-      /* Chrome 长时间未用会进入 paused，先恢复 */
-      if (synth.paused) { try { synth.resume(); } catch (e) {} }
-
+      /* 无条件清理队列：Chrome 里残留的 utterance 会让后续 speak 静默失效 */
       clearTimeout(speakTimer);
-      if (synth.speaking || synth.pending) {
-        /* 关键：cancel 后立即 speak 在 Chrome 上会被吞，延后 60ms */
-        try { synth.cancel(); } catch (e) {}
-        speakTimer = setTimeout(fire, 60);
-      } else {
-        fire();
-      }
+      try { synth.cancel(); } catch (e) {}
+      try { synth.resume(); } catch (e) {}
+      /* cancel 后立即 speak 在 Chrome 上会被吞，延后 120ms */
+      speakTimer = setTimeout(fire, 120);
       return true;
     } catch (e) { return false; }
   }

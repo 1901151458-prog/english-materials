@@ -320,3 +320,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .is-speaking{background:color-mix(in srgb,var(--blue,#1e5fa3) 15%,transparent)!important;
   border-radius:4px;transition:background .15s ease}
 @media print{.is-speaking{background:none!important}}
+
+/* ---------- 朗读失败提示 ---------- */
+.speak-toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(10px);
+  background:rgba(17,24,39,.94);color:#fff;font-size:13px;line-height:1.55;padding:10px 16px;
+  border-radius:10px;max-width:min(90vw,420px);text-align:center;z-index:99998;
+  opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.speak-toast.is-on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media print{.speak-toast{display:none!important}}
