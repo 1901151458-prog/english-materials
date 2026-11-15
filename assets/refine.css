@@ -296,3 +296,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
   .site-nav--full a{display:inline-block !important;padding:6px 10px;font-size:12.5px}
   .site-nav--full .theme-toggle{margin-left:0}
 }
+
+/* ---------- 课文朗读 ---------- */
+.passage-head .ra-all{margin-left:auto;padding:5px 12px;border-radius:8px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-2);font-size:12.5px;font-weight:600;cursor:pointer;
+  font-family:inherit;transition:all .15s;white-space:nowrap;align-self:center}
+.passage-head .ra-all:hover{border-color:var(--blue,#1e5fa3);color:var(--blue,#1e5fa3)}
+.passage-head .ra-all.is-playing{background:var(--blue,#1e5fa3);border-color:transparent;color:#fff}
+
+.s-en,.g-sent,.d-sent{transition:background .12s}
+.s-en:hover,.g-sent:hover,.d-sent:hover{background:color-mix(in srgb,var(--blue,#1e5fa3) 8%,transparent);border-radius:5px}
+.sentence-item.is-reading{border-left-color:var(--blue,#1e5fa3);
+  background:color-mix(in srgb,var(--blue,#1e5fa3) 9%,transparent)}
+.s-en.is-reading,.g-sent.is-reading,.d-sent.is-reading{
+  background:color-mix(in srgb,var(--blue,#1e5fa3) 12%,transparent);border-radius:5px}
+@media print{.passage-head .ra-all{display:none!important}}
+@media(max-width:640px){
+  .passage-head .ra-all{margin-left:0;width:100%;text-align:center}
+  .passage-head .ra-all{order:9}
+}
