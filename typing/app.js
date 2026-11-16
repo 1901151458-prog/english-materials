@@ -45,6 +45,21 @@
   if (!daily.goal) daily.goal = 20;
   var ACCENT_LS = 'em-typing-accent';
 
+  /* 音频输出设备切换（插耳机/连蓝牙音箱）后 Chrome 的 TTS 可能失效 */
+  var ttsNeedReset = false;
+  try {
+    if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+      navigator.mediaDevices.addEventListener('devicechange', function () {
+        ttsNeedReset = true;
+        try {
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.resume();
+          window.speechSynthesis.getVoices();
+        } catch (e) {}
+      });
+    }
+  } catch (e) {}
+
   /* 预热浏览器语音列表（Chrome 首次 getVoices 可能返回空，需要监听 voiceschanged） */
   (function warmUpVoices() {
     if (typeof window.speechSynthesis === 'undefined') return;
@@ -410,10 +425,16 @@
     try {
       /* 无条件清理队列：Chrome 里残留的 utterance 会让后续 speak 静默失效 */
       clearTimeout(speakTimer);
+      var d = 120;
+      if (ttsNeedReset) {
+        ttsNeedReset = false;
+        d = 400;
+        try { synth.getVoices(); } catch (e) {}
+      }
       try { synth.cancel(); } catch (e) {}
       try { synth.resume(); } catch (e) {}
-      /* cancel 后立即 speak 在 Chrome 上会被吞，延后 120ms */
-      speakTimer = setTimeout(fire, 120);
+      /* cancel 后立即 speak 在 Chrome 上会被吞，延后执行 */
+      speakTimer = setTimeout(fire, d);
       return true;
     } catch (e) { return false; }
   }

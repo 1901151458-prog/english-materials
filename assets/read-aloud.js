@@ -38,9 +38,25 @@
     return exact || anyEn || null;
   }
 
+  /* 音频设备切换后 TTS 可能失效 → 标记重置 */
+  var needReset = false;
+  try {
+    if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+      navigator.mediaDevices.addEventListener('devicechange', function () {
+        needReset = true;
+        try { window.speechSynthesis.cancel(); } catch (e) {}
+      });
+    }
+  } catch (e) {}
+
   function speak(text, onend) {
     try {
+      if (needReset) {
+        needReset = false;
+        try { window.speechSynthesis.getVoices(); } catch (e) {}
+      }
       window.speechSynthesis.cancel();
+      try { window.speechSynthesis.resume(); } catch (e) {}
       var u = new window.SpeechSynthesisUtterance(String(text || ''));
       u.lang = LANG;
       u.rate = RATE;

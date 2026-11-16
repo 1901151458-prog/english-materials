@@ -5,7 +5,8 @@
  *   - 单击任意英文位置 → 只读光标处的那个单词
  *   - 排除链接/按钮/输入框/词典浮条，避免误触
  *   - 课文页的「朗读全文」按钮仍由 read-aloud.js 负责
- *   - 复用 Chrome TTS 的坑规避：语音预热、cancel 后延迟、paused resume
+ *   - 复用 Chrome TTS 的坑规避：语音预热、cancel 后延迟、paused resume、
+ *     音频设备切换检测、失败自动重试一次
  */
 (function () {
   'use strict';
@@ -33,6 +34,22 @@
     }
   } catch (e) {}
 
+  /* 音频输出设备切换（插耳机 / 连蓝牙音箱）后 Chrome 的 TTS 会话可能失效
+     → 标记 needReset，下次发音前做更彻底的重置 */
+  var needReset = false;
+  try {
+    if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+      navigator.mediaDevices.addEventListener('devicechange', function () {
+        needReset = true;
+        try {
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.resume();
+          window.speechSynthesis.getVoices();
+        } catch (e) {}
+      });
+    }
+  } catch (e) {}
+
   function pickVoice() {
     var vs = [];
     try { vs = window.speechSynthesis.getVoices() || []; } catch (e) { return null; }
@@ -54,36 +71,71 @@
       var synth = window.speechSynthesis;
       if (!text) return false;
 
-      var u = new window.SpeechSynthesisUtterance(String(text));
-      u.lang = LANG;
-      u.rate = RATE;
-      u.volume = 1;
-      var v = pickVoice();
-      if (v) u.voice = v;
-      u.onerror = function (ev) { lastErr = (ev && ev.error) || 'unknown'; };
-
-      /* 无条件清理队列：Chrome 里残留的 utterance 会让后续 speak 静默失效 */
       clearTimeout(timer);
-      try { synth.cancel(); } catch (e) {}
-      try { synth.resume(); } catch (e) {}
+      lastErr = '';
 
-      /* cancel 后立即 speak 在 Chrome 上会被吞，延后 150ms */
+      /* 设备刚切换过 → 更彻底地重置引擎，并多等一会儿 */
+      var delay = 150;
+      if (needReset) {
+        needReset = false;
+        delay = 420;
+        try {
+          synth.cancel();
+          synth.resume();
+          synth.getVoices();      /* 重新拉取语音列表 */
+        } catch (e) {}
+      } else {
+        /* 无条件清理队列：残留 utterance 会让后续 speak 静默失效 */
+        try { synth.cancel(); } catch (e) {}
+        try { synth.resume(); } catch (e) {}
+      }
+
+      /* cancel 后立即 speak 在 Chrome 上会被吞，延后执行 */
       timer = setTimeout(function () {
-        try { synth.speak(u); } catch (e) { lastErr = String(e); }
-        /* 1.2s 后仍未开始播报 → 给出可见提示 */
-        setTimeout(function () {
-          if (synth.speaking || synth.pending) return;
+        var started = false;
+
+        function attempt(n) {
+          try {
+            var u = new window.SpeechSynthesisUtterance(String(text));
+            u.lang = LANG;
+            u.rate = RATE;
+            u.volume = 1;
+            var v = pickVoice();
+            if (v) u.voice = v;
+            u.onstart = function () { started = true; };
+            u.onerror = function (ev) { lastErr = (ev && ev.error) || 'unknown'; };
+            synth.speak(u);
+          } catch (e) {
+            lastErr = String(e);
+            return;
+          }
+
+          /* 900ms 内既没 onstart 也没在播报 → 重置后重试一次 */
+          setTimeout(function () {
+            if (started || synth.speaking || synth.pending) return;
+            if (n < 1) {
+              try { synth.cancel(); synth.resume(); } catch (e) {}
+              setTimeout(function () { attempt(n + 1); }, 160);
+            } else {
+              finishFail();
+            }
+          }, 900);
+        }
+
+        function finishFail() {
           if (!lastErr && synth.getVoices && !synth.getVoices().length) lastErr = 'no-voice';
           if (lastErr === 'not-allowed') {
             toast('朗读被浏览器拦截：请先点一下页面空白处再试');
           } else if (lastErr === 'no-voice') {
             toast('未检测到英文语音包：请在系统设置中安装英语语音');
-          } else if (lastErr) {
-            toast('朗读失败（' + lastErr + '）：可刷新页面后重试');
+          } else {
+            /* 最常见：切换音频设备后引擎卡住，刷新页面可恢复 */
+            toast('没有声音：可能切换了音响/耳机，刷新页面即可恢复');
           }
-          /* 无错误但也没开始播报：不打扰，避免误报 */
-        }, 1800);
-      }, 150);
+        }
+
+        attempt(0);
+      }, delay);
       return true;
     } catch (e) { return false; }
   }
