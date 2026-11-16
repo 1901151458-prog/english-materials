@@ -40,16 +40,10 @@ jobs:
         run: |
           set +e
           npx lhci autorun > /tmp/lh.log 2>&1
-          code=$?
-          echo "退出码：$code"
-          tail -n 80 /tmp/lh.log | while IFS= read -r line; do
-            if [ -n "$line" ]; then
-              echo "::error title=lighthouse::$line"
-            fi
-          done
-          exit 0
+          echo "退出码：$?"
+          tail -n 30 /tmp/lh.log || true
 
-      - name: 显示评分
+      - name: 生成评分摘要
         if: always()
         run: |
           node -e '
@@ -63,30 +57,44 @@ jobs:
               }
               return acc;
             }
-            const roots = ["artifacts/lighthouse", ".lighthouseci", "lighthouse-results"];
+            const roots = [".lighthouseci", "artifacts/lighthouse", "lighthouse-results"];
             let files = [];
             for (const r of roots) walk(r, files);
-            console.log("搜索目录：" + roots.join(" | "));
-            files.slice(0, 3).forEach((f) => console.log("  样例：" + f));
-            console.log("报告文件数：" + files.length);
+
             const rows = [];
             for (const f of files) {
               let j; try { j = JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { continue; }
               const c = j.categories || {};
               const pct = (k) => Math.round(((c[k] && c[k].score) || 0) * 100);
               const url = (j.finalUrl || j.requestedUrl || "?").replace("https://1901151458-prog.github.io/english-materials", "") || "/";
-              rows.push({ url, perf: pct("performance"), a11y: pct("accessibility"), bp: pct("best-practices"), seo: pct("seo") });
+              rows.push({
+                url,
+                perf: pct("performance"),
+                a11y: pct("accessibility"),
+                bp: pct("best-practices"),
+                seo: pct("seo")
+              });
             }
             rows.sort((a, b) => a.url.localeCompare(b.url));
-            console.log("页面".padEnd(30) + "性能  可访问  最佳实践  SEO");
+
+            const out = [];
+            out.push("## Lighthouse 评分");
+            out.push("");
+            out.push("| 页面 | 性能 | 可访问性 | 最佳实践 | SEO |");
+            out.push("|---|---:|---:|---:|---:|");
             for (const r of rows) {
-              console.log(r.url.padEnd(30) + String(r.perf).padStart(4) + String(r.a11y).padStart(7) + String(r.bp).padStart(9) + String(r.seo).padStart(6));
+              const mark = (v) => v >= 90 ? String(v) : v >= 50 ? v + " ⚠️" : v + " ❌";
+              out.push(`| \`${r.url}\` | ${mark(r.perf)} | ${mark(r.a11y)} | ${mark(r.bp)} | ${mark(r.seo)} |`);
             }
-          ' | while IFS= read -r line; do
-            [ -n "$line" ] && echo "::notice title=Lighthouse::$line"
-          done
-          echo "===== 原始输出尾部 ====="
-          tail -n 20 /tmp/lh.log 2>/dev/null || true
+            if (!rows.length) out.push("| （未生成报告） | - | - | - | - |");
+            out.push("");
+            out.push("> 90 分以上为绿色区间，50-89 为黄色，50 以下为红色。");
+            console.log(out.join("\n"));
+
+            if (process.env.GITHUB_STEP_SUMMARY) {
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out.join("\n") + "\n");
+            }
+          '
 
       - name: 上传报告
         if: always()
@@ -94,8 +102,8 @@ jobs:
         with:
           name: lighthouse-report
           path: |
-            artifacts/lighthouse/
             .lighthouseci/
+            artifacts/lighthouse/
             /tmp/lh.log
           if-no-files-found: warn
           retention-days: 30
