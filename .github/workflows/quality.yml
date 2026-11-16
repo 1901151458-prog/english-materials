@@ -63,7 +63,11 @@ jobs:
               }
               return acc;
             }
-            const files = walk("artifacts/lighthouse", []);
+            const roots = ["artifacts/lighthouse", ".lighthouseci", "lighthouse-results"];
+            let files = [];
+            for (const r of roots) walk(r, files);
+            console.log("搜索目录：" + roots.join(" | "));
+            files.slice(0, 3).forEach((f) => console.log("  样例：" + f));
             console.log("报告文件数：" + files.length);
             const rows = [];
             for (const f of files) {
@@ -91,6 +95,7 @@ jobs:
           name: lighthouse-report
           path: |
             artifacts/lighthouse/
+            .lighthouseci/
             /tmp/lh.log
           if-no-files-found: warn
           retention-days: 30
