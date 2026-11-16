@@ -20,6 +20,7 @@ import json
 import os
 import re
 import shutil
+from html.parser import HTMLParser
 import subprocess
 import sys
 
@@ -188,6 +189,75 @@ def check_js(problems):
             problems.append(f"{rel(path)}: JS 语法错误 -> {first[:160]}")
 
 
+# ---------- HTML 标签平衡 ----------
+VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+             "link", "meta", "param", "source", "track", "wbr"}
+# 只检查通常不省略闭合的容器标签，避免 <p>/<li>/<td> 的合法省略造成误报
+CONTAINER_TAGS = {"div", "section", "main", "article", "aside", "nav",
+                  "header", "footer", "ul", "ol", "table", "thead", "tbody",
+                  "tfoot", "form", "details", "summary", "blockquote", "figure",
+                  "style", "script", "svg", "template"}
+
+
+class _Balance(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.errors = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in VOID_TAGS or tag in ("br", "img", "input", "meta", "link", "hr"):
+            return
+        if tag in CONTAINER_TAGS:
+            self.stack.append((tag, self.getpos()))
+        else:
+            self.stack.append((tag, self.getpos()))
+
+    def handle_startendtag(self, tag, attrs):
+        return  # 自闭合，忽略
+
+    def handle_endtag(self, tag):
+        if tag in VOID_TAGS:
+            return
+        if not self.stack:
+            self.errors.append(f"多余的 </{tag}> @ 行 {self.getpos()[0]}")
+            return
+        # 找到最近的同名标签
+        idx = None
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                idx = i
+                break
+        if idx is None:
+            self.errors.append(f"多余的 </{tag}> @ 行 {self.getpos()[0]}")
+            return
+        # 中间未闭合的非容器标签（如 p/li）允许，容器标签不算错
+        unclosed = [t for t, _ in self.stack[idx + 1:] if t in CONTAINER_TAGS]
+        if unclosed:
+            self.errors.append(
+                f"</{tag}> @ 行 {self.getpos()[0]} 之前有未闭合容器: {', '.join(unclosed[:4])}")
+        del self.stack[idx:]
+
+
+def check_tag_balance(problems):
+    for path in iter_files(".html"):
+        text = read(path)
+        if "<html" not in text.lower():
+            continue
+        b = _Balance()
+        try:
+            b.feed(text)
+            b.close()
+        except Exception as exc:
+            problems.append(f"{rel(path)}: HTML 解析失败 -> {str(exc)[:100]}")
+            continue
+        opens = [f"<{t}>@行{pos[0]}" for t, pos in b.stack if t in CONTAINER_TAGS]
+        if opens:
+            problems.append(f"{rel(path)}: 未闭合容器标签 {len(opens)} 个 -> {', '.join(opens[:4])}")
+        for e in b.errors[:4]:
+            problems.append(f"{rel(path)}: {e}")
+
+
 # ---------- JSON ----------
 def check_json(problems):
     for path in iter_files(".json"):
@@ -218,6 +288,7 @@ def main():
         ("链接与锚点", lambda p: check_links(p, ids_cache)),
         ("版本化引用", check_versioned),
         ("CSS", check_css),
+        ("标签平衡", check_tag_balance),
         ("JS 语法", check_js),
         ("JSON", check_json),
     ]
