@@ -1,0 +1,31 @@
+name: 每周线上巡检
+
+on:
+  schedule:
+    # 每周一 02:00 UTC = 北京时间 10:00
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-live-check
+  cancel-in-progress: true
+
+jobs:
+  live:
+    name: 可用性 / 响应时间 / 外链
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 线上巡检
+        run: python scripts/check_live.py

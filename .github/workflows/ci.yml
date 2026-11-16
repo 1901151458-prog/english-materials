@@ -1,0 +1,37 @@
+name: 站点自检
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: 静态检查（结构 / 链接 / 语法）
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装 Node（用于 JS 语法检查）
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 运行自检
+        run: python scripts/check_site.py
