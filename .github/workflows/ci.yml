@@ -42,11 +42,15 @@ jobs:
       - name: HTML 校验
         run: |
           set +e
-          npx html-validate --ignore "node_modules/**" "**/*.html" > /tmp/hv.log 2>&1
+          find . -name "*.html" \
+            -not -path "./node_modules/*" \
+            -not -path "./.git/*" \
+            -not -path "./artifacts/*" | sort > /tmp/hv-files.txt
+          echo "待校验 HTML：$(wc -l < /tmp/hv-files.txt) 个"
+          xargs npx html-validate < /tmp/hv-files.txt > /tmp/hv.log 2>&1
           code=$?
           total=$(wc -l < /tmp/hv.log)
-          echo "html-validate 输出行数：$total"
-          # 把前 45 行错误写成 GitHub 注解，便于在 Actions 页面和 API 里定位
+          echo "输出行数：$total"
           head -n 45 /tmp/hv.log | while IFS= read -r line; do
             if [ -n "$line" ]; then
               echo "::error title=html-validate::$line"
