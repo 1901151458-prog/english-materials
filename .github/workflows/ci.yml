@@ -31,7 +31,7 @@ jobs:
       - name: 安装 Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: 结构与链接自检
         run: python scripts/check_site.py
@@ -40,4 +40,25 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: HTML 校验
-        run: npx html-validate --ignore "node_modules/**" "**/*.html"
+        run: |
+          set +e
+          npx html-validate --ignore "node_modules/**" "**/*.html" > /tmp/hv.log 2>&1
+          code=$?
+          total=$(wc -l < /tmp/hv.log)
+          echo "html-validate 输出行数：$total"
+          # 把前 45 行错误写成 GitHub 注解，便于在 Actions 页面和 API 里定位
+          head -n 45 /tmp/hv.log | while IFS= read -r line; do
+            if [ -n "$line" ]; then
+              echo "::error title=html-validate::$line"
+            fi
+          done
+          exit $code
+
+      - name: 上传 HTML 校验报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-validate-report
+          path: /tmp/hv.log
+          if-no-files-found: ignore
+          retention-days: 14
