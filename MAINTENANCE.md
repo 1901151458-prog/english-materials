@@ -114,8 +114,18 @@ GitHub Pages 构建约 **1–2 分钟**后生效，可用 `?cb=<时间戳>` 绕�
 
 | 工作流 | 触发时机 | 检查内容 | 耗时 |
 |---|---|---|---|
-| 站点自检 `ci.yml` | 每次 push / PR | 结构（lang/title/desc/viewport/h1/重复 id）、4656 个内部链接、627 个锚点、版本化引用、CSS 配平、JS 语法、JSON 合法性 | 约 40 秒 |
+| 站点自检 `ci.yml` | 每次 push / PR | Python 自检（结构 / 4656 内部链接 / 627 锚点 / 版本化引用 / CSS / JS 语法 / JSON / **标签平衡**）<br>+ `html-validate` HTML 结构校验（167 页） | 约 90 秒 |
+| 性能评分 `quality.yml` | 每周一 11:00（北京时间）<br>+ 配置文件变更时 | Lighthouse 对 5 个代表页面评分：性能 / 可访问性 / 最佳实践 / SEO<br>报告存 artifact | 约 5 分钟 |
 | 每周线上巡检 `weekly.yml` | 每周一 10:00（北京时间） | 25 个页面可用性、15 个关键资源、外链可达性、404 行为、平均响应时间 | 约 1 分钟 |
+
+### 触发过一次的真实问题
+
+CI 上线当天就发现并修复了两个手工检查漏掉的问题：
+
+1. **首页多余的 `</div>`**（`index.html` 第 130 行）——DOM 层级错位，浏览器能容错渲染但结构不合法
+2. **`inputmode="latin"` 非法值**（`typing/index.html`）—— 标准里 `inputmode` 只有 `text/tel/url/email/numeric/decimal/search/none`
+
+修复后 `check_site.py` 增加了「标签平衡」检查，本地 3 秒内可发现同类问题。
 
 查看结果：仓库 **Actions** 标签页
 <https://github.com/1901151458-prog/english-materials/actions>

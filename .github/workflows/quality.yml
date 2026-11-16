@@ -4,6 +4,12 @@ on:
   schedule:
     # 每周一 11:00 北京时间（03:00 UTC）
     - cron: '0 3 * * 1'
+  # 配置文件变更时也跑一次，便于验证配置
+  push:
+    paths:
+      - 'lighthouserc.json'
+      - 'package.json'
+      - '.github/workflows/quality.yml'
   workflow_dispatch:
 
 permissions:
