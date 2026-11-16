@@ -16,9 +16,9 @@ concurrency:
 
 jobs:
   static:
-    name: 静态检查（结构 / 链接 / 语法）
+    name: 静态检查（结构 / 链接 / 语法 / HTML）
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -28,10 +28,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: 安装 Node（用于 JS 语法检查）
+      - name: 安装 Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: 运行自检
+      - name: 结构与链接自检
         run: python scripts/check_site.py
+
+      - name: 安装校验工具
+        run: npm install --no-audit --no-fund
+
+      - name: HTML 校验
+        run: npx html-validate --ignore "node_modules/**" "**/*.html"

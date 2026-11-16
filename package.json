@@ -1,0 +1,13 @@
+{
+  "name": "english-materials-checks",
+  "private": true,
+  "description": "english-materials 站点的 HTML 校验与 Lighthouse 性能检查（仅 CI 使用）",
+  "scripts": {
+    "htmlvalidate": "html-validate \"**/*.html\"",
+    "lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@lhci/cli": ">=0.14.0",
+    "html-validate": ">=9.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+# 依赖与构建产物
+node_modules/
+package-lock.json
+artifacts/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
+
+# 临时文件
+*.tmp
+*.log

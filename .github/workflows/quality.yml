@@ -1,0 +1,45 @@
+name: 性能评分（Lighthouse）
+
+on:
+  schedule:
+    # 每周一 11:00 北京时间（03:00 UTC）
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: 5 个代表页面性能评分
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安装依赖
+        run: npm install --no-audit --no-fund
+
+      - name: 运行 Lighthouse
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: npx lhci autorun
+
+      - name: 上传报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: artifacts/lighthouse/
+          if-no-files-found: warn
+          retention-days: 30
