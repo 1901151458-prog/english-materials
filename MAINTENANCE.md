@@ -105,3 +105,43 @@ git push origin main
 ```
 
 GitHub Pages 构建约 **1–2 分钟**后生效，可用 `?cb=<时间戳>` 绕过 CDN 缓存验证。
+
+---
+
+## 六、自动化检查（GitHub Actions）
+
+仓库已启用两个工作流，**不消耗任何本地/AI 资源**（GitHub 托管，public 仓库免费）：
+
+| 工作流 | 触发时机 | 检查内容 | 耗时 |
+|---|---|---|---|
+| 站点自检 `ci.yml` | 每次 push / PR | 结构（lang/title/desc/viewport/h1/重复 id）、4656 个内部链接、627 个锚点、版本化引用、CSS 配平、JS 语法、JSON 合法性 | 约 40 秒 |
+| 每周线上巡检 `weekly.yml` | 每周一 10:00（北京时间） | 25 个页面可用性、15 个关键资源、外链可达性、404 行为、平均响应时间 | 约 1 分钟 |
+
+查看结果：仓库 **Actions** 标签页
+<https://github.com/1901151458-prog/english-materials/actions>
+
+失败时 GitHub 会发邮件通知。
+
+### 本地手动运行
+
+```powershell
+cd english-materials
+<python> scripts\check_site.py                 # 静态检查（约 3 秒）
+<python> scripts\check_live.py                 # 线上巡检（约 30 秒）
+<python> scripts\check_live.py --external 40   # 外链抽样 40 个
+```
+
+### 工作流文件
+
+| 文件 | 说明 |
+|---|---|
+| `.github/workflows/ci.yml` | push 触发，跑 `scripts/check_site.py` |
+| `.github/workflows/weekly.yml` | 每周一定时，跑 `scripts/check_live.py` |
+
+**为什么 push 时不跑线上巡检**：GitHub Pages 部署有 1–2 分钟延迟，
+push 后立刻检查会读到旧版本，所以线上检查放在定时任务里。
+
+### 注意事项
+
+- GitHub Pages 的 `Cache-Control` 固定为 `max-age=600`（10 分钟），无法修改
+- 资源更新后如遇缓存问题，用 `?v=N` 版本号强制刷新（现有约定）
