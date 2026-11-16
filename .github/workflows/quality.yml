@@ -49,18 +49,40 @@ jobs:
           done
           exit 0
 
-      - name: 显示报告摘要
+      - name: 显示评分
         if: always()
         run: |
-          if [ -f /tmp/lh.log ]; then
-            echo "===== Lighthouse 关键行 ====="
-            grep -Ei "performance|accessibility|best-practices|seo|largest-contentful|first-contentful|total-blocking|layout-shift|median|error|fail" /tmp/lh.log \
-              | head -30 | while IFS= read -r line; do
-                echo "::notice title=lighthouse::$line"
-              done
-            echo "===== 原始输出尾部 ====="
-            tail -n 30 /tmp/lh.log || true
-          fi
+          node -e '
+            const fs = require("fs"), path = require("path");
+            function walk(d, acc) {
+              if (!fs.existsSync(d)) return acc;
+              for (const f of fs.readdirSync(d)) {
+                const p = path.join(d, f), st = fs.statSync(p);
+                if (st.isDirectory()) walk(p, acc);
+                else if (f.endsWith(".json") && f.startsWith("lhr")) acc.push(p);
+              }
+              return acc;
+            }
+            const files = walk("artifacts/lighthouse", []);
+            console.log("报告文件数：" + files.length);
+            const rows = [];
+            for (const f of files) {
+              let j; try { j = JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { continue; }
+              const c = j.categories || {};
+              const pct = (k) => Math.round(((c[k] && c[k].score) || 0) * 100);
+              const url = (j.finalUrl || j.requestedUrl || "?").replace("https://1901151458-prog.github.io/english-materials", "") || "/";
+              rows.push({ url, perf: pct("performance"), a11y: pct("accessibility"), bp: pct("best-practices"), seo: pct("seo") });
+            }
+            rows.sort((a, b) => a.url.localeCompare(b.url));
+            console.log("页面".padEnd(30) + "性能  可访问  最佳实践  SEO");
+            for (const r of rows) {
+              console.log(r.url.padEnd(30) + String(r.perf).padStart(4) + String(r.a11y).padStart(7) + String(r.bp).padStart(9) + String(r.seo).padStart(6));
+            }
+          ' | while IFS= read -r line; do
+            [ -n "$line" ] && echo "::notice title=Lighthouse::$line"
+          done
+          echo "===== 原始输出尾部 ====="
+          tail -n 20 /tmp/lh.log 2>/dev/null || true
 
       - name: 上传报告
         if: always()
