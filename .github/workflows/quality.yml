@@ -53,8 +53,13 @@ jobs:
         if: always()
         run: |
           if [ -f /tmp/lh.log ]; then
-            echo "===== Lighthouse 输出尾部 ====="
-            tail -n 40 /tmp/lh.log || true
+            echo "===== Lighthouse 关键行 ====="
+            grep -Ei "performance|accessibility|best-practices|seo|largest-contentful|first-contentful|total-blocking|layout-shift|median|error|fail" /tmp/lh.log \
+              | head -30 | while IFS= read -r line; do
+                echo "::notice title=lighthouse::$line"
+              done
+            echo "===== 原始输出尾部 ====="
+            tail -n 30 /tmp/lh.log || true
           fi
 
       - name: 上传报告
