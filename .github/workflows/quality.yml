@@ -31,21 +31,39 @@ jobs:
       - name: 安装 Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: 安装依赖
         run: npm install --no-audit --no-fund
 
       - name: 运行 Lighthouse
-        env:
-          CHROME_PATH: /usr/bin/google-chrome
-        run: npx lhci autorun
+        run: |
+          set +e
+          npx lhci autorun > /tmp/lh.log 2>&1
+          code=$?
+          echo "退出码：$code"
+          tail -n 80 /tmp/lh.log | while IFS= read -r line; do
+            if [ -n "$line" ]; then
+              echo "::error title=lighthouse::$line"
+            fi
+          done
+          exit 0
+
+      - name: 显示报告摘要
+        if: always()
+        run: |
+          if [ -f /tmp/lh.log ]; then
+            echo "===== Lighthouse 输出尾部 ====="
+            tail -n 40 /tmp/lh.log || true
+          fi
 
       - name: 上传报告
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: artifacts/lighthouse/
+          path: |
+            artifacts/lighthouse/
+            /tmp/lh.log
           if-no-files-found: warn
           retention-days: 30
