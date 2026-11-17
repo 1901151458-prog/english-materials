@@ -169,3 +169,32 @@ push 后立刻检查会读到旧版本，所以线上检查放在定时任务里
 评分显示在 Actions 运行页的 **Summary** 区域（每次运行自动生成表格）。
 
 背单词页 85 分主要受 JS 体积影响（`app.min.js` 19.4 KB），可接受。
+
+---
+
+## 七、Anki 牌组导出
+
+`assets/anki/` 下有 8 个文件，供用户把 1,504 个黑体词导入 Anki 复习：
+
+| 文件 | 内容 | 大小 |
+|---|---|---:|
+| `anki-g7a.apkg` ~ `anki-g9x.apkg` | 六册分册牌组 | 116–200 KB / 个 |
+| `anki-all.apkg` | 六册合订（1,504 词） | 692 KB |
+| `vocab-all.csv` | 通用 CSV（7 列） | 240 KB |
+
+**生成脚本**：[`work/build_anki.py`](../work/build_anki.py)（需要 `pip install genanki`）
+
+```powershell
+<python> work\build_anki.py
+```
+
+**卡片设计**：
+- 正面：单词 + 音标，`{{tts en_GB:Word}}` 自动英音朗读
+- 背面：词性、释义、助记（按标签分色）、出处单元
+- 九下（网传版）卡片带 ⚠ 警示
+- Model ID / Deck ID 固定，重复导入不会产生重复牌组
+- `note.guid` 用词条 id（如 `v1-u1-1`），Anki 据此去重
+
+**词库变更后**需重新运行生成脚本，再提交 `assets/anki/` 目录。
+
+**用户入口**：`vocab-hub/index.html` 第六节「导出到 Anki」。

@@ -329,3 +329,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
   box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .speak-toast.is-on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media print{.speak-toast{display:none!important}}
+
+/* ---------- Anki 导出 ---------- */
+.anki-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:16px}
+.anki-item{display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid var(--line);
+  border-radius:12px;background:var(--card);text-decoration:none;
+  transition:border-color .15s ease,transform .15s ease}
+.anki-item:hover{border-color:var(--blue,#1e5fa3);transform:translateY(-2px);text-decoration:none}
+.anki-book{font-weight:700;font-size:15px;color:var(--ink)}
+.anki-meta{font-size:12.5px;color:var(--muted);line-height:1.5}
+.anki-dl{margin-top:7px;font-size:12.5px;font-weight:600;color:var(--blue,#1e5fa3)}
+.anki-item.is-all{border-color:var(--blue,#1e5fa3);
+  background:color-mix(in srgb,var(--blue,#1e5fa3) 7%,var(--card))}
+.anki-help{margin-top:18px;padding:14px 16px;border-radius:10px;background:var(--soft);
+  font-size:13.5px;line-height:1.85;color:var(--ink-2)}
+.anki-help p{margin:5px 0}
+.anki-help b{color:var(--ink)}
+.anki-help a{color:var(--blue,#1e5fa3)}
+@media(max-width:640px){.anki-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px}
+  .anki-item{padding:12px 13px}.anki-help{font-size:13px}}
