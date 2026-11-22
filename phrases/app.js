@@ -10,6 +10,7 @@
   var state = {
     book: 'all',
     cat: 'all',
+    val: 'high',
     kw: '',
     page: 1
   };
@@ -23,7 +24,12 @@
   var searchEl = $('ph-q');
   var stTotal = $('st-total');
 
-  if (stTotal) stTotal.textContent = D.stats.total.toLocaleString('en-US');
+  if (stTotal) stTotal.textContent = (D.stats.high || D.stats.total).toLocaleString('en-US');
+  var stAll = $('st-all');
+  if (stAll) stAll.textContent = D.stats.total.toLocaleString('en-US');
+  var vh = $('val-high-n'), va = $('val-all-n');
+  if (vh) vh.textContent = (D.stats.high || D.stats.total);
+  if (va) va.textContent = D.stats.total;
 
   /* ---------- 工具 ---------- */
   function esc(s) {
@@ -89,6 +95,7 @@
       var it = items[i];
       if (state.book !== 'all' && it[2] !== state.book) continue;
       if (state.cat !== 'all' && it[4] !== state.cat) continue;
+      if (state.val !== 'all' && it[7] !== 'high') continue;
       if (kws) {
         var hay = norm(it[0]) + ' ' + norm(it[1]);
         var ok = true;
@@ -195,6 +202,21 @@
       render();
     }, 140);
   });
+
+  /* ---------- 价值开关 ---------- */
+  var valRow = $('val-row');
+  if (valRow) {
+    Array.prototype.forEach.call(valRow.querySelectorAll('[data-val]'), function (b) {
+      b.addEventListener('click', function () {
+        state.val = b.getAttribute('data-val');
+        state.page = 1;
+        Array.prototype.forEach.call(valRow.querySelectorAll('[data-val]'), function (x) {
+          x.classList.toggle('is-on', x.getAttribute('data-val') === state.val);
+        });
+        render();
+      });
+    });
+  }
 
   /* ---------- 初始化 ---------- */
   buildFilters();
