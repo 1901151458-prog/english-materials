@@ -217,3 +217,43 @@
     width: 100%;
   }
 }
+
+/* 下载区块 */
+.ph-export { margin: 30px 0 0; }
+.ph-export-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.ph-export-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.ph-export-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--card);
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color .15s ease, transform .15s ease;
+}
+.ph-export-item:hover {
+  border-color: var(--blue, #3b82f6);
+  transform: translateY(-1px);
+}
+.ph-export-icon { font-size: 26px; line-height: 1; }
+.ph-export-body { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.ph-export-body strong { font-size: 14.5px; color: var(--ink); }
+.ph-export-body span { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.ph-export-cta {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue, #3b82f6);
+  white-space: nowrap;
+}
