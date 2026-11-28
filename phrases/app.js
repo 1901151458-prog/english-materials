@@ -10,7 +10,7 @@
   var state = {
     book: 'all',
     cat: 'all',
-    val: 'A',
+    val: 'S',
     kw: '',
     page: 1
   };
@@ -24,10 +24,11 @@
   var searchEl = $('ph-q');
   var stTotal = $('st-total');
 
-  if (stTotal) stTotal.textContent = (D.stats.tierA || D.stats.high || D.stats.total).toLocaleString('en-US');
+  if (stTotal) stTotal.textContent = (D.stats.tierS || 0).toLocaleString('en-US');
   var stAll = $('st-all');
   if (stAll) stAll.textContent = D.stats.total.toLocaleString('en-US');
-  var va = $('val-a-n'), vab = $('val-ab-n'), vall = $('val-all-n');
+  var vs = $('val-s-n'), va = $('val-a-n'), vab = $('val-ab-n'), vall = $('val-all-n');
+  if (vs) vs.textContent = (D.stats.tierS || 0);
   if (va) va.textContent = (D.stats.tierA || 0);
   if (vab) vab.textContent = (D.stats.tierAB || 0);
   if (vall) vall.textContent = D.stats.total;
@@ -96,8 +97,9 @@
       var it = items[i];
       if (state.book !== 'all' && it[2] !== state.book) continue;
       if (state.cat !== 'all' && it[4] !== state.cat) continue;
-      if (state.val === 'A' && it[8] !== 'A') continue;
-      if (state.val === 'AB' && it[8] !== 'A' && it[8] !== 'B') continue;
+      if (state.val === 'S' && it[8] !== 'S') continue;
+      if (state.val === 'A' && it[8] !== 'S' && it[8] !== 'A') continue;
+      if (state.val === 'AB' && it[8] !== 'S' && it[8] !== 'A' && it[8] !== 'B') continue;
       if (kws) {
         var hay = norm(it[0]) + ' ' + norm(it[1]);
         var ok = true;
